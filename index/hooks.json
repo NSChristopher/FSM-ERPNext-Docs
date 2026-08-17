@@ -1,0 +1,1471 @@
+{
+ "built_at": "2026-08-17",
+ "pins": {
+  "frappe": "v16.31.0",
+  "erpnext": "v16.32.1"
+ },
+ "note": "Hook keys frappe/erpnext actually read via get_hooks(). If a key is not here, nothing consumes it.",
+ "count": 118,
+ "hooks": [
+  {
+   "hook": "accounting_dimension_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/accounting_dimension/accounting_dimension.py",
+     "line": 259
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/accounts_settings/accounts_settings.py",
+     "line": 224
+    }
+   ]
+  },
+  {
+   "hook": "add_to_apps_screen",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/apps.py",
+     "line": 34
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/apps.py",
+     "line": 58
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/apps.py",
+     "line": 114
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 181
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/desktop_icon/desktop_icon.py",
+     "line": 110
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/desktop_icon/desktop_icon.py",
+     "line": 282
+    }
+   ]
+  },
+  {
+   "hook": "advance_payment_payable_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/report/accounts_receivable/accounts_receivable.py",
+     "line": 72
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/utils.py",
+     "line": 2585
+    }
+   ]
+  },
+  {
+   "hook": "advance_payment_receivable_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/utils.py",
+     "line": 2584
+    }
+   ]
+  },
+  {
+   "hook": "after_app_install",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/installer.py",
+     "line": 363
+    }
+   ]
+  },
+  {
+   "hook": "after_app_uninstall",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/installer.py",
+     "line": 465
+    }
+   ]
+  },
+  {
+   "hook": "after_build",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/commands/utils.py",
+     "line": 118
+    }
+   ]
+  },
+  {
+   "hook": "after_job",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/background_jobs.py",
+     "line": 312
+    }
+   ]
+  },
+  {
+   "hook": "after_migrate",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/migrate.py",
+     "line": 202
+    }
+   ]
+  },
+  {
+   "hook": "after_request",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/app.py",
+     "line": 173
+    }
+   ]
+  },
+  {
+   "hook": "app_home",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 215
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 216
+    }
+   ]
+  },
+  {
+   "hook": "app_include_js",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/translate.py",
+     "line": 544
+    }
+   ]
+  },
+  {
+   "hook": "app_logo_url",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 221
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 222
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/navbar_settings/navbar_settings.py",
+     "line": 34
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/desk/page/desktop/desktop.py",
+     "line": 14
+    }
+   ]
+  },
+  {
+   "hook": "app_name",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/install.py",
+     "line": 212
+    }
+   ]
+  },
+  {
+   "hook": "app_publisher",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/modules/utils.py",
+     "line": 344
+    }
+   ]
+  },
+  {
+   "hook": "app_title",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 208
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 209
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/user_invitation/user_invitation.py",
+     "line": 158
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/changelog_feed/changelog_feed.py",
+     "line": 84
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/desktop_icon/desktop_icon.py",
+     "line": 223
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/desktop_icon/desktop_icon.py",
+     "line": 248
+    }
+   ]
+  },
+  {
+   "hook": "auth_hooks",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/auth.py",
+     "line": 743
+    }
+   ]
+  },
+  {
+   "hook": "auto_cancel_exempted_doctypes",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/form/linked_with.py",
+     "line": 424
+    }
+   ]
+  },
+  {
+   "hook": "bank_reconciliation_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/bank_transaction/bank_transaction.py",
+     "line": 365
+    }
+   ]
+  },
+  {
+   "hook": "base_template",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/page_renderers/base_template_page.py",
+     "line": 40
+    }
+   ]
+  },
+  {
+   "hook": "base_template_map",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/router.py",
+     "line": 257
+    }
+   ]
+  },
+  {
+   "hook": "before_app_install",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/installer.py",
+     "line": 341
+    }
+   ]
+  },
+  {
+   "hook": "before_app_uninstall",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/installer.py",
+     "line": 448
+    }
+   ]
+  },
+  {
+   "hook": "before_job",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/background_jobs.py",
+     "line": 269
+    }
+   ]
+  },
+  {
+   "hook": "before_migrate",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/migrate.py",
+     "line": 123
+    }
+   ]
+  },
+  {
+   "hook": "before_request",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/app.py",
+     "line": 207
+    }
+   ]
+  },
+  {
+   "hook": "before_tests",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/parallel_test_runner.py",
+     "line": 66
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/testing/environment.py",
+     "line": 193
+    }
+   ]
+  },
+  {
+   "hook": "bulk_transaction_task_mapper",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/utilities/bulk_transaction.py",
+     "line": 174
+    }
+   ]
+  },
+  {
+   "hook": "calendars",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 107
+    }
+   ]
+  },
+  {
+   "hook": "clear_cache",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/cache_manager.py",
+     "line": 308
+    }
+   ]
+  },
+  {
+   "hook": "comment_rate_limit",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/templates/includes/comments/comments.py",
+     "line": 18
+    }
+   ]
+  },
+  {
+   "hook": "company_data_to_be_ignored",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/doctype/transaction_deletion_record/transaction_deletion_record.py",
+     "line": 1046
+    }
+   ]
+  },
+  {
+   "hook": "default_log_clearing_doctypes",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/commands/site.py",
+     "line": 1355
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/log_settings/log_settings.py",
+     "line": 70
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/log_settings/log_settings.py",
+     "line": 159
+    }
+   ]
+  },
+  {
+   "hook": "default_mail_footer",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/email/email_body.py",
+     "line": 579
+    }
+   ]
+  },
+  {
+   "hook": "demo_master_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/demo.py",
+     "line": 107
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/demo.py",
+     "line": 216
+    }
+   ]
+  },
+  {
+   "hook": "demo_transaction_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/demo.py",
+     "line": 132
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/doctype/company/test_company.py",
+     "line": 199
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/doctype/company/test_company.py",
+     "line": 205
+    }
+   ]
+  },
+  {
+   "hook": "doc_events",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/__init__.py",
+     "line": 948
+    }
+   ]
+  },
+  {
+   "hook": "domains",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/__init__.py",
+     "line": 576
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/__init__.py",
+     "line": 578
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/domain/domain.py",
+     "line": 95
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/domain_settings/domain_settings.py",
+     "line": 46
+    }
+   ]
+  },
+  {
+   "hook": "email_css",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/email/email_body.py",
+     "line": 477
+    }
+   ]
+  },
+  {
+   "hook": "employee_holiday_list",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/doctype/employee/employee.py",
+     "line": 374
+    }
+   ]
+  },
+  {
+   "hook": "export_python_type_annotations",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/doctype/doctype.py",
+     "line": 922
+    }
+   ]
+  },
+  {
+   "hook": "extend_bootinfo",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/sessions.py",
+     "line": 169
+    }
+   ]
+  },
+  {
+   "hook": "extend_doctype_class",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/model/base_document.py",
+     "line": 190
+    }
+   ]
+  },
+  {
+   "hook": "fields_for_group_similar_items",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/controllers/accounts_controller.py",
+     "line": 2563
+    }
+   ]
+  },
+  {
+   "hook": "filters_config",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 313
+    }
+   ]
+  },
+  {
+   "hook": "fixture_auto_order",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/tests/test_hooks.py",
+     "line": 140
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/tests/test_hooks.py",
+     "line": 158
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/utils/fixtures.py",
+     "line": 74
+    }
+   ]
+  },
+  {
+   "hook": "fixtures",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/tests/test_hooks.py",
+     "line": 147
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/translate.py",
+     "line": 368
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/translate.py",
+     "line": 433
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/utils/fixtures.py",
+     "line": 75
+    }
+   ]
+  },
+  {
+   "hook": "get_changelog_feed",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/changelog_feed/changelog_feed.py",
+     "line": 40
+    }
+   ]
+  },
+  {
+   "hook": "get_entries_for_bank_clearance_summary",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/report/bank_clearance_summary/bank_clearance_summary.py",
+     "line": 58
+    }
+   ]
+  },
+  {
+   "hook": "get_entries_for_bank_reconciliation_statement",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/report/bank_reconciliation_statement/bank_reconciliation_statement.py",
+     "line": 116
+    }
+   ]
+  },
+  {
+   "hook": "get_matching_queries",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/bank_reconciliation_tool/bank_reconciliation_tool.py",
+     "line": 1197
+    }
+   ]
+  },
+  {
+   "hook": "get_payment_entries_for_bank_clearance",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/bank_clearance/bank_clearance.py",
+     "line": 54
+    }
+   ]
+  },
+  {
+   "hook": "get_print_format_template",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/www/printview.py",
+     "line": 195
+    }
+   ]
+  },
+  {
+   "hook": "get_site_info",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/__init__.py",
+     "line": 837
+    }
+   ]
+  },
+  {
+   "hook": "get_web_pages_with_dynamic_routes",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/doctype/web_page/web_page.py",
+     "line": 296
+    }
+   ]
+  },
+  {
+   "hook": "get_website_user_home_page",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 149
+    }
+   ]
+  },
+  {
+   "hook": "global_search_doctypes",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/global_search_settings/global_search_settings.py",
+     "line": 70
+    }
+   ]
+  },
+  {
+   "hook": "has_comment_permission",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/templates/includes/comments/comments.py",
+     "line": 39
+    }
+   ]
+  },
+  {
+   "hook": "has_permission",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/permissions.py",
+     "line": 489
+    }
+   ]
+  },
+  {
+   "hook": "has_website_permission",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/__init__.py",
+     "line": 673
+    }
+   ]
+  },
+  {
+   "hook": "home_page",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/tests/test_website.py",
+     "line": 89
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 164
+    }
+   ]
+  },
+  {
+   "hook": "ignore_links_on_delete",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/model/delete_doc.py",
+     "line": 313
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/model/delete_doc.py",
+     "line": 395
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/model/delete_doc.py",
+     "line": 444
+    }
+   ]
+  },
+  {
+   "hook": "ignore_translatable_strings_from",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/gettext/translate.py",
+     "line": 170
+    }
+   ]
+  },
+  {
+   "hook": "importable_doctypes",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/model/sync.py",
+     "line": 151
+    }
+   ]
+  },
+  {
+   "hook": "invoice_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/payment_entry/payment_entry.py",
+     "line": 695
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/payment_entry/payment_entry.py",
+     "line": 2407
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/party.py",
+     "line": 1025
+    }
+   ]
+  },
+  {
+   "hook": "jenv",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/patches/v13_0/jinja_hook.py",
+     "line": 10
+    }
+   ]
+  },
+  {
+   "hook": "jinja",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/jinja.py",
+     "line": 250
+    }
+   ]
+  },
+  {
+   "hook": "look_for_sidebar_json",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 442
+    }
+   ]
+  },
+  {
+   "hook": "make_email_body_message",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/email/email_body.py",
+     "line": 387
+    }
+   ]
+  },
+  {
+   "hook": "naming_series_variables",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/model/naming.py",
+     "line": 392
+    }
+   ]
+  },
+  {
+   "hook": "notification_self_notify_types",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/notification_log/notification_log.py",
+     "line": 99
+    }
+   ]
+  },
+  {
+   "hook": "notification_skip_email_types",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/doctype/notification_log/notification_log.py",
+     "line": 94
+    }
+   ]
+  },
+  {
+   "hook": "on_print_pdf",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/print_utils.py",
+     "line": 107
+    }
+   ]
+  },
+  {
+   "hook": "override_doctype_class",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/installer.py",
+     "line": 325
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/migrate.py",
+     "line": 126
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/model/base_document.py",
+     "line": 110
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/model/sync.py",
+     "line": 179
+    }
+   ]
+  },
+  {
+   "hook": "override_doctype_dashboards",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/model/meta.py",
+     "line": 766
+    }
+   ]
+  },
+  {
+   "hook": "override_whitelisted_methods",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/__init__.py",
+     "line": 1579
+    }
+   ]
+  },
+  {
+   "hook": "page_renderer",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/path_resolver.py",
+     "line": 81
+    }
+   ]
+  },
+  {
+   "hook": "pdf_body_html",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/www/printview.py",
+     "line": 268
+    }
+   ]
+  },
+  {
+   "hook": "pdf_generator",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/print_utils.py",
+     "line": 80
+    }
+   ]
+  },
+  {
+   "hook": "period_closing_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/accounting_period/accounting_period.py",
+     "line": 89
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/controllers/queries.py",
+     "line": 907
+    }
+   ]
+  },
+  {
+   "hook": "permission_query_conditions",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/database/query.py",
+     "line": 1616
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/model/db_query.py",
+     "line": 1161
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/tests/test_query.py",
+     "line": 1199
+    }
+   ]
+  },
+  {
+   "hook": "persistent_cache_keys",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/cache_manager.py",
+     "line": 298
+    }
+   ]
+  },
+  {
+   "hook": "portal_menu_items",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 480
+    }
+   ]
+  },
+  {
+   "hook": "process_soa_html",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.py",
+     "line": 309
+    }
+   ]
+  },
+  {
+   "hook": "regional_overrides",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/__init__.py",
+     "line": 145
+    }
+   ]
+  },
+  {
+   "hook": "repost_allowed_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/repost_accounting_ledger/repost_accounting_ledger.py",
+     "line": 398
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/patches/v16_0/merge_repost_settings_to_accounts_settings.py",
+     "line": 5
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/setup/install.py",
+     "line": 82
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/startup/boot.py",
+     "line": 69
+    }
+   ]
+  },
+  {
+   "hook": "required_apps",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/installed_applications/installed_applications.py",
+     "line": 173
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/installer.py",
+     "line": 290
+    }
+   ]
+  },
+  {
+   "hook": "role_home_page",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/tests/test_website.py",
+     "line": 94
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 156
+    }
+   ]
+  },
+  {
+   "hook": "scheduler_events",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/scheduled_job_type/scheduled_job_type.py",
+     "line": 223
+    }
+   ]
+  },
+  {
+   "hook": "send_sms",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/sms_settings/sms_settings.py",
+     "line": 73
+    }
+   ]
+  },
+  {
+   "hook": "send_token_via_sms",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/twofactor.py",
+     "line": 303
+    }
+   ]
+  },
+  {
+   "hook": "setup_wizard_complete",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/page/setup_wizard/setup_wizard.py",
+     "line": 261
+    }
+   ]
+  },
+  {
+   "hook": "setup_wizard_exception",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/page/setup_wizard/setup_wizard.py",
+     "line": 270
+    }
+   ]
+  },
+  {
+   "hook": "setup_wizard_requires",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 256
+    }
+   ]
+  },
+  {
+   "hook": "setup_wizard_success",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/desk/page/setup_wizard/setup_wizard.py",
+     "line": 207
+    }
+   ]
+  },
+  {
+   "hook": "signup_form_template",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/www/login.py",
+     "line": 56
+    }
+   ]
+  },
+  {
+   "hook": "sqlite_search",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/search/sqlite_search.py",
+     "line": 1887
+    }
+   ]
+  },
+  {
+   "hook": "standard_help_items",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/install.py",
+     "line": 184
+    }
+   ]
+  },
+  {
+   "hook": "standard_navbar_items",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/install.py",
+     "line": 181
+    }
+   ]
+  },
+  {
+   "hook": "standard_portal_menu_items",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/doctype/portal_settings/portal_settings.py",
+     "line": 47
+    }
+   ]
+  },
+  {
+   "hook": "subscription_doctypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/accounts/doctype/accounts_settings/accounts_settings.py",
+     "line": 246
+    }
+   ]
+  },
+  {
+   "hook": "template_apps",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/utils/jinja.py",
+     "line": 191
+    }
+   ]
+  },
+  {
+   "hook": "treeviews",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/boot.py",
+     "line": 108
+    }
+   ]
+  },
+  {
+   "hook": "update_gl_dict_with_app_based_fields",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/controllers/accounts_controller.py",
+     "line": 4438
+    }
+   ]
+  },
+  {
+   "hook": "update_website_context",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/page_renderers/base_template_page.py",
+     "line": 71
+    }
+   ]
+  },
+  {
+   "hook": "user_data_fields",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/doctype/personal_data_deletion_request/personal_data_deletion_request.py",
+     "line": 38
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/website/doctype/personal_data_download_request/personal_data_download_request.py",
+     "line": 94
+    }
+   ]
+  },
+  {
+   "hook": "user_invitation",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/core/api/user_invitation.py",
+     "line": 69
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/user_invitation/user_invitation.py",
+     "line": 151
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/user_invitation/user_invitation.py",
+     "line": 164
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/user_invitation/user_invitation.py",
+     "line": 201
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/user_invitation/user_invitation.py",
+     "line": 225
+    }
+   ]
+  },
+  {
+   "hook": "voucher_subtypes",
+   "consumed_by": [
+    {
+     "app": "erpnext",
+     "file": "erpnext/controllers/accounts_controller.py",
+     "line": 1476
+    }
+   ]
+  },
+  {
+   "hook": "web_include_js",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/translate.py",
+     "line": 545
+    }
+   ]
+  },
+  {
+   "hook": "webform_list_context",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/www/list.py",
+     "line": 127
+    },
+    {
+     "app": "erpnext",
+     "file": "erpnext/tests/test_webform.py",
+     "line": 44
+    }
+   ]
+  },
+  {
+   "hook": "website_clear_cache",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 413
+    }
+   ]
+  },
+  {
+   "hook": "website_generators",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/router.py",
+     "line": 294
+    }
+   ]
+  },
+  {
+   "hook": "website_path_resolver",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/path_resolver.py",
+     "line": 46
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/website/path_resolver.py",
+     "line": 47
+    }
+   ]
+  },
+  {
+   "hook": "website_redirects",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/path_resolver.py",
+     "line": 139
+    }
+   ]
+  },
+  {
+   "hook": "website_route_rules",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/website/path_resolver.py",
+     "line": 214
+    }
+   ]
+  },
+  {
+   "hook": "website_user_home_page",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/tests/test_website.py",
+     "line": 85
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 152
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/website/utils.py",
+     "line": 153
+    }
+   ]
+  },
+  {
+   "hook": "welcome_email",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/core/doctype/user/user.py",
+     "line": 525
+    }
+   ]
+  },
+  {
+   "hook": "workflow_methods",
+   "consumed_by": [
+    {
+     "app": "frappe",
+     "file": "frappe/model/workflow.py",
+     "line": 171
+    },
+    {
+     "app": "frappe",
+     "file": "frappe/workflow/doctype/workflow/workflow.py",
+     "line": 140
+    }
+   ]
+  }
+ ]
+}

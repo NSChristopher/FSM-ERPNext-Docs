@@ -1,0 +1,136 @@
+{
+ "built_at": "2026-08-17",
+ "pins": {
+  "frappe": "v16.31.0",
+  "erpnext": "v16.32.1"
+ },
+ "note": "Order as dispatched by run_method(). doc_events hooks in hooks.py fire through the same path, so a handler sees this same ordering.",
+ "actions": {
+  "insert": {
+   "before": [
+    "before_insert",
+    "before_validate",
+    "validate",
+    "before_save"
+   ],
+   "after": [
+    "after_insert",
+    "on_update",
+    "on_change"
+   ],
+   "source": "frappe/model/document.py",
+   "dispatched_at": {
+    "before_insert": "frappe/model/document.py:478",
+    "before_validate": "frappe/model/document.py:1403",
+    "validate": "frappe/model/document.py:1409",
+    "before_save": "frappe/model/document.py:1410",
+    "after_insert": "frappe/model/document.py:503",
+    "on_update": "frappe/model/document.py:1452",
+    "on_change": "frappe/model/document.py:1472"
+   },
+   "cite": "before_insert @ frappe/model/document.py:478"
+  },
+  "save": {
+   "before": [
+    "before_validate",
+    "validate",
+    "before_save"
+   ],
+   "after": [
+    "on_update",
+    "on_change"
+   ],
+   "source": "frappe/model/document.py",
+   "dispatched_at": {
+    "before_validate": "frappe/model/document.py:1403",
+    "validate": "frappe/model/document.py:1409",
+    "before_save": "frappe/model/document.py:1410",
+    "on_update": "frappe/model/document.py:1452",
+    "on_change": "frappe/model/document.py:1472"
+   },
+   "cite": "before_save @ frappe/model/document.py:1410"
+  },
+  "submit": {
+   "before": [
+    "before_validate",
+    "validate",
+    "before_submit"
+   ],
+   "after": [
+    "on_update",
+    "on_submit",
+    "on_change"
+   ],
+   "source": "frappe/model/document.py",
+   "dispatched_at": {
+    "before_validate": "frappe/model/document.py:1403",
+    "validate": "frappe/model/document.py:1409",
+    "before_submit": "frappe/model/document.py:1413",
+    "on_update": "frappe/model/document.py:1452",
+    "on_submit": "frappe/model/document.py:1455",
+    "on_change": "frappe/model/document.py:1472"
+   },
+   "cite": "before_submit @ frappe/model/document.py:1413"
+  },
+  "cancel": {
+   "before": [
+    "before_cancel"
+   ],
+   "after": [
+    "on_cancel",
+    "on_change"
+   ],
+   "source": "frappe/model/document.py",
+   "dispatched_at": {
+    "before_cancel": "frappe/model/document.py:1415",
+    "on_cancel": "frappe/model/document.py:1457",
+    "on_change": "frappe/model/document.py:1472"
+   },
+   "cite": "before_cancel @ frappe/model/document.py:1415"
+  },
+  "update_after_submit": {
+   "before": [
+    "before_update_after_submit"
+   ],
+   "after": [
+    "on_update_after_submit",
+    "on_change"
+   ],
+   "source": "frappe/model/document.py",
+   "dispatched_at": {
+    "before_update_after_submit": "frappe/model/document.py:1417",
+    "on_update_after_submit": "frappe/model/document.py:1460",
+    "on_change": "frappe/model/document.py:1472"
+   },
+   "cite": "before_update_after_submit @ frappe/model/document.py:1417"
+  },
+  "delete": {
+   "before": [
+    "on_trash"
+   ],
+   "after": [
+    "after_delete"
+   ],
+   "source": "frappe/model/delete_doc.py",
+   "dispatched_at": {
+    "on_trash": "frappe/model/delete_doc.py:165",
+    "after_delete": "frappe/model/delete_doc.py:185"
+   },
+   "cite": "on_trash @ frappe/model/delete_doc.py:165"
+  },
+  "rename": {
+   "before": [
+    "before_rename"
+   ],
+   "after": [
+    "after_rename"
+   ],
+   "source": "frappe/model/rename_doc.py",
+   "dispatched_at": {
+    "before_rename": "frappe/model/rename_doc.py:73",
+    "after_rename": "frappe/model/rename_doc.py:198"
+   },
+   "cite": "before_rename @ frappe/model/rename_doc.py:73"
+  }
+ }
+}

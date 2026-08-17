@@ -1,0 +1,13 @@
+node_modules/
+
+# Pinned platform source, materialised by scripts/sync-source.sh in ~10 seconds.
+# Deliberately not committed: ~300 MB of upstream code would bloat every clone to answer
+# questions that index/ already answers, and that a shallow clone answers better.
+# grep_source / read_source report this and name the command when it is missing.
+source/
+
+# NOTE: mcp/dist/ is intentionally NOT ignored. A Claude session registers MCP servers at
+# startup, before it can run a build, so an uncommitted dist means the fsm-docs tools are
+# simply absent in any fresh checkout - including the scheduled framework review, which is
+# exactly when nobody is around to notice. Rebuild with `npm run build:mcp` and commit it
+# alongside the src change; `npm run verify` drives the committed dist over real stdio.

@@ -1,0 +1,61 @@
+{
+  "_comment": [
+    "Single source of truth for every upstream ref this repo indexes or mirrors.",
+    "",
+    "FSM-App has THREE Frappe/ERPNext pins and they are not the same number - see the table in",
+    "FSM-App/CLAUDE.md § Version pins. `source` below is the PRODUCTION/CI pin, because that is",
+    "what shipped code runs against and therefore what a claim about 'the platform' must mean.",
+    "",
+    "Do NOT point `source` at scripts/devcontainer-init.sh. That holds the devcontainer pin",
+    "(v16.20.0), which FSM-App's CLAUDE.md calls out as behind the other two - a known",
+    "divergence, not a target. Indexing it would make this repo answer confidently about a",
+    "platform production is not on, which is the exact failure it exists to prevent.",
+    "",
+    "Note frappe/erpnext:vX.Y.Z is tagged with the ERPNext version, so the Frappe version inside",
+    "the production image differs from the image tag by design. These are per-repo tags, so the",
+    "pairing is explicit here and needs no inference."
+  ],
+  "source": {
+    "_comment": "Production + CI. Enforced by ARG FRAPPE_VERSION in infrastructure/production/Dockerfile and FRAPPE_BRANCH/ERPNEXT_BRANCH in .github/workflows/ci.yml.",
+    "frappe": {
+      "repo": "https://github.com/frappe/frappe.git",
+      "tag": "v16.31.0"
+    },
+    "erpnext": {
+      "repo": "https://github.com/frappe/erpnext.git",
+      "tag": "v16.32.1"
+    }
+  },
+  "devcontainer": {
+    "_comment": "What local dev runs, from FSM-App/scripts/devcontainer-init.sh. Behind production on purpose. index/drift.md reports what differs, so a 'works on my machine' gap is visible instead of surprising.",
+    "frappe": { "tag": "v16.20.0" },
+    "erpnext": { "tag": "v16.20.0" }
+  },
+  "vendor": {
+    "_comment": "Doc sets that genuinely live in git, synced verbatim. Resolved SHAs land in vendor/_manifest.json.",
+    "frappe_docker": {
+      "repo": "https://github.com/frappe/frappe_docker.git",
+      "ref": "main",
+      "include": ["docs"]
+    },
+    "bench": {
+      "repo": "https://github.com/frappe/bench.git",
+      "ref": "develop",
+      "include": ["docs"]
+    }
+  },
+  "mirror": {
+    "_comment": [
+      "docs.frappe.io is a Frappe Wiki site - the content is in that site's database, not a repo.",
+      "frappe/frappe_docs was archived in Dec 2021. So these subtrees are crawled, not cloned.",
+      "Note there is no v16 tree upstream: framework docs stop at v15, ERPNext has no versioned",
+      "current tree at all. For anything v16-specific the index/ layer is the only real answer."
+    ],
+    "origin": "https://docs.frappe.io",
+    "subtrees": [
+      "framework/user/en/",
+      "framework/v15/user/en/",
+      "erpnext/user/manual/en/"
+    ]
+  }
+}

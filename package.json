@@ -1,0 +1,29 @@
+{
+  "name": "fsm-erpnext-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Frappe/ERPNext knowledge base for FSM: pinned-source indexes, a docs.frappe.io mirror, and an MCP server over both.",
+  "workspaces": [
+    "mcp"
+  ],
+  "scripts": {
+    "sync": "./scripts/sync-source.sh && ./scripts/sync-vendor.sh",
+    "sync:source": "./scripts/sync-source.sh",
+    "sync:vendor": "./scripts/sync-vendor.sh",
+    "build:index": "node scripts/build-index.mjs",
+    "build:drift": "./scripts/sync-source.sh --with-devcontainer && node scripts/build-drift.mjs",
+    "crawl": "node scripts/crawl-docs.mjs",
+    "build:mcp": "npm run build -w @fsm/erpnext-docs-mcp",
+    "rebuild": "npm run sync && npm run build:index && npm run crawl && npm run build:mcp",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "1.0.0",
+    "turndown": "7.2.0",
+    "turndown-plugin-gfm": "1.0.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

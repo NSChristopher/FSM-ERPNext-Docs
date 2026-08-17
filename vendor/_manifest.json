@@ -1,0 +1,20 @@
+{
+  "note": "Synced verbatim from upstream git. Do not edit by hand - sync-vendor.sh overwrites.",
+  "synced_at": "2026-08-17",
+  "sources": [
+    {
+      "name": "frappe_docker",
+      "repo": "https://github.com/frappe/frappe_docker.git",
+      "ref": "main",
+      "sha": "600744eb07e86584a7fdf3f9d5e4336c08f30f39",
+      "markdown_files": 50
+    },
+    {
+      "name": "bench",
+      "repo": "https://github.com/frappe/bench.git",
+      "ref": "develop",
+      "sha": "c9d12503d9d7fbfd94086c3de3cd4ac23dd44823",
+      "markdown_files": 8
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@fsm/erpnext-docs-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server over the pinned Frappe/ERPNext source indexes and the docs.frappe.io mirror.",
+  "bin": {
+    "fsm-erpnext-docs-mcp": "dist/index.mjs"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && esbuild src/index.ts --bundle --platform=node --target=node22 --format=esm --outfile=dist/index.mjs --banner:js=\"#!/usr/bin/env node\"",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.mjs"
+  },
+  "_comment": "The build bundles the SDK into dist/index.js. dist is committed (see ../.gitignore) so the server starts in a fresh clone, and a bundle is what makes that true - an unbundled dist would still need node_modules that a fresh checkout does not have.",
+  "dependencies": {},
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "1.12.1",
+    "@types/node": "22.14.1",
+    "esbuild": "0.25.5",
+    "typescript": "5.8.3"
+  }
+}
