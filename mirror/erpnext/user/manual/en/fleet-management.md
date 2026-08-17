@@ -1,0 +1,22 @@
+---
+title: "Fleet Management"
+source_url: https://docs.frappe.io/erpnext/user/manual/en/fleet-management
+upstream_updated: "04-02-2026 14:54:32"
+mirrored_from: docs.frappe.io (Frappe Wiki - not git-backed)
+---
+
+# Fleet Management
+
+Fleet Management section of Human Resources helps your Organization manage their fleet of vehicles and track their expenses.
+
+To use Fleet Management in Frappe HR, you can do the following:
+
+1.  Set Up a Vehicle.
+2.  Enter Vehicle Logs regularly.
+3.  Make Expense Claims for Vehicle Expenses.
+4.  View Reports for Vehicle Expenses.
+
+## **Related Topics**
+
+1.  [Vehicle](https://docs.frappe.io/hr/vehicle)
+2.  [Vehicle Log](https://docs.frappe.io/hr/vehicle-log)

@@ -1,0 +1,66 @@
+---
+title: "Listing documents"
+source_url: https://docs.frappe.io/framework/v15/user/en/guides/integration/rest_api/listing_documents
+upstream_updated: "17-02-2026 10:41:19"
+mirrored_from: docs.frappe.io (Frappe Wiki - not git-backed)
+---
+
+# Listing documents
+
+To list documents, make a GET request to `/api/resource/{doctype}`.
+
+GET **/api/resource/Person**
+
+> All listings are returned paginated by 20 items. To change the page size, you can pass the query parameter `limit_page_length`. To request succesive pages, pass `limit_start`.
+
+The response is returned as JSON Object and the listing is an array in with the key `data`.
+
+Response:
+
+```
+{
+ "data": [
+ {
+ "name": "000000012"
+ },
+ {
+ "name": "000000008"
+ }
+ ]
+}
+```
+
+By default, only the `name` field is included in the listing. To add more fields, you can pass the `fields` parameter with your GET request. `fields` has to be a JSON array containing the fieldnames.
+
+GET **/api/resource/Person/?fields=\["name","first\_name"\]**
+
+Response:
+
+```
+{
+ "data": [
+ {
+ "first_name": "Jane",
+ "name": "000000012"
+ },
+ {
+ "first_name": "John",
+ "name": "000000008"
+ }
+ ]
+}
+```
+
+You can filter the listing using SQL-conditions by passing the query parameter `filters`. `filters` has to be a JSON array containing one or multiple filters. Each condition is an array of the format, \[{doctype}, {field}, {operator}, {operand}\].
+
+For example, get the name (id) of all persons with firstname "Jane":
+
+GET **/api/resource/Person?filters=\[\["Person","first\_name","=","Jane"\]\]**
+
+Response:
+
+```
+ { "data": [ { "name": "000000012" } ] }
+```
+
+Authors: Rushabh Mehta ([\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection)), Raffael Meyer ([\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection))

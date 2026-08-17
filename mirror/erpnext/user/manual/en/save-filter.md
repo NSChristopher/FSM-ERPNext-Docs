@@ -1,0 +1,22 @@
+---
+title: "Save Filter"
+source_url: https://docs.frappe.io/erpnext/user/manual/en/save-filter
+upstream_updated: "26-02-2026 21:23:21"
+mirrored_from: docs.frappe.io (Frappe Wiki - not git-backed)
+---
+
+# Save Filter
+
+**Save Filter is a tool that will allow you to save a certain set of filters which are applied often in a document list or a report so that you can reuse them.**
+
+![Save Filter](https://docs.frappe.io/files/using-save-filter-1.png)
+
+To learn more about filters, checkout [Search Filter](https://docs.frappe.io/docs/v13/user/manual/en/using-erpnext/search-filter)
+
+Let's say, in purchase orders, you need to search for all the purchase orders where the Grand Total is more than ₹ 10000. However, as we know, there is no filter that is present for it out of the box.
+
+In this case, you can create a custom filter for it and save the same condition in the 'Save Filter' option for you to easily access this filter every time you open the Purchase Order list.
+
+To save a Custom Filter, you may go to the 'Save Filter' option in the Left Sidebar of the list or the report.
+
+![Save Filter](https://docs.frappe.io/files/using-save-filter-1.gif)
