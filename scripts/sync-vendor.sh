@@ -36,6 +36,15 @@ for name in $names; do
     fi
   done
 
+  # Upstream docs folders carry their static-site build scaffolding (VitePress config,
+  # lockfiles, branding assets). None of it is documentation, and a knowledge base that
+  # ships a pnpm lockfile is just clutter. Prose and the images the prose references stay.
+  find "$DEST/$name" -type d -name '.vitepress' -prune -exec rm -rf {} + 2>/dev/null || true
+  find "$DEST/$name" -type d -name 'public' -prune -exec rm -rf {} + 2>/dev/null || true
+  find "$DEST/$name" -type f \
+    \( -name '*.yaml' -o -name '*.yml' -o -name '*.mts' -o -name '*.ts' -o -name 'package.json' \) \
+    -delete 2>/dev/null || true
+
   count=$(find "$DEST/$name" -name '*.md' | wc -l | tr -d ' ')
   echo "    $count markdown files"
   entries="${entries}{\"name\":\"$name\",\"repo\":\"$repo\",\"ref\":\"$ref\",\"sha\":\"$sha\",\"markdown_files\":$count},"
