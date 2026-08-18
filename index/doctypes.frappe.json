@@ -1,16 +1,18 @@
 {
- "built_at": "2026-08-17",
+ "built_at": "2026-08-18",
  "pins": {
   "frappe": "v16.31.0",
   "erpnext": "v16.32.1"
  },
  "app": "frappe",
- "tag": "v16.31.0",
+ "installed": 1,
+ "ref": "v16.31.0",
  "count": 282,
  "doctypes": [
   {
    "name": "About Us Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 1,
@@ -104,6 +106,7 @@
   {
    "name": "About Us Team Member",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -150,6 +153,7 @@
   {
    "name": "Access Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -264,6 +268,7 @@
   {
    "name": "Activity Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -407,6 +412,7 @@
   {
    "name": "Address",
    "app": "frappe",
+   "installed": 1,
    "module": "Contacts",
    "istable": 0,
    "issingle": 0,
@@ -602,6 +608,7 @@
   {
    "name": "Address Template",
    "app": "frappe",
+   "installed": 1,
    "module": "Contacts",
    "istable": 0,
    "issingle": 0,
@@ -665,6 +672,7 @@
   {
    "name": "Amended Document Naming Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -715,6 +723,7 @@
   {
    "name": "API Request Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -775,6 +784,7 @@
   {
    "name": "Assignment Rule",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 0,
    "issingle": 0,
@@ -935,6 +945,7 @@
   {
    "name": "Assignment Rule Day",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 1,
    "issingle": 0,
@@ -967,6 +978,7 @@
   {
    "name": "Assignment Rule User",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 1,
    "issingle": 0,
@@ -1013,6 +1025,7 @@
   {
    "name": "Audit Trail",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -1080,6 +1093,7 @@
   {
    "name": "Auto Email Report",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -1273,6 +1287,7 @@
   {
    "name": "Auto Repeat",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 0,
    "issingle": 0,
@@ -1495,6 +1510,7 @@
   {
    "name": "Auto Repeat Day",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 1,
    "issingle": 0,
@@ -1530,6 +1546,7 @@
   {
    "name": "Auto Repeat User",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 1,
    "issingle": 0,
@@ -1570,6 +1587,7 @@
   {
    "name": "Block Module",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -1604,6 +1622,7 @@
   {
    "name": "Bulk Update",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 1,
@@ -1680,6 +1699,7 @@
   {
    "name": "Calendar View",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -1764,6 +1784,7 @@
   {
    "name": "Changelog Feed",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -1830,6 +1851,7 @@
   {
    "name": "Client Script",
    "app": "frappe",
+   "installed": 1,
    "module": "Custom",
    "istable": 0,
    "issingle": 0,
@@ -1924,6 +1946,7 @@
   {
    "name": "Color",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -1971,6 +1994,7 @@
   {
    "name": "Comment",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -2093,6 +2117,7 @@
   {
    "name": "Communication",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -2420,6 +2445,7 @@
   {
    "name": "Communication Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -2480,6 +2506,7 @@
   {
    "name": "Company History",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -2516,6 +2543,7 @@
   {
    "name": "Connected App",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -2640,6 +2668,7 @@
   {
    "name": "Console Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -2698,6 +2727,7 @@
   {
    "name": "Contact",
    "app": "frappe",
+   "installed": 1,
    "module": "Contacts",
    "istable": 0,
    "issingle": 0,
@@ -3032,6 +3062,7 @@
   {
    "name": "Contact Email",
    "app": "frappe",
+   "installed": 1,
    "module": "Contacts",
    "istable": 1,
    "issingle": 0,
@@ -3073,6 +3104,7 @@
   {
    "name": "Contact Phone",
    "app": "frappe",
+   "installed": 1,
    "module": "Contacts",
    "istable": 1,
    "issingle": 0,
@@ -3120,6 +3152,7 @@
   {
    "name": "Contact Us Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 1,
@@ -3241,6 +3274,7 @@
   {
    "name": "Country",
    "app": "frappe",
+   "installed": 1,
    "module": "Geo",
    "istable": 0,
    "issingle": 0,
@@ -3318,6 +3352,7 @@
   {
    "name": "Currency",
    "app": "frappe",
+   "installed": 1,
    "module": "Geo",
    "istable": 0,
    "issingle": 0,
@@ -3420,6 +3455,7 @@
   {
    "name": "Custom DocPerm",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -3581,6 +3617,7 @@
   {
    "name": "Custom Field",
    "app": "frappe",
+   "installed": 1,
    "module": "Custom",
    "istable": 0,
    "issingle": 0,
@@ -3968,6 +4005,7 @@
   {
    "name": "Custom HTML Block",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -4077,6 +4115,7 @@
   {
    "name": "Custom Role",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -4153,6 +4192,7 @@
   {
    "name": "Customize Form",
    "app": "frappe",
+   "installed": 1,
    "module": "Custom",
    "istable": 0,
    "issingle": 1,
@@ -4473,6 +4513,7 @@
   {
    "name": "Customize Form Field",
    "app": "frappe",
+   "installed": 1,
    "module": "Custom",
    "istable": 1,
    "issingle": 0,
@@ -4826,6 +4867,7 @@
   {
    "name": "Dashboard",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -4947,6 +4989,7 @@
   {
    "name": "Dashboard Chart",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -5238,6 +5281,7 @@
   {
    "name": "Dashboard Chart Field",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -5274,6 +5318,7 @@
   {
    "name": "Dashboard Chart Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -5318,6 +5363,7 @@
   {
    "name": "Dashboard Chart Source",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -5394,6 +5440,7 @@
   {
    "name": "Dashboard Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -5450,6 +5497,7 @@
   {
    "name": "Data Export",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -5516,6 +5564,7 @@
   {
    "name": "Data Import",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -5668,6 +5717,7 @@
   {
    "name": "Data Import Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -5751,6 +5801,7 @@
   {
    "name": "DefaultValue",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -5790,6 +5841,7 @@
   {
    "name": "Deleted Document",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -5853,6 +5905,7 @@
   {
    "name": "Desktop Icon",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -6016,6 +6069,7 @@
   {
    "name": "Desktop Layout",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -6085,6 +6139,7 @@
   {
    "name": "Desktop Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 1,
@@ -6129,6 +6184,7 @@
   {
    "name": "Discussion Reply",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -6184,6 +6240,7 @@
   {
    "name": "Discussion Topic",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -6245,6 +6302,7 @@
   {
    "name": "DocField",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -6640,6 +6698,7 @@
   {
    "name": "DocPerm",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -6782,6 +6841,7 @@
   {
    "name": "DocShare",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -6887,6 +6947,7 @@
   {
    "name": "DocType",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -7454,6 +7515,7 @@
   {
    "name": "DocType Action",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -7521,6 +7583,7 @@
   {
    "name": "DocType Layout",
    "app": "frappe",
+   "installed": 1,
    "module": "Custom",
    "istable": 0,
    "issingle": 0,
@@ -7604,6 +7667,7 @@
   {
    "name": "DocType Layout Field",
    "app": "frappe",
+   "installed": 1,
    "module": "Custom",
    "istable": 1,
    "issingle": 0,
@@ -7643,6 +7707,7 @@
   {
    "name": "DocType Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -7730,6 +7795,7 @@
   {
    "name": "DocType State",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -7780,6 +7846,7 @@
   {
    "name": "Doctype To Sync",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -7817,6 +7884,7 @@
   {
    "name": "Document Follow",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -7902,6 +7970,7 @@
   {
    "name": "Document Naming Rule",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -7998,6 +8067,7 @@
   {
    "name": "Document Naming Rule Condition",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -8047,6 +8117,7 @@
   {
    "name": "Document Naming Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -8158,6 +8229,7 @@
   {
    "name": "Document Share Key",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -8228,6 +8300,7 @@
   {
    "name": "Domain",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -8286,6 +8359,7 @@
   {
    "name": "Domain Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -8336,6 +8410,7 @@
   {
    "name": "DuckDB Sync",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -8440,6 +8515,7 @@
   {
    "name": "DuckDB Sync Item",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -8477,6 +8553,7 @@
   {
    "name": "Dynamic Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -8531,6 +8608,7 @@
   {
    "name": "Email Account",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -8968,6 +9046,7 @@
   {
    "name": "Email Domain",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9101,6 +9180,7 @@
   {
    "name": "Email Flag Queue",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9168,6 +9248,7 @@
   {
    "name": "Email Group",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9262,6 +9343,7 @@
   {
    "name": "Email Group Member",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9329,6 +9411,7 @@
   {
    "name": "Email Queue",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9510,6 +9593,7 @@
   {
    "name": "Email Queue Recipient",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 1,
    "issingle": 0,
@@ -9554,6 +9638,7 @@
   {
    "name": "Email Rule",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9603,6 +9688,7 @@
   {
    "name": "Email Template",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9670,6 +9756,7 @@
   {
    "name": "Email Unsubscribe",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -9740,6 +9827,7 @@
   {
    "name": "Error Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -9833,6 +9921,7 @@
   {
    "name": "Event",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -10126,6 +10215,7 @@
   {
    "name": "Event Notifications",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -10174,6 +10264,7 @@
   {
    "name": "Event Participants",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -10234,6 +10325,7 @@
   {
    "name": "File",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -10400,6 +10492,7 @@
   {
    "name": "Form Tour",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -10588,6 +10681,7 @@
   {
    "name": "Form Tour Step",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -10752,6 +10846,7 @@
   {
    "name": "Gender",
    "app": "frappe",
+   "installed": 1,
    "module": "Contacts",
    "istable": 0,
    "issingle": 0,
@@ -10801,6 +10896,7 @@
   {
    "name": "Geolocation Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 1,
@@ -10861,6 +10957,7 @@
   {
    "name": "Global Search DocType",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -10903,6 +11000,7 @@
   {
    "name": "Global Search Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 1,
@@ -10955,6 +11053,7 @@
   {
    "name": "Google Calendar",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -11082,6 +11181,7 @@
   {
    "name": "Google Contacts",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -11183,6 +11283,7 @@
   {
    "name": "Google Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 1,
@@ -11252,6 +11353,7 @@
   {
    "name": "Has Domain",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -11289,6 +11391,7 @@
   {
    "name": "Has Role",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -11326,6 +11429,7 @@
   {
    "name": "Help Article",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -11441,6 +11545,7 @@
   {
    "name": "Help Category",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -11510,6 +11615,7 @@
   {
    "name": "IMAP Folder",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 1,
    "issingle": 0,
@@ -11567,6 +11673,7 @@
   {
    "name": "Installed Application",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -11626,6 +11733,7 @@
   {
    "name": "Installed Applications",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -11675,6 +11783,7 @@
   {
    "name": "Integration Request",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -11800,6 +11909,7 @@
   {
    "name": "Kanban Board",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -11919,6 +12029,7 @@
   {
    "name": "Kanban Board Column",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -11969,6 +12080,7 @@
   {
    "name": "Language",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -12070,6 +12182,7 @@
   {
    "name": "LDAP Group Mapping",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 1,
    "issingle": 0,
@@ -12117,6 +12230,7 @@
   {
    "name": "LDAP Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 1,
@@ -12344,6 +12458,7 @@
   {
    "name": "Letter Head",
    "app": "frappe",
+   "installed": 1,
    "module": "Printing",
    "istable": 0,
    "issingle": 0,
@@ -12485,6 +12600,7 @@
   {
    "name": "List Filter",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -12555,6 +12671,7 @@
   {
    "name": "List View Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -12647,6 +12764,7 @@
   {
    "name": "Log Setting User",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -12688,6 +12806,7 @@
   {
    "name": "Log Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -12736,6 +12855,7 @@
   {
    "name": "Logs To Clear",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -12784,6 +12904,7 @@
   {
    "name": "Milestone",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 0,
    "issingle": 0,
@@ -12872,6 +12993,7 @@
   {
    "name": "Milestone Tracker",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 0,
    "issingle": 0,
@@ -12939,6 +13061,7 @@
   {
    "name": "Module Def",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -13094,6 +13217,7 @@
   {
    "name": "Module Onboarding",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -13195,6 +13319,7 @@
   {
    "name": "Module Profile",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -13262,6 +13387,7 @@
   {
    "name": "Navbar Item",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -13333,6 +13459,7 @@
   {
    "name": "Navbar Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -13401,6 +13528,7 @@
   {
    "name": "Network Printer Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Printing",
    "istable": 0,
    "issingle": 0,
@@ -13473,6 +13601,7 @@
   {
    "name": "Note",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -13589,6 +13718,7 @@
   {
    "name": "Note Seen By",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -13626,6 +13756,7 @@
   {
    "name": "Notification",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -13907,6 +14038,7 @@
   {
    "name": "Notification Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -14044,6 +14176,7 @@
   {
    "name": "Notification Recipient",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 1,
    "issingle": 0,
@@ -14101,6 +14234,7 @@
   {
    "name": "Notification Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -14227,6 +14361,7 @@
   {
    "name": "Notification Subscribed Document",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -14267,6 +14402,7 @@
   {
    "name": "Notification Type",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -14321,6 +14457,7 @@
   {
    "name": "Notification Type Preference",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -14361,6 +14498,7 @@
   {
    "name": "Number Card",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -14572,6 +14710,7 @@
   {
    "name": "Number Card Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -14609,6 +14748,7 @@
   {
    "name": "OAuth Authorization Code",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -14720,6 +14860,7 @@
   {
    "name": "OAuth Bearer Token",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -14818,6 +14959,7 @@
   {
    "name": "OAuth Client",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -14981,6 +15123,7 @@
   {
    "name": "OAuth Client Role",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 1,
    "issingle": 0,
@@ -15018,6 +15161,7 @@
   {
    "name": "OAuth Provider Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 1,
@@ -15061,6 +15205,7 @@
   {
    "name": "OAuth Scope",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 1,
    "issingle": 0,
@@ -15092,6 +15237,7 @@
   {
    "name": "OAuth Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 1,
@@ -15191,6 +15337,7 @@
   {
    "name": "Onboarding Permission",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -15231,6 +15378,7 @@
   {
    "name": "Onboarding Step",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -15429,6 +15577,7 @@
   {
    "name": "Onboarding Step Map",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -15469,6 +15618,7 @@
   {
    "name": "Package",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -15543,6 +15693,7 @@
   {
    "name": "Package Import",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -15605,6 +15756,7 @@
   {
    "name": "Package Release",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -15690,6 +15842,7 @@
   {
    "name": "Page",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -15802,6 +15955,7 @@
   {
    "name": "Patch Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -15863,6 +16017,7 @@
   {
    "name": "Permission Inspector",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -15939,6 +16094,7 @@
   {
    "name": "Permission Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -16043,6 +16199,7 @@
   {
    "name": "Permission Type",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -16103,6 +16260,7 @@
   {
    "name": "Personal Data Deletion Request",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -16177,6 +16335,7 @@
   {
    "name": "Personal Data Deletion Step",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -16238,6 +16397,7 @@
   {
    "name": "Personal Data Download Request",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -16314,6 +16474,7 @@
   {
    "name": "Portal Menu Item",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -16388,6 +16549,7 @@
   {
    "name": "Portal Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 1,
@@ -16468,6 +16630,7 @@
   {
    "name": "Prepared Report",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -16577,6 +16740,7 @@
   {
    "name": "Print Format",
    "app": "frappe",
+   "installed": 1,
    "module": "Printing",
    "istable": 0,
    "issingle": 0,
@@ -16812,6 +16976,7 @@
   {
    "name": "Print Format Field Template",
    "app": "frappe",
+   "installed": 1,
    "module": "Printing",
    "istable": 0,
    "issingle": 0,
@@ -16897,6 +17062,7 @@
   {
    "name": "Print Heading",
    "app": "frappe",
+   "installed": 1,
    "module": "Printing",
    "istable": 0,
    "issingle": 0,
@@ -16953,6 +17119,7 @@
   {
    "name": "Print Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Printing",
    "istable": 0,
    "issingle": 1,
@@ -17089,6 +17256,7 @@
   {
    "name": "Print Style",
    "app": "frappe",
+   "installed": 1,
    "module": "Printing",
    "istable": 0,
    "issingle": 0,
@@ -17162,6 +17330,7 @@
   {
    "name": "Property Setter",
    "app": "frappe",
+   "installed": 1,
    "module": "Custom",
    "istable": 0,
    "issingle": 0,
@@ -17282,6 +17451,7 @@
   {
    "name": "Push Notification Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 1,
@@ -17335,6 +17505,7 @@
   {
    "name": "Query Parameters",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 1,
    "issingle": 0,
@@ -17376,6 +17547,7 @@
   {
    "name": "Recorder",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -17513,6 +17685,7 @@
   {
    "name": "Recorder Event",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -17599,6 +17772,7 @@
   {
    "name": "Recorder Query",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -17667,6 +17841,7 @@
   {
    "name": "Recorder Suggested Index",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -17703,6 +17878,7 @@
   {
    "name": "Reminder",
    "app": "frappe",
+   "installed": 1,
    "module": "Automation",
    "istable": 0,
    "issingle": 0,
@@ -17794,6 +17970,7 @@
   {
    "name": "Reply To Address",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 1,
    "issingle": 0,
@@ -17833,6 +18010,7 @@
   {
    "name": "Report",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -18069,6 +18247,7 @@
   {
    "name": "Report Column",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -18128,6 +18307,7 @@
   {
    "name": "Report Filter",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -18199,6 +18379,7 @@
   {
    "name": "Role",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -18286,6 +18467,7 @@
   {
    "name": "Role Permission for Page and Report",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -18372,6 +18554,7 @@
   {
    "name": "Role Profile",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -18449,6 +18632,7 @@
   {
    "name": "Role Replication",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -18502,6 +18686,7 @@
   {
    "name": "Route History",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -18556,6 +18741,7 @@
   {
    "name": "RQ Job",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -18655,6 +18841,7 @@
   {
    "name": "RQ Worker",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -18759,6 +18946,7 @@
   {
    "name": "Salutation",
    "app": "frappe",
+   "installed": 1,
    "module": "Contacts",
    "istable": 0,
    "issingle": 0,
@@ -18820,6 +19008,7 @@
   {
    "name": "Scheduled Job Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -18895,6 +19084,7 @@
   {
    "name": "Scheduled Job Type",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -19011,6 +19201,7 @@
   {
    "name": "Scheduler Event",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -19069,6 +19260,7 @@
   {
    "name": "Security Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -19144,6 +19336,7 @@
   {
    "name": "Security Settings Contact",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -19186,6 +19379,7 @@
   {
    "name": "Security Settings Language",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -19226,6 +19420,7 @@
   {
    "name": "Server Script",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -19361,6 +19556,7 @@
   {
    "name": "Session Default",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -19401,6 +19597,7 @@
   {
    "name": "Session Default Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -19449,6 +19646,7 @@
   {
    "name": "Sidebar Item Group",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -19517,6 +19715,7 @@
   {
    "name": "Sidebar Item Group Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -19554,6 +19753,7 @@
   {
    "name": "Slack Webhook URL",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -19615,6 +19815,7 @@
   {
    "name": "SMS Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -19691,6 +19892,7 @@
   {
    "name": "SMS Parameter",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -19738,6 +19940,7 @@
   {
    "name": "SMS Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -19811,6 +20014,7 @@
   {
    "name": "Social Link Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -19853,6 +20057,7 @@
   {
    "name": "Social Login Key",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -19989,6 +20194,7 @@
   {
    "name": "Submission Queue",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -20092,6 +20298,7 @@
   {
    "name": "Success Action",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -20174,6 +20381,7 @@
   {
    "name": "System Console",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 1,
@@ -20240,6 +20448,7 @@
   {
    "name": "System Health Report",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 1,
@@ -20478,6 +20687,7 @@
   {
    "name": "System Health Report Errors",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -20514,6 +20724,7 @@
   {
    "name": "System Health Report Failing Jobs",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -20556,6 +20767,7 @@
   {
    "name": "System Health Report Queue",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -20592,6 +20804,7 @@
   {
    "name": "System Health Report Tables",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -20628,6 +20841,7 @@
   {
    "name": "System Health Report Workers",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -20674,6 +20888,7 @@
   {
    "name": "System Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 1,
@@ -21226,6 +21441,7 @@
   {
    "name": "Tag",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -21281,6 +21497,7 @@
   {
    "name": "Tag Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -21367,6 +21584,7 @@
   {
    "name": "ToDo",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -21519,6 +21737,7 @@
   {
    "name": "Token Cache",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -21634,6 +21853,7 @@
   {
    "name": "Top Bar Item",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -21690,6 +21910,7 @@
   {
    "name": "Translation",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -21796,6 +22017,7 @@
   {
    "name": "Unhandled Email",
    "app": "frappe",
+   "installed": 1,
    "module": "Email",
    "istable": 0,
    "issingle": 0,
@@ -21858,6 +22080,7 @@
   {
    "name": "User",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -22467,6 +22690,7 @@
   {
    "name": "User Document Type",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -22574,6 +22798,7 @@
   {
    "name": "User Email",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -22642,6 +22867,7 @@
   {
    "name": "User Group",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -22699,6 +22925,7 @@
   {
    "name": "User Group Member",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -22739,6 +22966,7 @@
   {
    "name": "User Invitation",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -22869,6 +23097,7 @@
   {
    "name": "User Permission",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -22971,6 +23200,7 @@
   {
    "name": "User Role",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -23011,6 +23241,7 @@
   {
    "name": "User Role Profile",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -23048,6 +23279,7 @@
   {
    "name": "User Select Document Type",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -23088,6 +23320,7 @@
   {
    "name": "User Session Display",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -23150,6 +23383,7 @@
   {
    "name": "User Social Login",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -23194,6 +23428,7 @@
   {
    "name": "User Type",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -23318,6 +23553,7 @@
   {
    "name": "User Type Module",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 1,
    "issingle": 0,
@@ -23358,6 +23594,7 @@
   {
    "name": "UTM Campaign",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -23435,6 +23672,7 @@
   {
    "name": "UTM Medium",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -23505,6 +23743,7 @@
   {
    "name": "UTM Source",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -23575,6 +23814,7 @@
   {
    "name": "Version",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -23640,6 +23880,7 @@
   {
    "name": "View Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Core",
    "istable": 0,
    "issingle": 0,
@@ -23701,6 +23942,7 @@
   {
    "name": "Web Form",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -24007,6 +24249,7 @@
   {
    "name": "Web Form Field",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -24132,6 +24375,7 @@
   {
    "name": "Web Form List Column",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -24182,6 +24426,7 @@
   {
    "name": "Web Form Request",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -24277,6 +24522,7 @@
   {
    "name": "Web Page",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -24508,6 +24754,7 @@
   {
    "name": "Web Page Block",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -24620,6 +24867,7 @@
   {
    "name": "Web Page View",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -24728,6 +24976,7 @@
   {
    "name": "Web Template",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -24808,6 +25057,7 @@
   {
    "name": "Web Template Field",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -24872,6 +25122,7 @@
   {
    "name": "Webhook",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -25027,6 +25278,7 @@
   {
    "name": "Webhook Data",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 1,
    "issingle": 0,
@@ -25068,6 +25320,7 @@
   {
    "name": "Webhook Header",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 1,
    "issingle": 0,
@@ -25104,6 +25357,7 @@
   {
    "name": "Webhook Request Log",
    "app": "frappe",
+   "installed": 1,
    "module": "Integrations",
    "istable": 0,
    "issingle": 0,
@@ -25210,6 +25464,7 @@
   {
    "name": "Website Meta Tag",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -25251,6 +25506,7 @@
   {
    "name": "Website Route Meta",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -25304,6 +25560,7 @@
   {
    "name": "Website Route Redirect",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -25358,6 +25615,7 @@
   {
    "name": "Website Script",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 1,
@@ -25400,6 +25658,7 @@
   {
    "name": "Website Settings",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 1,
@@ -25730,6 +25989,7 @@
   {
    "name": "Website Sidebar",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -25791,6 +26051,7 @@
   {
    "name": "Website Sidebar Item",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -25835,6 +26096,7 @@
   {
    "name": "Website Slideshow",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -25898,6 +26160,7 @@
   {
    "name": "Website Slideshow Item",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -25944,6 +26207,7 @@
   {
    "name": "Website Theme",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 0,
    "issingle": 0,
@@ -26142,6 +26406,7 @@
   {
    "name": "Website Theme Ignore App",
    "app": "frappe",
+   "installed": 1,
    "module": "Website",
    "istable": 1,
    "issingle": 0,
@@ -26176,6 +26441,7 @@
   {
    "name": "Workflow",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 0,
    "issingle": 0,
@@ -26294,6 +26560,7 @@
   {
    "name": "Workflow Action",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 0,
    "issingle": 0,
@@ -26400,6 +26667,7 @@
   {
    "name": "Workflow Action Master",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 0,
    "issingle": 0,
@@ -26446,6 +26714,7 @@
   {
    "name": "Workflow Action Permitted Role",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 1,
    "issingle": 0,
@@ -26483,6 +26752,7 @@
   {
    "name": "Workflow Document State",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 1,
    "issingle": 0,
@@ -26597,6 +26867,7 @@
   {
    "name": "Workflow State",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 0,
    "issingle": 0,
@@ -26659,6 +26930,7 @@
   {
    "name": "Workflow Transition",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 1,
    "issingle": 0,
@@ -26769,6 +27041,7 @@
   {
    "name": "Workflow Transition Task",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 1,
    "issingle": 0,
@@ -26821,6 +27094,7 @@
   {
    "name": "Workflow Transition Tasks",
    "app": "frappe",
+   "installed": 1,
    "module": "Workflow",
    "istable": 0,
    "issingle": 0,
@@ -26871,6 +27145,7 @@
   {
    "name": "Workspace",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -27119,6 +27394,7 @@
   {
    "name": "Workspace Chart",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -27164,6 +27440,7 @@
   {
    "name": "Workspace Custom Block",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -27206,6 +27483,7 @@
   {
    "name": "Workspace Link",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -27322,6 +27600,7 @@
   {
    "name": "Workspace Number Card",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -27367,6 +27646,7 @@
   {
    "name": "Workspace Quick List",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -27420,6 +27700,7 @@
   {
    "name": "Workspace Shortcut",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,
@@ -27532,6 +27813,7 @@
   {
    "name": "Workspace Sidebar",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 0,
    "issingle": 0,
@@ -27644,6 +27926,7 @@
   {
    "name": "Workspace Sidebar Item",
    "app": "frappe",
+   "installed": 1,
    "module": "Desk",
    "istable": 1,
    "issingle": 0,

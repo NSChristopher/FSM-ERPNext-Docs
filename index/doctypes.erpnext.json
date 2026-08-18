@@ -1,16 +1,18 @@
 {
- "built_at": "2026-08-17",
+ "built_at": "2026-08-18",
  "pins": {
   "frappe": "v16.31.0",
   "erpnext": "v16.32.1"
  },
  "app": "erpnext",
- "tag": "v16.32.1",
+ "installed": 1,
+ "ref": "v16.32.1",
  "count": 529,
  "doctypes": [
   {
    "name": "Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -223,6 +225,7 @@
   {
    "name": "Account Category",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -304,6 +307,7 @@
   {
    "name": "Account Closing Balance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -476,6 +480,7 @@
   {
    "name": "Accounting Dimension",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -572,6 +577,7 @@
   {
    "name": "Accounting Dimension Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -655,6 +661,7 @@
   {
    "name": "Accounting Dimension Filter",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -788,6 +795,7 @@
   {
    "name": "Accounting Period",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -916,6 +924,7 @@
   {
    "name": "Accounts Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -1375,6 +1384,7 @@
   {
    "name": "Activity Cost",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -1474,6 +1484,7 @@
   {
    "name": "Activity Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -1564,6 +1575,7 @@
   {
    "name": "Advance Payment Ledger Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -1710,6 +1722,7 @@
   {
    "name": "Advance Taxes and Charges",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -1877,6 +1890,7 @@
   {
    "name": "Allowed Dimension",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -1921,6 +1935,7 @@
   {
    "name": "Allowed To Transact With",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -1961,6 +1976,7 @@
   {
    "name": "Applicable On Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -2007,6 +2023,7 @@
   {
    "name": "Appointment",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -2176,6 +2193,7 @@
   {
    "name": "Appointment Booking Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 1,
@@ -2329,6 +2347,7 @@
   {
    "name": "Appointment Booking Slots",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -2378,6 +2397,7 @@
   {
    "name": "Asset",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -2870,6 +2890,7 @@
   {
    "name": "Asset Activity",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -2966,6 +2987,7 @@
   {
    "name": "Asset Capitalization",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -3219,6 +3241,7 @@
   {
    "name": "Asset Capitalization Asset Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -3340,6 +3363,7 @@
   {
    "name": "Asset Capitalization Service Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -3436,6 +3460,7 @@
   {
    "name": "Asset Capitalization Stock Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -3580,6 +3605,7 @@
   {
    "name": "Asset Category",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -3687,6 +3713,7 @@
   {
    "name": "Asset Category Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -3769,6 +3796,7 @@
   {
    "name": "Asset Depreciation Schedule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -3984,6 +4012,7 @@
   {
    "name": "Asset Finance Book",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -4098,6 +4127,7 @@
   {
    "name": "Asset Maintenance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -4228,6 +4258,7 @@
   {
    "name": "Asset Maintenance Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -4395,6 +4426,7 @@
   {
    "name": "Asset Maintenance Task",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -4502,6 +4534,7 @@
   {
    "name": "Asset Maintenance Team",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -4591,6 +4624,7 @@
   {
    "name": "Asset Movement",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -4733,6 +4767,7 @@
   {
    "name": "Asset Movement Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -4831,6 +4866,7 @@
   {
    "name": "Asset Repair",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -5047,6 +5083,7 @@
   {
    "name": "Asset Repair Consumed Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -5136,6 +5173,7 @@
   {
    "name": "Asset Repair Purchase Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -5194,6 +5232,7 @@
   {
    "name": "Asset Shift Allocation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -5303,6 +5342,7 @@
   {
    "name": "Asset Shift Factor",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -5376,6 +5416,7 @@
   {
    "name": "Asset Value Adjustment",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -5559,6 +5600,7 @@
   {
    "name": "Authorization Control",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 1,
@@ -5584,6 +5626,7 @@
   {
    "name": "Authorization Rule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -5729,6 +5772,7 @@
   {
    "name": "Availability Of Slots",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -5778,6 +5822,7 @@
   {
    "name": "Bank",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -5855,6 +5900,7 @@
   {
    "name": "Bank Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -6088,6 +6134,7 @@
   {
    "name": "Bank Account Balance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -6199,6 +6246,7 @@
   {
    "name": "Bank Account Subtype",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -6268,6 +6316,7 @@
   {
    "name": "Bank Account Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -6337,6 +6386,7 @@
   {
    "name": "Bank Clearance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -6443,6 +6493,7 @@
   {
    "name": "Bank Clearance Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -6521,6 +6572,7 @@
   {
    "name": "Bank Guarantee",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -6753,6 +6805,7 @@
   {
    "name": "Bank Reconciliation Tool",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -6861,6 +6914,7 @@
   {
    "name": "Bank Statement Import",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -7057,6 +7111,7 @@
   {
    "name": "Bank Statement Import Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -7234,6 +7289,7 @@
   {
    "name": "Bank Statement Import Log Column Map",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -7288,6 +7344,7 @@
   {
    "name": "Bank Transaction",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -7542,6 +7599,7 @@
   {
    "name": "Bank Transaction Mapping",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -7583,6 +7641,7 @@
   {
    "name": "Bank Transaction Payments",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -7652,6 +7711,7 @@
   {
    "name": "Bank Transaction Rule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -7831,6 +7891,7 @@
   {
    "name": "Bank Transaction Rule Accounts",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -7902,6 +7963,7 @@
   {
    "name": "Bank Transaction Rule Description Conditions",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -7944,6 +8006,7 @@
   {
    "name": "Batch",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -8122,6 +8185,7 @@
   {
    "name": "Bin",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -8312,6 +8376,7 @@
   {
    "name": "Bisect Accounting Statements",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -8417,6 +8482,7 @@
   {
    "name": "Bisect Nodes",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -8518,6 +8584,7 @@
   {
    "name": "Blanket Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -8684,6 +8751,7 @@
   {
    "name": "Blanket Order Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -8758,6 +8826,7 @@
   {
    "name": "BOM",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -9251,6 +9320,7 @@
   {
    "name": "BOM Creator",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -9512,6 +9582,7 @@
   {
    "name": "BOM Creator Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -9715,6 +9786,7 @@
   {
    "name": "BOM Explosion Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -9857,6 +9929,7 @@
   {
    "name": "BOM Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -10095,6 +10168,7 @@
   {
    "name": "BOM Operation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -10326,6 +10400,7 @@
   {
    "name": "BOM Secondary Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -10498,6 +10573,7 @@
   {
    "name": "BOM Update Batch",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -10547,6 +10623,7 @@
   {
    "name": "BOM Update Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -10675,6 +10752,7 @@
   {
    "name": "BOM Update Tool",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 1,
@@ -10745,6 +10823,7 @@
   {
    "name": "BOM Website Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -10803,6 +10882,7 @@
   {
    "name": "BOM Website Operation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -10870,6 +10950,7 @@
   {
    "name": "Branch",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -10928,6 +11009,7 @@
   {
    "name": "Brand",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -11026,6 +11108,7 @@
   {
    "name": "Budget",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -11303,6 +11386,7 @@
   {
    "name": "Budget Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -11351,6 +11435,7 @@
   {
    "name": "Budget Distribution",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -11408,6 +11493,7 @@
   {
    "name": "Bulk Transaction Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Bulk Transaction",
    "istable": 0,
    "issingle": 0,
@@ -11471,6 +11557,7 @@
   {
    "name": "Bulk Transaction Log Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Bulk Transaction",
    "istable": 0,
    "issingle": 0,
@@ -11570,6 +11657,7 @@
   {
    "name": "Buying Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 1,
@@ -11834,6 +11922,7 @@
   {
    "name": "Call Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Telephony",
    "istable": 0,
    "issingle": 0,
@@ -12000,6 +12089,7 @@
   {
    "name": "Campaign",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -12087,6 +12177,7 @@
   {
    "name": "Campaign Email Schedule",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -12134,6 +12225,7 @@
   {
    "name": "Campaign Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -12171,6 +12263,7 @@
   {
    "name": "Cashier Closing",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -12308,6 +12401,7 @@
   {
    "name": "Cashier Closing Payments",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -12354,6 +12448,7 @@
   {
    "name": "Chart of Accounts Importer",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -12409,6 +12504,7 @@
   {
    "name": "Cheque Print Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -12623,6 +12719,7 @@
   {
    "name": "Closed Document",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -12669,6 +12766,7 @@
   {
    "name": "Code List",
    "app": "erpnext",
+   "installed": 1,
    "module": "EDI",
    "istable": 0,
    "issingle": 0,
@@ -12761,6 +12859,7 @@
   {
    "name": "Common Code",
    "app": "erpnext",
+   "installed": 1,
    "module": "EDI",
    "istable": 0,
    "issingle": 0,
@@ -12855,6 +12954,7 @@
   {
    "name": "Communication Medium",
    "app": "erpnext",
+   "installed": 1,
    "module": "Communication",
    "istable": 0,
    "issingle": 0,
@@ -12946,6 +13046,7 @@
   {
    "name": "Communication Medium Timeslot",
    "app": "erpnext",
+   "installed": 1,
    "module": "Communication",
    "istable": 1,
    "issingle": 0,
@@ -13008,6 +13109,7 @@
   {
    "name": "Company",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -13875,6 +13977,7 @@
   {
    "name": "Competitor",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -13951,6 +14054,7 @@
   {
    "name": "Competitor Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -13991,6 +14095,7 @@
   {
    "name": "Contract",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -14237,6 +14342,7 @@
   {
    "name": "Contract Fulfilment Checklist",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -14291,6 +14397,7 @@
   {
    "name": "Contract Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -14385,6 +14492,7 @@
   {
    "name": "Contract Template Fulfilment Terms",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -14416,6 +14524,7 @@
   {
    "name": "Cost Center",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -14562,6 +14671,7 @@
   {
    "name": "Cost Center Allocation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -14692,6 +14802,7 @@
   {
    "name": "Cost Center Allocation Percentage",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -14739,6 +14850,7 @@
   {
    "name": "Coupon Code",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -14903,6 +15015,7 @@
   {
    "name": "CRM Note",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -14950,6 +15063,7 @@
   {
    "name": "CRM Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 1,
@@ -15080,6 +15194,7 @@
   {
    "name": "Currency Exchange",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -15191,6 +15306,7 @@
   {
    "name": "Currency Exchange Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -15299,6 +15415,7 @@
   {
    "name": "Currency Exchange Settings Details",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -15340,6 +15457,7 @@
   {
    "name": "Currency Exchange Settings Result",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -15374,6 +15492,7 @@
   {
    "name": "Customer",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -15887,6 +16006,7 @@
   {
    "name": "Customer Credit Limit",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 1,
    "issingle": 0,
@@ -15941,6 +16061,7 @@
   {
    "name": "Customer Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -16113,6 +16234,7 @@
   {
    "name": "Customer Group Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -16150,6 +16272,7 @@
   {
    "name": "Customer Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -16187,6 +16310,7 @@
   {
    "name": "Customer Number At Supplier",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -16229,6 +16353,7 @@
   {
    "name": "Customs Tariff Number",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -16291,6 +16416,7 @@
   {
    "name": "Delivery Note",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -17271,6 +17397,7 @@
   {
    "name": "Delivery Note Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -17861,6 +17988,7 @@
   {
    "name": "Delivery Schedule Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -18010,6 +18138,7 @@
   {
    "name": "Delivery Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 1,
@@ -18079,6 +18208,7 @@
   {
    "name": "Delivery Stop",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -18225,6 +18355,7 @@
   {
    "name": "Delivery Trip",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -18459,6 +18590,7 @@
   {
    "name": "Department",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -18587,6 +18719,7 @@
   {
    "name": "Dependent Task",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 1,
    "issingle": 0,
@@ -18624,6 +18757,7 @@
   {
    "name": "Depreciation Schedule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -18700,6 +18834,7 @@
   {
    "name": "Designation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -18766,6 +18901,7 @@
   {
    "name": "Discounted Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -18840,6 +18976,7 @@
   {
    "name": "Downtime Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -18970,6 +19107,7 @@
   {
    "name": "Driver",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -19128,6 +19266,7 @@
   {
    "name": "Driving License Category",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -19174,6 +19313,7 @@
   {
    "name": "Dunning",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -19520,6 +19660,7 @@
   {
    "name": "Dunning Letter Text",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -19573,6 +19714,7 @@
   {
    "name": "Dunning Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -19711,6 +19853,7 @@
   {
    "name": "Email Campaign",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -19812,6 +19955,7 @@
   {
    "name": "Email Digest",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -20051,6 +20195,7 @@
   {
    "name": "Email Digest Recipient",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -20091,6 +20236,7 @@
   {
    "name": "Employee",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -20611,6 +20757,7 @@
   {
    "name": "Employee Education",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -20668,6 +20815,7 @@
   {
    "name": "Employee External Work History",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -20725,6 +20873,7 @@
   {
    "name": "Employee Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -20800,6 +20949,7 @@
   {
    "name": "Employee Group Table",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -20848,6 +20998,7 @@
   {
    "name": "Employee Internal Work History",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -20915,6 +21066,7 @@
   {
    "name": "Exchange Rate Revaluation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -21065,6 +21217,7 @@
   {
    "name": "Exchange Rate Revaluation Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -21186,6 +21339,7 @@
   {
    "name": "Finance Book",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -21249,6 +21403,7 @@
   {
    "name": "Financial Report Row",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -21360,6 +21515,7 @@
   {
    "name": "Financial Report Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -21452,6 +21608,7 @@
   {
    "name": "Fiscal Year",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -21579,6 +21736,7 @@
   {
    "name": "Fiscal Year Company",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -21619,6 +21777,7 @@
   {
    "name": "Frappe CRM Allowed User",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -21659,6 +21818,7 @@
   {
    "name": "GL Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -21956,6 +22116,7 @@
   {
    "name": "Global Defaults",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 1,
@@ -22071,6 +22232,7 @@
   {
    "name": "Holiday",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -22124,6 +22286,7 @@
   {
    "name": "Holiday List",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -22250,6 +22413,7 @@
   {
    "name": "Import Supplier Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Regional",
    "istable": 0,
    "issingle": 0,
@@ -22363,6 +22527,7 @@
   {
    "name": "Incoming Call Handling Schedule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Telephony",
    "istable": 1,
    "issingle": 0,
@@ -22427,6 +22592,7 @@
   {
    "name": "Incoming Call Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Telephony",
    "istable": 0,
    "issingle": 0,
@@ -22502,6 +22668,7 @@
   {
    "name": "Incoterm",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -22665,6 +22832,7 @@
   {
    "name": "Industry Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -22728,6 +22896,7 @@
   {
    "name": "Installation Note",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -22946,6 +23115,7 @@
   {
    "name": "Installation Note Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 1,
    "issingle": 0,
@@ -23035,6 +23205,7 @@
   {
    "name": "Inventory Dimension",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -23181,6 +23352,7 @@
   {
    "name": "Invoice Discounting",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -23377,6 +23549,7 @@
   {
    "name": "Issue",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 0,
    "issingle": 0,
@@ -23678,6 +23851,7 @@
   {
    "name": "Issue Priority",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 0,
    "issingle": 0,
@@ -23722,6 +23896,7 @@
   {
    "name": "Issue Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 0,
    "issingle": 0,
@@ -23778,6 +23953,7 @@
   {
    "name": "Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -24425,6 +24601,7 @@
   {
    "name": "Item Alternative",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -24525,6 +24702,7 @@
   {
    "name": "Item Attribute",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -24611,6 +24789,7 @@
   {
    "name": "Item Attribute Value",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -24652,6 +24831,7 @@
   {
    "name": "Item Barcode",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -24704,6 +24884,7 @@
   {
    "name": "Item Customer Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -24759,6 +24940,7 @@
   {
    "name": "Item Default",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -24980,6 +25162,7 @@
   {
    "name": "Item Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -25139,6 +25322,7 @@
   {
    "name": "Item Lead Time",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -25259,6 +25443,7 @@
   {
    "name": "Item Manufacturer",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -25373,6 +25558,7 @@
   {
    "name": "Item Price",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -25581,6 +25767,7 @@
   {
    "name": "Item Quality Inspection Parameter",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -25665,6 +25852,7 @@
   {
    "name": "Item Reorder",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -25733,6 +25921,7 @@
   {
    "name": "Item Supplier",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -25778,6 +25967,7 @@
   {
    "name": "Item Tax",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -25843,6 +26033,7 @@
   {
    "name": "Item Tax Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -25943,6 +26134,7 @@
   {
    "name": "Item Tax Template Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -25994,6 +26186,7 @@
   {
    "name": "Item Variant",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -26041,6 +26234,7 @@
   {
    "name": "Item Variant Attribute",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -26123,6 +26317,7 @@
   {
    "name": "Item Variant Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 1,
@@ -26197,6 +26392,7 @@
   {
    "name": "Item Website Specification",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -26233,6 +26429,7 @@
   {
    "name": "Item Wise Tax Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -26291,6 +26488,7 @@
   {
    "name": "Job Card",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -26847,6 +27045,7 @@
   {
    "name": "Job Card Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -26963,6 +27162,7 @@
   {
    "name": "Job Card Operation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -27021,6 +27221,7 @@
   {
    "name": "Job Card Scheduled Time",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -27062,6 +27263,7 @@
   {
    "name": "Job Card Secondary Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -27146,6 +27348,7 @@
   {
    "name": "Job Card Time Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -27214,6 +27417,7 @@
   {
    "name": "Journal Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -27700,6 +27904,7 @@
   {
    "name": "Journal Entry Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -27900,6 +28105,7 @@
   {
    "name": "Journal Entry Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -28022,6 +28228,7 @@
   {
    "name": "Journal Entry Template Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -28098,6 +28305,7 @@
   {
    "name": "Landed Cost Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -28218,6 +28426,7 @@
   {
    "name": "Landed Cost Purchase Receipt",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -28286,6 +28495,7 @@
   {
    "name": "Landed Cost Taxes and Charges",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -28397,6 +28607,7 @@
   {
    "name": "Landed Cost Vendor Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -28441,6 +28652,7 @@
   {
    "name": "Landed Cost Voucher",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -28599,6 +28811,7 @@
   {
    "name": "Lead",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -28994,6 +29207,7 @@
   {
    "name": "Ledger Health",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -29060,6 +29274,7 @@
   {
    "name": "Ledger Health Monitor",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -29155,6 +29370,7 @@
   {
    "name": "Ledger Health Monitor Company",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -29192,6 +29408,7 @@
   {
    "name": "Ledger Merge",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -29314,6 +29531,7 @@
   {
    "name": "Ledger Merge Accounts",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -29369,6 +29587,7 @@
   {
    "name": "Linked Location",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -29409,6 +29628,7 @@
   {
    "name": "Location",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 0,
    "issingle": 0,
@@ -29568,6 +29788,7 @@
   {
    "name": "Lost Reason Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -29605,6 +29826,7 @@
   {
    "name": "Lower Deduction Certificate",
    "app": "erpnext",
+   "installed": 1,
    "module": "Regional",
    "istable": 0,
    "issingle": 0,
@@ -29761,6 +29983,7 @@
   {
    "name": "Loyalty Point Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -29914,6 +30137,7 @@
   {
    "name": "Loyalty Point Entry Redemption",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -29955,6 +30179,7 @@
   {
    "name": "Loyalty Program",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -30111,6 +30336,7 @@
   {
    "name": "Loyalty Program Collection",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -30157,6 +30383,7 @@
   {
    "name": "Maintenance Schedule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Maintenance",
    "istable": 0,
    "issingle": 0,
@@ -30369,6 +30596,7 @@
   {
    "name": "Maintenance Schedule Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Maintenance",
    "istable": 1,
    "issingle": 0,
@@ -30462,6 +30690,7 @@
   {
    "name": "Maintenance Schedule Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Maintenance",
    "istable": 1,
    "issingle": 0,
@@ -30578,6 +30807,7 @@
   {
    "name": "Maintenance Team Member",
    "app": "erpnext",
+   "installed": 1,
    "module": "Assets",
    "istable": 1,
    "issingle": 0,
@@ -30637,6 +30867,7 @@
   {
    "name": "Maintenance Visit",
    "app": "erpnext",
+   "installed": 1,
    "module": "Maintenance",
    "istable": 0,
    "issingle": 0,
@@ -30879,6 +31110,7 @@
   {
    "name": "Maintenance Visit Purpose",
    "app": "erpnext",
+   "installed": 1,
    "module": "Maintenance",
    "istable": 1,
    "issingle": 0,
@@ -30982,6 +31214,7 @@
   {
    "name": "Manufacturer",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -31070,6 +31303,7 @@
   {
    "name": "Manufacturing Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 1,
@@ -31215,6 +31449,7 @@
   {
    "name": "Market Segment",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -31260,6 +31495,7 @@
   {
    "name": "Master Production Schedule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -31477,6 +31713,7 @@
   {
    "name": "Master Production Schedule Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -31574,6 +31811,7 @@
   {
    "name": "Material Request",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -31874,6 +32112,7 @@
   {
    "name": "Material Request Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -32226,6 +32465,7 @@
   {
    "name": "Material Request Plan Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -32429,6 +32669,7 @@
   {
    "name": "Mode of Payment",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -32509,6 +32750,7 @@
   {
    "name": "Mode of Payment Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -32556,6 +32798,7 @@
   {
    "name": "Monthly Distribution",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -32630,6 +32873,7 @@
   {
    "name": "Monthly Distribution Percentage",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -32670,6 +32914,7 @@
   {
    "name": "Non Conformance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -32777,6 +33022,7 @@
   {
    "name": "Opening Invoice Creation Tool",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -32874,6 +33120,7 @@
   {
    "name": "Opening Invoice Creation Tool Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -32998,6 +33245,7 @@
   {
    "name": "Operation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -33105,6 +33353,7 @@
   {
    "name": "Opportunity",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -33568,6 +33817,7 @@
   {
    "name": "Opportunity Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -33701,6 +33951,7 @@
   {
    "name": "Opportunity Lost Reason",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -33782,6 +34033,7 @@
   {
    "name": "Opportunity Lost Reason Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -33819,6 +34071,7 @@
   {
    "name": "Opportunity Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -33884,6 +34137,7 @@
   {
    "name": "Overdue Payment",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -34018,6 +34272,7 @@
   {
    "name": "Packed Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -34241,6 +34496,7 @@
   {
    "name": "Packing Slip",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -34439,6 +34695,7 @@
   {
    "name": "Packing Slip Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -34553,6 +34810,7 @@
   {
    "name": "Party Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -34613,6 +34871,7 @@
   {
    "name": "Party Link",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -34712,6 +34971,7 @@
   {
    "name": "Party Specific Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -34784,6 +35044,7 @@
   {
    "name": "Party Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -34861,6 +35122,7 @@
   {
    "name": "Pause SLA On Status",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 1,
    "issingle": 0,
@@ -34895,6 +35157,7 @@
   {
    "name": "Payment Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -35526,6 +35789,7 @@
   {
    "name": "Payment Entry Deduction",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -35598,6 +35862,7 @@
   {
    "name": "Payment Entry Reference",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -35764,6 +36029,7 @@
   {
    "name": "Payment Gateway Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -35865,6 +36131,7 @@
   {
    "name": "Payment Ledger Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -36072,6 +36339,7 @@
   {
    "name": "Payment Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -36228,6 +36496,7 @@
   {
    "name": "Payment Order Reference",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -36349,6 +36618,7 @@
   {
    "name": "Payment Reconciliation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -36571,6 +36841,7 @@
   {
    "name": "Payment Reconciliation Allocation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -36736,6 +37007,7 @@
   {
    "name": "Payment Reconciliation Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -36814,6 +37086,7 @@
   {
    "name": "Payment Reconciliation Payment",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -36926,6 +37199,7 @@
   {
    "name": "Payment Reference",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -37002,6 +37276,7 @@
   {
    "name": "Payment Request",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -37388,6 +37663,7 @@
   {
    "name": "Payment Schedule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -37550,6 +37826,7 @@
   {
    "name": "Payment Term",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -37680,6 +37957,7 @@
   {
    "name": "Payment Terms Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -37777,6 +38055,7 @@
   {
    "name": "Payment Terms Template Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -37881,6 +38160,7 @@
   {
    "name": "Pegged Currencies",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -37929,6 +38209,7 @@
   {
    "name": "Pegged Currency Details",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -37981,6 +38262,7 @@
   {
    "name": "Period Closing Voucher",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -38125,6 +38407,7 @@
   {
    "name": "Pick List",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -38387,6 +38670,7 @@
   {
    "name": "Pick List Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -38613,6 +38897,7 @@
   {
    "name": "Plaid Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "ERPNext Integrations",
    "istable": 0,
    "issingle": 1,
@@ -38684,6 +38969,7 @@
   {
    "name": "Plant Floor",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -38752,6 +39038,7 @@
   {
    "name": "Portal User",
    "app": "erpnext",
+   "installed": 1,
    "module": "Utilities",
    "istable": 1,
    "issingle": 0,
@@ -38792,6 +39079,7 @@
   {
    "name": "POS Closing Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -39047,6 +39335,7 @@
   {
    "name": "POS Closing Entry Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -39119,6 +39408,7 @@
   {
    "name": "POS Closing Entry Taxes",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -39163,6 +39453,7 @@
   {
    "name": "POS Customer Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -39203,6 +39494,7 @@
   {
    "name": "POS Field",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -39269,6 +39561,7 @@
   {
    "name": "POS Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -40371,6 +40664,7 @@
   {
    "name": "POS Invoice Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -40936,6 +41230,7 @@
   {
    "name": "POS Invoice Merge Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -41131,6 +41426,7 @@
   {
    "name": "POS Invoice Reference",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -41216,6 +41512,7 @@
   {
    "name": "POS Item Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -41256,6 +41553,7 @@
   {
    "name": "POS Opening Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -41428,6 +41726,7 @@
   {
    "name": "POS Opening Entry Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -41477,6 +41776,7 @@
   {
    "name": "POS Payment Method",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -41529,6 +41829,7 @@
   {
    "name": "POS Profile",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -41977,6 +42278,7 @@
   {
    "name": "POS Profile User",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -42020,6 +42322,7 @@
   {
    "name": "POS Search Fields",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -42060,6 +42363,7 @@
   {
    "name": "POS Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -42146,6 +42450,7 @@
   {
    "name": "Price List",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -42263,6 +42568,7 @@
   {
    "name": "Price List Country",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -42303,6 +42609,7 @@
   {
    "name": "Pricing Rule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -42842,6 +43149,7 @@
   {
    "name": "Pricing Rule Brand",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -42889,6 +43197,7 @@
   {
    "name": "Pricing Rule Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -42961,6 +43270,7 @@
   {
    "name": "Pricing Rule Item Code",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -43008,6 +43318,7 @@
   {
    "name": "Pricing Rule Item Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -43055,6 +43366,7 @@
   {
    "name": "Process Deferred Accounting",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -43188,6 +43500,7 @@
   {
    "name": "Process Payment Reconciliation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -43356,6 +43669,7 @@
   {
    "name": "Process Payment Reconciliation Log",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -43473,6 +43787,7 @@
   {
    "name": "Process Payment Reconciliation Log Allocations",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -43629,6 +43944,7 @@
   {
    "name": "Process Period Closing Voucher",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -43747,6 +44063,7 @@
   {
    "name": "Process Period Closing Voucher Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -43797,6 +44114,7 @@
   {
    "name": "Process Statement Of Accounts",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -44170,6 +44488,7 @@
   {
    "name": "Process Statement Of Accounts CC",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -44207,6 +44526,7 @@
   {
    "name": "Process Statement Of Accounts Customer",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -44263,6 +44583,7 @@
   {
    "name": "Process Subscription",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -44359,6 +44680,7 @@
   {
    "name": "Product Bundle",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -44453,6 +44775,7 @@
   {
    "name": "Product Bundle Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 1,
    "issingle": 0,
@@ -44522,6 +44845,7 @@
   {
    "name": "Production Plan",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -44882,6 +45206,7 @@
   {
    "name": "Production Plan Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -45062,6 +45387,7 @@
   {
    "name": "Production Plan Item Reference",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -45114,6 +45440,7 @@
   {
    "name": "Production Plan Material Request",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -45160,6 +45487,7 @@
   {
    "name": "Production Plan Material Request Warehouse",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -45197,6 +45525,7 @@
   {
    "name": "Production Plan Sales Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -45265,6 +45594,7 @@
   {
    "name": "Production Plan Sub Assembly Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -45483,6 +45813,7 @@
   {
    "name": "Project",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -45860,6 +46191,7 @@
   {
    "name": "Project Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -45930,6 +46262,7 @@
   {
    "name": "Project Template Task",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 1,
    "issingle": 0,
@@ -45975,6 +46308,7 @@
   {
    "name": "Project Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -46049,6 +46383,7 @@
   {
    "name": "Project Update",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -46151,6 +46486,7 @@
   {
    "name": "Project User",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 1,
    "issingle": 0,
@@ -46230,6 +46566,7 @@
   {
    "name": "Projects Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 1,
@@ -46291,6 +46628,7 @@
   {
    "name": "Promotional Scheme",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -46603,6 +46941,7 @@
   {
    "name": "Promotional Scheme Price Discount",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -46739,6 +47078,7 @@
   {
    "name": "Promotional Scheme Product Discount",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -46891,6 +47231,7 @@
   {
    "name": "Prospect",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -47075,6 +47416,7 @@
   {
    "name": "Prospect Lead",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -47146,6 +47488,7 @@
   {
    "name": "Prospect Opportunity",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 1,
    "issingle": 0,
@@ -47229,6 +47572,7 @@
   {
    "name": "PSOA Cost Center",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -47269,6 +47613,7 @@
   {
    "name": "PSOA Project",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -47306,6 +47651,7 @@
   {
    "name": "Purchase Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -48432,6 +48778,7 @@
   {
    "name": "Purchase Invoice Advance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -48521,6 +48868,7 @@
   {
    "name": "Purchase Invoice Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -49215,6 +49563,7 @@
   {
    "name": "Purchase Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -50125,6 +50474,7 @@
   {
    "name": "Purchase Order Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -50757,6 +51107,7 @@
   {
    "name": "Purchase Order Item Supplied",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -50890,6 +51241,7 @@
   {
    "name": "Purchase Receipt",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -51741,6 +52093,7 @@
   {
    "name": "Purchase Receipt Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -52498,6 +52851,7 @@
   {
    "name": "Purchase Receipt Item Supplied",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -52652,6 +53006,7 @@
   {
    "name": "Purchase Taxes and Charges",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -52864,6 +53219,7 @@
   {
    "name": "Purchase Taxes and Charges Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -52967,6 +53323,7 @@
   {
    "name": "Putaway Rule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -53120,6 +53477,7 @@
   {
    "name": "Quality Action",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -53248,6 +53606,7 @@
   {
    "name": "Quality Action Resolution",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -53306,6 +53665,7 @@
   {
    "name": "Quality Feedback",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -53404,6 +53764,7 @@
   {
    "name": "Quality Feedback Parameter",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -53451,6 +53812,7 @@
   {
    "name": "Quality Feedback Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -53518,6 +53880,7 @@
   {
    "name": "Quality Feedback Template Parameter",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -53549,6 +53912,7 @@
   {
    "name": "Quality Goal",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -53656,6 +54020,7 @@
   {
    "name": "Quality Goal Objective",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -53706,6 +54071,7 @@
   {
    "name": "Quality Inspection",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -53948,6 +54314,7 @@
   {
    "name": "Quality Inspection Parameter",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -54048,6 +54415,7 @@
   {
    "name": "Quality Inspection Parameter Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -54132,6 +54500,7 @@
   {
    "name": "Quality Inspection Reading",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -54283,6 +54652,7 @@
   {
    "name": "Quality Inspection Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -54386,6 +54756,7 @@
   {
    "name": "Quality Meeting",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -54465,6 +54836,7 @@
   {
    "name": "Quality Meeting Agenda",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -54496,6 +54868,7 @@
   {
    "name": "Quality Meeting Minutes",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -54542,6 +54915,7 @@
   {
    "name": "Quality Procedure",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -54689,6 +55063,7 @@
   {
    "name": "Quality Procedure Process",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -54731,6 +55106,7 @@
   {
    "name": "Quality Review",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 0,
    "issingle": 0,
@@ -54856,6 +55232,7 @@
   {
    "name": "Quality Review Objective",
    "app": "erpnext",
+   "installed": 1,
    "module": "Quality Management",
    "istable": 1,
    "issingle": 0,
@@ -54918,6 +55295,7 @@
   {
    "name": "Quick Stock Balance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 1,
@@ -55039,6 +55417,7 @@
   {
    "name": "Quotation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -55868,6 +56247,7 @@
   {
    "name": "Quotation Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 1,
    "issingle": 0,
@@ -56300,6 +56680,7 @@
   {
    "name": "Quotation Lost Reason",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -56369,6 +56750,7 @@
   {
    "name": "Quotation Lost Reason Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -56406,6 +56788,7 @@
   {
    "name": "Rename Tool",
    "app": "erpnext",
+   "installed": 1,
    "module": "Utilities",
    "istable": 0,
    "issingle": 1,
@@ -56456,6 +56839,7 @@
   {
    "name": "Repost Accounting Ledger",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -56562,6 +56946,7 @@
   {
    "name": "Repost Accounting Ledger Items",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -56624,6 +57009,7 @@
   {
    "name": "Repost Allowed Types",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -56661,6 +57047,7 @@
   {
    "name": "Repost Item Valuation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -56911,6 +57298,7 @@
   {
    "name": "Repost Payment Ledger",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -57059,6 +57447,7 @@
   {
    "name": "Repost Payment Ledger Items",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -57102,6 +57491,7 @@
   {
    "name": "Request for Quotation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -57435,6 +57825,7 @@
   {
    "name": "Request for Quotation Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -57623,6 +58014,7 @@
   {
    "name": "Request for Quotation Supplier",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -57703,6 +58095,7 @@
   {
    "name": "Routing",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -57777,6 +58170,7 @@
   {
    "name": "Sales Forecast",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -57986,6 +58380,7 @@
   {
    "name": "Sales Forecast Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -58068,6 +58463,7 @@
   {
    "name": "Sales Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -59394,6 +59790,7 @@
   {
    "name": "Sales Invoice Advance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -59483,6 +59880,7 @@
   {
    "name": "Sales Invoice Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -60159,6 +60557,7 @@
   {
    "name": "Sales Invoice Payment",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -60250,6 +60649,7 @@
   {
    "name": "Sales Invoice Reference",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -60335,6 +60735,7 @@
   {
    "name": "Sales Invoice Timesheet",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -60426,6 +60827,7 @@
   {
    "name": "Sales Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -61415,6 +61817,7 @@
   {
    "name": "Sales Order Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 1,
    "issingle": 0,
@@ -62042,6 +62445,7 @@
   {
    "name": "Sales Partner",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -62181,6 +62585,7 @@
   {
    "name": "Sales Partner Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -62218,6 +62623,7 @@
   {
    "name": "Sales Partner Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 0,
@@ -62266,6 +62672,7 @@
   {
    "name": "Sales Person",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -62407,6 +62814,7 @@
   {
    "name": "Sales Stage",
    "app": "erpnext",
+   "installed": 1,
    "module": "CRM",
    "istable": 0,
    "issingle": 0,
@@ -62452,6 +62860,7 @@
   {
    "name": "Sales Taxes and Charges",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -62639,6 +63048,7 @@
   {
    "name": "Sales Taxes and Charges Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -62749,6 +63159,7 @@
   {
    "name": "Sales Team",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 1,
    "issingle": 0,
@@ -62819,6 +63230,7 @@
   {
    "name": "Selling Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 1,
@@ -63085,6 +63497,7 @@
   {
    "name": "Serial and Batch Bundle",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -63418,6 +63831,7 @@
   {
    "name": "Serial and Batch Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -63576,6 +63990,7 @@
   {
    "name": "Serial No",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -63844,6 +64259,7 @@
   {
    "name": "Service Day",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 1,
    "issingle": 0,
@@ -63893,6 +64309,7 @@
   {
    "name": "Service Level Agreement",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 0,
    "issingle": 0,
@@ -64075,6 +64492,7 @@
   {
    "name": "Service Level Priority",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 1,
    "issingle": 0,
@@ -64133,6 +64551,7 @@
   {
    "name": "Share Balance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -64230,6 +64649,7 @@
   {
    "name": "Share Transfer",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -64443,6 +64863,7 @@
   {
    "name": "Share Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -64556,6 +64977,7 @@
   {
    "name": "Shareholder",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -64680,6 +65102,7 @@
   {
    "name": "Shipment",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -65095,6 +65518,7 @@
   {
    "name": "Shipment Delivery Note",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -65141,6 +65565,7 @@
   {
    "name": "Shipment Parcel",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -65198,6 +65623,7 @@
   {
    "name": "Shipment Parcel Template",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -65274,6 +65700,7 @@
   {
    "name": "Shipping Rule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -65438,6 +65865,7 @@
   {
    "name": "Shipping Rule Condition",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -65485,6 +65913,7 @@
   {
    "name": "Shipping Rule Country",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -65525,6 +65954,7 @@
   {
    "name": "SLA Fulfilled On Status",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 1,
    "issingle": 0,
@@ -65559,6 +65989,7 @@
   {
    "name": "SMS Center",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 0,
    "issingle": 1,
@@ -65687,6 +66118,7 @@
   {
    "name": "South Africa VAT Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -65724,6 +66156,7 @@
   {
    "name": "South Africa VAT Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Regional",
    "istable": 0,
    "issingle": 0,
@@ -65812,6 +66245,7 @@
   {
    "name": "Stock Closing Balance",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -65992,6 +66426,7 @@
   {
    "name": "Stock Closing Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -66110,6 +66545,7 @@
   {
    "name": "Stock Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -66697,6 +67133,7 @@
   {
    "name": "Stock Entry Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -67181,6 +67618,7 @@
   {
    "name": "Stock Entry Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -67272,6 +67710,7 @@
   {
    "name": "Stock Ledger Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -67538,6 +67977,7 @@
   {
    "name": "Stock Reconciliation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -67708,6 +68148,7 @@
   {
    "name": "Stock Reconciliation Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -67914,6 +68355,7 @@
   {
    "name": "Stock Reposting Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 1,
@@ -68020,6 +68462,7 @@
   {
    "name": "Stock Reservation Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -68329,6 +68772,7 @@
   {
    "name": "Stock Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 1,
@@ -68712,6 +69156,7 @@
   {
    "name": "Sub Operation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -68763,6 +69208,7 @@
   {
    "name": "Subcontracting BOM",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 0,
    "issingle": 0,
@@ -68892,6 +69338,7 @@
   {
    "name": "Subcontracting Inward Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 0,
    "issingle": 0,
@@ -69173,6 +69620,7 @@
   {
    "name": "Subcontracting Inward Order Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -69323,6 +69771,7 @@
   {
    "name": "Subcontracting Inward Order Received Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -69481,6 +69930,7 @@
   {
    "name": "Subcontracting Inward Order Secondary Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -69594,6 +70044,7 @@
   {
    "name": "Subcontracting Inward Order Service Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -69705,6 +70156,7 @@
   {
    "name": "Subcontracting Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 0,
    "issingle": 0,
@@ -70120,6 +70572,7 @@
   {
    "name": "Subcontracting Order Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -70409,6 +70862,7 @@
   {
    "name": "Subcontracting Order Service Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -70524,6 +70978,7 @@
   {
    "name": "Subcontracting Order Supplied Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -70665,6 +71120,7 @@
   {
    "name": "Subcontracting Receipt",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 0,
    "issingle": 0,
@@ -71167,6 +71623,7 @@
   {
    "name": "Subcontracting Receipt Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -71602,6 +72059,7 @@
   {
    "name": "Subcontracting Receipt Supplied Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Subcontracting",
    "istable": 1,
    "issingle": 0,
@@ -71806,6 +72264,7 @@
   {
    "name": "Subscription",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -72067,6 +72526,7 @@
   {
    "name": "Subscription Invoice",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -72112,6 +72572,7 @@
   {
    "name": "Subscription Plan",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -72275,6 +72736,7 @@
   {
    "name": "Subscription Plan Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -72322,6 +72784,7 @@
   {
    "name": "Subscription Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 1,
@@ -72397,6 +72860,7 @@
   {
    "name": "Supplier",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -72814,6 +73278,7 @@
   {
    "name": "Supplier Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -72958,6 +73423,7 @@
   {
    "name": "Supplier Group Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -72995,6 +73461,7 @@
   {
    "name": "Supplier Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -73032,6 +73499,7 @@
   {
    "name": "Supplier Number At Customer",
    "app": "erpnext",
+   "installed": 1,
    "module": "Selling",
    "istable": 1,
    "issingle": 0,
@@ -73074,6 +73542,7 @@
   {
    "name": "Supplier Quotation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -73737,6 +74206,7 @@
   {
    "name": "Supplier Quotation Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -74150,6 +74620,7 @@
   {
    "name": "Supplier Scorecard",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -74323,6 +74794,7 @@
   {
    "name": "Supplier Scorecard Criteria",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -74391,6 +74863,7 @@
   {
    "name": "Supplier Scorecard Period",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -74520,6 +74993,7 @@
   {
    "name": "Supplier Scorecard Scoring Criteria",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -74589,6 +75063,7 @@
   {
    "name": "Supplier Scorecard Scoring Standing",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -74691,6 +75166,7 @@
   {
    "name": "Supplier Scorecard Scoring Variable",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 1,
    "issingle": 0,
@@ -74758,6 +75234,7 @@
   {
    "name": "Supplier Scorecard Standing",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -74869,6 +75346,7 @@
   {
    "name": "Supplier Scorecard Variable",
    "app": "erpnext",
+   "installed": 1,
    "module": "Buying",
    "istable": 0,
    "issingle": 0,
@@ -74943,6 +75421,7 @@
   {
    "name": "Support Search Source",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 1,
    "issingle": 0,
@@ -75049,6 +75528,7 @@
   {
    "name": "Support Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 0,
    "issingle": 1,
@@ -75173,6 +75653,7 @@
   {
    "name": "Target Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -75245,6 +75726,7 @@
   {
    "name": "Task",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -75542,6 +76024,7 @@
   {
    "name": "Task Depends On",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 1,
    "issingle": 0,
@@ -75591,6 +76074,7 @@
   {
    "name": "Task Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -75668,6 +76152,7 @@
   {
    "name": "Tax Category",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -75743,6 +76228,7 @@
   {
    "name": "Tax Rule",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -75972,6 +76458,7 @@
   {
    "name": "Tax Withholding Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -76024,6 +76511,7 @@
   {
    "name": "Tax Withholding Category",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -76151,6 +76639,7 @@
   {
    "name": "Tax Withholding Entry",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -76346,6 +76835,7 @@
   {
    "name": "Tax Withholding Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -76394,6 +76884,7 @@
   {
    "name": "Tax Withholding Rate",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -76463,6 +76954,7 @@
   {
    "name": "Telephony Call Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Telephony",
    "istable": 0,
    "issingle": 0,
@@ -76523,6 +77015,7 @@
   {
    "name": "Terms and Conditions",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -76652,6 +77145,7 @@
   {
    "name": "Territory",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -76799,6 +77293,7 @@
   {
    "name": "Territory Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -76836,6 +77331,7 @@
   {
    "name": "Timesheet",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 0,
    "issingle": 0,
@@ -77171,6 +77667,7 @@
   {
    "name": "Timesheet Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Projects",
    "istable": 1,
    "issingle": 0,
@@ -77339,6 +77836,7 @@
   {
    "name": "Transaction Deletion Record",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -77504,6 +78002,7 @@
   {
    "name": "Transaction Deletion Record Details",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -77564,6 +78063,7 @@
   {
    "name": "Transaction Deletion Record Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -77604,6 +78104,7 @@
   {
    "name": "Transaction Deletion Record To Delete",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -77665,6 +78166,7 @@
   {
    "name": "UAE VAT Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Regional",
    "istable": 1,
    "issingle": 0,
@@ -77702,6 +78204,7 @@
   {
    "name": "UAE VAT Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Regional",
    "istable": 0,
    "issingle": 0,
@@ -77756,6 +78259,7 @@
   {
    "name": "Unreconcile Payment",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 0,
    "issingle": 0,
@@ -77855,6 +78359,7 @@
   {
    "name": "Unreconcile Payment Entries",
    "app": "erpnext",
+   "installed": 1,
    "module": "Accounts",
    "istable": 1,
    "issingle": 0,
@@ -77937,6 +78442,7 @@
   {
    "name": "UOM",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -78055,6 +78561,7 @@
   {
    "name": "UOM Category",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -78139,6 +78646,7 @@
   {
    "name": "UOM Conversion Detail",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -78184,6 +78692,7 @@
   {
    "name": "UOM Conversion Factor",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -78268,6 +78777,7 @@
   {
    "name": "Variant Field",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 1,
    "issingle": 0,
@@ -78302,6 +78812,7 @@
   {
    "name": "Vehicle",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 0,
    "issingle": 0,
@@ -78500,6 +79011,7 @@
   {
    "name": "Video",
    "app": "erpnext",
+   "installed": 1,
    "module": "Utilities",
    "istable": 0,
    "issingle": 0,
@@ -78630,6 +79142,7 @@
   {
    "name": "Video Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Utilities",
    "istable": 0,
    "issingle": 1,
@@ -78685,6 +79198,7 @@
   {
    "name": "Voice Call Settings",
    "app": "erpnext",
+   "installed": 1,
    "module": "Telephony",
    "istable": 0,
    "issingle": 0,
@@ -78804,6 +79318,7 @@
   {
    "name": "Warehouse",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -79034,6 +79549,7 @@
   {
    "name": "Warehouse Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Stock",
    "istable": 0,
    "issingle": 0,
@@ -79147,6 +79663,7 @@
   {
    "name": "Warranty Claim",
    "app": "erpnext",
+   "installed": 1,
    "module": "Support",
    "istable": 0,
    "issingle": 0,
@@ -79412,6 +79929,7 @@
   {
    "name": "Website Attribute",
    "app": "erpnext",
+   "installed": 1,
    "module": "Portal",
    "istable": 1,
    "issingle": 0,
@@ -79452,6 +79970,7 @@
   {
    "name": "Website Filter Field",
    "app": "erpnext",
+   "installed": 1,
    "module": "Portal",
    "istable": 1,
    "issingle": 0,
@@ -79483,6 +80002,7 @@
   {
    "name": "Website Item Group",
    "app": "erpnext",
+   "installed": 1,
    "module": "Setup",
    "istable": 1,
    "issingle": 0,
@@ -79523,6 +80043,7 @@
   {
    "name": "Work Order",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -80046,6 +80567,7 @@
   {
    "name": "Work Order Additional Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -80113,6 +80635,7 @@
   {
    "name": "Work Order Item",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -80284,6 +80807,7 @@
   {
    "name": "Work Order Operation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -80530,6 +81054,7 @@
   {
    "name": "Workstation",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -80685,6 +81210,7 @@
   {
    "name": "Workstation Cost",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -80732,6 +81258,7 @@
   {
    "name": "Workstation Operating Component",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -80815,6 +81342,7 @@
   {
    "name": "Workstation Operating Component Account",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,
@@ -80865,6 +81393,7 @@
   {
    "name": "Workstation Type",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 0,
    "issingle": 0,
@@ -80934,6 +81463,7 @@
   {
    "name": "Workstation Working Hour",
    "app": "erpnext",
+   "installed": 1,
    "module": "Manufacturing",
    "istable": 1,
    "issingle": 0,

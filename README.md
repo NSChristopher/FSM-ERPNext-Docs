@@ -42,6 +42,41 @@ reading source the cheap path instead of the expensive one.
 The curated, FSM-specific distillation stays in `FSM-App/docs/reference/erpnext/`. This repo
 holds the corpus; that folder holds the judgement.
 
+## Coverage — what is and is not in here
+
+Two tiers, and the distinction is the point.
+
+**Installed — what a tenant site actually runs.** `frappe` + `erpnext`, from
+`infrastructure/production/apps.json`. When a tool says "the platform has this", it means
+these. 811 DocTypes, 1,323 whitelisted methods, 118 hook keys.
+
+**Available but NOT installed.** Four apps we do not ship, indexed anyway and tagged
+`installed: 0` everywhere they appear:
+
+| App | DocTypes | Why it is indexed |
+| --- | ---: | --- |
+| `hrms` | 159 | Employee, Timesheet, Leave, Attendance — and the `Vehicle Log` / `Vehicle Service` pair ERPNext dropped when HR split out |
+| `press` | 383 | Site, Bench, Server, Team, Subscription — the reference implementation of what `orchestrator/` and `provisioner/` do by hand |
+| `crm` | 44 | Lead/Deal pipeline, adjacent to Service Request intake |
+| `helpdesk` | 36 | Ticketing, SLA, agent assignment |
+
+Without this tier a `find_doctype` miss reads as *"the platform cannot do this"*, which is the
+wrong conclusion and has already cost us once — a mileage question got answered from recall
+about `hrms` because `hrms` was not indexed. Results are rendered in two separate sections,
+never one merged list, and `describe_doctype` leads with a NOT INSTALLED banner. Whitelisted
+methods stay installed-only: a callable path from an app we do not run is not callable.
+
+**Prose (`mirror/`) — 11 of the site's ~16 sections.** framework (+v15), erpnext manual, hr,
+cloud, crm, helpdesk, insights, drive, builder, wiki. Deliberately excluded, and recorded in
+`pins.json` → `mirror.excluded` so a gap never has to be guessed at:
+
+- **~4,600 pages** of `erpnext/v12|v13|v14` and `framework/v13|v14` — superseded versions whose
+  stale text would surface as confidently wrong hits, the exact opposite of the point.
+- **~191 pages** — `lending`, `education`, `books`, `learning`, `school`. Separate Frappe
+  products (loan management, school ERP, desktop accounting, LMS) with no bearing on field service.
+- **~68 pages** — `customer-guide`, `partner-guide`, `legal`. Frappe's own pricing and partner
+  material, not platform documentation.
+
 ## Use it
 
 The `fsm-docs` MCP server is registered in `FSM-App/.mcp.json` and expects this repo as a
@@ -59,7 +94,9 @@ sibling checkout (or set `FSM_DOCS_ROOT` to an absolute path).
 submit/cancel/delete/rename variants), each cited to the file that dispatches it.
 
 A miss is meaningful here in a way a `grep` of FSM-App never is: the index covers everything
-both apps ship, so "not found" is evidence about the platform, not about us.
+the installed apps ship *and* four we do not, so "not found" is evidence about the Frappe
+ecosystem, not about us. Pass `installed_only: true` when the question is strictly "can our
+code use this today".
 
 ## Build it
 

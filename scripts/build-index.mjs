@@ -11,12 +11,17 @@
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { readdirSync, statSync, readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SOURCE = path.join(ROOT, "source");
 const INDEX = path.join(ROOT, "index");
+// Two tiers, and the distinction is load-bearing. INSTALLED is what a tenant site actually
+// runs, so "the platform has this" means these. AVAILABLE apps are not installed anywhere -
+// they are indexed only so a miss can say "not on your bench, but hrms ships it" instead of
+// a bare "not found", which reads as "the platform cannot do this".
 const APPS = ["frappe", "erpnext"];
 
 const pins = JSON.parse(await readFile(path.join(ROOT, "pins.json"), "utf8"));
@@ -44,8 +49,26 @@ function walk(dir, out = []) {
   return out;
 }
 
-const filesByApp = Object.fromEntries(APPS.map((a) => [a, walk(path.join(SOURCE, a))]));
-const relTo = (app, full) => path.relative(path.join(SOURCE, app), full);
+const AVAILABLE = Object.keys(pins.available ?? {}).filter((k) => !k.startsWith("_"));
+const ALL_APPS = [...APPS, ...AVAILABLE];
+
+// Installed apps live at source/<app>; available ones at source/available/<app>.
+const dirOf = (app) => (APPS.includes(app) ? path.join(SOURCE, app) : path.join(SOURCE, "available", app));
+const isInstalled = (app) => APPS.includes(app);
+
+const filesByApp = Object.fromEntries(ALL_APPS.map((a) => [a, walk(dirOf(a))]));
+const relTo = (app, full) => path.relative(dirOf(app), full);
+
+// Available apps track a branch rather than a tag, so the resolved SHA is what pins them.
+function refOf(app) {
+  if (isInstalled(app)) return pins.source[app].tag;
+  try {
+    const sha = execFileSync("git", ["rev-parse", "HEAD"], { cwd: dirOf(app), encoding: "utf8" }).trim();
+    return `${pins.available[app].ref}@${sha.slice(0, 12)}`;
+  } catch {
+    return pins.available[app].ref;
+  }
+}
 
 // ---------------------------------------------------------------- doctypes
 
@@ -88,6 +111,9 @@ function buildDoctypes(app) {
     out.push({
       name: def.name,
       app,
+      // Never omit this. A DocType from an app we do not install is not available to our
+      // code, and presenting it as though it were is the failure this whole repo prevents.
+      installed: isInstalled(app) ? 1 : 0,
       module: def.module ?? null,
       // The three flags that most often decide "can we actually use this".
       istable: def.istable ? 1 : 0,
@@ -302,15 +328,29 @@ await mkdir(INDEX, { recursive: true });
 const meta = { built_at: new Date().toISOString().slice(0, 10), pins: Object.fromEntries(APPS.map((a) => [a, tagOf(a)])) };
 const summary = {};
 
-for (const app of APPS) {
+for (const app of ALL_APPS) {
   const doctypes = buildDoctypes(app);
   await writeFile(
     path.join(INDEX, `doctypes.${app}.json`),
-    JSON.stringify({ ...meta, app, tag: tagOf(app), count: doctypes.length, doctypes }, null, 1) + "\n",
+    JSON.stringify(
+      {
+        ...meta,
+        app,
+        installed: isInstalled(app) ? 1 : 0,
+        ref: refOf(app),
+        ...(isInstalled(app) ? {} : { why_indexed: pins.available[app].why }),
+        count: doctypes.length,
+        doctypes,
+      },
+      null,
+      1,
+    ) + "\n",
   );
-  summary[`doctypes.${app}`] = doctypes.length;
+  summary[`doctypes.${app}${isInstalled(app) ? "" : " (not installed)"}`] = doctypes.length;
 }
 
+// Whitelisted methods stay installed-only. A callable RPC path from an app we do not install
+// is not callable, and listing it beside real endpoints invites exactly the wrong call.
 const whitelist = APPS.flatMap(buildWhitelist);
 await writeFile(
   path.join(INDEX, "whitelist.json"),

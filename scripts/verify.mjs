@@ -31,7 +31,7 @@ const pins = JSON.parse(readFileSync(path.join(ROOT, "pins.json"), "utf8"));
 
 check("doctype count is plausible (>700)", dtF.count + dtE.count > 700, `got ${dtF.count + dtE.count}`);
 check("whitelist count is plausible (>1000)", wl.count > 1000, `got ${wl.count}`);
-check("indexes built at the pinned tag", dtF.tag === pins.source.frappe.tag, `${dtF.tag} vs ${pins.source.frappe.tag}`);
+check("indexes built at the production pin", dtF.ref === pins.source.frappe.tag, `${dtF.ref} vs ${pins.source.frappe.tag}`);
 
 const manifestPath = path.join(ROOT, "mirror", "_manifest.json");
 if (existsSync(manifestPath)) {
@@ -150,6 +150,23 @@ check("search_docs returns hits", /^\d+ result\(s\)/.test(search), search.slice(
 check("search_docs surfaces a mirrored page path", /mirror\/\S+\.md/.test(search));
 check("search_docs warns that prose stops at v15", search.includes("stop at v15"));
 
+// The available-but-not-installed tier. These assertions encode the miss that created it:
+// a mileage question was answered from recall about hrms, because hrms was not indexed.
+const vehicles = await callText("find_doctype", { pattern: "vehicle|mileage" });
+check("find_doctype separates installed from not-installed", /## On your bench/.test(vehicles) && /## NOT installed/.test(vehicles));
+check("Vehicle Log is found, in hrms", /Vehicle Log\s+\[hrms/.test(vehicles));
+check("Vehicle Log appears under NOT installed", vehicles.indexOf("## NOT installed") < vehicles.indexOf("Vehicle Log"));
+check("erpnext Vehicle stays on the bench side", vehicles.indexOf("## On your bench") < vehicles.indexOf("Vehicle  [erpnext"));
+
+const vlog = await callText("describe_doctype", { name: "Vehicle Log" });
+check("describe_doctype banners NOT INSTALLED first", vlog.indexOf("NOT INSTALLED") < vlog.indexOf("## Required fields"));
+// The shape check that matters: Vehicle Log keys on an hrms Employee, so it cannot hold a
+// per-user daily rollup even if hrms were installed. That is the finding, not the name match.
+check("Vehicle Log shows employee as required", /## Required fields[\s\S]*?- employee/.test(vlog));
+
+const installedOnly = await callText("find_doctype", { pattern: "vehicle|mileage", installed_only: true });
+check("installed_only suppresses the not-installed tier", !installedOnly.includes("## NOT installed"));
+
 // Reading source by citation. The line comes from the index rather than a literal, because a
 // hardcoded line number silently pointed at the wrong code the moment the pinned tag moved.
 const ev = JSON.parse(readFileSync(idxPath("controller-events.json"), "utf8"));
@@ -162,8 +179,22 @@ check("read_source lands on the before_save dispatch", /run_method\(["']before_s
 
 // The pin must be production, not the devcontainer's older tag — the distinction this repo
 // got wrong once and must not get wrong silently again.
-check("indexes are built at the production pin, not the devcontainer's", dtF.tag !== pins.devcontainer.frappe.tag,
-  `frappe index at ${dtF.tag}, devcontainer at ${pins.devcontainer.frappe.tag}`);
+// Assert positively against production, not merely "not the devcontainer" — an undefined
+// field satisfies a not-equals and passes vacuously, which it did until this was caught.
+check("index ref is production and differs from the devcontainer",
+  dtF.ref === pins.source.frappe.tag && pins.source.frappe.tag !== pins.devcontainer.frappe.tag,
+  `frappe index at ${dtF.ref}, production ${pins.source.frappe.tag}, devcontainer ${pins.devcontainer.frappe.tag}`);
+
+// The available tier must be present and correctly flagged at the file level, not just in
+// rendered output — a index built without it would degrade silently back to bare misses.
+for (const app of ["hrms", "crm", "helpdesk", "press"]) {
+  const f = path.join(ROOT, "index", `doctypes.${app}.json`);
+  if (!existsSync(f)) { check(`index/doctypes.${app}.json exists`, false, "run `npm run build:index`"); continue; }
+  const j = JSON.parse(readFileSync(f, "utf8"));
+  check(`${app} indexed and flagged not-installed`,
+    j.installed === 0 && j.count > 0 && j.doctypes.every((d) => d.installed === 0),
+    `installed=${j.installed} count=${j.count}`);
+}
 
 server.kill();
 

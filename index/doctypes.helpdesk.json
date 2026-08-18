@@ -1,0 +1,3773 @@
+{
+ "built_at": "2026-08-18",
+ "pins": {
+  "frappe": "v16.31.0",
+  "erpnext": "v16.32.1"
+ },
+ "app": "helpdesk",
+ "installed": 0,
+ "ref": "main@480486287b2b",
+ "why_indexed": "Ticketing, SLA and agent assignment, adjacent to job dispatch and customer follow-up.",
+ "count": 36,
+ "doctypes": [
+  {
+   "name": "ERPNext HD Settings",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 1,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 1,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/erpnext_hd_settings/erpnext_hd_settings.json",
+   "controller_path": "helpdesk/helpdesk/doctype/erpnext_hd_settings/erpnext_hd_settings.py"
+  },
+  {
+   "name": "HD Agent",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": "agent_name",
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "user",
+    "agent_name"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    },
+    {
+     "fieldname": "availability",
+     "to": "HD Agent Status"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 6,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "reqd": 1,
+     "options": "User"
+    },
+    {
+     "fieldname": "agent_name",
+     "fieldtype": "Data",
+     "label": "Agent Name",
+     "reqd": 1
+    },
+    {
+     "fieldname": "is_active",
+     "fieldtype": "Check",
+     "label": "Is Active",
+     "default": "1"
+    },
+    {
+     "fieldname": "user_image",
+     "fieldtype": "Attach Image",
+     "label": "Image"
+    },
+    {
+     "fieldname": "availability",
+     "fieldtype": "Link",
+     "label": "Availability",
+     "options": "HD Agent Status"
+    },
+    {
+     "fieldname": "availability_changed_on",
+     "fieldtype": "Datetime",
+     "label": "Availability Changed On",
+     "read_only": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_agent/hd_agent.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_agent/hd_agent.py"
+  },
+  {
+   "name": "HD Agent Status",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:agent_status",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "category"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "agent_status",
+     "fieldtype": "Data",
+     "label": "Agent Status",
+     "unique": 1
+    },
+    {
+     "fieldname": "status_order",
+     "fieldtype": "Int",
+     "label": "Status Order"
+    },
+    {
+     "fieldname": "category",
+     "fieldtype": "Select",
+     "label": "Category",
+     "reqd": 1,
+     "options": "Active\nAway\nUnavailable"
+    },
+    {
+     "fieldname": "color",
+     "fieldtype": "Select",
+     "label": "Color",
+     "options": "Gray\nBlue\nGreen\nRed\nPink\nOrange\nAmber\nYellow\nCyan\nTeal\nViolet\npurple"
+    },
+    {
+     "fieldname": "enable",
+     "fieldtype": "Check",
+     "label": "Enable",
+     "default": "1"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "report": 1,
+     "export": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_agent_status/hd_agent_status.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_agent_status/hd_agent_status.py"
+  },
+  {
+   "name": "HD Article",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "hash",
+   "naming_rule": "Random",
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "title"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "category",
+     "to": "HD Article Category"
+    },
+    {
+     "fieldname": "author",
+     "to": "User"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 8,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "title",
+     "fieldtype": "Data",
+     "label": "Title",
+     "reqd": 1
+    },
+    {
+     "fieldname": "category",
+     "fieldtype": "Link",
+     "label": "Category",
+     "options": "HD Article Category"
+    },
+    {
+     "fieldname": "content",
+     "fieldtype": "Text Editor",
+     "label": "Content"
+    },
+    {
+     "fieldname": "author",
+     "fieldtype": "Link",
+     "label": "Author",
+     "options": "User",
+     "read_only": 1
+    },
+    {
+     "fieldname": "published_on",
+     "fieldtype": "Datetime",
+     "label": "Published On",
+     "read_only": 1
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Select",
+     "label": "Status",
+     "options": "Published\nDraft\nArchived",
+     "default": "Draft"
+    },
+    {
+     "fieldname": "title_slug",
+     "fieldtype": "Data",
+     "label": "Title Slug"
+    },
+    {
+     "fieldname": "views",
+     "fieldtype": "Int",
+     "label": "Views",
+     "read_only": 1,
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer Manager",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_article/hd_article.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_article/hd_article.py"
+  },
+  {
+   "name": "HD Article Category",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "hash",
+   "naming_rule": "Random",
+   "title_field": "category_name",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "category_name",
+     "fieldtype": "Data",
+     "label": "Name"
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Text",
+     "label": "Description"
+    },
+    {
+     "fieldname": "icon",
+     "fieldtype": "Data",
+     "label": "Icon"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1
+    },
+    {
+     "role": "HD Customer Manager",
+     "read": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_article_category/hd_article_category.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_article_category/hd_article_category.py"
+  },
+  {
+   "name": "HD Article Feedback",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    },
+    {
+     "fieldname": "article",
+     "to": "HD Article"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "options": "User"
+    },
+    {
+     "fieldname": "feedback",
+     "fieldtype": "Select",
+     "label": "Feedback",
+     "options": "0\n1\n2"
+    },
+    {
+     "fieldname": "article",
+     "fieldtype": "Link",
+     "label": "Article",
+     "options": "HD Article"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "if_owner": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_article_feedback/hd_article_feedback.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_article_feedback/hd_article_feedback.py"
+  },
+  {
+   "name": "HD Comment Reaction",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "autoincrement",
+   "naming_rule": "Autoincrement",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "emoji",
+    "user"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 2,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "emoji",
+     "fieldtype": "Data",
+     "label": "Emoji",
+     "reqd": 1
+    },
+    {
+     "fieldname": "user",
+     "fieldtype": "Data",
+     "label": "User",
+     "reqd": 1,
+     "read_only": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_comment_reaction/hd_comment_reaction.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_comment_reaction/hd_comment_reaction.py"
+  },
+  {
+   "name": "HD Customer",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:customer_name",
+   "naming_rule": "Expression",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "primary_contact",
+     "to": "Contact"
+    },
+    {
+     "fieldname": "country",
+     "to": "Country"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "contacts",
+     "doctype": "HD Customer Member"
+    }
+   ],
+   "field_count": 10,
+   "layout_field_count": 4,
+   "fields": [
+    {
+     "fieldname": "image",
+     "fieldtype": "Attach Image",
+     "label": "Image"
+    },
+    {
+     "fieldname": "customer_name",
+     "fieldtype": "Data",
+     "label": "Customer Name",
+     "unique": 1
+    },
+    {
+     "fieldname": "customer_type",
+     "fieldtype": "Select",
+     "label": "Customer Type",
+     "options": "Company\nIndividual\nPartnership",
+     "default": "Company"
+    },
+    {
+     "fieldname": "domain",
+     "fieldtype": "Data",
+     "label": "Domain"
+    },
+    {
+     "fieldname": "erpnext_customer",
+     "fieldtype": "Data",
+     "label": "ERPNext Customer",
+     "read_only": 1,
+     "hidden": 1
+    },
+    {
+     "fieldname": "contacts",
+     "fieldtype": "Table",
+     "label": "Contacts",
+     "options": "HD Customer Member"
+    },
+    {
+     "fieldname": "mobile_no",
+     "fieldtype": "Data",
+     "label": "Mobile No",
+     "options": "Phone",
+     "read_only": 1
+    },
+    {
+     "fieldname": "email_id",
+     "fieldtype": "Data",
+     "label": "Email ID",
+     "options": "Email",
+     "read_only": 1
+    },
+    {
+     "fieldname": "primary_contact",
+     "fieldtype": "Link",
+     "label": "Primary Contact",
+     "options": "Contact"
+    },
+    {
+     "fieldname": "country",
+     "fieldtype": "Link",
+     "label": "Country",
+     "options": "Country"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "Administrator",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer Manager",
+     "read": 1,
+     "write": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_customer/hd_customer.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_customer/hd_customer.py"
+  },
+  {
+   "name": "HD Customer Member",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "contact_name"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "contact_name",
+     "to": "Contact"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 2,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "is_manager",
+     "fieldtype": "Check",
+     "label": "Is Manager",
+     "default": "0"
+    },
+    {
+     "fieldname": "contact_name",
+     "fieldtype": "Link",
+     "label": "Name",
+     "reqd": 1,
+     "options": "Contact"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_customer_member/hd_customer_member.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_customer_member/hd_customer_member.py"
+  },
+  {
+   "name": "HD Email Feedback",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "ticket",
+     "to": "HD Ticket"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 4,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "feedback_rating",
+     "fieldtype": "Rating",
+     "label": "Feedback Rating",
+     "read_only": 1
+    },
+    {
+     "fieldname": "feedback_extra",
+     "fieldtype": "Small Text",
+     "label": "Feedback ",
+     "read_only": 1
+    },
+    {
+     "fieldname": "key",
+     "fieldtype": "Data",
+     "label": "Key",
+     "read_only": 1
+    },
+    {
+     "fieldname": "ticket",
+     "fieldtype": "Link",
+     "label": "Ticket",
+     "options": "HD Ticket",
+     "read_only": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_email_feedback/hd_email_feedback.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_email_feedback/hd_email_feedback.py"
+  },
+  {
+   "name": "HD Field Layout",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "type",
+    "layout"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "document_type",
+     "to": "DocType"
+    },
+    {
+     "fieldname": "user",
+     "to": "User"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "document_type",
+     "fieldtype": "Link",
+     "label": "Document Type",
+     "options": "DocType"
+    },
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "options": "User"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "reqd": 1,
+     "options": "Landing Page"
+    },
+    {
+     "fieldname": "apply_to_system",
+     "fieldtype": "Check",
+     "label": "Is applied to system",
+     "default": "0"
+    },
+    {
+     "fieldname": "layout",
+     "fieldtype": "Code",
+     "label": "Layout",
+     "reqd": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1,
+     "if_owner": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1,
+     "if_owner": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_field_layout/hd_field_layout.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_field_layout/hd_field_layout.py"
+  },
+  {
+   "name": "HD Form Script",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "prompt",
+   "naming_rule": "Set by user",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "dt"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "dt",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "dt",
+     "fieldtype": "Link",
+     "label": "DocType",
+     "reqd": 1,
+     "options": "DocType",
+     "default": "HD Ticket"
+    },
+    {
+     "fieldname": "apply_to",
+     "fieldtype": "Select",
+     "label": "Apply To",
+     "options": "Form\nList",
+     "default": "Form"
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "script",
+     "fieldtype": "Code",
+     "label": "Script",
+     "options": "JS",
+     "default": "function setupForm({doc, updateField, call, router, toast, $dialog, createToast ,applyFilters}) {\n    return {\n        actions: [],\n        onChange:{\n            \"fieldname\":(newVal)=>console.log(newVal)\n        }\n    }\n}"
+    },
+    {
+     "fieldname": "apply_to_customer_portal",
+     "fieldtype": "Check",
+     "label": "Apply to customer portal",
+     "default": "0"
+    },
+    {
+     "fieldname": "apply_on_new_page",
+     "fieldtype": "Check",
+     "label": "Apply on new page",
+     "default": "0"
+    },
+    {
+     "fieldname": "is_standard",
+     "fieldtype": "Check",
+     "label": "Is Standard",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_form_script/hd_form_script.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_form_script/hd_form_script.py"
+  },
+  {
+   "name": "HD Holiday",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "holiday_date",
+    "description"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "holiday_date",
+     "fieldtype": "Date",
+     "label": "Date",
+     "reqd": 1
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Text Editor",
+     "label": "Description",
+     "reqd": 1
+    },
+    {
+     "fieldname": "weekly_off",
+     "fieldtype": "Check",
+     "label": "Weekly Off",
+     "default": "0"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_holiday/hd_holiday.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_holiday/hd_holiday.py"
+  },
+  {
+   "name": "HD Notification",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "user_from",
+    "user_to",
+    "notification_type"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "user_from",
+     "to": "User"
+    },
+    {
+     "fieldname": "user_to",
+     "to": "User"
+    },
+    {
+     "fieldname": "reference_ticket",
+     "to": "HD Ticket"
+    },
+    {
+     "fieldname": "reference_comment",
+     "to": "HD Ticket Comment"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "user_from",
+     "fieldtype": "Link",
+     "label": "From",
+     "reqd": 1,
+     "options": "User"
+    },
+    {
+     "fieldname": "user_to",
+     "fieldtype": "Link",
+     "label": "To",
+     "reqd": 1,
+     "options": "User"
+    },
+    {
+     "fieldname": "notification_type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "reqd": 1,
+     "options": "Assignment\nMention\nReaction"
+    },
+    {
+     "fieldname": "reference_ticket",
+     "fieldtype": "Link",
+     "label": "Ticket",
+     "options": "HD Ticket"
+    },
+    {
+     "fieldname": "reference_comment",
+     "fieldtype": "Link",
+     "label": "Comment",
+     "options": "HD Ticket Comment"
+    },
+    {
+     "fieldname": "read",
+     "fieldtype": "Check",
+     "label": "Read",
+     "default": "0"
+    },
+    {
+     "fieldname": "message",
+     "fieldtype": "Text",
+     "label": "Message"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_notification/hd_notification.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_notification/hd_notification.py"
+  },
+  {
+   "name": "HD Saved Reply",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:title",
+   "naming_rule": "By fieldname",
+   "title_field": "title",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "title",
+    "message",
+    "scope"
+   ],
+   "link_fields": [],
+   "child_tables": [
+    {
+     "fieldname": "teams",
+     "doctype": "HD Saved Reply Team"
+    }
+   ],
+   "field_count": 4,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "title",
+     "fieldtype": "Data",
+     "label": "Title",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "message",
+     "fieldtype": "Text Editor",
+     "label": "Message",
+     "reqd": 1
+    },
+    {
+     "fieldname": "scope",
+     "fieldtype": "Select",
+     "label": "Scope",
+     "reqd": 1,
+     "options": "Global\nTeam\nPersonal",
+     "default": "Global"
+    },
+    {
+     "fieldname": "teams",
+     "fieldtype": "Table MultiSelect",
+     "label": "Teams",
+     "options": "HD Saved Reply Team"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_saved_reply/hd_saved_reply.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_saved_reply/hd_saved_reply.py"
+  },
+  {
+   "name": "HD Saved Reply Team",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "team",
+     "to": "HD Team"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 1,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "team",
+     "fieldtype": "Link",
+     "label": "Team",
+     "options": "HD Team"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_saved_reply_team/hd_saved_reply_team.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_saved_reply_team/hd_saved_reply_team.py"
+  },
+  {
+   "name": "HD Service Day",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "workday",
+    "start_time",
+    "end_time"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "workday",
+     "fieldtype": "Select",
+     "label": "Workday",
+     "reqd": 1,
+     "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+    },
+    {
+     "fieldname": "start_time",
+     "fieldtype": "Time",
+     "label": "Start Time",
+     "reqd": 1
+    },
+    {
+     "fieldname": "end_time",
+     "fieldtype": "Time",
+     "label": "End Time",
+     "reqd": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_service_day/hd_service_day.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_service_day/hd_service_day.py"
+  },
+  {
+   "name": "HD Service Holiday List",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:holiday_list_name",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "holiday_list_name",
+    "from_date",
+    "to_date"
+   ],
+   "link_fields": [],
+   "child_tables": [
+    {
+     "fieldname": "holidays",
+     "doctype": "HD Holiday"
+    }
+   ],
+   "field_count": 11,
+   "layout_field_count": 4,
+   "fields": [
+    {
+     "fieldname": "holiday_list_name",
+     "fieldtype": "Data",
+     "label": "Holiday List Name",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "from_date",
+     "fieldtype": "Date",
+     "label": "From Date",
+     "reqd": 1
+    },
+    {
+     "fieldname": "to_date",
+     "fieldtype": "Date",
+     "label": "To Date",
+     "reqd": 1
+    },
+    {
+     "fieldname": "total_holidays",
+     "fieldtype": "Int",
+     "label": "Total Holidays",
+     "read_only": 1
+    },
+    {
+     "fieldname": "weekly_off",
+     "fieldtype": "Select",
+     "label": "Weekly Off",
+     "options": "\nSunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+    },
+    {
+     "fieldname": "get_weekly_off_dates",
+     "fieldtype": "Button",
+     "label": "Add to Holidays",
+     "options": "get_weekly_off_dates"
+    },
+    {
+     "fieldname": "holidays",
+     "fieldtype": "Table",
+     "label": "Holidays",
+     "options": "HD Holiday"
+    },
+    {
+     "fieldname": "clear_table",
+     "fieldtype": "Button",
+     "label": "Clear Table",
+     "options": "clear_table"
+    },
+    {
+     "fieldname": "color",
+     "fieldtype": "Color",
+     "label": "Color"
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Data",
+     "label": "Description"
+    },
+    {
+     "fieldname": "recurring_holidays",
+     "fieldtype": "JSON",
+     "label": "Recurring holidays"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "Support Team",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_service_holiday_list/hd_service_holiday_list.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_service_holiday_list/hd_service_holiday_list.py"
+  },
+  {
+   "name": "HD Service Level Agreement",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:service_level",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "service_level",
+    "holiday_list",
+    "support_and_resolution",
+    "priorities"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "holiday_list",
+     "to": "HD Service Holiday List"
+    },
+    {
+     "fieldname": "default_priority",
+     "to": "HD Ticket Priority"
+    },
+    {
+     "fieldname": "ticket_reopen_status",
+     "to": "HD Ticket Status"
+    },
+    {
+     "fieldname": "default_ticket_status",
+     "to": "HD Ticket Status"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "support_and_resolution",
+     "doctype": "HD Service Day"
+    },
+    {
+     "fieldname": "priorities",
+     "doctype": "HD Service Level Priority"
+    }
+   ],
+   "field_count": 15,
+   "layout_field_count": 9,
+   "fields": [
+    {
+     "fieldname": "service_level",
+     "fieldtype": "Data",
+     "label": "Service Level Name",
+     "reqd": 1,
+     "unique": 1,
+     "set_only_once": 1
+    },
+    {
+     "fieldname": "holiday_list",
+     "fieldtype": "Link",
+     "label": "Holiday List",
+     "reqd": 1,
+     "options": "HD Service Holiday List"
+    },
+    {
+     "fieldname": "start_date",
+     "fieldtype": "Date",
+     "label": "Start Date"
+    },
+    {
+     "fieldname": "end_date",
+     "fieldtype": "Date",
+     "label": "End Date"
+    },
+    {
+     "fieldname": "support_and_resolution",
+     "fieldtype": "Table",
+     "label": "Working Hours",
+     "reqd": 1,
+     "options": "HD Service Day"
+    },
+    {
+     "fieldname": "priorities",
+     "fieldtype": "Table",
+     "label": "Priorities",
+     "reqd": 1,
+     "options": "HD Service Level Priority"
+    },
+    {
+     "fieldname": "default_sla",
+     "fieldtype": "Check",
+     "label": "Default SLA",
+     "default": "0"
+    },
+    {
+     "fieldname": "default_priority",
+     "fieldtype": "Link",
+     "label": "Default Priority",
+     "options": "HD Ticket Priority",
+     "read_only": 1
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "1"
+    },
+    {
+     "fieldname": "apply_sla_for_resolution",
+     "fieldtype": "Check",
+     "label": "Apply SLA for Resolution Time",
+     "default": "1"
+    },
+    {
+     "fieldname": "condition",
+     "fieldtype": "Code",
+     "label": "Condition",
+     "options": "PythonExpression"
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Data",
+     "label": "Description"
+    },
+    {
+     "fieldname": "condition_json",
+     "fieldtype": "Code",
+     "label": "Condition"
+    },
+    {
+     "fieldname": "ticket_reopen_status",
+     "fieldtype": "Link",
+     "label": "Ticket Reopen status",
+     "options": "HD Ticket Status"
+    },
+    {
+     "fieldname": "default_ticket_status",
+     "fieldtype": "Link",
+     "label": "Default Ticket Status",
+     "options": "HD Ticket Status"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_service_level_agreement/hd_service_level_agreement.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_service_level_agreement/hd_service_level_agreement.py"
+  },
+  {
+   "name": "HD Service Level Priority",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "priority",
+    "response_time"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "priority",
+     "to": "HD Ticket Priority"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 4,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "priority",
+     "fieldtype": "Link",
+     "label": "Priority",
+     "reqd": 1,
+     "options": "HD Ticket Priority"
+    },
+    {
+     "fieldname": "resolution_time",
+     "fieldtype": "Duration",
+     "label": "Resolution Time"
+    },
+    {
+     "fieldname": "default_priority",
+     "fieldtype": "Check",
+     "label": "Default Priority",
+     "default": "0"
+    },
+    {
+     "fieldname": "response_time",
+     "fieldtype": "Duration",
+     "label": "First Response Time",
+     "reqd": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_service_level_priority/hd_service_level_priority.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_service_level_priority/hd_service_level_priority.py"
+  },
+  {
+   "name": "HD Settings",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 1,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "default_ticket_status",
+    "ticket_reopen_status"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "base_support_rotation",
+     "to": "Assignment Rule"
+    },
+    {
+     "fieldname": "default_ticket_type",
+     "to": "HD Ticket Type"
+    },
+    {
+     "fieldname": "default_priority",
+     "to": "HD Ticket Priority"
+    },
+    {
+     "fieldname": "send_email_feedback_on_status",
+     "to": "HD Ticket Status"
+    },
+    {
+     "fieldname": "update_status_to",
+     "to": "HD Ticket Status"
+    },
+    {
+     "fieldname": "default_ticket_status",
+     "to": "HD Ticket Status"
+    },
+    {
+     "fieldname": "ticket_reopen_status",
+     "to": "HD Ticket Status"
+    },
+    {
+     "fieldname": "auto_close_status",
+     "to": "HD Ticket Status"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 43,
+   "layout_field_count": 34,
+   "fields": [
+    {
+     "fieldname": "base_support_rotation",
+     "fieldtype": "Link",
+     "label": "Base Support Rotation",
+     "options": "Assignment Rule",
+     "read_only": 1,
+     "hidden": 1
+    },
+    {
+     "fieldname": "restrict_tickets_by_agent_group",
+     "fieldtype": "Check",
+     "label": "Restrict tickets by Team",
+     "default": "0"
+    },
+    {
+     "fieldname": "do_not_restrict_tickets_without_an_agent_group",
+     "fieldtype": "Check",
+     "label": "Do not restrict tickets without a Team",
+     "default": "0"
+    },
+    {
+     "fieldname": "setup_complete",
+     "fieldtype": "Check",
+     "label": "Is setup complete",
+     "default": "0"
+    },
+    {
+     "fieldname": "initial_helpdesk_name_setup_skipped",
+     "fieldtype": "Check",
+     "label": "Is name setup skipped",
+     "default": "0"
+    },
+    {
+     "fieldname": "show_customer_portal_permission_notice",
+     "fieldtype": "Check",
+     "label": "Show Customer Portal Permission Notice",
+     "hidden": 1,
+     "default": "0"
+    },
+    {
+     "fieldname": "persona_captured",
+     "fieldtype": "Check",
+     "label": "Persona Captured",
+     "hidden": 1,
+     "default": "0"
+    },
+    {
+     "fieldname": "default_ticket_type",
+     "fieldtype": "Link",
+     "label": "Default ticket type",
+     "options": "HD Ticket Type"
+    },
+    {
+     "fieldname": "skip_email_workflow",
+     "fieldtype": "Check",
+     "label": "Skip e-mail workflow",
+     "default": "0"
+    },
+    {
+     "fieldname": "instantly_send_email",
+     "fieldtype": "Check",
+     "label": "Instantly send e-mail",
+     "default": "0"
+    },
+    {
+     "fieldname": "brand_logo",
+     "fieldtype": "Attach Image",
+     "label": "Logo"
+    },
+    {
+     "fieldname": "prefer_knowledge_base",
+     "fieldtype": "Check",
+     "label": "Prefer knowledge base",
+     "default": "0"
+    },
+    {
+     "fieldname": "default_priority",
+     "fieldtype": "Link",
+     "label": "Default priority",
+     "options": "HD Ticket Priority"
+    },
+    {
+     "fieldname": "name_weight",
+     "fieldtype": "Int",
+     "label": "Name Weight",
+     "default": "1"
+    },
+    {
+     "fieldname": "subject_weight",
+     "fieldtype": "Int",
+     "label": "Subject Weight",
+     "default": "6"
+    },
+    {
+     "fieldname": "description_weight",
+     "fieldtype": "Int",
+     "label": "Description Weight",
+     "default": "5"
+    },
+    {
+     "fieldname": "headings_weight",
+     "fieldtype": "Int",
+     "label": "Headings Weight",
+     "default": "8"
+    },
+    {
+     "fieldname": "allow_anyone_to_create_tickets",
+     "fieldtype": "Check",
+     "label": "Allow anyone to create tickets",
+     "default": "0"
+    },
+    {
+     "fieldname": "auto_update_status",
+     "fieldtype": "Check",
+     "label": "Auto update status",
+     "default": "0"
+    },
+    {
+     "fieldname": "is_feedback_mandatory",
+     "fieldtype": "Check",
+     "label": "Enable feedback for Customer Portal",
+     "default": "1"
+    },
+    {
+     "fieldname": "auto_close_tickets",
+     "fieldtype": "Check",
+     "label": "Automatically Close Tickets when",
+     "default": "0"
+    },
+    {
+     "fieldname": "auto_close_after_days",
+     "fieldtype": "Int",
+     "label": "Auto-close after (Days)",
+     "default": "14"
+    },
+    {
+     "fieldname": "enable_comment_reactions",
+     "fieldtype": "Check",
+     "label": "Enable comment reactions",
+     "default": "0"
+    },
+    {
+     "fieldname": "send_email_feedback_on_status",
+     "fieldtype": "Link",
+     "label": "Send feedback when",
+     "options": "HD Ticket Status"
+    },
+    {
+     "fieldname": "enable_email_ticket_feedback",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "assign_within_team",
+     "fieldtype": "Check",
+     "label": "Restrict agent assignment to selected Team",
+     "default": "0"
+    },
+    {
+     "fieldname": "feedback_email_content",
+     "fieldtype": "Text",
+     "label": "Email Content"
+    },
+    {
+     "fieldname": "acknowledgement_email_content",
+     "fieldtype": "Text",
+     "label": "Email Content"
+    },
+    {
+     "fieldname": "send_acknowledgement_email",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "enable_reply_email_to_agent",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "1"
+    },
+    {
+     "fieldname": "reply_email_to_agent_content",
+     "fieldtype": "Text",
+     "label": "Email Content"
+    },
+    {
+     "fieldname": "enable_reply_email_via_agent",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "1"
+    },
+    {
+     "fieldname": "reply_via_agent_email_content",
+     "fieldtype": "Text",
+     "label": "Email Content"
+    },
+    {
+     "fieldname": "update_status_to",
+     "fieldtype": "Link",
+     "label": "Update status to",
+     "options": "HD Ticket Status"
+    },
+    {
+     "fieldname": "default_ticket_status",
+     "fieldtype": "Link",
+     "label": "Default ticket status",
+     "reqd": 1,
+     "options": "HD Ticket Status"
+    },
+    {
+     "fieldname": "ticket_reopen_status",
+     "fieldtype": "Link",
+     "label": "Ticket Reopen status",
+     "reqd": 1,
+     "options": "HD Ticket Status"
+    },
+    {
+     "fieldname": "auto_close_status",
+     "fieldtype": "Link",
+     "label": "Status ",
+     "options": "HD Ticket Status"
+    },
+    {
+     "fieldname": "brand_name",
+     "fieldtype": "Data",
+     "label": "Name"
+    },
+    {
+     "fieldname": "favicon",
+     "fieldtype": "Attach Image",
+     "label": "Favicon"
+    },
+    {
+     "fieldname": "disable_saved_replies_global_scope",
+     "fieldtype": "Check",
+     "label": "Disable saved replies with scope 'Global'",
+     "default": "0"
+    },
+    {
+     "fieldname": "outside_working_hours_message",
+     "fieldtype": "Small Text",
+     "label": "Custom Outside Working Hours Message",
+     "default": "Thanks for reaching out 👋. This ticket was created outside our working hours. You can expect the next response by {{ next_working_day }}."
+    },
+    {
+     "fieldname": "enable_outside_hours_banner",
+     "fieldtype": "Check",
+     "label": "Apply outside working hours",
+     "default": "0"
+    },
+    {
+     "fieldname": "auto_set_customer_from_contact",
+     "fieldtype": "Check",
+     "label": "Auto-set customer from contact",
+     "default": "1"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_settings/hd_settings.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_settings/hd_settings.py"
+  },
+  {
+   "name": "HD Stopword",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:word",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 2,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "word",
+     "fieldtype": "Data",
+     "label": "Word",
+     "unique": 1
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "1"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_stopword/hd_stopword.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_stopword/hd_stopword.py"
+  },
+  {
+   "name": "HD Synonym",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:synonym",
+   "naming_rule": "Expression (old style)",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 1,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "synonym",
+     "fieldtype": "Data",
+     "label": "synonym",
+     "unique": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_synonym/hd_synonym.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_synonym/hd_synonym.py"
+  },
+  {
+   "name": "HD Synonyms",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:word",
+   "naming_rule": "Expression (old style)",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [
+    {
+     "fieldname": "synonyms",
+     "doctype": "HD Synonym"
+    }
+   ],
+   "field_count": 2,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "synonyms",
+     "fieldtype": "Table",
+     "label": "Synonyms",
+     "options": "HD Synonym"
+    },
+    {
+     "fieldname": "word",
+     "fieldtype": "Data",
+     "label": "Word",
+     "unique": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_synonyms/hd_synonyms.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_synonyms/hd_synonyms.py"
+  },
+  {
+   "name": "HD Team",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:team_name",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "team_name",
+    "users"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "assignment_rule",
+     "to": "Assignment Rule"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "users",
+     "doctype": "HD Team Member"
+    }
+   ],
+   "field_count": 5,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "team_name",
+     "fieldtype": "Data",
+     "label": "Name",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "assignment_rule",
+     "fieldtype": "Link",
+     "label": "Assignment Rule",
+     "options": "Assignment Rule",
+     "read_only": 1
+    },
+    {
+     "fieldname": "users",
+     "fieldtype": "Table MultiSelect",
+     "label": "Users",
+     "reqd": 1,
+     "options": "HD Team Member"
+    },
+    {
+     "fieldname": "ignore_restrictions",
+     "fieldtype": "Check",
+     "label": "Ignore Restrictions",
+     "default": "0"
+    },
+    {
+     "fieldname": "disabled",
+     "fieldtype": "Check",
+     "label": "Disabled",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Administrator",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer"
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_team/hd_team.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_team/hd_team.py"
+  },
+  {
+   "name": "HD Team Member",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "autoincrement",
+   "naming_rule": "Autoincrement",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 1,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "options": "User"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_team_member/hd_team_member.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_team_member/hd_team_member.py"
+  },
+  {
+   "name": "HD Ticket",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": ".####",
+   "naming_rule": "Expression",
+   "title_field": "subject",
+   "track_changes": 1,
+   "track_seen": 1,
+   "reqd_fields": [
+    "subject"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "status",
+     "to": "HD Ticket Status"
+    },
+    {
+     "fieldname": "priority",
+     "to": "HD Ticket Priority"
+    },
+    {
+     "fieldname": "ticket_type",
+     "to": "HD Ticket Type"
+    },
+    {
+     "fieldname": "agent_group",
+     "to": "HD Team"
+    },
+    {
+     "fieldname": "ticket_split_from",
+     "to": "HD Ticket"
+    },
+    {
+     "fieldname": "template",
+     "to": "HD Ticket Template"
+    },
+    {
+     "fieldname": "sla",
+     "to": "HD Service Level Agreement"
+    },
+    {
+     "fieldname": "contact",
+     "to": "Contact"
+    },
+    {
+     "fieldname": "customer",
+     "to": "HD Customer"
+    },
+    {
+     "fieldname": "email_account",
+     "to": "Email Account"
+    },
+    {
+     "fieldname": "feedback",
+     "to": "HD Ticket Feedback Option"
+    },
+    {
+     "fieldname": "merged_with",
+     "to": "HD Ticket"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 44,
+   "layout_field_count": 18,
+   "fields": [
+    {
+     "fieldname": "subject",
+     "fieldtype": "Data",
+     "label": "Subject",
+     "reqd": 1
+    },
+    {
+     "fieldname": "raised_by",
+     "fieldtype": "Data",
+     "label": "Raised By (Email)",
+     "options": "Email"
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Link",
+     "label": "Status",
+     "options": "HD Ticket Status"
+    },
+    {
+     "fieldname": "priority",
+     "fieldtype": "Link",
+     "label": "Priority",
+     "options": "HD Ticket Priority"
+    },
+    {
+     "fieldname": "ticket_type",
+     "fieldtype": "Link",
+     "label": "Ticket Type",
+     "options": "HD Ticket Type"
+    },
+    {
+     "fieldname": "agent_group",
+     "fieldtype": "Link",
+     "label": "Team",
+     "options": "HD Team"
+    },
+    {
+     "fieldname": "ticket_split_from",
+     "fieldtype": "Link",
+     "label": "Ticket Split From",
+     "options": "HD Ticket",
+     "read_only": 1
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Text Editor",
+     "label": "Description"
+    },
+    {
+     "fieldname": "template",
+     "fieldtype": "Link",
+     "label": "Template",
+     "options": "HD Ticket Template"
+    },
+    {
+     "fieldname": "sla",
+     "fieldtype": "Link",
+     "label": "SLA",
+     "options": "HD Service Level Agreement"
+    },
+    {
+     "fieldname": "response_by",
+     "fieldtype": "Datetime",
+     "label": "Response By",
+     "read_only": 1
+    },
+    {
+     "fieldname": "agreement_status",
+     "fieldtype": "Select",
+     "label": "SLA Status",
+     "options": "\nFirst Response Due\nResolution Due\nFailed\nFulfilled\nPaused",
+     "read_only": 1
+    },
+    {
+     "fieldname": "resolution_by",
+     "fieldtype": "Datetime",
+     "label": "Resolution By",
+     "read_only": 1
+    },
+    {
+     "fieldname": "service_level_agreement_creation",
+     "fieldtype": "Datetime",
+     "label": "SLA Creation",
+     "read_only": 1,
+     "hidden": 1
+    },
+    {
+     "fieldname": "on_hold_since",
+     "fieldtype": "Datetime",
+     "label": "On Hold Since",
+     "read_only": 1
+    },
+    {
+     "fieldname": "total_hold_time",
+     "fieldtype": "Duration",
+     "label": "Total Hold Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "first_response_time",
+     "fieldtype": "Duration",
+     "label": "First Response Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "first_responded_on",
+     "fieldtype": "Datetime",
+     "label": "First Responded On",
+     "read_only": 1
+    },
+    {
+     "fieldname": "avg_response_time",
+     "fieldtype": "Duration",
+     "label": "Average Response Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "resolution_details",
+     "fieldtype": "Text Editor",
+     "label": "Resolution Details"
+    },
+    {
+     "fieldname": "opening_date",
+     "fieldtype": "Date",
+     "label": "Opening Date",
+     "read_only": 1,
+     "default": "Today"
+    },
+    {
+     "fieldname": "opening_time",
+     "fieldtype": "Time",
+     "label": "Opening Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "resolution_date",
+     "fieldtype": "Datetime",
+     "label": "Resolution Date",
+     "read_only": 1
+    },
+    {
+     "fieldname": "resolution_time",
+     "fieldtype": "Duration",
+     "label": "Resolution Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "user_resolution_time",
+     "fieldtype": "Duration",
+     "label": "User Resolution Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "contact",
+     "fieldtype": "Link",
+     "label": "Contact",
+     "options": "Contact"
+    },
+    {
+     "fieldname": "customer",
+     "fieldtype": "Link",
+     "label": "Customer",
+     "options": "HD Customer"
+    },
+    {
+     "fieldname": "email_account",
+     "fieldtype": "Link",
+     "label": "Email Account",
+     "options": "Email Account"
+    },
+    {
+     "fieldname": "via_customer_portal",
+     "fieldtype": "Check",
+     "label": "Via Customer Portal",
+     "default": "0"
+    },
+    {
+     "fieldname": "attachment",
+     "fieldtype": "Attach",
+     "label": "Attachment",
+     "hidden": 1
+    },
+    {
+     "fieldname": "content_type",
+     "fieldtype": "Data",
+     "label": "Content Type",
+     "hidden": 1
+    },
+    {
+     "fieldname": "feedback_extra",
+     "fieldtype": "Long Text",
+     "label": "Feedback (Extra)",
+     "read_only": 1
+    },
+    {
+     "fieldname": "feedback",
+     "fieldtype": "Link",
+     "label": "Feedback (Option)",
+     "options": "HD Ticket Feedback Option",
+     "read_only": 1
+    },
+    {
+     "fieldname": "feedback_rating",
+     "fieldtype": "Rating",
+     "label": "Rating",
+     "read_only": 1
+    },
+    {
+     "fieldname": "summary",
+     "fieldtype": "Text Editor",
+     "label": "Summary"
+    },
+    {
+     "fieldname": "is_merged",
+     "fieldtype": "Check",
+     "label": "Ticket Merged",
+     "read_only": 1,
+     "default": "0"
+    },
+    {
+     "fieldname": "merged_with",
+     "fieldtype": "Link",
+     "label": "Merged With",
+     "options": "HD Ticket",
+     "read_only": 1
+    },
+    {
+     "fieldname": "key",
+     "fieldtype": "Data",
+     "label": "Key",
+     "read_only": 1,
+     "set_only_once": 1
+    },
+    {
+     "fieldname": "status_category",
+     "fieldtype": "Data",
+     "label": "Status Category",
+     "read_only": 1
+    },
+    {
+     "fieldname": "last_agent_response",
+     "fieldtype": "Datetime",
+     "label": "Last Agent Response",
+     "read_only": 1
+    },
+    {
+     "fieldname": "last_customer_response",
+     "fieldtype": "Datetime",
+     "label": "Last Customer Response",
+     "read_only": 1
+    },
+    {
+     "fieldname": "raised_outside_working_hours",
+     "fieldtype": "Check",
+     "label": "Ticket raised outside working hours",
+     "read_only": 1,
+     "default": "0",
+     "set_only_once": 1
+    },
+    {
+     "fieldname": "first_response_failed_by",
+     "fieldtype": "Duration",
+     "label": "First Response Failed By",
+     "read_only": 1
+    },
+    {
+     "fieldname": "resolution_failed_by",
+     "fieldtype": "Duration",
+     "label": "Resolution Failed By",
+     "read_only": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket/hd_ticket.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket/hd_ticket.py"
+  },
+  {
+   "name": "HD Ticket Activity",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "hash",
+   "naming_rule": "Random",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "ticket",
+     "to": "HD Ticket"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 2,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "ticket",
+     "fieldtype": "Link",
+     "label": "HD Ticket",
+     "options": "HD Ticket"
+    },
+    {
+     "fieldname": "action",
+     "fieldtype": "Small Text",
+     "label": "Action"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_activity/hd_ticket_activity.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_activity/hd_ticket_activity.py"
+  },
+  {
+   "name": "HD Ticket Comment",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "hash",
+   "naming_rule": "Random",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "reference_ticket",
+     "to": "HD Ticket"
+    },
+    {
+     "fieldname": "commented_by",
+     "to": "User"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "reactions",
+     "doctype": "HD Comment Reaction"
+    }
+   ],
+   "field_count": 5,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "content",
+     "fieldtype": "Text Editor",
+     "label": "Content"
+    },
+    {
+     "fieldname": "reference_ticket",
+     "fieldtype": "Link",
+     "label": "Reference Ticket",
+     "options": "HD Ticket"
+    },
+    {
+     "fieldname": "commented_by",
+     "fieldtype": "Link",
+     "label": "Commented By",
+     "options": "User"
+    },
+    {
+     "fieldname": "is_pinned",
+     "fieldtype": "Check",
+     "label": "Is pinned",
+     "default": "0"
+    },
+    {
+     "fieldname": "reactions",
+     "fieldtype": "Table",
+     "label": "Reactions",
+     "options": "HD Comment Reaction"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_comment/hd_ticket_comment.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_comment/hd_ticket_comment.py"
+  },
+  {
+   "name": "HD Ticket Feedback Option",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:label",
+   "naming_rule": "By fieldname",
+   "title_field": "label",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "rating",
+     "fieldtype": "Rating",
+     "label": "Rating"
+    },
+    {
+     "fieldname": "label",
+     "fieldtype": "Data",
+     "label": "Label",
+     "unique": 1
+    },
+    {
+     "fieldname": "disabled",
+     "fieldtype": "Check",
+     "label": "Disabled",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_feedback_option/hd_ticket_feedback_option.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_feedback_option/hd_ticket_feedback_option.py"
+  },
+  {
+   "name": "HD Ticket Priority",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "Prompt",
+   "naming_rule": "Set by user",
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "level"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "description",
+     "fieldtype": "Small Text",
+     "label": "Description"
+    },
+    {
+     "fieldname": "level",
+     "fieldtype": "Select",
+     "label": "Level",
+     "reqd": 1,
+     "options": "Urgent\nHigh\nMedium\nLow",
+     "default": "Medium"
+    },
+    {
+     "fieldname": "disabled",
+     "fieldtype": "Check",
+     "label": "Disabled",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer Manager",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_priority/hd_ticket_priority.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_priority/hd_ticket_priority.py"
+  },
+  {
+   "name": "HD Ticket Status",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:label_agent",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "label_agent",
+    "category"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "color",
+     "fieldtype": "Select",
+     "label": "Color",
+     "options": "Black\nGray\nBlue\nGreen\nRed\nPink\nOrange\nAmber\nYellow\nCyan\nTeal\nViolet\nPurple"
+    },
+    {
+     "fieldname": "label_agent",
+     "fieldtype": "Data",
+     "label": "Label",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "different_view",
+     "fieldtype": "Check",
+     "label": "Show end users a different view",
+     "default": "0"
+    },
+    {
+     "fieldname": "label_customer",
+     "fieldtype": "Data",
+     "label": "Label (customer view)"
+    },
+    {
+     "fieldname": "category",
+     "fieldtype": "Select",
+     "label": "Category",
+     "reqd": 1,
+     "options": "Open\nPaused\nResolved"
+    },
+    {
+     "fieldname": "order",
+     "fieldtype": "Int",
+     "label": "Order"
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "1"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_status/hd_ticket_status.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_status/hd_ticket_status.py"
+  },
+  {
+   "name": "HD Ticket Template",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:template_name",
+   "naming_rule": "By fieldname",
+   "title_field": "template_name",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [
+    {
+     "fieldname": "fields",
+     "doctype": "HD Ticket Template Field"
+    }
+   ],
+   "field_count": 4,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "template_name",
+     "fieldtype": "Data",
+     "label": "Template Name",
+     "unique": 1
+    },
+    {
+     "fieldname": "about",
+     "fieldtype": "Code",
+     "label": "Additional Information",
+     "options": "HTML"
+    },
+    {
+     "fieldname": "fields",
+     "fieldtype": "Table",
+     "label": "Fields",
+     "options": "HD Ticket Template Field"
+    },
+    {
+     "fieldname": "description_template",
+     "fieldtype": "Text Editor",
+     "label": "Description Template"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_template/hd_ticket_template.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_template/hd_ticket_template.py"
+  },
+  {
+   "name": "HD Ticket Template Field",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "fieldname",
+     "fieldtype": "Data",
+     "label": "Field (fieldname)"
+    },
+    {
+     "fieldname": "required",
+     "fieldtype": "Check",
+     "label": "Required",
+     "default": "0"
+    },
+    {
+     "fieldname": "hide_from_customer",
+     "fieldtype": "Check",
+     "label": "Hide from customer",
+     "default": "0"
+    },
+    {
+     "fieldname": "url_method",
+     "fieldtype": "Data",
+     "label": "URL/Method"
+    },
+    {
+     "fieldname": "placeholder",
+     "fieldtype": "Data",
+     "label": "Placeholder"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_template_field/hd_ticket_template_field.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_template_field/hd_ticket_template_field.py"
+  },
+  {
+   "name": "HD Ticket Type",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "Prompt",
+   "naming_rule": "Set by user",
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "priority",
+     "to": "HD Ticket Priority"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 4,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "description",
+     "fieldtype": "Small Text",
+     "label": "Description"
+    },
+    {
+     "fieldname": "priority",
+     "fieldtype": "Link",
+     "label": "Priority",
+     "options": "HD Ticket Priority"
+    },
+    {
+     "fieldname": "is_system",
+     "fieldtype": "Check",
+     "label": "System",
+     "read_only": 1,
+     "default": "0"
+    },
+    {
+     "fieldname": "disabled",
+     "fieldtype": "Check",
+     "label": "Disabled",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Support Team",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1
+    },
+    {
+     "role": "HD Customer Manager",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_ticket_type/hd_ticket_type.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_ticket_type/hd_ticket_type.py"
+  },
+  {
+   "name": "HD View",
+   "app": "helpdesk",
+   "installed": 0,
+   "module": "Helpdesk",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "format:VIEW-{dt}-{###}",
+   "naming_rule": "Expression (old style)",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    },
+    {
+     "fieldname": "dt",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 17,
+   "layout_field_count": 6,
+   "fields": [
+    {
+     "fieldname": "label",
+     "fieldtype": "Data",
+     "label": "Label"
+    },
+    {
+     "fieldname": "icon",
+     "fieldtype": "Data",
+     "label": "Icon"
+    },
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "options": "User"
+    },
+    {
+     "fieldname": "is_default",
+     "fieldtype": "Check",
+     "label": "Is Default",
+     "default": "0"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "options": "list\ngroup_by\nkanban",
+     "default": "list"
+    },
+    {
+     "fieldname": "dt",
+     "fieldtype": "Link",
+     "label": "DocType",
+     "options": "DocType"
+    },
+    {
+     "fieldname": "route_name",
+     "fieldtype": "Data",
+     "label": "Route Name"
+    },
+    {
+     "fieldname": "pinned",
+     "fieldtype": "Check",
+     "label": "Pinned",
+     "default": "0"
+    },
+    {
+     "fieldname": "public",
+     "fieldtype": "Check",
+     "label": "Public",
+     "default": "0"
+    },
+    {
+     "fieldname": "filters",
+     "fieldtype": "Code",
+     "label": "Filters"
+    },
+    {
+     "fieldname": "order_by",
+     "fieldtype": "Code",
+     "label": "Order By"
+    },
+    {
+     "fieldname": "load_default_columns",
+     "fieldtype": "Check",
+     "label": "Load Default Columns",
+     "default": "0"
+    },
+    {
+     "fieldname": "columns",
+     "fieldtype": "Code",
+     "label": "Columns"
+    },
+    {
+     "fieldname": "rows",
+     "fieldtype": "Code",
+     "label": "Rows"
+    },
+    {
+     "fieldname": "group_by_field",
+     "fieldtype": "Data",
+     "label": "Group By Field"
+    },
+    {
+     "fieldname": "is_customer_portal",
+     "fieldtype": "Check",
+     "label": "Is Customer Portal",
+     "default": "0"
+    },
+    {
+     "fieldname": "is_standard",
+     "fieldtype": "Check",
+     "label": "Is Standard",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "Administrator",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Agent Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "HD Customer",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1,
+     "if_owner": 1
+    },
+    {
+     "role": "HD Customer Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1,
+     "if_owner": 1
+    }
+   ],
+   "links": [],
+   "json_path": "helpdesk/helpdesk/doctype/hd_view/hd_view.json",
+   "controller_path": "helpdesk/helpdesk/doctype/hd_view/hd_view.py"
+  }
+ ]
+}

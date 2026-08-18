@@ -31,6 +31,41 @@
     "frappe": { "tag": "v16.20.0" },
     "erpnext": { "tag": "v16.20.0" }
   },
+  "available": {
+    "_comment": [
+      "Frappe apps we do NOT install, indexed anyway and tagged installed:false.",
+      "",
+      "Without these, `find_doctype` answers a bare 'not found' for anything they ship, which",
+      "reads as 'the platform cannot do this' - the exact wrong conclusion. It already cost us:",
+      "a mileage question was answered from recall about hrms because hrms was not indexed.",
+      "",
+      "The useful answer is neither 'no' nor a false 'yes'. It is: not on your bench, but app X",
+      "ships it, here is its shape, so adopt-or-build becomes a real decision.",
+      "",
+      "Only hrms publishes version-N branches; the rest release continuously against frappe",
+      "develop, so they are pinned by ref and the resolved SHA is recorded in the index."
+    ],
+    "hrms": {
+      "repo": "https://github.com/frappe/hrms.git",
+      "ref": "version-16",
+      "why": "Closest adjacent app: Employee, Timesheet, Leave, Attendance, Expense Claim, and the Vehicle Log / Vehicle Service pair ERPNext dropped when HR split out."
+    },
+    "crm": {
+      "repo": "https://github.com/frappe/crm.git",
+      "ref": "main",
+      "why": "Lead/Deal pipeline and communication logging, adjacent to Service Request intake."
+    },
+    "helpdesk": {
+      "repo": "https://github.com/frappe/helpdesk.git",
+      "ref": "main",
+      "why": "Ticketing, SLA and agent assignment, adjacent to job dispatch and customer follow-up."
+    },
+    "press": {
+      "repo": "https://github.com/frappe/press.git",
+      "ref": "master",
+      "why": "The app behind Frappe Cloud: Site, Bench, Server, Team, Subscription. It is the reference implementation of what orchestrator/ and provisioner/ do by hand, so it is the best available check against rebuilding tenant lifecycle from scratch."
+    }
+  },
   "vendor": {
     "_comment": "Doc sets that genuinely live in git, synced verbatim. Resolved SHAs land in vendor/_manifest.json.",
     "frappe_docker": {
@@ -55,7 +90,22 @@
     "subtrees": [
       "framework/user/en/",
       "framework/v15/user/en/",
-      "erpnext/user/manual/en/"
-    ]
+      "erpnext/user/manual/en/",
+      "hr/",
+      "cloud/",
+      "crm/",
+      "helpdesk/",
+      "insights/",
+      "drive/",
+      "builder/",
+      "wiki-v2/",
+      "wiki/"
+    ],
+    "excluded": {
+      "_comment": "Recorded so nobody has to guess whether a gap is deliberate. Roughly 4,860 of the sitemap's 6,663 URLs are skipped.",
+      "superseded_versions": "erpnext/v12, erpnext/v13, erpnext/v14, framework/v13, framework/v14 - about 4,600 pages. Stale text that would surface as confidently wrong search hits, which is the opposite of this repo's purpose. framework/v15 is kept because it is the last versioned framework tree and often carries detail the unversioned 'user' tree dropped.",
+      "other_verticals": "lending, education, books, learning, school - about 191 pages. Separate Frappe products (loan management, school ERP, desktop accounting, LMS) with no bearing on field service.",
+      "non_technical": "customer-guide, partner-guide, legal - about 68 pages. Frappe's own pricing, support and partner-programme material, not platform documentation."
+    }
   }
 }

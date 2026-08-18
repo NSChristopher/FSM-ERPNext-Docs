@@ -5486,6 +5486,8 @@ import { promisify } from "node:util";
 var execFileAsync = promisify(execFile);
 var ROOT = process.env.FSM_DOCS_ROOT ? path.resolve(process.env.FSM_DOCS_ROOT) : path.resolve(path.dirname(new URL(import.meta.url).pathname), "..", "..");
 var APPS = ["frappe", "erpnext"];
+var AVAILABLE_APPS = ["hrms", "crm", "helpdesk", "press"];
+var isInstalled = (app) => APPS.includes(app);
 function readJson(rel) {
   const full = path.join(ROOT, rel);
   if (!existsSync(full)) {
@@ -5498,11 +5500,15 @@ function readJson(rel) {
 var _doctypes = null;
 function doctypes() {
   if (!_doctypes) {
-    _doctypes = APPS.flatMap(
+    _doctypes = [...APPS, ...AVAILABLE_APPS].flatMap(
       (app) => readJson(`index/doctypes.${app}.json`).doctypes
     );
   }
   return _doctypes;
+}
+function availableAppNote(app) {
+  const p = pins();
+  return p.available?.[app]?.why ?? "";
 }
 var _whitelist = null;
 function whitelist() {
@@ -5526,12 +5532,18 @@ function pins() {
 }
 var tagOf = (app) => pins().source[app].tag;
 var devTagOf = (app) => pins().devcontainer[app].tag;
+function refLabel(app) {
+  if (isInstalled(app)) return `${app}@${tagOf(app)}`;
+  const p = pins();
+  return `${app}@${p.available?.[app]?.ref ?? "?"} (NOT installed)`;
+}
 var pinNote = () => `production/CI: frappe ${tagOf("frappe")} \xB7 erpnext ${tagOf("erpnext")} (devcontainer runs ${devTagOf("frappe")} \u2014 see index/drift.md)`;
 function sourceDir(app) {
-  const dir = path.join(ROOT, "source", app);
+  const rel = isInstalled(app) ? ["source", app] : ["source", "available", app];
+  const dir = path.join(ROOT, ...rel);
   if (!existsSync(dir)) {
     throw new Error(
-      `source/${app} is not present. Run \`./scripts/sync-source.sh\` in ${ROOT} (~10s, it is gitignored on purpose).`
+      `${rel.join("/")} is not present. Run \`./scripts/sync-source.sh\` in ${ROOT} (~30s, it is gitignored on purpose).`
     );
   }
   return dir;
@@ -5570,7 +5582,7 @@ function readSourceFile(app, rel, start, end) {
   const base = sourceDir(app);
   const full = path.resolve(base, rel);
   if (!full.startsWith(base + path.sep)) throw new Error(`path escapes source/${app}: ${rel}`);
-  if (!existsSync(full) || !statSync(full).isFile()) throw new Error(`no such file in ${app}@${tagOf(app)}: ${rel}`);
+  if (!existsSync(full) || !statSync(full).isFile()) throw new Error(`no such file in ${refLabel(app)}: ${rel}`);
   const lines = readFileSync(full, "utf8").split("\n");
   const from = Math.max(1, start ?? 1);
   const to = Math.min(lines.length, end ?? Math.min(lines.length, from + 200));
@@ -5726,17 +5738,23 @@ function searchDocs(query, opts = {}) {
 }
 
 // src/index.ts
-var APP_ENUM = { type: "string", enum: [...APPS], description: "Restrict to one app." };
+var APP_ENUM = { type: "string", enum: [...APPS], description: "Restrict to one installed app." };
+var ANY_APP_ENUM = {
+  type: "string",
+  enum: [...APPS, ...AVAILABLE_APPS],
+  description: `Installed: ${APPS.join(", ")}. Available but NOT installed: ${AVAILABLE_APPS.join(", ")}.`
+};
 var TOOLS = [
   {
     name: "find_doctype",
-    description: "Search the ~810 DocTypes Frappe and ERPNext ship in production (frappe v16.31.0 / erpnext v16.32.1). Use this BEFORE designing a new DocType \u2014 the answer is often that the platform already has one. Returns each match with its module, required fields and flags, which is usually enough to tell whether it actually fits.",
+    description: "Search ~1,430 DocTypes across the Frappe ecosystem: the ~810 that frappe + erpnext ship in production (what our tenants actually run), plus ~620 from four apps we do NOT install (hrms, crm, helpdesk, press). Use BEFORE designing a new DocType. Results are split into two clearly separated sections so an available-but-not-installed match is never mistaken for something usable today \u2014 that distinction is the point of the second tier.",
     inputSchema: {
       type: "object",
       properties: {
         pattern: { type: "string", description: "Case-insensitive substring or regex matched against the DocType name (e.g. 'webhook', 'serial', '^Sales')." },
-        app: APP_ENUM,
+        app: ANY_APP_ENUM,
         module: { type: "string", description: "Restrict to a module, e.g. 'Stock', 'Accounts', 'Integrations'." },
+        installed_only: { type: "boolean", description: "Only DocTypes on our benches (frappe + erpnext). Use when the question is strictly 'can our code use this today'." },
         limit: { type: "number", description: "Max results (default 25)." }
       },
       required: ["pattern"]
@@ -5744,7 +5762,7 @@ var TOOLS = [
   },
   {
     name: "describe_doctype",
-    description: "Full schema for one DocType as it exists in production: every field with its type and reqd/unique flags, permissions, links, child tables, autoname. Use this to answer 'does this actually fit our shape?' \u2014 a required field you cannot satisfy is the usual reason a close-sounding DocType is wrong.",
+    description: "Full schema for one DocType: every field with its type and reqd/unique flags, permissions, links, child tables, autoname. Use this to answer 'does this actually fit our shape?' \u2014 a required field you cannot satisfy is the usual reason a close-sounding DocType is wrong. DocTypes from non-installed apps are returned with a prominent NOT INSTALLED banner.",
     inputSchema: {
       type: "object",
       properties: {
@@ -5781,12 +5799,12 @@ var TOOLS = [
   },
   {
     name: "grep_source",
-    description: "Regex search the Frappe and ERPNext source at the production tag. This is the citation machine: use it to PROVE a platform claim before acting on it. Absence of something in our own repo is never evidence about the platform \u2014 this is.",
+    description: "Regex search platform source at the pinned refs. This is the citation machine: use it to PROVE a claim before acting on it. Absence in our own repo is never evidence about the platform \u2014 this is. Defaults to the installed apps (frappe + erpnext); pass `app` to read how a non-installed app such as hrms or press implements something.",
     inputSchema: {
       type: "object",
       properties: {
         pattern: { type: "string", description: "POSIX extended regex (git grep -E)." },
-        app: APP_ENUM,
+        app: ANY_APP_ENUM,
         glob: { type: "string", description: "Limit to matching paths, e.g. '*.py', 'frappe/model/*'." },
         ignore_case: { type: "boolean" },
         limit: { type: "number", description: "Max matches (default 60)." }
@@ -5800,7 +5818,7 @@ var TOOLS = [
     inputSchema: {
       type: "object",
       properties: {
-        app: { ...APP_ENUM, description: "Which app's checkout to read from." },
+        app: { ...ANY_APP_ENUM, description: "Which app's checkout to read from." },
         path: { type: "string", description: "Path relative to the app checkout, e.g. 'frappe/model/document.py'." },
         start: { type: "number", description: "First line (1-indexed)." },
         end: { type: "number", description: "Last line. Defaults to start+200." }
@@ -5817,8 +5835,8 @@ var TOOLS = [
         query: { type: "string", description: "Natural-language or keyword query." },
         scope: {
           type: "string",
-          enum: ["all", "framework", "erpnext", "frappe_docker", "bench"],
-          description: "Restrict to one corpus (default 'all')."
+          enum: ["all", "framework", "erpnext", "hr", "cloud", "crm", "helpdesk", "insights", "drive", "builder", "wiki", "frappe_docker", "bench"],
+          description: "Restrict to one corpus (default 'all'). 'hr', 'crm', 'helpdesk' etc. are docs for apps we do not install."
         },
         limit: { type: "number", description: "Max results (default 10)." }
       },
@@ -5840,6 +5858,14 @@ var TOOLS = [
 var SCOPE_PREFIX = {
   framework: "mirror/framework/",
   erpnext: "mirror/erpnext/",
+  hr: "mirror/hr/",
+  cloud: "mirror/cloud/",
+  crm: "mirror/crm/",
+  helpdesk: "mirror/helpdesk/",
+  insights: "mirror/insights/",
+  drive: "mirror/drive/",
+  builder: "mirror/builder/",
+  wiki: "mirror/wiki",
   frappe_docker: "vendor/frappe_docker/",
   bench: "vendor/bench/"
 };
@@ -5866,6 +5892,40 @@ function doctypeLine(d) {
     `    ${d.field_count} fields \xB7 ${d.json_path}`
   ].join("\n");
 }
+function renderDoctypeHits(hits, limit, header) {
+  const live = hits.filter((d) => d.installed);
+  const avail = hits.filter((d) => !d.installed);
+  const parts = [`${header} \xB7 ${pinNote()}`, ""];
+  if (live.length) {
+    parts.push(`## On your bench (${live.length}) \u2014 frappe + erpnext`, "");
+    parts.push(live.slice(0, limit).map(doctypeLine).join("\n\n"));
+    if (live.length > limit) parts.push(`
+\u2026${live.length - limit} more.`);
+    parts.push("");
+  }
+  if (avail.length) {
+    const byApp = [...new Set(avail.map((d) => d.app))];
+    parts.push(
+      `## NOT installed (${avail.length}) \u2014 ships with ${byApp.join(", ")}`,
+      "",
+      "These are **not available to our code**. Adopting one means installing that app on every",
+      "tenant \u2014 a real decision with migration and upgrade cost, not a free win.",
+      ""
+    );
+    const availLimit = Math.min(limit, 10);
+    parts.push(avail.slice(0, availLimit).map(doctypeLine).join("\n\n"));
+    if (avail.length > availLimit) parts.push(`
+\u2026${avail.length - availLimit} more (pass app: to narrow).`);
+    parts.push("");
+    for (const app of byApp) {
+      const note = availableAppNote(app);
+      if (note) parts.push(`_${app}: ${note}_`);
+    }
+    parts.push("");
+  }
+  parts.push("Use describe_doctype for the full field list before concluding one fits.");
+  return parts.join("\n");
+}
 async function handle(name, a) {
   switch (name) {
     case "find_doctype": {
@@ -5873,24 +5933,17 @@ async function handle(name, a) {
       let hits = doctypes().filter((d) => re.test(d.name));
       if (a.app) hits = hits.filter((d) => d.app === a.app);
       if (a.module) hits = hits.filter((d) => (d.module ?? "").toLowerCase() === String(a.module).toLowerCase());
+      if (a.installed_only) hits = hits.filter((d) => d.installed);
       if (hits.length === 0) {
         return text(
-          `No DocType matching /${a.pattern}/i at ${pinNote()}
+          `No DocType matching /${a.pattern}/i \xB7 ${pinNote()}
 
-That is real evidence of absence \u2014 this index covers every DocType both apps ship. Consider grep_source for a non-DocType mechanism before building one.`
+That is real evidence of absence. This index covers every DocType shipped by the apps we install (frappe, erpnext) **and** by four we do not (${AVAILABLE_APPS.join(", ")}), so a miss here is not merely "we haven't used it".
+
+Search by what the thing does rather than what we named it before concluding. Then try grep_source for a non-DocType mechanism.`
         );
       }
-      const limit = a.limit ?? 25;
-      const shown = hits.slice(0, limit);
-      return text(
-        `${hits.length} DocType(s) matching /${a.pattern}/i \xB7 ${pinNote()}
-
-` + shown.map(doctypeLine).join("\n\n") + (hits.length > limit ? `
-
-\u2026${hits.length - limit} more; narrow the pattern or raise limit.` : "") + `
-
-Use describe_doctype for the full field list before concluding one fits.`
-      );
+      return text(renderDoctypeHits(hits, a.limit ?? 25, `${hits.length} DocType(s) matching /${a.pattern}/i`));
     }
     case "describe_doctype": {
       const d = doctypes().find((x) => x.name.toLowerCase() === String(a.name).toLowerCase());
@@ -5906,7 +5959,18 @@ Did you mean: ${near.slice(0, 8).map((n) => n.name).join(", ")}` : "")
       const lines = [
         `# ${d.name}`,
         `${d.app}/${d.module ?? "?"} \xB7 ${pinNote()}`,
-        "",
+        ""
+      ];
+      if (!d.installed) {
+        lines.push(
+          `> \u26A0\uFE0F **NOT INSTALLED.** \`${d.app}\` is not on our benches \u2014 this DocType does not exist`,
+          `> on a tenant site today. Using it means installing \`${d.app}\` everywhere, with the`,
+          `> migration and upgrade cost that carries.`,
+          availableAppNote(d.app) ? `> Indexed because: ${availableAppNote(d.app)}` : "",
+          ""
+        );
+      }
+      lines.push(
         `- autoname: ${d.autoname ?? "(none)"}${d.naming_rule ? ` \xB7 naming_rule: ${d.naming_rule}` : ""}`,
         `- flags: submittable=${d.is_submittable} child_table=${d.istable} single=${d.issingle} tree=${d.is_tree} virtual=${d.is_virtual}`,
         `- track_changes=${d.track_changes} track_seen=${d.track_seen}${d.title_field ? ` \xB7 title_field=${d.title_field}` : ""}`,
@@ -5918,7 +5982,7 @@ Did you mean: ${near.slice(0, 8).map((n) => n.name).join(", ")}` : "")
           return `- ${f} (${fld.fieldtype}${fld.options ? ` \u2192 ${fld.options}` : ""})`;
         }).join("\n") : "- (none)",
         ""
-      ];
+      );
       if (mode !== "required") {
         if (d.link_fields.length) {
           lines.push(`## Links out (${d.link_fields.length})`, d.link_fields.map((l) => `- ${l.fieldname} \u2192 ${l.to}`).join("\n"), "");
@@ -6017,7 +6081,7 @@ This searched the whole pinned tree, so it is evidence of absence in the platfor
     }
     case "read_source":
       return text(
-        `${a.app}@${tagOf(a.app)} \xB7 ${a.path}
+        `${refLabel(a.app)} \xB7 ${a.path}
 
 ` + readSourceFile(a.app, a.path, a.start, a.end)
       );

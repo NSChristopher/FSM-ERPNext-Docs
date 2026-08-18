@@ -16,8 +16,18 @@ export const ROOT = process.env.FSM_DOCS_ROOT
   ? path.resolve(process.env.FSM_DOCS_ROOT)
   : path.resolve(path.dirname(new URL(import.meta.url).pathname), "..", "..");
 
+/** Apps a tenant site actually runs. "The platform has this" means these. */
 export const APPS = ["frappe", "erpnext"] as const;
+/**
+ * Apps we do NOT install, indexed so a miss can distinguish "nothing in the Frappe ecosystem
+ * does this" from "not on your bench, but hrms ships it". Conflating those two is the failure
+ * this repo exists to prevent, so `installed` is carried on every record and never dropped.
+ */
+export const AVAILABLE_APPS = ["hrms", "crm", "helpdesk", "press"] as const;
 export type App = (typeof APPS)[number];
+export type AnyApp = App | (typeof AVAILABLE_APPS)[number];
+
+export const isInstalled = (app: string): app is App => (APPS as readonly string[]).includes(app);
 
 export interface DocField {
   fieldname: string;
@@ -34,7 +44,9 @@ export interface DocField {
 
 export interface DocType {
   name: string;
-  app: App;
+  app: AnyApp;
+  /** 1 = shipped by an app the tenant runs. 0 = exists upstream but is not on the bench. */
+  installed: number;
   module: string | null;
   istable: number;
   issingle: number;
@@ -86,13 +98,20 @@ function readJson<T>(rel: string): T {
 }
 
 let _doctypes: DocType[] | null = null;
+/** Every indexed DocType, installed and available alike. Filter on `.installed`. */
 export function doctypes(): DocType[] {
   if (!_doctypes) {
-    _doctypes = APPS.flatMap(
+    _doctypes = [...APPS, ...AVAILABLE_APPS].flatMap(
       (app) => readJson<{ doctypes: DocType[] }>(`index/doctypes.${app}.json`).doctypes,
     );
   }
   return _doctypes;
+}
+
+/** Why a non-installed app is indexed at all, for explaining an "available" hit. */
+export function availableAppNote(app: string): string {
+  const p = pins() as unknown as { available?: Record<string, { ref: string; why: string }> };
+  return p.available?.[app]?.why ?? "";
 }
 
 let _whitelist: WhitelistMethod[] | null = null;
@@ -124,6 +143,16 @@ export const tagOf = (app: App) => pins().source[app].tag;
 export const devTagOf = (app: App) => pins().devcontainer[app].tag;
 
 /**
+ * How to name an app's pinned ref in output. Installed apps carry a release tag; available
+ * ones track a branch, so their label says so rather than implying a version we do not have.
+ */
+export function refLabel(app: AnyApp): string {
+  if (isInstalled(app)) return `${app}@${tagOf(app)}`;
+  const p = pins() as unknown as { available?: Record<string, { ref: string }> };
+  return `${app}@${p.available?.[app]?.ref ?? "?"} (NOT installed)`;
+}
+
+/**
  * Provenance footer for anything read out of pinned source.
  *
  * Names production explicitly. FSM-App carries three different Frappe/ERPNext pins, and the
@@ -136,11 +165,13 @@ export const pinNote = () =>
 
 // ---------------------------------------------------------------- source access
 
-export function sourceDir(app: App): string {
-  const dir = path.join(ROOT, "source", app);
+export function sourceDir(app: AnyApp): string {
+  // Installed apps sit at source/<app>; available ones under source/available/<app>.
+  const rel = isInstalled(app) ? ["source", app] : ["source", "available", app];
+  const dir = path.join(ROOT, ...rel);
   if (!existsSync(dir)) {
     throw new Error(
-      `source/${app} is not present. Run \`./scripts/sync-source.sh\` in ${ROOT} (~10s, it is gitignored on purpose).`,
+      `${rel.join("/")} is not present. Run \`./scripts/sync-source.sh\` in ${ROOT} (~30s, it is gitignored on purpose).`,
     );
   }
   return dir;
@@ -152,11 +183,13 @@ export function sourceDir(app: App): string {
  */
 export async function grepSource(
   pattern: string,
-  opts: { app?: App; glob?: string; limit?: number; ignoreCase?: boolean } = {},
-): Promise<{ app: App; file: string; line: number; text: string }[]> {
-  const apps = opts.app ? [opts.app] : [...APPS];
+  opts: { app?: AnyApp; glob?: string; limit?: number; ignoreCase?: boolean } = {},
+): Promise<{ app: AnyApp; file: string; line: number; text: string }[]> {
+  // Default to installed apps only. An unqualified grep is asking about our platform;
+  // opting into hrms/press is a deliberate 'how does that app do it' question.
+  const apps: AnyApp[] = opts.app ? [opts.app] : [...APPS];
   const limit = opts.limit ?? 60;
-  const out: { app: App; file: string; line: number; text: string }[] = [];
+  const out: { app: AnyApp; file: string; line: number; text: string }[] = [];
 
   for (const app of apps) {
     const args = ["grep", "--no-color", "-n", "-I", "-E"];
@@ -188,12 +221,12 @@ export async function grepSource(
   return out;
 }
 
-export function readSourceFile(app: App, rel: string, start?: number, end?: number): string {
+export function readSourceFile(app: AnyApp, rel: string, start?: number, end?: number): string {
   const base = sourceDir(app);
   const full = path.resolve(base, rel);
   // Confine reads to the checkout: a '../' in rel must not escape into the host filesystem.
   if (!full.startsWith(base + path.sep)) throw new Error(`path escapes source/${app}: ${rel}`);
-  if (!existsSync(full) || !statSync(full).isFile()) throw new Error(`no such file in ${app}@${tagOf(app)}: ${rel}`);
+  if (!existsSync(full) || !statSync(full).isFile()) throw new Error(`no such file in ${refLabel(app)}: ${rel}`);
 
   const lines = readFileSync(full, "utf8").split("\n");
   const from = Math.max(1, start ?? 1);

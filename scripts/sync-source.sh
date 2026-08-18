@@ -36,6 +36,24 @@ for app in frappe erpnext; do
   clone_at "$(read_pin ".source.$app.repo")" "$(read_pin ".source.$app.tag")" "$DEST/$app"
 done
 
+# Apps we do not install, cloned so the index can answer "not on your bench, but app X ships
+# it". Only hrms tags version-N releases; the rest track a branch, so clone_at's tag check
+# does not apply and they are re-cloned each sync.
+echo "syncing available-but-not-installed apps into source/available/"
+AVAILABLE=$(node -p "Object.keys(JSON.parse(require('fs').readFileSync('$PINS','utf8')).available).filter(k=>!k.startsWith('_')).join(' ')")
+for app in $AVAILABLE; do
+  ref="$(read_pin ".available['$app'].ref")"
+  dir="$DEST/available/$app"
+  if [[ -d "$dir/.git" ]] && [[ "$(git -C "$dir" rev-parse --abbrev-ref HEAD 2>/dev/null || true)" == "$ref" ]]; then
+    echo "  ✓ $app already on $ref"
+    continue
+  fi
+  rm -rf "$dir"
+  mkdir -p "$(dirname "$dir")"
+  echo "  ↓ $app @ $ref"
+  git clone --quiet --depth 1 --branch "$ref" "$(read_pin ".available['$app'].repo")" "$dir"
+done
+
 if [[ $WITH_DEVCONTAINER == 1 ]]; then
   echo "syncing devcontainer-pinned source into source/.devcontainer/"
   for app in frappe erpnext; do
@@ -45,6 +63,9 @@ fi
 
 echo
 for app in frappe erpnext; do
-  printf '  %-8s %s\n' "$app" "$(git -C "$DEST/$app" describe --tags 2>/dev/null || echo '?')"
+  printf '  %-10s %s  (installed)\n' "$app" "$(git -C "$DEST/$app" describe --tags 2>/dev/null || echo '?')"
+done
+for app in $AVAILABLE; do
+  printf '  %-10s %s  (available, not installed)\n' "$app" "$(git -C "$DEST/available/$app" rev-parse --short HEAD 2>/dev/null || echo '?')"
 done
 echo "done."

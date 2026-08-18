@@ -1,0 +1,4922 @@
+{
+ "built_at": "2026-08-18",
+ "pins": {
+  "frappe": "v16.31.0",
+  "erpnext": "v16.32.1"
+ },
+ "app": "crm",
+ "installed": 0,
+ "ref": "main@49d98d61e7d4",
+ "why_indexed": "Lead/Deal pipeline and communication logging, adjacent to Service Request intake.",
+ "count": 44,
+ "doctypes": [
+  {
+   "name": "CRM Call Log",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:id",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "from",
+    "status",
+    "type",
+    "to"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "note",
+     "to": "FCRM Note"
+    },
+    {
+     "fieldname": "receiver",
+     "to": "User"
+    },
+    {
+     "fieldname": "caller",
+     "to": "User"
+    },
+    {
+     "fieldname": "reference_doctype",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "links",
+     "doctype": "Dynamic Link"
+    }
+   ],
+   "field_count": 17,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "id",
+     "fieldtype": "Data",
+     "label": "ID",
+     "unique": 1
+    },
+    {
+     "fieldname": "from",
+     "fieldtype": "Data",
+     "label": "From Number",
+     "reqd": 1
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Select",
+     "label": "Status",
+     "reqd": 1,
+     "options": "Initiated\nRinging\nIn Progress\nCompleted\nFailed\nBusy\nNo Answer\nQueued\nCanceled"
+    },
+    {
+     "fieldname": "start_time",
+     "fieldtype": "Datetime",
+     "label": "Start Time"
+    },
+    {
+     "fieldname": "medium",
+     "fieldtype": "Data",
+     "label": "Medium"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "reqd": 1,
+     "options": "Incoming\nOutgoing"
+    },
+    {
+     "fieldname": "to",
+     "fieldtype": "Data",
+     "label": "To Number",
+     "reqd": 1
+    },
+    {
+     "fieldname": "duration",
+     "fieldtype": "Duration",
+     "label": "Duration"
+    },
+    {
+     "fieldname": "recording_url",
+     "fieldtype": "Small Text",
+     "label": "Recording URL"
+    },
+    {
+     "fieldname": "end_time",
+     "fieldtype": "Datetime",
+     "label": "End Time"
+    },
+    {
+     "fieldname": "note",
+     "fieldtype": "Link",
+     "label": "Note",
+     "options": "FCRM Note"
+    },
+    {
+     "fieldname": "receiver",
+     "fieldtype": "Link",
+     "label": "Call Received By",
+     "options": "User"
+    },
+    {
+     "fieldname": "caller",
+     "fieldtype": "Link",
+     "label": "Caller",
+     "options": "User"
+    },
+    {
+     "fieldname": "reference_doctype",
+     "fieldtype": "Link",
+     "label": "Reference Document Type",
+     "options": "DocType",
+     "default": "CRM Lead"
+    },
+    {
+     "fieldname": "reference_docname",
+     "fieldtype": "Dynamic Link",
+     "label": "Reference Name",
+     "options": "reference_doctype"
+    },
+    {
+     "fieldname": "links",
+     "fieldtype": "Table",
+     "label": "Links",
+     "options": "Dynamic Link"
+    },
+    {
+     "fieldname": "telephony_medium",
+     "fieldtype": "Select",
+     "label": "Telephony Medium",
+     "options": "\nManual\nTwilio\nExotel",
+     "read_only": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_call_log/crm_call_log.json",
+   "controller_path": "crm/fcrm/doctype/crm_call_log/crm_call_log.py"
+  },
+  {
+   "name": "CRM Communication Status",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:status",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "status"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 1,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "status",
+     "fieldtype": "Data",
+     "label": "Status",
+     "reqd": 1,
+     "unique": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_communication_status/crm_communication_status.json",
+   "controller_path": "crm/fcrm/doctype/crm_communication_status/crm_communication_status.py"
+  },
+  {
+   "name": "CRM Contacts",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "contact",
+     "to": "Contact"
+    },
+    {
+     "fieldname": "gender",
+     "to": "Gender"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "contact",
+     "fieldtype": "Link",
+     "label": "Contact",
+     "options": "Contact"
+    },
+    {
+     "fieldname": "full_name",
+     "fieldtype": "Data",
+     "label": "Full Name",
+     "read_only": 1
+    },
+    {
+     "fieldname": "email",
+     "fieldtype": "Data",
+     "label": "Email",
+     "read_only": 1
+    },
+    {
+     "fieldname": "mobile_no",
+     "fieldtype": "Data",
+     "label": "Mobile No.",
+     "options": "Phone",
+     "read_only": 1
+    },
+    {
+     "fieldname": "phone",
+     "fieldtype": "Data",
+     "label": "Phone",
+     "options": "Phone",
+     "read_only": 1
+    },
+    {
+     "fieldname": "gender",
+     "fieldtype": "Link",
+     "label": "Gender",
+     "options": "Gender",
+     "read_only": 1
+    },
+    {
+     "fieldname": "is_primary",
+     "fieldtype": "Check",
+     "label": "Is Primary",
+     "default": "0"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_contacts/crm_contacts.json",
+   "controller_path": "crm/fcrm/doctype/crm_contacts/crm_contacts.py"
+  },
+  {
+   "name": "CRM Dashboard",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:title",
+   "naming_rule": "By fieldname",
+   "title_field": "title",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 4,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "layout",
+     "fieldtype": "Code",
+     "label": "Layout",
+     "options": "JSON",
+     "default": "[]"
+    },
+    {
+     "fieldname": "title",
+     "fieldtype": "Data",
+     "label": "Name",
+     "unique": 1
+    },
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "options": "User"
+    },
+    {
+     "fieldname": "private",
+     "fieldtype": "Check",
+     "label": "Private",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_dashboard/crm_dashboard.json",
+   "controller_path": "crm/fcrm/doctype/crm_dashboard/crm_dashboard.py"
+  },
+  {
+   "name": "CRM Deal",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "naming_series:",
+   "naming_rule": "By \"Naming Series\" field",
+   "title_field": "organization",
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "status"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "organization",
+     "to": "CRM Organization"
+    },
+    {
+     "fieldname": "lead",
+     "to": "CRM Lead"
+    },
+    {
+     "fieldname": "deal_owner",
+     "to": "User"
+    },
+    {
+     "fieldname": "status",
+     "to": "CRM Deal Status"
+    },
+    {
+     "fieldname": "sla",
+     "to": "CRM Service Level Agreement"
+    },
+    {
+     "fieldname": "communication_status",
+     "to": "CRM Communication Status"
+    },
+    {
+     "fieldname": "territory",
+     "to": "CRM Territory"
+    },
+    {
+     "fieldname": "source",
+     "to": "CRM Lead Source"
+    },
+    {
+     "fieldname": "industry",
+     "to": "CRM Industry"
+    },
+    {
+     "fieldname": "salutation",
+     "to": "Salutation"
+    },
+    {
+     "fieldname": "gender",
+     "to": "Gender"
+    },
+    {
+     "fieldname": "contact",
+     "to": "Contact"
+    },
+    {
+     "fieldname": "currency",
+     "to": "Currency"
+    },
+    {
+     "fieldname": "lost_reason",
+     "to": "CRM Lost Reason"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "contacts",
+     "doctype": "CRM Contacts"
+    },
+    {
+     "fieldname": "status_change_log",
+     "doctype": "CRM Status Change Log"
+    },
+    {
+     "fieldname": "products",
+     "doctype": "CRM Products"
+    },
+    {
+     "fieldname": "rolling_responses",
+     "doctype": "CRM Rolling Response Time"
+    }
+   ],
+   "field_count": 47,
+   "layout_field_count": 23,
+   "fields": [
+    {
+     "fieldname": "organization",
+     "fieldtype": "Link",
+     "label": "Organization",
+     "options": "CRM Organization"
+    },
+    {
+     "fieldname": "probability",
+     "fieldtype": "Percent",
+     "label": "Probability"
+    },
+    {
+     "fieldname": "annual_revenue",
+     "fieldtype": "Currency",
+     "label": "Annual Revenue",
+     "options": "currency"
+    },
+    {
+     "fieldname": "website",
+     "fieldtype": "Data",
+     "label": "Website"
+    },
+    {
+     "fieldname": "next_step",
+     "fieldtype": "Data",
+     "label": "Next Step"
+    },
+    {
+     "fieldname": "lead",
+     "fieldtype": "Link",
+     "label": "Lead",
+     "options": "CRM Lead"
+    },
+    {
+     "fieldname": "deal_owner",
+     "fieldtype": "Link",
+     "label": "Deal Owner",
+     "options": "User"
+    },
+    {
+     "fieldname": "naming_series",
+     "fieldtype": "Select",
+     "label": "Naming Series",
+     "options": "CRM-DEAL-.YYYY.-",
+     "default": "CRM-DEAL-.YYYY.-"
+    },
+    {
+     "fieldname": "email",
+     "fieldtype": "Data",
+     "label": "Primary email",
+     "options": "Email"
+    },
+    {
+     "fieldname": "mobile_no",
+     "fieldtype": "Data",
+     "label": "Primary mobile no",
+     "options": "Phone"
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Link",
+     "label": "Status",
+     "reqd": 1,
+     "options": "CRM Deal Status"
+    },
+    {
+     "fieldname": "contacts",
+     "fieldtype": "Table",
+     "label": "Contacts",
+     "options": "CRM Contacts"
+    },
+    {
+     "fieldname": "sla",
+     "fieldtype": "Link",
+     "label": "SLA",
+     "options": "CRM Service Level Agreement"
+    },
+    {
+     "fieldname": "response_by",
+     "fieldtype": "Datetime",
+     "label": "Response By",
+     "read_only": 1
+    },
+    {
+     "fieldname": "sla_status",
+     "fieldtype": "Select",
+     "label": "SLA Status",
+     "options": "\nFirst Response Due\nRolling Response Due\nFailed\nFulfilled",
+     "read_only": 1
+    },
+    {
+     "fieldname": "sla_creation",
+     "fieldtype": "Datetime",
+     "label": "SLA Creation",
+     "read_only": 1
+    },
+    {
+     "fieldname": "first_response_time",
+     "fieldtype": "Duration",
+     "label": "First Response Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "first_responded_on",
+     "fieldtype": "Datetime",
+     "label": "First Responded On",
+     "read_only": 1
+    },
+    {
+     "fieldname": "communication_status",
+     "fieldtype": "Link",
+     "label": "Communication Status",
+     "options": "CRM Communication Status",
+     "default": "Open"
+    },
+    {
+     "fieldname": "territory",
+     "fieldtype": "Link",
+     "label": "Territory",
+     "options": "CRM Territory"
+    },
+    {
+     "fieldname": "source",
+     "fieldtype": "Link",
+     "label": "Source",
+     "options": "CRM Lead Source"
+    },
+    {
+     "fieldname": "no_of_employees",
+     "fieldtype": "Select",
+     "label": "No. of Employees",
+     "options": "1-10\n11-50\n51-200\n201-500\n501-1000\n1000+"
+    },
+    {
+     "fieldname": "job_title",
+     "fieldtype": "Data",
+     "label": "Job Title"
+    },
+    {
+     "fieldname": "phone",
+     "fieldtype": "Data",
+     "label": "Primary phone",
+     "options": "Phone"
+    },
+    {
+     "fieldname": "status_change_log",
+     "fieldtype": "Table",
+     "label": "Status Change Log",
+     "options": "CRM Status Change Log"
+    },
+    {
+     "fieldname": "lead_name",
+     "fieldtype": "Data",
+     "label": "Lead Name"
+    },
+    {
+     "fieldname": "organization_name",
+     "fieldtype": "Data",
+     "label": "Organization Name"
+    },
+    {
+     "fieldname": "industry",
+     "fieldtype": "Link",
+     "label": "Industry",
+     "options": "CRM Industry"
+    },
+    {
+     "fieldname": "salutation",
+     "fieldtype": "Link",
+     "label": "Salutation",
+     "options": "Salutation"
+    },
+    {
+     "fieldname": "first_name",
+     "fieldtype": "Data",
+     "label": "First name"
+    },
+    {
+     "fieldname": "last_name",
+     "fieldtype": "Data",
+     "label": "Last name"
+    },
+    {
+     "fieldname": "gender",
+     "fieldtype": "Link",
+     "label": "Gender",
+     "options": "Gender"
+    },
+    {
+     "fieldname": "contact",
+     "fieldtype": "Link",
+     "label": "Contact",
+     "options": "Contact"
+    },
+    {
+     "fieldname": "currency",
+     "fieldtype": "Link",
+     "label": "Currency",
+     "options": "Currency"
+    },
+    {
+     "fieldname": "products",
+     "fieldtype": "Table",
+     "label": "Products",
+     "options": "CRM Products"
+    },
+    {
+     "fieldname": "total",
+     "fieldtype": "Currency",
+     "label": "Total",
+     "options": "currency",
+     "read_only": 1
+    },
+    {
+     "fieldname": "net_total",
+     "fieldtype": "Currency",
+     "label": "Net Total",
+     "options": "currency",
+     "read_only": 1
+    },
+    {
+     "fieldname": "deal_value",
+     "fieldtype": "Currency",
+     "label": "Deal Value",
+     "options": "currency"
+    },
+    {
+     "fieldname": "lost_reason",
+     "fieldtype": "Link",
+     "label": "Lost Reason",
+     "options": "CRM Lost Reason"
+    },
+    {
+     "fieldname": "lost_notes",
+     "fieldtype": "Text",
+     "label": "Lost Notes"
+    },
+    {
+     "fieldname": "exchange_rate",
+     "fieldtype": "Float",
+     "label": "Exchange Rate",
+     "default": "1"
+    },
+    {
+     "fieldname": "expected_deal_value",
+     "fieldtype": "Currency",
+     "label": "Expected Deal Value",
+     "options": "currency"
+    },
+    {
+     "fieldname": "expected_closure_date",
+     "fieldtype": "Date",
+     "label": "Expected Closure Date"
+    },
+    {
+     "fieldname": "closed_date",
+     "fieldtype": "Date",
+     "label": "Closed Date"
+    },
+    {
+     "fieldname": "rolling_responses",
+     "fieldtype": "Table",
+     "label": "Rolling Responses",
+     "options": "CRM Rolling Response Time"
+    },
+    {
+     "fieldname": "last_response_time",
+     "fieldtype": "Duration",
+     "label": "Last Response Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "last_responded_on",
+     "fieldtype": "Datetime",
+     "label": "Last Responded On",
+     "read_only": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_deal/crm_deal.json",
+   "controller_path": "crm/fcrm/doctype/crm_deal/crm_deal.py"
+  },
+  {
+   "name": "CRM Deal Status",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:deal_status",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "deal_status"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "color",
+     "fieldtype": "Select",
+     "label": "Color",
+     "options": "black\ngray\nblue\ngreen\nred\npink\norange\namber\nyellow\ncyan\nteal\nviolet\npurple",
+     "default": "gray"
+    },
+    {
+     "fieldname": "deal_status",
+     "fieldtype": "Data",
+     "label": "Status",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "position",
+     "fieldtype": "Int",
+     "label": "Position"
+    },
+    {
+     "fieldname": "probability",
+     "fieldtype": "Percent",
+     "label": "Probability"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "options": "Open\nOngoing\nOn Hold\nWon\nLost",
+     "default": "Open"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_deal_status/crm_deal_status.json",
+   "controller_path": "crm/fcrm/doctype/crm_deal_status/crm_deal_status.py"
+  },
+  {
+   "name": "CRM Dropdown Item",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 8,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "label",
+     "fieldtype": "Data",
+     "label": "Label"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "options": "Route\nSeparator"
+    },
+    {
+     "fieldname": "route",
+     "fieldtype": "Data",
+     "label": "Route"
+    },
+    {
+     "fieldname": "hidden",
+     "fieldtype": "Check",
+     "label": "Hidden",
+     "default": "0"
+    },
+    {
+     "fieldname": "is_standard",
+     "fieldtype": "Check",
+     "label": "Is Standard",
+     "read_only": 1,
+     "default": "0"
+    },
+    {
+     "fieldname": "icon",
+     "fieldtype": "Code",
+     "label": "Icon"
+    },
+    {
+     "fieldname": "open_in_new_window",
+     "fieldtype": "Check",
+     "label": "Open in new window",
+     "default": "1"
+    },
+    {
+     "fieldname": "name1",
+     "fieldtype": "Data",
+     "label": "Name",
+     "unique": 1,
+     "read_only": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_dropdown_item/crm_dropdown_item.json",
+   "controller_path": "crm/fcrm/doctype/crm_dropdown_item/crm_dropdown_item.py"
+  },
+  {
+   "name": "CRM Exotel Settings",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 1,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 5,
+   "fields": [
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "account_sid",
+     "fieldtype": "Data",
+     "label": "Account SID"
+    },
+    {
+     "fieldname": "api_key",
+     "fieldtype": "Data",
+     "label": "API Key"
+    },
+    {
+     "fieldname": "api_token",
+     "fieldtype": "Password",
+     "label": "API Token"
+    },
+    {
+     "fieldname": "record_call",
+     "fieldtype": "Check",
+     "label": "Record Outgoing Calls",
+     "default": "0"
+    },
+    {
+     "fieldname": "webhook_verify_token",
+     "fieldtype": "Data",
+     "label": "Webhook Verify Token"
+    },
+    {
+     "fieldname": "subdomain",
+     "fieldtype": "Data",
+     "label": "Subdomain"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_exotel_settings/crm_exotel_settings.json",
+   "controller_path": "crm/fcrm/doctype/crm_exotel_settings/crm_exotel_settings.py"
+  },
+  {
+   "name": "CRM Fields Layout",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "format:{dt}-{type}",
+   "naming_rule": "Expression (old style)",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "dt",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "dt",
+     "fieldtype": "Link",
+     "label": "Document Type",
+     "options": "DocType"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "options": "Quick Entry\nSide Panel\nData Fields\nGrid Row\nRequired Fields"
+    },
+    {
+     "fieldname": "layout",
+     "fieldtype": "Code",
+     "label": "Layout",
+     "options": "JSON"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.json",
+   "controller_path": "crm/fcrm/doctype/crm_fields_layout/crm_fields_layout.py"
+  },
+  {
+   "name": "CRM Form Script",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "prompt",
+   "naming_rule": "Set by user",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "dt"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "dt",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "dt",
+     "fieldtype": "Link",
+     "label": "DocType",
+     "reqd": 1,
+     "options": "DocType"
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "hidden": 1,
+     "default": "0"
+    },
+    {
+     "fieldname": "script",
+     "fieldtype": "Code",
+     "label": "Script",
+     "options": "JS",
+     "default": "function setupForm({ doc }) {\n    return {\n        actions: [],\n    }\n}"
+    },
+    {
+     "fieldname": "view",
+     "fieldtype": "Select",
+     "label": "Apply To",
+     "options": "Form\nList",
+     "default": "Form",
+     "set_only_once": 1
+    },
+    {
+     "fieldname": "is_standard",
+     "fieldtype": "Check",
+     "label": "Is Standard",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_form_script/crm_form_script.json",
+   "controller_path": "crm/fcrm/doctype/crm_form_script/crm_form_script.py"
+  },
+  {
+   "name": "CRM Global Settings",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "hash",
+   "naming_rule": "Random",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "dt",
+    "type"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "dt",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "dt",
+     "fieldtype": "Link",
+     "label": "DocType",
+     "reqd": 1,
+     "options": "DocType",
+     "default": "DocType"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "reqd": 1,
+     "options": "Quick Filters\nSidebar Items"
+    },
+    {
+     "fieldname": "json",
+     "fieldtype": "JSON",
+     "label": "JSON"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_global_settings/crm_global_settings.json",
+   "controller_path": "crm/fcrm/doctype/crm_global_settings/crm_global_settings.py"
+  },
+  {
+   "name": "CRM Holiday",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "date",
+    "description"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "date",
+     "fieldtype": "Date",
+     "label": "Date",
+     "reqd": 1
+    },
+    {
+     "fieldname": "weekly_off",
+     "fieldtype": "Check",
+     "label": "Weekly Off",
+     "default": "0"
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Text Editor",
+     "label": "Description",
+     "reqd": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_holiday/crm_holiday.json",
+   "controller_path": "crm/fcrm/doctype/crm_holiday/crm_holiday.py"
+  },
+  {
+   "name": "CRM Holiday List",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:holiday_list_name",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "holiday_list_name",
+    "from_date",
+    "to_date"
+   ],
+   "link_fields": [],
+   "child_tables": [
+    {
+     "fieldname": "holidays",
+     "doctype": "CRM Holiday"
+    }
+   ],
+   "field_count": 8,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "holiday_list_name",
+     "fieldtype": "Data",
+     "label": "Holiday List Name",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "from_date",
+     "fieldtype": "Date",
+     "label": "From Date",
+     "reqd": 1
+    },
+    {
+     "fieldname": "to_date",
+     "fieldtype": "Date",
+     "label": "To Date",
+     "reqd": 1
+    },
+    {
+     "fieldname": "total_holidays",
+     "fieldtype": "Int",
+     "label": "Total Holidays"
+    },
+    {
+     "fieldname": "weekly_off",
+     "fieldtype": "Select",
+     "label": "Weekly Off",
+     "options": "\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+    },
+    {
+     "fieldname": "add_to_holidays",
+     "fieldtype": "Button",
+     "label": "Add to Holidays",
+     "options": "add_to_holidays"
+    },
+    {
+     "fieldname": "clear_table",
+     "fieldtype": "Button",
+     "label": "Clear Table",
+     "options": "clear_table"
+    },
+    {
+     "fieldname": "holidays",
+     "fieldtype": "Table",
+     "label": "Holidays",
+     "options": "CRM Holiday"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_holiday_list/crm_holiday_list.json",
+   "controller_path": "crm/fcrm/doctype/crm_holiday_list/crm_holiday_list.py"
+  },
+  {
+   "name": "CRM Industry",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:industry",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 1,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "industry",
+     "fieldtype": "Data",
+     "label": "Industry",
+     "unique": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_industry/crm_industry.json",
+   "controller_path": "crm/fcrm/doctype/crm_industry/crm_industry.py"
+  },
+  {
+   "name": "CRM Invitation",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "email",
+    "role"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "invited_by",
+     "to": "User"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "email",
+     "fieldtype": "Data",
+     "label": "Email",
+     "reqd": 1
+    },
+    {
+     "fieldname": "role",
+     "fieldtype": "Select",
+     "label": "Role",
+     "reqd": 1,
+     "options": "\nSales User\nSales Manager\nSystem Manager"
+    },
+    {
+     "fieldname": "key",
+     "fieldtype": "Data",
+     "label": "Key"
+    },
+    {
+     "fieldname": "invited_by",
+     "fieldtype": "Link",
+     "label": "Invited By",
+     "options": "User"
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Select",
+     "label": "Status",
+     "options": "\nPending\nAccepted\nExpired"
+    },
+    {
+     "fieldname": "email_sent_at",
+     "fieldtype": "Datetime",
+     "label": "Email Sent At"
+    },
+    {
+     "fieldname": "accepted_at",
+     "fieldtype": "Datetime",
+     "label": "Accepted At"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_invitation/crm_invitation.json",
+   "controller_path": "crm/fcrm/doctype/crm_invitation/crm_invitation.py"
+  },
+  {
+   "name": "CRM Lead",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "naming_series:",
+   "naming_rule": "By \"Naming Series\" field",
+   "title_field": "lead_name",
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "first_name",
+    "status"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "salutation",
+     "to": "Salutation"
+    },
+    {
+     "fieldname": "gender",
+     "to": "Gender"
+    },
+    {
+     "fieldname": "status",
+     "to": "CRM Lead Status"
+    },
+    {
+     "fieldname": "lead_owner",
+     "to": "User"
+    },
+    {
+     "fieldname": "source",
+     "to": "CRM Lead Source"
+    },
+    {
+     "fieldname": "industry",
+     "to": "CRM Industry"
+    },
+    {
+     "fieldname": "sla",
+     "to": "CRM Service Level Agreement"
+    },
+    {
+     "fieldname": "communication_status",
+     "to": "CRM Communication Status"
+    },
+    {
+     "fieldname": "territory",
+     "to": "CRM Territory"
+    },
+    {
+     "fieldname": "lost_reason",
+     "to": "CRM Lost Reason"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "status_change_log",
+     "doctype": "CRM Status Change Log"
+    },
+    {
+     "fieldname": "products",
+     "doctype": "CRM Products"
+    },
+    {
+     "fieldname": "rolling_responses",
+     "doctype": "CRM Rolling Response Time"
+    }
+   ],
+   "field_count": 40,
+   "layout_field_count": 21,
+   "fields": [
+    {
+     "fieldname": "naming_series",
+     "fieldtype": "Select",
+     "label": "Series",
+     "options": "CRM-LEAD-.YYYY.-",
+     "default": "CRM-LEAD-.YYYY.-"
+    },
+    {
+     "fieldname": "salutation",
+     "fieldtype": "Link",
+     "label": "Salutation",
+     "options": "Salutation"
+    },
+    {
+     "fieldname": "first_name",
+     "fieldtype": "Data",
+     "label": "First Name",
+     "reqd": 1
+    },
+    {
+     "fieldname": "middle_name",
+     "fieldtype": "Data",
+     "label": "Middle Name"
+    },
+    {
+     "fieldname": "last_name",
+     "fieldtype": "Data",
+     "label": "Last Name"
+    },
+    {
+     "fieldname": "gender",
+     "fieldtype": "Link",
+     "label": "Gender",
+     "options": "Gender"
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Link",
+     "label": "Status",
+     "reqd": 1,
+     "options": "CRM Lead Status"
+    },
+    {
+     "fieldname": "email",
+     "fieldtype": "Data",
+     "label": "Email",
+     "options": "Email"
+    },
+    {
+     "fieldname": "website",
+     "fieldtype": "Data",
+     "label": "Website"
+    },
+    {
+     "fieldname": "mobile_no",
+     "fieldtype": "Data",
+     "label": "Mobile No.",
+     "options": "Phone"
+    },
+    {
+     "fieldname": "phone",
+     "fieldtype": "Data",
+     "label": "Phone",
+     "options": "Phone"
+    },
+    {
+     "fieldname": "no_of_employees",
+     "fieldtype": "Select",
+     "label": "No. of Employees",
+     "options": "1-10\n11-50\n51-200\n201-500\n501-1000\n1000+"
+    },
+    {
+     "fieldname": "annual_revenue",
+     "fieldtype": "Currency",
+     "label": "Annual Revenue"
+    },
+    {
+     "fieldname": "lead_owner",
+     "fieldtype": "Link",
+     "label": "Lead Owner",
+     "options": "User"
+    },
+    {
+     "fieldname": "source",
+     "fieldtype": "Link",
+     "label": "Source",
+     "options": "CRM Lead Source"
+    },
+    {
+     "fieldname": "industry",
+     "fieldtype": "Link",
+     "label": "Industry",
+     "options": "CRM Industry"
+    },
+    {
+     "fieldname": "image",
+     "fieldtype": "Attach Image",
+     "label": "Image",
+     "hidden": 1
+    },
+    {
+     "fieldname": "lead_name",
+     "fieldtype": "Data",
+     "label": "Full Name"
+    },
+    {
+     "fieldname": "job_title",
+     "fieldtype": "Data",
+     "label": "Job Title"
+    },
+    {
+     "fieldname": "organization",
+     "fieldtype": "Data",
+     "label": "Organization"
+    },
+    {
+     "fieldname": "converted",
+     "fieldtype": "Check",
+     "label": "Converted",
+     "default": "0"
+    },
+    {
+     "fieldname": "sla",
+     "fieldtype": "Link",
+     "label": "SLA",
+     "options": "CRM Service Level Agreement"
+    },
+    {
+     "fieldname": "sla_creation",
+     "fieldtype": "Datetime",
+     "label": "SLA Creation",
+     "read_only": 1
+    },
+    {
+     "fieldname": "sla_status",
+     "fieldtype": "Select",
+     "label": "SLA Status",
+     "options": "\nFirst Response Due\nRolling Response Due\nFailed\nFulfilled",
+     "read_only": 1
+    },
+    {
+     "fieldname": "response_by",
+     "fieldtype": "Datetime",
+     "label": "Response By",
+     "read_only": 1
+    },
+    {
+     "fieldname": "first_response_time",
+     "fieldtype": "Duration",
+     "label": "First Response Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "first_responded_on",
+     "fieldtype": "Datetime",
+     "label": "First Responded On",
+     "read_only": 1
+    },
+    {
+     "fieldname": "communication_status",
+     "fieldtype": "Link",
+     "label": "Communication Status",
+     "options": "CRM Communication Status",
+     "default": "Open"
+    },
+    {
+     "fieldname": "territory",
+     "fieldtype": "Link",
+     "label": "Territory",
+     "options": "CRM Territory"
+    },
+    {
+     "fieldname": "status_change_log",
+     "fieldtype": "Table",
+     "label": "Status Change Log",
+     "options": "CRM Status Change Log"
+    },
+    {
+     "fieldname": "products",
+     "fieldtype": "Table",
+     "label": "Products",
+     "options": "CRM Products"
+    },
+    {
+     "fieldname": "total",
+     "fieldtype": "Currency",
+     "label": "Total",
+     "options": "currency",
+     "read_only": 1
+    },
+    {
+     "fieldname": "net_total",
+     "fieldtype": "Currency",
+     "label": "Net Total",
+     "options": "currency",
+     "read_only": 1
+    },
+    {
+     "fieldname": "facebook_lead_id",
+     "fieldtype": "Data",
+     "label": "Facebook Lead ID",
+     "unique": 1
+    },
+    {
+     "fieldname": "facebook_form_id",
+     "fieldtype": "Data",
+     "label": "Facebook Form ID"
+    },
+    {
+     "fieldname": "rolling_responses",
+     "fieldtype": "Table",
+     "label": "Rolling Responses",
+     "options": "CRM Rolling Response Time"
+    },
+    {
+     "fieldname": "last_response_time",
+     "fieldtype": "Duration",
+     "label": "Last Response Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "last_responded_on",
+     "fieldtype": "Datetime",
+     "label": "Last Responded On",
+     "read_only": 1
+    },
+    {
+     "fieldname": "lost_reason",
+     "fieldtype": "Link",
+     "label": "Lost Reason",
+     "options": "CRM Lost Reason"
+    },
+    {
+     "fieldname": "lost_notes",
+     "fieldtype": "Text",
+     "label": "Lost Notes"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_lead/crm_lead.json",
+   "controller_path": "crm/fcrm/doctype/crm_lead/crm_lead.py"
+  },
+  {
+   "name": "CRM Lead Source",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:source_name",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "source_name"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 2,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "source_name",
+     "fieldtype": "Data",
+     "label": "Source Name",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "details",
+     "fieldtype": "Text Editor",
+     "label": "Details"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_lead_source/crm_lead_source.json",
+   "controller_path": "crm/fcrm/doctype/crm_lead_source/crm_lead_source.py"
+  },
+  {
+   "name": "CRM Lead Status",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:lead_status",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "lead_status"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 4,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "color",
+     "fieldtype": "Select",
+     "label": "Color",
+     "options": "black\ngray\nblue\ngreen\nred\npink\norange\namber\nyellow\ncyan\nteal\nviolet\npurple",
+     "default": "gray"
+    },
+    {
+     "fieldname": "lead_status",
+     "fieldtype": "Data",
+     "label": "Status",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "position",
+     "fieldtype": "Int",
+     "label": "Position",
+     "default": "1"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "options": "Open\nOngoing\nOn Hold\nWon\nLost",
+     "default": "Open"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_lead_status/crm_lead_status.json",
+   "controller_path": "crm/fcrm/doctype/crm_lead_status/crm_lead_status.py"
+  },
+  {
+   "name": "CRM Lost Reason",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:lost_reason",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "lost_reason"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 2,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "lost_reason",
+     "fieldtype": "Data",
+     "label": "Lost Reason",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Text Editor",
+     "label": "Description"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_lost_reason/crm_lost_reason.json",
+   "controller_path": "crm/fcrm/doctype/crm_lost_reason/crm_lost_reason.py"
+  },
+  {
+   "name": "CRM Notification",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "type",
+    "to_user"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "from_user",
+     "to": "User"
+    },
+    {
+     "fieldname": "to_user",
+     "to": "User"
+    },
+    {
+     "fieldname": "comment",
+     "to": "Comment"
+    },
+    {
+     "fieldname": "reference_doctype",
+     "to": "DocType"
+    },
+    {
+     "fieldname": "notification_type_doctype",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 11,
+   "layout_field_count": 5,
+   "fields": [
+    {
+     "fieldname": "from_user",
+     "fieldtype": "Link",
+     "label": "From User",
+     "options": "User"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "reqd": 1,
+     "options": "Mention\nTask\nAssignment\nWhatsApp"
+    },
+    {
+     "fieldname": "to_user",
+     "fieldtype": "Link",
+     "label": "To User",
+     "reqd": 1,
+     "options": "User"
+    },
+    {
+     "fieldname": "comment",
+     "fieldtype": "Link",
+     "label": "Comment",
+     "options": "Comment",
+     "hidden": 1
+    },
+    {
+     "fieldname": "read",
+     "fieldtype": "Check",
+     "label": "Read",
+     "default": "0"
+    },
+    {
+     "fieldname": "message",
+     "fieldtype": "HTML Editor",
+     "label": "Message"
+    },
+    {
+     "fieldname": "reference_name",
+     "fieldtype": "Dynamic Link",
+     "label": "Reference Doc",
+     "options": "reference_doctype"
+    },
+    {
+     "fieldname": "reference_doctype",
+     "fieldtype": "Link",
+     "label": "Reference Doctype",
+     "options": "DocType"
+    },
+    {
+     "fieldname": "notification_type_doctype",
+     "fieldtype": "Link",
+     "label": "Notification Type Doctype",
+     "options": "DocType"
+    },
+    {
+     "fieldname": "notification_type_doc",
+     "fieldtype": "Dynamic Link",
+     "label": "Notification Type Doc",
+     "options": "notification_type_doctype"
+    },
+    {
+     "fieldname": "notification_text",
+     "fieldtype": "Text",
+     "label": "Notification Text"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_notification/crm_notification.json",
+   "controller_path": "crm/fcrm/doctype/crm_notification/crm_notification.py"
+  },
+  {
+   "name": "CRM Organization",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:organization_name",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "industry",
+     "to": "CRM Industry"
+    },
+    {
+     "fieldname": "territory",
+     "to": "CRM Territory"
+    },
+    {
+     "fieldname": "currency",
+     "to": "Currency"
+    },
+    {
+     "fieldname": "address",
+     "to": "Address"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 10,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "organization_name",
+     "fieldtype": "Data",
+     "label": "Organization Name",
+     "unique": 1
+    },
+    {
+     "fieldname": "website",
+     "fieldtype": "Data",
+     "label": "Website"
+    },
+    {
+     "fieldname": "organization_logo",
+     "fieldtype": "Attach Image",
+     "label": "Organization Logo"
+    },
+    {
+     "fieldname": "no_of_employees",
+     "fieldtype": "Select",
+     "label": "No. of Employees",
+     "options": "1-10\n11-50\n51-200\n201-500\n501-1000\n1000+"
+    },
+    {
+     "fieldname": "annual_revenue",
+     "fieldtype": "Currency",
+     "label": "Annual Revenue",
+     "options": "currency"
+    },
+    {
+     "fieldname": "industry",
+     "fieldtype": "Link",
+     "label": "Industry",
+     "options": "CRM Industry"
+    },
+    {
+     "fieldname": "territory",
+     "fieldtype": "Link",
+     "label": "Territory",
+     "options": "CRM Territory"
+    },
+    {
+     "fieldname": "currency",
+     "fieldtype": "Link",
+     "label": "Currency",
+     "options": "Currency"
+    },
+    {
+     "fieldname": "address",
+     "fieldtype": "Link",
+     "label": "Address",
+     "options": "Address"
+    },
+    {
+     "fieldname": "exchange_rate",
+     "fieldtype": "Float",
+     "label": "Exchange Rate"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_organization/crm_organization.json",
+   "controller_path": "crm/fcrm/doctype/crm_organization/crm_organization.py"
+  },
+  {
+   "name": "CRM Product",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:product_code",
+   "naming_rule": "By fieldname",
+   "title_field": "product_name",
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "product_code"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "naming_series",
+     "fieldtype": "Select",
+     "label": "Naming Series",
+     "options": "CRM-PROD-.YYYY.-"
+    },
+    {
+     "fieldname": "product_code",
+     "fieldtype": "Data",
+     "label": "Product Code",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "product_name",
+     "fieldtype": "Data",
+     "label": "Product Name"
+    },
+    {
+     "fieldname": "disabled",
+     "fieldtype": "Check",
+     "label": "Disabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "image",
+     "fieldtype": "Attach Image",
+     "label": "Image"
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Text Editor",
+     "label": "Description"
+    },
+    {
+     "fieldname": "standard_rate",
+     "fieldtype": "Currency",
+     "label": "Standard Selling Rate"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_product/crm_product.json",
+   "controller_path": "crm/fcrm/doctype/crm_product/crm_product.py"
+  },
+  {
+   "name": "CRM Product Sync Issue",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "autoincrement",
+   "naming_rule": "Autoincrement",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "product",
+     "to": "CRM Product"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "product",
+     "fieldtype": "Link",
+     "label": "Product",
+     "options": "CRM Product",
+     "read_only": 1
+    },
+    {
+     "fieldname": "kind",
+     "fieldtype": "Select",
+     "label": "Kind",
+     "options": "unlinked_orphan",
+     "read_only": 1
+    },
+    {
+     "fieldname": "detail",
+     "fieldtype": "Small Text",
+     "label": "Detail",
+     "read_only": 1
+    },
+    {
+     "fieldname": "detected_on",
+     "fieldtype": "Datetime",
+     "label": "Detected On",
+     "read_only": 1,
+     "default": "now"
+    },
+    {
+     "fieldname": "dismissed",
+     "fieldtype": "Check",
+     "label": "Dismissed",
+     "default": "0"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.json",
+   "controller_path": "crm/fcrm/doctype/crm_product_sync_issue/crm_product_sync_issue.py"
+  },
+  {
+   "name": "CRM Products",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "product_name",
+    "rate"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "product_code",
+     "to": "CRM Product"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 8,
+   "layout_field_count": 8,
+   "fields": [
+    {
+     "fieldname": "product_name",
+     "fieldtype": "Data",
+     "label": "Product Name",
+     "reqd": 1
+    },
+    {
+     "fieldname": "discount_percentage",
+     "fieldtype": "Percent",
+     "label": "Discount %"
+    },
+    {
+     "fieldname": "discount_amount",
+     "fieldtype": "Currency",
+     "label": "Discount Amount",
+     "options": "currency",
+     "read_only": 1
+    },
+    {
+     "fieldname": "rate",
+     "fieldtype": "Currency",
+     "label": "Rate",
+     "reqd": 1,
+     "options": "currency"
+    },
+    {
+     "fieldname": "amount",
+     "fieldtype": "Currency",
+     "label": "Amount",
+     "options": "currency",
+     "read_only": 1
+    },
+    {
+     "fieldname": "net_amount",
+     "fieldtype": "Currency",
+     "label": "Net Amount",
+     "options": "currency",
+     "read_only": 1
+    },
+    {
+     "fieldname": "product_code",
+     "fieldtype": "Link",
+     "label": "Product",
+     "options": "CRM Product"
+    },
+    {
+     "fieldname": "qty",
+     "fieldtype": "Float",
+     "label": "Quantity",
+     "default": "1"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_products/crm_products.json",
+   "controller_path": "crm/fcrm/doctype/crm_products/crm_products.py"
+  },
+  {
+   "name": "CRM Rolling Response Time",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "response_time",
+     "fieldtype": "Duration",
+     "label": "Response Time",
+     "read_only": 1
+    },
+    {
+     "fieldname": "responded_on",
+     "fieldtype": "Datetime",
+     "label": "Responded On",
+     "read_only": 1
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Select",
+     "label": "Status",
+     "options": "Fulfilled\nFailed",
+     "read_only": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_rolling_response_time/crm_rolling_response_time.json",
+   "controller_path": "crm/fcrm/doctype/crm_rolling_response_time/crm_rolling_response_time.py"
+  },
+  {
+   "name": "CRM Sales Hierarchy",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 1,
+   "is_virtual": 0,
+   "autoname": "hash",
+   "naming_rule": "Random",
+   "title_field": "full_name",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "user"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    },
+    {
+     "fieldname": "old_parent",
+     "to": "CRM Sales Hierarchy"
+    },
+    {
+     "fieldname": "reports_to",
+     "to": "CRM Sales Hierarchy"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "full_name",
+     "fieldtype": "Data",
+     "label": "Full Name",
+     "read_only": 1
+    },
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "reqd": 1,
+     "unique": 1,
+     "options": "User"
+    },
+    {
+     "fieldname": "old_parent",
+     "fieldtype": "Link",
+     "label": "Old Parent",
+     "options": "CRM Sales Hierarchy",
+     "hidden": 1
+    },
+    {
+     "fieldname": "reports_to",
+     "fieldtype": "Link",
+     "label": "Reports To",
+     "options": "CRM Sales Hierarchy"
+    },
+    {
+     "fieldname": "lft",
+     "fieldtype": "Int",
+     "label": "Left",
+     "read_only": 1,
+     "hidden": 1
+    },
+    {
+     "fieldname": "rgt",
+     "fieldtype": "Int",
+     "label": "Right",
+     "read_only": 1,
+     "hidden": 1
+    },
+    {
+     "fieldname": "is_group",
+     "fieldtype": "Check",
+     "label": "Is Group",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_sales_hierarchy/crm_sales_hierarchy.json",
+   "controller_path": "crm/fcrm/doctype/crm_sales_hierarchy/crm_sales_hierarchy.py"
+  },
+  {
+   "name": "CRM Service Day",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "workday",
+    "start_time",
+    "end_time"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "workday",
+     "fieldtype": "Select",
+     "label": "Workday",
+     "reqd": 1,
+     "options": "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday"
+    },
+    {
+     "fieldname": "start_time",
+     "fieldtype": "Time",
+     "label": "Start Time",
+     "reqd": 1
+    },
+    {
+     "fieldname": "end_time",
+     "fieldtype": "Time",
+     "label": "End Time",
+     "reqd": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_service_day/crm_service_day.json",
+   "controller_path": "crm/fcrm/doctype/crm_service_day/crm_service_day.py"
+  },
+  {
+   "name": "CRM Service Level Agreement",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:sla_name",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "sla_name",
+    "apply_on",
+    "priorities",
+    "working_hours"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "apply_on",
+     "to": "DocType"
+    },
+    {
+     "fieldname": "holiday_list",
+     "to": "CRM Holiday List"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "priorities",
+     "doctype": "CRM Service Level Priority"
+    },
+    {
+     "fieldname": "working_hours",
+     "doctype": "CRM Service Day"
+    }
+   ],
+   "field_count": 12,
+   "layout_field_count": 5,
+   "fields": [
+    {
+     "fieldname": "sla_name",
+     "fieldtype": "Data",
+     "label": "SLA Name",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "default",
+     "fieldtype": "Check",
+     "label": "Default",
+     "default": "0"
+    },
+    {
+     "fieldname": "condition",
+     "fieldtype": "Code",
+     "label": "Condition",
+     "options": "Python"
+    },
+    {
+     "fieldname": "apply_on",
+     "fieldtype": "Link",
+     "label": "Apply On",
+     "reqd": 1,
+     "options": "DocType"
+    },
+    {
+     "fieldname": "priorities",
+     "fieldtype": "Table",
+     "label": "Priorities",
+     "reqd": 1,
+     "options": "CRM Service Level Priority"
+    },
+    {
+     "fieldname": "working_hours",
+     "fieldtype": "Table",
+     "label": "Working Hours",
+     "reqd": 1,
+     "options": "CRM Service Day"
+    },
+    {
+     "fieldname": "start_date",
+     "fieldtype": "Date",
+     "label": "Start Date"
+    },
+    {
+     "fieldname": "end_date",
+     "fieldtype": "Date",
+     "label": "End Date"
+    },
+    {
+     "fieldname": "holiday_list",
+     "fieldtype": "Link",
+     "label": "Holiday List",
+     "options": "CRM Holiday List"
+    },
+    {
+     "fieldname": "rolling_responses",
+     "fieldtype": "Check",
+     "label": "Rolling Responses",
+     "default": "0"
+    },
+    {
+     "fieldname": "condition_json",
+     "fieldtype": "Code",
+     "label": "Condition"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_service_level_agreement/crm_service_level_agreement.json",
+   "controller_path": "crm/fcrm/doctype/crm_service_level_agreement/crm_service_level_agreement.py"
+  },
+  {
+   "name": "CRM Service Level Priority",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "priority",
+    "first_response_time"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "priority",
+     "to": "CRM Communication Status"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 3,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "default_priority",
+     "fieldtype": "Check",
+     "label": "Default Priority",
+     "default": "0"
+    },
+    {
+     "fieldname": "priority",
+     "fieldtype": "Link",
+     "label": "Priority",
+     "reqd": 1,
+     "options": "CRM Communication Status"
+    },
+    {
+     "fieldname": "first_response_time",
+     "fieldtype": "Duration",
+     "label": "First Response TIme",
+     "reqd": 1
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_service_level_priority/crm_service_level_priority.json",
+   "controller_path": "crm/fcrm/doctype/crm_service_level_priority/crm_service_level_priority.py"
+  },
+  {
+   "name": "CRM Status Change Log",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "last_status_change_log",
+     "to": "CRM Status Change Log"
+    },
+    {
+     "fieldname": "log_owner",
+     "to": "User"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 9,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "from",
+     "fieldtype": "Data",
+     "label": "From"
+    },
+    {
+     "fieldname": "from_date",
+     "fieldtype": "Datetime",
+     "label": "From Date"
+    },
+    {
+     "fieldname": "duration",
+     "fieldtype": "Duration",
+     "label": "Duration"
+    },
+    {
+     "fieldname": "to",
+     "fieldtype": "Data",
+     "label": "To"
+    },
+    {
+     "fieldname": "to_date",
+     "fieldtype": "Datetime",
+     "label": "To Date"
+    },
+    {
+     "fieldname": "last_status_change_log",
+     "fieldtype": "Link",
+     "label": "Last Status Change Log",
+     "options": "CRM Status Change Log"
+    },
+    {
+     "fieldname": "log_owner",
+     "fieldtype": "Link",
+     "label": "Owner",
+     "options": "User"
+    },
+    {
+     "fieldname": "from_type",
+     "fieldtype": "Data",
+     "label": "From Type"
+    },
+    {
+     "fieldname": "to_type",
+     "fieldtype": "Data",
+     "label": "To Type"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_status_change_log/crm_status_change_log.json",
+   "controller_path": "crm/fcrm/doctype/crm_status_change_log/crm_status_change_log.py"
+  },
+  {
+   "name": "CRM Task",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "autoincrement",
+   "naming_rule": "Autoincrement",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "title"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "assigned_to",
+     "to": "User"
+    },
+    {
+     "fieldname": "reference_doctype",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 9,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "title",
+     "fieldtype": "Data",
+     "label": "Title",
+     "reqd": 1
+    },
+    {
+     "fieldname": "priority",
+     "fieldtype": "Select",
+     "label": "Priority",
+     "options": "Low\nMedium\nHigh"
+    },
+    {
+     "fieldname": "start_date",
+     "fieldtype": "Date",
+     "label": "Start Date"
+    },
+    {
+     "fieldname": "assigned_to",
+     "fieldtype": "Link",
+     "label": "Assigned To",
+     "options": "User"
+    },
+    {
+     "fieldname": "status",
+     "fieldtype": "Select",
+     "label": "Status",
+     "options": "Backlog\nTodo\nIn Progress\nDone\nCanceled"
+    },
+    {
+     "fieldname": "due_date",
+     "fieldtype": "Datetime",
+     "label": "Due Date"
+    },
+    {
+     "fieldname": "description",
+     "fieldtype": "Text Editor",
+     "label": "Description"
+    },
+    {
+     "fieldname": "reference_doctype",
+     "fieldtype": "Link",
+     "label": "Reference Document Type",
+     "options": "DocType"
+    },
+    {
+     "fieldname": "reference_docname",
+     "fieldtype": "Dynamic Link",
+     "label": "Reference Doc",
+     "options": "reference_doctype"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_task/crm_task.json",
+   "controller_path": "crm/fcrm/doctype/crm_task/crm_task.py"
+  },
+  {
+   "name": "CRM Telephony Agent",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:user",
+   "naming_rule": "By fieldname",
+   "title_field": "user_name",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "user"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "phone_nos",
+     "doctype": "CRM Telephony Phone"
+    }
+   ],
+   "field_count": 8,
+   "layout_field_count": 4,
+   "fields": [
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "reqd": 1,
+     "unique": 1,
+     "options": "User"
+    },
+    {
+     "fieldname": "mobile_no",
+     "fieldtype": "Data",
+     "label": "Mobile No.",
+     "read_only": 1
+    },
+    {
+     "fieldname": "user_name",
+     "fieldtype": "Data",
+     "label": "User Name"
+    },
+    {
+     "fieldname": "exotel_number",
+     "fieldtype": "Data",
+     "label": "Exotel Number"
+    },
+    {
+     "fieldname": "twilio_number",
+     "fieldtype": "Data",
+     "label": "Twilio Number"
+    },
+    {
+     "fieldname": "phone_nos",
+     "fieldtype": "Table",
+     "label": "Phone Numbers",
+     "options": "CRM Telephony Phone"
+    },
+    {
+     "fieldname": "default_medium",
+     "fieldtype": "Select",
+     "label": "Default Medium",
+     "options": "\nTwilio\nExotel"
+    },
+    {
+     "fieldname": "call_receiving_device",
+     "fieldtype": "Select",
+     "label": "Device",
+     "options": "Computer\nPhone",
+     "default": "Computer"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_telephony_agent/crm_telephony_agent.json",
+   "controller_path": "crm/fcrm/doctype/crm_telephony_agent/crm_telephony_agent.py"
+  },
+  {
+   "name": "CRM Telephony Phone",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "number"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 2,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "number",
+     "fieldtype": "Data",
+     "label": "Number",
+     "reqd": 1
+    },
+    {
+     "fieldname": "is_primary",
+     "fieldtype": "Check",
+     "label": "Is Primary",
+     "default": "0"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_telephony_phone/crm_telephony_phone.json",
+   "controller_path": "crm/fcrm/doctype/crm_telephony_phone/crm_telephony_phone.py"
+  },
+  {
+   "name": "CRM Territory",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 1,
+   "is_virtual": 0,
+   "autoname": "field:territory_name",
+   "naming_rule": "By fieldname",
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "territory_name"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "territory_manager",
+     "to": "User"
+    },
+    {
+     "fieldname": "old_parent",
+     "to": "CRM Territory"
+    },
+    {
+     "fieldname": "parent_crm_territory",
+     "to": "CRM Territory"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "territory_name",
+     "fieldtype": "Data",
+     "label": "Territory Name",
+     "reqd": 1,
+     "unique": 1
+    },
+    {
+     "fieldname": "territory_manager",
+     "fieldtype": "Link",
+     "label": "Territory Manager",
+     "options": "User"
+    },
+    {
+     "fieldname": "lft",
+     "fieldtype": "Int",
+     "label": "Left",
+     "read_only": 1,
+     "hidden": 1
+    },
+    {
+     "fieldname": "rgt",
+     "fieldtype": "Int",
+     "label": "Right",
+     "read_only": 1,
+     "hidden": 1
+    },
+    {
+     "fieldname": "is_group",
+     "fieldtype": "Check",
+     "label": "Is Group",
+     "default": "0"
+    },
+    {
+     "fieldname": "old_parent",
+     "fieldtype": "Link",
+     "label": "Old Parent",
+     "options": "CRM Territory"
+    },
+    {
+     "fieldname": "parent_crm_territory",
+     "fieldtype": "Link",
+     "label": "Parent CRM Territory",
+     "options": "CRM Territory"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_territory/crm_territory.json",
+   "controller_path": "crm/fcrm/doctype/crm_territory/crm_territory.py"
+  },
+  {
+   "name": "CRM Twilio Settings",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 1,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 9,
+   "layout_field_count": 7,
+   "fields": [
+    {
+     "fieldname": "account_sid",
+     "fieldtype": "Data",
+     "label": "Account SID"
+    },
+    {
+     "fieldname": "api_key",
+     "fieldtype": "Data",
+     "label": "API Key",
+     "read_only": 1
+    },
+    {
+     "fieldname": "api_secret",
+     "fieldtype": "Password",
+     "label": "API Secret",
+     "read_only": 1
+    },
+    {
+     "fieldname": "auth_token",
+     "fieldtype": "Password",
+     "label": "Auth Token"
+    },
+    {
+     "fieldname": "twiml_sid",
+     "fieldtype": "Data",
+     "label": "TwiML SID"
+    },
+    {
+     "fieldname": "record_calls",
+     "fieldtype": "Check",
+     "label": "Record Calls",
+     "default": "0"
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "app_name",
+     "fieldtype": "Data",
+     "label": "App Name"
+    },
+    {
+     "fieldname": "twilio_apps",
+     "fieldtype": "Data",
+     "label": "Twilio Apps",
+     "hidden": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_twilio_settings/crm_twilio_settings.json",
+   "controller_path": "crm/fcrm/doctype/crm_twilio_settings/crm_twilio_settings.py"
+  },
+  {
+   "name": "CRM View Settings",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "autoincrement",
+   "naming_rule": "Autoincrement",
+   "title_field": "label",
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "user",
+     "to": "User"
+    },
+    {
+     "fieldname": "dt",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 20,
+   "layout_field_count": 8,
+   "fields": [
+    {
+     "fieldname": "columns",
+     "fieldtype": "Code",
+     "label": "Columns"
+    },
+    {
+     "fieldname": "user",
+     "fieldtype": "Link",
+     "label": "User",
+     "options": "User"
+    },
+    {
+     "fieldname": "rows",
+     "fieldtype": "Code",
+     "label": "Rows"
+    },
+    {
+     "fieldname": "filters",
+     "fieldtype": "Code",
+     "label": "Filters"
+    },
+    {
+     "fieldname": "label",
+     "fieldtype": "Data",
+     "label": "Label"
+    },
+    {
+     "fieldname": "dt",
+     "fieldtype": "Link",
+     "label": "DocType",
+     "options": "DocType"
+    },
+    {
+     "fieldname": "order_by",
+     "fieldtype": "Code",
+     "label": "Order By"
+    },
+    {
+     "fieldname": "pinned",
+     "fieldtype": "Check",
+     "label": "Pinned",
+     "default": "0"
+    },
+    {
+     "fieldname": "route_name",
+     "fieldtype": "Data",
+     "label": "Route Name"
+    },
+    {
+     "fieldname": "load_default_columns",
+     "fieldtype": "Check",
+     "label": "Load Default Columns",
+     "default": "0"
+    },
+    {
+     "fieldname": "public",
+     "fieldtype": "Check",
+     "label": "Public",
+     "default": "0"
+    },
+    {
+     "fieldname": "icon",
+     "fieldtype": "Data",
+     "label": "Icon"
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "options": "list\ngroup_by\nkanban",
+     "default": "list"
+    },
+    {
+     "fieldname": "group_by_field",
+     "fieldtype": "Data",
+     "label": "Group By Field"
+    },
+    {
+     "fieldname": "column_field",
+     "fieldtype": "Data",
+     "label": "Column Field"
+    },
+    {
+     "fieldname": "kanban_columns",
+     "fieldtype": "Code",
+     "label": "Kanban Columns"
+    },
+    {
+     "fieldname": "kanban_fields",
+     "fieldtype": "Code",
+     "label": "Kanban Fields"
+    },
+    {
+     "fieldname": "title_field",
+     "fieldtype": "Data",
+     "label": "Title Field"
+    },
+    {
+     "fieldname": "is_standard",
+     "fieldtype": "Check",
+     "label": "Is Standard",
+     "default": "0"
+    },
+    {
+     "fieldname": "is_default",
+     "fieldtype": "Check",
+     "label": "Is Default",
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/crm_view_settings/crm_view_settings.json",
+   "controller_path": "crm/fcrm/doctype/crm_view_settings/crm_view_settings.py"
+  },
+  {
+   "name": "ERPNext CRM Settings",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 1,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "deal_status",
+     "to": "CRM Deal Status"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "sync_issues",
+     "doctype": "CRM Product Sync Issue"
+    }
+   ],
+   "field_count": 10,
+   "layout_field_count": 5,
+   "fields": [
+    {
+     "fieldname": "api_key",
+     "fieldtype": "Data",
+     "label": "API Key"
+    },
+    {
+     "fieldname": "api_secret",
+     "fieldtype": "Password",
+     "label": "API Secret"
+    },
+    {
+     "fieldname": "erpnext_site_url",
+     "fieldtype": "Data",
+     "label": "ERPNext Site URL"
+    },
+    {
+     "fieldname": "erpnext_company",
+     "fieldtype": "Data",
+     "label": "Company in ERPNext site"
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled",
+     "default": "0"
+    },
+    {
+     "fieldname": "sync_issues",
+     "fieldtype": "Table",
+     "label": "Product Sync Issues",
+     "options": "CRM Product Sync Issue",
+     "read_only": 1
+    },
+    {
+     "fieldname": "is_erpnext_in_different_site",
+     "fieldtype": "Check",
+     "label": "Is ERPNext installed on a different site?",
+     "default": "0"
+    },
+    {
+     "fieldname": "sync_products",
+     "fieldtype": "Check",
+     "label": "Bidirectional Product Sync",
+     "default": "1"
+    },
+    {
+     "fieldname": "create_customer_on_status_change",
+     "fieldtype": "Check",
+     "label": "Create customer on status change",
+     "default": "0"
+    },
+    {
+     "fieldname": "deal_status",
+     "fieldtype": "Link",
+     "label": "Deal Status",
+     "options": "CRM Deal Status"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.json",
+   "controller_path": "crm/fcrm/doctype/erpnext_crm_settings/erpnext_crm_settings.py"
+  },
+  {
+   "name": "Facebook Lead Form",
+   "app": "crm",
+   "installed": 0,
+   "module": "Lead Syncing",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:id",
+   "naming_rule": "By fieldname",
+   "title_field": "form_name",
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "page"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "page",
+     "to": "Facebook Page"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "questions",
+     "doctype": "Facebook Lead Form Question"
+    }
+   ],
+   "field_count": 4,
+   "layout_field_count": 2,
+   "fields": [
+    {
+     "fieldname": "page",
+     "fieldtype": "Link",
+     "label": "Page",
+     "reqd": 1,
+     "options": "Facebook Page"
+    },
+    {
+     "fieldname": "id",
+     "fieldtype": "Data",
+     "label": "ID",
+     "unique": 1
+    },
+    {
+     "fieldname": "form_name",
+     "fieldtype": "Data",
+     "label": "Form Name"
+    },
+    {
+     "fieldname": "questions",
+     "fieldtype": "Table",
+     "label": "Questions",
+     "options": "Facebook Lead Form Question"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/lead_syncing/doctype/facebook_lead_form/facebook_lead_form.json",
+   "controller_path": "crm/lead_syncing/doctype/facebook_lead_form/facebook_lead_form.py"
+  },
+  {
+   "name": "Facebook Lead Form Question",
+   "app": "crm",
+   "installed": 0,
+   "module": "Lead Syncing",
+   "istable": 1,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [
+    "key"
+   ],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "label",
+     "fieldtype": "Data",
+     "label": "Label"
+    },
+    {
+     "fieldname": "key",
+     "fieldtype": "Data",
+     "label": "Key",
+     "reqd": 1
+    },
+    {
+     "fieldname": "type",
+     "fieldtype": "Data",
+     "label": "Type"
+    },
+    {
+     "fieldname": "id",
+     "fieldtype": "Data",
+     "label": "ID"
+    },
+    {
+     "fieldname": "mapped_to_crm_field",
+     "fieldtype": "Autocomplete",
+     "label": "Mapped to CRM Field"
+    }
+   ],
+   "permissions": [],
+   "links": [],
+   "json_path": "crm/lead_syncing/doctype/facebook_lead_form_question/facebook_lead_form_question.json",
+   "controller_path": "crm/lead_syncing/doctype/facebook_lead_form_question/facebook_lead_form_question.py"
+  },
+  {
+   "name": "Facebook Page",
+   "app": "crm",
+   "installed": 0,
+   "module": "Lead Syncing",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "field:id",
+   "naming_rule": "By fieldname",
+   "title_field": "page_name",
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [],
+   "child_tables": [],
+   "field_count": 5,
+   "layout_field_count": 1,
+   "fields": [
+    {
+     "fieldname": "category",
+     "fieldtype": "Data",
+     "label": "Category"
+    },
+    {
+     "fieldname": "id",
+     "fieldtype": "Data",
+     "label": "ID",
+     "unique": 1
+    },
+    {
+     "fieldname": "account_id",
+     "fieldtype": "Data",
+     "label": "Account ID"
+    },
+    {
+     "fieldname": "access_token",
+     "fieldtype": "Small Text",
+     "label": "Access Token"
+    },
+    {
+     "fieldname": "page_name",
+     "fieldtype": "Data",
+     "label": "Page Name"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [
+    {
+     "link_doctype": "Facebook Lead Form",
+     "link_fieldname": "page",
+     "group": null
+    }
+   ],
+   "json_path": "crm/lead_syncing/doctype/facebook_page/facebook_page.json",
+   "controller_path": "crm/lead_syncing/doctype/facebook_page/facebook_page.py"
+  },
+  {
+   "name": "Failed Lead Sync Log",
+   "app": "crm",
+   "installed": 0,
+   "module": "Lead Syncing",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "source",
+     "to": "Lead Sync Source"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 4,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "options": "Duplicate\nFailure\nSynced",
+     "read_only": 1,
+     "default": "Failure"
+    },
+    {
+     "fieldname": "lead_data",
+     "fieldtype": "Code",
+     "label": "Lead Data",
+     "options": "JSON",
+     "read_only": 1
+    },
+    {
+     "fieldname": "source",
+     "fieldtype": "Link",
+     "label": "Source",
+     "options": "Lead Sync Source",
+     "read_only": 1
+    },
+    {
+     "fieldname": "traceback",
+     "fieldtype": "Code",
+     "label": "Traceback",
+     "read_only": 1
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/lead_syncing/doctype/failed_lead_sync_log/failed_lead_sync_log.json",
+   "controller_path": "crm/lead_syncing/doctype/failed_lead_sync_log/failed_lead_sync_log.py"
+  },
+  {
+   "name": "FCRM Note",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": "title",
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "title"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "reference_doctype",
+     "to": "DocType"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 4,
+   "layout_field_count": 0,
+   "fields": [
+    {
+     "fieldname": "title",
+     "fieldtype": "Data",
+     "label": "Title",
+     "reqd": 1
+    },
+    {
+     "fieldname": "content",
+     "fieldtype": "Text Editor",
+     "label": "Content"
+    },
+    {
+     "fieldname": "reference_doctype",
+     "fieldtype": "Link",
+     "label": "Reference Document Type",
+     "options": "DocType",
+     "default": "CRM Lead"
+    },
+    {
+     "fieldname": "reference_docname",
+     "fieldtype": "Dynamic Link",
+     "label": "Reference Doc",
+     "options": "reference_doctype"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [
+    {
+     "link_doctype": "CRM Call Log",
+     "link_fieldname": "note",
+     "group": null
+    }
+   ],
+   "json_path": "crm/fcrm/doctype/fcrm_note/fcrm_note.json",
+   "controller_path": "crm/fcrm/doctype/fcrm_note/fcrm_note.py"
+  },
+  {
+   "name": "FCRM Settings",
+   "app": "crm",
+   "installed": 0,
+   "module": "FCRM",
+   "istable": 0,
+   "issingle": 1,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": null,
+   "naming_rule": null,
+   "title_field": null,
+   "track_changes": 0,
+   "track_seen": 0,
+   "reqd_fields": [],
+   "link_fields": [
+    {
+     "fieldname": "currency",
+     "to": "Currency"
+    }
+   ],
+   "child_tables": [
+    {
+     "fieldname": "dropdown_items",
+     "doctype": "CRM Dropdown Item"
+    }
+   ],
+   "field_count": 18,
+   "layout_field_count": 7,
+   "fields": [
+    {
+     "fieldname": "restore_defaults",
+     "fieldtype": "Button",
+     "label": "Restore Defaults"
+    },
+    {
+     "fieldname": "dropdown_items",
+     "fieldtype": "Table",
+     "label": null,
+     "options": "CRM Dropdown Item"
+    },
+    {
+     "fieldname": "brand_logo",
+     "fieldtype": "Attach",
+     "label": "Logo"
+    },
+    {
+     "fieldname": "brand_name",
+     "fieldtype": "Data",
+     "label": "Name"
+    },
+    {
+     "fieldname": "favicon",
+     "fieldtype": "Attach",
+     "label": "Favicon"
+    },
+    {
+     "fieldname": "enable_forecasting",
+     "fieldtype": "Check",
+     "label": "Enable Forecasting",
+     "default": "0"
+    },
+    {
+     "fieldname": "enable_sales_hierarchy",
+     "fieldtype": "Check",
+     "label": "Enable Sales Hierarchy Permissions",
+     "default": "0"
+    },
+    {
+     "fieldname": "currency",
+     "fieldtype": "Link",
+     "label": "Currency",
+     "options": "Currency"
+    },
+    {
+     "fieldname": "service_provider",
+     "fieldtype": "Select",
+     "label": "Service Provider",
+     "options": "frankfurter.app\nfawazahmed-exchange-api\nexchangerate.host\nexchangerate-api",
+     "default": "frankfurter.app"
+    },
+    {
+     "fieldname": "access_key",
+     "fieldtype": "Data",
+     "label": "Access Key"
+    },
+    {
+     "fieldname": "auto_update_expected_deal_value",
+     "fieldtype": "Check",
+     "label": "Auto update Expected Deal Value",
+     "default": "1"
+    },
+    {
+     "fieldname": "update_timestamp_on_new_communication",
+     "fieldtype": "Check",
+     "label": "Update timestamp on new communication",
+     "default": "1"
+    },
+    {
+     "fieldname": "auto_mark_replied_on_response",
+     "fieldtype": "Check",
+     "label": "Mark lead/deal as replied on response",
+     "default": "0"
+    },
+    {
+     "fieldname": "auto_reopen_on_new_communication",
+     "fieldtype": "Check",
+     "label": "Reopen lead/deal on new communication",
+     "default": "0"
+    },
+    {
+     "fieldname": "restore_demo_data",
+     "fieldtype": "Button",
+     "label": "Restore Demo Data"
+    },
+    {
+     "fieldname": "crm_timeline_timestamp_format",
+     "fieldtype": "Select",
+     "label": "Timeline Timestamp Format",
+     "options": "Relative\nExact",
+     "default": "Relative"
+    },
+    {
+     "fieldname": "crm_timeline_sort_order",
+     "fieldtype": "Select",
+     "label": "Timeline Sort Order",
+     "options": "Oldest First\nNewest First",
+     "default": "Oldest First"
+    },
+    {
+     "fieldname": "persona_captured",
+     "fieldtype": "Check",
+     "label": "Persona Captured",
+     "hidden": 1,
+     "default": "0"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales User",
+     "read": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [],
+   "json_path": "crm/fcrm/doctype/fcrm_settings/fcrm_settings.json",
+   "controller_path": "crm/fcrm/doctype/fcrm_settings/fcrm_settings.py"
+  },
+  {
+   "name": "Lead Sync Source",
+   "app": "crm",
+   "installed": 0,
+   "module": "Lead Syncing",
+   "istable": 0,
+   "issingle": 0,
+   "is_submittable": 0,
+   "is_tree": 0,
+   "is_virtual": 0,
+   "autoname": "prompt",
+   "naming_rule": "Set by user",
+   "title_field": null,
+   "track_changes": 1,
+   "track_seen": 0,
+   "reqd_fields": [
+    "type",
+    "access_token",
+    "background_sync_frequency"
+   ],
+   "link_fields": [
+    {
+     "fieldname": "facebook_page",
+     "to": "Facebook Page"
+    },
+    {
+     "fieldname": "facebook_lead_form",
+     "to": "Facebook Lead Form"
+    }
+   ],
+   "child_tables": [],
+   "field_count": 7,
+   "layout_field_count": 3,
+   "fields": [
+    {
+     "fieldname": "type",
+     "fieldtype": "Select",
+     "label": "Type",
+     "reqd": 1,
+     "options": "Facebook",
+     "default": "Facebook"
+    },
+    {
+     "fieldname": "last_synced_at",
+     "fieldtype": "Datetime",
+     "label": "Last Synced At",
+     "read_only": 1
+    },
+    {
+     "fieldname": "access_token",
+     "fieldtype": "Password",
+     "label": "Access Token",
+     "reqd": 1
+    },
+    {
+     "fieldname": "facebook_page",
+     "fieldtype": "Link",
+     "label": "Facebook Page",
+     "options": "Facebook Page"
+    },
+    {
+     "fieldname": "facebook_lead_form",
+     "fieldtype": "Link",
+     "label": "Facebook Lead Form",
+     "unique": 1,
+     "options": "Facebook Lead Form"
+    },
+    {
+     "fieldname": "enabled",
+     "fieldtype": "Check",
+     "label": "Enabled?",
+     "default": "1"
+    },
+    {
+     "fieldname": "background_sync_frequency",
+     "fieldtype": "Select",
+     "label": "Background Sync Frequency",
+     "reqd": 1,
+     "options": "Every 5 Minutes\nEvery 10 Minutes\nEvery 15 Minutes\nHourly\nDaily\nMonthly",
+     "default": "Hourly"
+    }
+   ],
+   "permissions": [
+    {
+     "role": "System Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    },
+    {
+     "role": "Sales Manager",
+     "read": 1,
+     "write": 1,
+     "create": 1,
+     "delete": 1,
+     "report": 1,
+     "export": 1,
+     "share": 1,
+     "print": 1,
+     "email": 1
+    }
+   ],
+   "links": [
+    {
+     "link_doctype": "Failed Lead Sync Log",
+     "link_fieldname": "source",
+     "group": null
+    }
+   ],
+   "json_path": "crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.json",
+   "controller_path": "crm/lead_syncing/doctype/lead_sync_source/lead_sync_source.py"
+  }
+ ]
+}

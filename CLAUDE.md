@@ -28,6 +28,24 @@ When two layers disagree, the earlier wins:
 production on purpose. Useful for "why does this behave differently on my machine", never for
 "how does this behave" — that question is always about production.
 
+## Installed vs available — never blur these
+
+`index/` holds two tiers. `frappe` and `erpnext` are **installed**: what a tenant runs, and
+what "the platform has this" means. `hrms`, `press`, `crm` and `helpdesk` are **available but
+not installed** — indexed only so a miss can say *"not on your bench, but hrms ships it"*
+instead of a bare "not found" that reads as "the platform cannot do this".
+
+Every record carries `installed: 0|1`. When you add output that shows DocTypes:
+
+- **Render the tiers separately.** Never one merged, ranked list — a reader who skims a mixed
+  list will plan against something that does not exist on the bench.
+- **Say NOT INSTALLED before the schema, not after.** Detail first, caveat later, gets skimmed.
+- **Keep whitelisted methods installed-only.** A callable path from an app we do not run is
+  not callable, and listing it beside real endpoints invites exactly the wrong call.
+
+Adding an app to the available tier is a `pins.json` edit — it needs a `why`, which the server
+prints when it returns a hit from that app.
+
 ## Layout
 
 ```
