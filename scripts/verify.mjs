@@ -38,6 +38,12 @@ if (existsSync(manifestPath)) {
   const man = JSON.parse(readFileSync(manifestPath, "utf8"));
   check("mirror has >1000 pages", man.page_count > 1000, `got ${man.page_count}`);
   check("no mirrored page is suspiciously thin", man.pages.every((p) => p.bytes >= 200));
+  // Six wiki pages inline screenshots as base64 data URIs, 7.9 MB between them. Stripping
+  // them is in crawl-docs.mjs; this is the guard that keeps them out if that regresses,
+  // because the cost lands in git history permanently and is not recoverable by a re-crawl.
+  const bloated = man.pages.filter((p) => p.bytes > 200_000);
+  check("no page carries inlined binary", bloated.length === 0,
+    bloated.length ? `${bloated.length} pages >200KB, largest ${bloated[0]?.path}` : "");
   // Flakiness on our side shrinks the mirror silently and must fail. Pages that are broken
   // upstream (404, or a route that 301s to itself forever) are recorded, not treated as ours.
   const ours = man.skipped.filter((s) => /fetch failed/.test(s.reason));

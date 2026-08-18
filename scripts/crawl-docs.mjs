@@ -81,6 +81,20 @@ function absolutise($, node) {
   }
 }
 
+// A handful of wiki pages inline their screenshots as base64 data URIs. Six of them carried
+// 7.9 MB between them — ~40% of the whole mirror — for content that is unsearchable, unreadable
+// as text, and permanent once committed. Replace each with a marker so the page still says an
+// image was there, and the reader can follow source_url to see it.
+function stripInlineImages($, node) {
+  let stripped = 0;
+  for (const el of node.find("img[src^='data:']").toArray()) {
+    const alt = $(el).attr("alt")?.trim();
+    $(el).replaceWith(`<p>[inline image omitted from mirror${alt ? `: ${alt}` : ""}]</p>`);
+    stripped++;
+  }
+  return stripped;
+}
+
 // A transient fetch failure would otherwise be indistinguishable from a page that no longer
 // exists, quietly shrinking the mirror on a flaky run. Retry the recoverable classes; a 404
 // is upstream's answer and is recorded as-is.
@@ -128,6 +142,7 @@ async function crawlOne({ url, route }) {
   const content = $("#wiki-content");
   if (content.length === 0) return { route, url, skipped: "no #wiki-content" };
   absolutise($, content);
+  const strippedImages = stripInlineImages($, content);
 
   const html = content.html() ?? "";
   const body = turndown.turndown(html).trim();
@@ -157,7 +172,7 @@ async function crawlOne({ url, route }) {
   const dest = path.join(MIRROR, rel);
   await mkdir(path.dirname(dest), { recursive: true });
   await writeFile(dest, md, "utf8");
-  return { route, url, path: rel, title, upstream_updated: updated, bytes: body.length, sha256 };
+  return { route, url, path: rel, title, upstream_updated: updated, bytes: body.length, sha256, ...(strippedImages ? { inline_images_stripped: strippedImages } : {}) };
 }
 
 async function pool(items, worker, size) {
@@ -202,8 +217,9 @@ const manifest = {
   page_count: pages.length,
   skipped_count: skipped.length,
   pages: pages
-    .map(({ path: p, url, title, upstream_updated, bytes, sha256 }) => ({
+    .map(({ path: p, url, title, upstream_updated, bytes, sha256, inline_images_stripped }) => ({
       path: p, url, title, upstream_updated, bytes, sha256,
+      ...(inline_images_stripped ? { inline_images_stripped } : {}),
     }))
     .sort((a, b) => a.path.localeCompare(b.path)),
   skipped: skipped.map(({ route, skipped: why }) => ({ route, reason: why })),
