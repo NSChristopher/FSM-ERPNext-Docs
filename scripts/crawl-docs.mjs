@@ -27,6 +27,11 @@ const MIN_CONTENT_BYTES = 200;
 const pins = JSON.parse(await readFile(path.join(ROOT, "pins.json"), "utf8"));
 const ORIGIN = pins.mirror.origin;
 const SUBTREES = pins.mirror.subtrees;
+// Prefix exclusions let a broad subtree carry its loose pages while the superseded version
+// trees underneath stay out. `framework/` alone would have dragged in v13 and v14; selecting
+// only `framework/user/` missed 20 top-level pages, one of which (doctypes/doctype-layout)
+// was the single most relevant page to a question we later researched by hand.
+const EXCLUDE = pins.mirror.exclude_prefixes ?? [];
 
 const turndown = new TurndownService({
   headingStyle: "atx",
@@ -55,6 +60,7 @@ function selectUrls(all) {
     if (!url.startsWith(ORIGIN + "/")) continue;
     const route = url.slice(ORIGIN.length + 1);
     if (!SUBTREES.some((s) => route.startsWith(s))) continue;
+    if (EXCLUDE.some((s) => route.startsWith(s))) continue;
     if (seen.has(route)) continue;
     seen.add(route);
     out.push({ url, route });

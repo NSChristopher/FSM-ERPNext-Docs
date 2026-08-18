@@ -88,8 +88,7 @@
     ],
     "origin": "https://docs.frappe.io",
     "subtrees": [
-      "framework/user/en/",
-      "framework/v15/user/en/",
+      "framework/",
       "erpnext/user/manual/en/",
       "hr/",
       "cloud/",
@@ -99,6 +98,10 @@
       "drive/",
       "builder/",
       "wiki-v2/"
+    ],
+    "exclude_prefixes": [
+      "framework/v13/",
+      "framework/v14/"
     ],
     "excluded": {
       "_comment": "Recorded so nobody has to guess whether a gap is deliberate. Roughly 4,860 of the sitemap's 6,663 URLs are skipped.",
