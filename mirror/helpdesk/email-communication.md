@@ -61,6 +61,6 @@ Before creating an Email Account, you need an Email Domain. However, you can ski
 
 ### **3\. Additional options when creating an Email Account**
 
-1.  **Use Different Email Login ID**: To use an alternative email login and password to access this account. For example, if you have [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#6b05041f020d02080a1f020405182b0e130a061b070e45080406) and you want users to access this email with an alternate email ID, they should tick this checkbox. The recipients will see [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#9ff1f0ebf6f9f6fcfeebf6f0f1ecdffae7fef2eff3fab1fcf0f2) as the sender.
+1.  **Use Different Email Login ID**: To use an alternative email login and password to access this account. For example, if you have [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#cda3a2b9a4aba4aeacb9a4a2a3be8da8b5aca0bda1a8e3aea2a0) and you want users to access this email with an alternate email ID, they should tick this checkbox. The recipients will see [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#e78988938e818e8486938e888994a7829f868a978b82c984888a) as the sender.
 2.  **Awaiting password**: If you're creating this account on behalf of someone and the password is unknown, tick this checkbox. When the other user logs in, they'll be prompted to enter the password.
 3.  **Use ASCII encoding for the password**: Ticking this will use ASCII encoding for the password.

@@ -1,8 +1,7 @@
 {
   "origin": "https://docs.frappe.io",
   "subtrees": [
-    "framework/user/en/",
-    "framework/v15/user/en/",
+    "framework/",
     "erpnext/user/manual/en/",
     "hr/",
     "cloud/",
@@ -11,13 +10,12 @@
     "insights/",
     "drive/",
     "builder/",
-    "wiki-v2/",
-    "wiki/"
+    "wiki-v2/"
   ],
   "crawled_at": "2026-08-18",
   "note": "docs.frappe.io is a Frappe Wiki site; content is not git-backed. Framework docs stop at v15 - there is no v16 tree upstream. For v16 behaviour, prefer index/ and grep_source over anything here.",
-  "page_count": 1712,
-  "skipped_count": 81,
+  "page_count": 1729,
+  "skipped_count": 73,
   "pages": [
     {
       "path": "builder/data-script.md",
@@ -1000,8 +998,9 @@
       "url": "https://docs.frappe.io/cloud/site/common-issues/502-bad-gateway",
       "title": "502 Bad Gateway",
       "upstream_updated": "12-08-2026 12:44:31",
-      "bytes": 615460,
-      "sha256": "bd272b07d95c5c7696392a1addbaf9cd40c6076d322bde0c6ce321eb7f5e96bb"
+      "bytes": 2548,
+      "sha256": "ae6df603f10cc95cf3a4ab8cdecf0c7b6d9b5389f76adf9c9fb1a58e7f00acfe",
+      "inline_images_stripped": 4
     },
     {
       "path": "cloud/site/common-issues/lost-connection-to-mysql-server.md",
@@ -1401,7 +1400,7 @@
       "title": "Email Communication",
       "upstream_updated": "05-02-2026 16:49:16",
       "bytes": 4600,
-      "sha256": "23d6223c51329a71ca00f5052e5e8ec53c9ddc471d26d7abcaf840f108e86646"
+      "sha256": "1f0dd042a82f1f37c7b00170f054769285653bffcdeeabc1829d50a5608ed57d"
     },
     {
       "path": "crm/email-template.md",
@@ -1529,7 +1528,7 @@
       "title": "Profile and Preferences",
       "upstream_updated": "20-04-2026 17:01:28",
       "bytes": 1854,
-      "sha256": "cfee648d2555b2e9e95b2170957b63592cf77ba90c4ffbaf982022b8b043025e"
+      "sha256": "bad0d0d664617f1ae6fd3ecc6ed97b26c54eeb8b1502ac4de35132d97ec0f3e3"
     },
     {
       "path": "crm/public-view.md",
@@ -1649,7 +1648,7 @@
       "title": "Previews",
       "upstream_updated": "06-01-2026 17:21:16",
       "bytes": 1127,
-      "sha256": "1122c4b3db10735596aa7841987b55451f30ae95f7f5c81f09857ea363c7aa39"
+      "sha256": "1e6d282517e01d43806bd0d33496ebf7778f90c58740a3c1cb0a1f3277bc61df"
     },
     {
       "path": "drive/quick-start.md",
@@ -2265,7 +2264,7 @@
       "title": "Automate Lead Creation | ERPNext Documentation",
       "upstream_updated": "23-07-2026 22:17:18",
       "bytes": 1252,
-      "sha256": "1c383e16781e1c77d2a62e7f74caa493c3386e6eff13e6bb0365bccf9e0d673f"
+      "sha256": "64ea0a2b87ec885af9727c3e35f7c502b78c9098f21340c36ae288a284c2fb6f"
     },
     {
       "path": "erpnext/user/manual/en/automating-issue-assignments-to-support-team-in-erpnext.md",
@@ -2793,7 +2792,7 @@
       "title": "Configuring A Reply-To Email Address",
       "upstream_updated": "04-03-2026 16:28:43",
       "bytes": 933,
-      "sha256": "46b6019c9babbe570969c80a796ba5e240c03a0254093c3ac9ea8932bafd8bc1"
+      "sha256": "8e09ae7b1b1f123da3516c0c00248b7e300469543ee30415fce4bda149ebfb8e"
     },
     {
       "path": "erpnext/user/manual/en/configuring-earned-leave.md",
@@ -3657,7 +3656,7 @@
       "title": "Email Account",
       "upstream_updated": "02-03-2026 23:35:30",
       "bytes": 7793,
-      "sha256": "acb00a3d77ad044cd119feda72342a98a0e0182a493b04720f145b51155cf446"
+      "sha256": "8413310fca55abff30e777ce3f7667aa3f12a75a9952f9750ed6d63328ef21da"
     },
     {
       "path": "erpnext/user/manual/en/email-campaign.md",
@@ -4825,7 +4824,7 @@
       "title": "Job Applicant",
       "upstream_updated": "04-02-2026 14:54:31",
       "bytes": 2281,
-      "sha256": "bf52aceedcff31d3923f8be2d3d02ba7f83aad9e6bc8e24f75738bc172d7369c"
+      "sha256": "d8c7aa05a18c8a86e950a4f777d8bd1b141bac21bb0221ea94db29544311e948"
     },
     {
       "path": "erpnext/user/manual/en/job-card-summary.md",
@@ -5976,8 +5975,9 @@
       "url": "https://docs.frappe.io/erpnext/user/manual/en/pos-profile",
       "title": "POS Profile",
       "upstream_updated": "26-02-2026 23:01:18",
-      "bytes": 515928,
-      "sha256": "64bdf98e0c1e3dd02d898fd0d7e66585692db52ee14f0f4d10b4e8b4656b1398"
+      "bytes": 6606,
+      "sha256": "8d1622faac2eefa5eb5b6b98e61d02a7e7ab548dfb2edf73ce3166d8e71bb0d4",
+      "inline_images_stripped": 6
     },
     {
       "path": "erpnext/user/manual/en/post-dated-cheque-entry.md",
@@ -6960,16 +6960,18 @@
       "url": "https://docs.frappe.io/erpnext/user/manual/en/sales-return-use-cases",
       "title": "Sales Return | ERPNext Documentation",
       "upstream_updated": "29-07-2026 22:54:55",
-      "bytes": 3164809,
-      "sha256": "0f9a09d21b4b65a2687a77bf90182af97fde4f1be176ab1076cd9218e1ce6ccd"
+      "bytes": 11315,
+      "sha256": "7737e92eab018a0257e2cc737d07d9aa7c693a6ef903af78ea46be56afdf08e4",
+      "inline_images_stripped": 10
     },
     {
       "path": "erpnext/user/manual/en/sales-return.md",
       "url": "https://docs.frappe.io/erpnext/user/manual/en/sales-return",
       "title": "Sales Return | ERPNext Documentation",
       "upstream_updated": "29-07-2026 22:54:55",
-      "bytes": 3164809,
-      "sha256": "0f9a09d21b4b65a2687a77bf90182af97fde4f1be176ab1076cd9218e1ce6ccd"
+      "bytes": 11315,
+      "sha256": "7737e92eab018a0257e2cc737d07d9aa7c693a6ef903af78ea46be56afdf08e4",
+      "inline_images_stripped": 10
     },
     {
       "path": "erpnext/user/manual/en/sales-taxes-and-charges-template.md",
@@ -8580,6 +8582,136 @@
       "sha256": "4e2576382583ff153209d2562fa744e1609dcf63bd3da36372edeca6c4ab5fdb"
     },
     {
+      "path": "framework/assignments-and-todos.md",
+      "url": "https://docs.frappe.io/framework/assignments-and-todos",
+      "title": "Assignments and Todos",
+      "upstream_updated": "17-02-2026 10:41:16",
+      "bytes": 4164,
+      "sha256": "14df817aae9a8508c5b06495fde4cd1d3864dc7c2925da4fac8e79e5c4345a0d"
+    },
+    {
+      "path": "framework/data-masking.md",
+      "url": "https://docs.frappe.io/framework/data-masking",
+      "title": "Data Masking",
+      "upstream_updated": "17-02-2026 10:41:14",
+      "bytes": 3265,
+      "sha256": "17d37fdc576aab8b5bc692196d5c5554271088b4d79cd5130d4fff8e8a90ed8f"
+    },
+    {
+      "path": "framework/desk-reports/excel-xlsx-export-styling.md",
+      "url": "https://docs.frappe.io/framework/desk-reports/excel-xlsx-export-styling",
+      "title": "Excel (XLSX) Export Styling",
+      "upstream_updated": "22-04-2026 14:16:07",
+      "bytes": 5349,
+      "sha256": "b3a4104627bcf5414bbef59a0e8cc304b148853cca547574f24f708335b88e11"
+    },
+    {
+      "path": "framework/doctypes/allow-on-submit.md",
+      "url": "https://docs.frappe.io/framework/doctypes/allow-on-submit",
+      "title": "Allow on Submit",
+      "upstream_updated": "02-07-2026 21:02:00",
+      "bytes": 3512,
+      "sha256": "fd22499ce7da37cb074de0216d323a8691558dc2d83a4d6e389da48f4eb6d559",
+      "inline_images_stripped": 2
+    },
+    {
+      "path": "framework/doctypes/docstatus.md",
+      "url": "https://docs.frappe.io/framework/doctypes/docstatus",
+      "title": "Docstatus or Document Status",
+      "upstream_updated": "05-07-2026 13:26:05",
+      "bytes": 1678,
+      "sha256": "eff380d645605d6987482087bcdf34365bfbc1ddbce000d0b899cf82c89366ee"
+    },
+    {
+      "path": "framework/doctypes/doctype-layout.md",
+      "url": "https://docs.frappe.io/framework/doctypes/doctype-layout",
+      "title": "DocType Layout",
+      "upstream_updated": "03-06-2026 11:37:12",
+      "bytes": 6901,
+      "sha256": "351e4bcb01d60a4a808a12b65109f6b52695ba7e4c005e51be2783a262a5de58"
+    },
+    {
+      "path": "framework/document-queue.md",
+      "url": "https://docs.frappe.io/framework/document-queue",
+      "title": "Document Queue",
+      "upstream_updated": "02-07-2026 07:32:12",
+      "bytes": 9914,
+      "sha256": "2d9929fd1655852e7b099e341af4ee84c380d1037840aaffe7d8ca74d9a8c26e"
+    },
+    {
+      "path": "framework/get_query.md",
+      "url": "https://docs.frappe.io/framework/get_query",
+      "title": "frappe.qb.get_query",
+      "upstream_updated": "17-02-2026 10:41:14",
+      "bytes": 23067,
+      "sha256": "ecb026c65ac9d416f03248936c8e4b13dbeed3f134057e07f6574e82df0e3287"
+    },
+    {
+      "path": "framework/guides-app-development/updating-a-field-from-a-linked-doctype.md",
+      "url": "https://docs.frappe.io/framework/guides-app-development/updating-a-field-from-a-linked-doctype",
+      "title": "Updating a Field from a Linked Doctype",
+      "upstream_updated": "05-07-2026 14:12:21",
+      "bytes": 4282,
+      "sha256": "d13012993136ec2add8884fbf4d6da46a34a4fedf0e4bc16259f111851d4dc2d"
+    },
+    {
+      "path": "framework/help/event-streaming.md",
+      "url": "https://docs.frappe.io/framework/help/event-streaming",
+      "title": "Event Streaming",
+      "upstream_updated": "04-07-2026 11:37:07",
+      "bytes": 2725,
+      "sha256": "60e0561348664c8394c5f373937b54001bcedded4a12ca9e19dac7718dd98182"
+    },
+    {
+      "path": "framework/keyboard-shortcuts.md",
+      "url": "https://docs.frappe.io/framework/keyboard-shortcuts",
+      "title": "Keyboard Shortcuts",
+      "upstream_updated": "04-07-2026 11:37:07",
+      "bytes": 2076,
+      "sha256": "1258fd4e8acd21d6b5aaf4889b4cf225dd63556f81367c8c9e0d992e9414ca02",
+      "inline_images_stripped": 2
+    },
+    {
+      "path": "framework/notifications.md",
+      "url": "https://docs.frappe.io/framework/notifications",
+      "title": "Notifications",
+      "upstream_updated": "17-02-2026 10:41:16",
+      "bytes": 6339,
+      "sha256": "4c2d374c62cd6af94c1e0f9abe3937db2ad0d40e20b21bce890a8aa8a85e3791"
+    },
+    {
+      "path": "framework/oauth2.md",
+      "url": "https://docs.frappe.io/framework/oauth2",
+      "title": "OAuth2",
+      "upstream_updated": "17-02-2026 10:41:20",
+      "bytes": 4107,
+      "sha256": "009465fbb95f127404ff8eef86cd149518223fa1dc8feef6c67ea5582b4a732e"
+    },
+    {
+      "path": "framework/permission-types.md",
+      "url": "https://docs.frappe.io/framework/permission-types",
+      "title": "Permission Types",
+      "upstream_updated": "17-02-2026 10:41:14",
+      "bytes": 2342,
+      "sha256": "7537547123d00ffaa9a0886272ec512478b5cf38b9e7b2d4d9b3645004a2a24c"
+    },
+    {
+      "path": "framework/portal-web-form/web-form-request.md",
+      "url": "https://docs.frappe.io/framework/portal-web-form/web-form-request",
+      "title": "Web Form Request",
+      "upstream_updated": "26-06-2026 18:18:48",
+      "bytes": 3122,
+      "sha256": "50155858d71e6cdc7181451c6e3f073951d2f0d2fde3ca410580e109bc9b38fe"
+    },
+    {
+      "path": "framework/sqlite-search.md",
+      "url": "https://docs.frappe.io/framework/sqlite-search",
+      "title": "SQLite Search",
+      "upstream_updated": "17-02-2026 10:41:15",
+      "bytes": 15043,
+      "sha256": "1484f6909ea8ca1bd36f1fb92a5a59c1f1f2898cf0be06a6f32e9ee5da4be80b"
+    },
+    {
       "path": "framework/user/en/api.md",
       "url": "https://docs.frappe.io/framework/user/en/api",
       "title": "Developer API",
@@ -8913,7 +9045,7 @@
       "title": "Configuration",
       "upstream_updated": "12-06-2026 22:19:24",
       "bytes": 17178,
-      "sha256": "2412bf349b39b1134b22dde3f6dcca177aad1bfb9e9a3222e72b7c2087b00f35"
+      "sha256": "3930457ecf0ca54598cc2ef92ddd61d26527044f12a7ff551d096434c923dc83"
     },
     {
       "path": "framework/user/en/basics/sites.md",
@@ -10308,6 +10440,14 @@
       "sha256": "57dcb1b67123b9d6fb691392401bfbc18d5827a87b3f47e540ad960de1ff2215"
     },
     {
+      "path": "framework/using-vue-inside-a-desk-page.md",
+      "url": "https://docs.frappe.io/framework/using-vue-inside-a-desk-page",
+      "title": "Using Vue in a Desk Page",
+      "upstream_updated": "10-05-2026 23:58:45",
+      "bytes": 4123,
+      "sha256": "409fbba25ec6871c69a0fe1a80a04ce1a1ddc7e138e1f40ebe06f285642a31da"
+    },
+    {
       "path": "framework/v15/user/en/api.md",
       "url": "https://docs.frappe.io/framework/v15/user/en/api",
       "title": "Developer API",
@@ -10625,7 +10765,7 @@
       "title": "Configuration",
       "upstream_updated": "12-06-2026 22:19:24",
       "bytes": 17178,
-      "sha256": "bd08bbab3733d9c41b5803e76b3466e00291f0e7829d3840c4cc2cc8b38132cb"
+      "sha256": "75765b067fdb23d056cf8f3225b99a71eba57bc21e65cf06906a4e1ba45ec347"
     },
     {
       "path": "framework/v15/user/en/basics/sites.md",
@@ -12025,7 +12165,7 @@
       "title": "Email Communication",
       "upstream_updated": "28-05-2026 01:50:29",
       "bytes": 4384,
-      "sha256": "06ebce834df666e804376182040399e03fe421b48d9e10f4c7b2f3613dcb67cc"
+      "sha256": "4d5570229fe17cb925d70511132b12fe5b1987b97e8763ce03d718c43a141c22"
     },
     {
       "path": "helpdesk/email-notifications.md",
@@ -12217,7 +12357,7 @@
       "title": "Settings",
       "upstream_updated": "15-05-2026 13:19:31",
       "bytes": 8930,
-      "sha256": "5606d9cb3ce503222773191e97be30c4559d8abc54d47b11d6a7feaa479086d9"
+      "sha256": "e0cc0548ab18f45ad2779845a0af0a4873ca7e98bced0f985b3323f35be3f6b4"
     },
     {
       "path": "helpdesk/team.md",
@@ -12289,7 +12429,7 @@
       "title": "Your First Steps with Frappe Helpdesk",
       "upstream_updated": "27-05-2026 21:39:01",
       "bytes": 7284,
-      "sha256": "dc9cfc6f77ae814cdfcd95748f6b14a867ccda1f93de406c1dd2e40be3a4d5fe"
+      "sha256": "8a6039cf5d8380c01e67554d4044134503866d3d9db67c5f683f82453207ef73"
     },
     {
       "path": "hr/additional-salary.md",
@@ -12881,7 +13021,7 @@
       "title": "Job Applicant",
       "upstream_updated": "04-02-2026 14:54:31",
       "bytes": 2281,
-      "sha256": "e6f0fe5592bad1d3b559948c3632fde623e5f388ae36dd0cc36db3935058ccbd"
+      "sha256": "ad3bbc8bb531e2ef2db79646b02cae27f629bd2527922a693933a44759a1b9d9"
     },
     {
       "path": "hr/job-offer.md",
@@ -13946,6 +14086,18 @@
       "reason": "http 404"
     },
     {
+      "route": "framework/cookbook",
+      "reason": "thin (10b)"
+    },
+    {
+      "route": "framework/introduction",
+      "reason": "thin (10b)"
+    },
+    {
+      "route": "framework/new-wiki-page",
+      "reason": "thin (31b)"
+    },
+    {
       "route": "framework/user/en/basics/doctypes/frameworktatus",
       "reason": "upstream http 500"
     },
@@ -13996,50 +14148,6 @@
     {
       "route": "wiki-v2/check-page-revisions",
       "reason": "thin (168b)"
-    },
-    {
-      "route": "wiki/approving-changes",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/check-page-revisions",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/how-to-contribute",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/install-locally",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/introduction",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/new-wiki-group",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/new-wiki-page",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/use-on-frappe-cloud",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/wiki-migration-guide",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/wiki-settings",
-      "reason": "no #wiki-content"
-    },
-    {
-      "route": "wiki/wiki-space",
-      "reason": "no #wiki-content"
     }
   ]
 }

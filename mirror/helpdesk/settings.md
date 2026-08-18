@@ -44,7 +44,7 @@ Select the email account provider from the list , then fill the fields mentioned
 -   **Password:** App password for your email account which can be found from the link provided in the banner.
 -   **Enable Incoming:** If enabled, all the emails which you will receive in this account will be created as a ticket in your Helpdesk System.
 -   **Enable Outgoing:** If enabled, all the replies to the tickets will be sent from this email address.
--   **Default Incoming:** If enabled, all replies to your company (eg: [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#106275607c79756350697f6562737f7d717e693e737f7d)) will come to this account. Note: Only one account can be default incoming.
+-   **Default Incoming:** If enabled, all replies to your company (eg: [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#205245504c49455360594f5552434f4d414e590e434f4d)) will come to this account. Note: Only one account can be default incoming.
 -   **Default Outgoing:** If enabled, all outgoing emails will be sent from this account. Note: Only one account can be default outgoing.
 -   To edit an email account, simply click on the account and you will be able to edit your email account.
 

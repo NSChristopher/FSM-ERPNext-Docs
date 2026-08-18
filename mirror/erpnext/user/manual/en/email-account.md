@@ -41,7 +41,7 @@ Before creating an Email Account, you need an [Email Domain](https://docs.frappe
 
 ### 2.1 Additional options when creating an Email Account
 
-1.  **Use Different Email Login ID**: To use an alternative email login and password to access this account. For example, if you have [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#adc3c2d9c4cbc4ceccd9c4c2c3deedc8d5ccc0ddc1c883cec2c0) and you want users to access this email with an alternate email ID, they should tick this checkbox. The recipients will see [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#1d737269747b747e7c697472736e5d78657c706d7178337e7270) as the sender.
+1.  **Use Different Email Login ID**: To use an alternative email login and password to access this account. For example, if you have [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#412f2e35282728222035282e2f32012439202c312d246f222e2c) and you want users to access this email with an alternate email ID, they should tick this checkbox. The recipients will see [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#97f9f8e3fef1fef4f6e3fef8f9e4d7f2eff6fae7fbf2b9f4f8fa) as the sender.
     
 2.  **Awaiting password**: If you're creating this account on behalf of someone and the password is unknown, tick this checkbox. When the other user logs in, they'll be prompted to enter the password.
     
@@ -71,7 +71,7 @@ The following options are available for incoming emails:
 1.  **Use IMAP**
 2.  **Use SSL**
 3.  **Attachment Limit**
-4.  **Default Incoming**: If ticked, all replies to your company (eg: [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#b2c0d7c2dedbd7c1f2cbddc7c0d1dddfd3dccb9cd1dddf)) will come to this account.
+4.  **Default Incoming**: If ticked, all replies to your company (eg: [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#92e0f7e2fefbf7e1d2ebfde7e0f1fdfff3fcebbcf1fdff)) will come to this account.
 5.  **Email Sync Option**: Whether to sync all or only unseen emails.
 6.  **Initial Sync Count**: Number of emails to sync the first time.
 
@@ -79,9 +79,9 @@ The following options are available for incoming emails:
 
 This feature creates documents when an email is sent to a particular pre-configured email.
 
-For example, you can link [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#5a292f2a2a35282e1a3f223b372a363f74393537) to the Issue DocType. After doing this, whenever an email is sent to [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#03707673736c717743667b626e736f662d606c6e), the system will automatically create an Issue is the system.
+For example, you can link [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#5b282e2b2b34292f1b3e233a362b373e75383436) to the Issue DocType. After doing this, whenever an email is sent to [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#8ffcfaffffe0fdfbcfeaf7eee2ffe3eaa1ece0e2), the system will automatically create an Issue is the system.
 
-Similarly, if you link [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#1f75707d6c5f7a677e726f737a317c7072), when emails are sent to [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#6e04010c1d2e0b160f031e020b400d0103), a Job Applicant document is automatically created.
+Similarly, if you link [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#91fbfef3e2d1f4e9f0fce1fdf4bff2fefc), when emails are sent to [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#9af0f5f8e9daffe2fbf7eaf6ffb4f9f5f7), a Job Applicant document is automatically created.
 
 Enable Automatic Linking in Documents will link emails to documents, to know more [click here](https://docs.frappe.io/erpnext/linking-emails-to-document).
 

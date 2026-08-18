@@ -134,7 +134,7 @@ If you have [help articles created](https://docs.frappe.io/helpdesk/lesson-4-kno
 
 #### b. Email
 
-If you want your customers to raise tickets via email (e.g., [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#7f0c0a0f0f100d0b3f1c10120f1e1106511c1012)), set one of your email accounts as "Incoming" or "Default Incoming." All emails sent to this address will automatically become tickets every 10 minutes.
+If you want your customers to raise tickets via email (e.g., [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#4c3f393c3c233e380c2f23213c2d2235622f2321)), set one of your email accounts as "Incoming" or "Default Incoming." All emails sent to this address will automatically become tickets every 10 minutes.
 
 #### c. Agent Portal
 

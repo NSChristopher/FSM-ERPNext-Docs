@@ -9,7 +9,7 @@ mirrored_from: docs.frappe.io (Frappe Wiki - not git-backed)
 
 For most common file types, Frappe Drive allows you to preview it in the browser itself.
 
-Here is a (non-exhaustive) list of file types we support. Want something added? Please [get in touch](https://docs.frappe.io/cdn-cgi/l/email-protection#ddaebcbbaabcb39dbbafbcadadb8f3b4b2) or open [an issue](github.com/frappe/drive/issues/new)!
+Here is a (non-exhaustive) list of file types we support. Want something added? Please [get in touch](https://docs.frappe.io/cdn-cgi/l/email-protection#4734262130262907213526373722692e28) or open [an issue](github.com/frappe/drive/issues/new)!
 
 **Office**
 

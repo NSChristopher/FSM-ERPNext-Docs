@@ -38,7 +38,7 @@ Before creating a Job Applicant, it is advisable you create the following:
 
 ### **3.1 Linking with an Email Account**
 
-You can link Job Application with an Email account. Suppose you link Job Application with an email [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#bdd7d2dffdd8c5dcd0cdd1d893ded2d0), the system will create a New Job Applicant against each email received on the mailbox.
+You can link Job Application with an Email account. Suppose you link Job Application with an email [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#8ae0e5e8caeff2ebe7fae6efa4e9e5e7), the system will create a New Job Applicant against each email received on the mailbox.
 
 -   To link Email Account with Job Applicant, go to:
 

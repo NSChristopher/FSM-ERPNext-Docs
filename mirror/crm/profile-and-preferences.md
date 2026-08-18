@@ -20,7 +20,7 @@ This is your personal account page. Keep it up to date, especially if you're com
 -   **Name** – How you appear to your teammates inside the CRM
 -   **Email & Signature** – Click Configure to open your Email Settings. Here you can set up two things:
     -   **Signature** – Write your email signature once, and it'll automatically appear at the bottom of every email you send from the CRM
-    -   **Emails** – If your team has multiple email accounts set up, you can choose which one to send from when composing an email. Useful if you handle both a personal inbox and a shared team inbox like [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#e99a88858c9aa990869c9b8a868499888790c78a8684)  
+    -   **Emails** – If your team has multiple email accounts set up, you can choose which one to send from when composing an email. Useful if you handle both a personal inbox and a shared team inbox like [\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#4330222f2630033a2c3631202c2e33222d3a6d202c2e)  
         ![](https://docs.frappe.io/files/Screenshot%202026-04-20%20at%204.57.12%E2%80%AFPM.png)
 -   **Password** – Change your password anytime from here.
 
