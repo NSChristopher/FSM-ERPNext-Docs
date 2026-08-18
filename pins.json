@@ -98,14 +98,18 @@
       "insights/",
       "drive/",
       "builder/",
-      "wiki-v2/",
-      "wiki/"
+      "wiki-v2/"
     ],
     "excluded": {
       "_comment": "Recorded so nobody has to guess whether a gap is deliberate. Roughly 4,860 of the sitemap's 6,663 URLs are skipped.",
       "superseded_versions": "erpnext/v12, erpnext/v13, erpnext/v14, framework/v13, framework/v14 - about 4,600 pages. Stale text that would surface as confidently wrong search hits, which is the opposite of this repo's purpose. framework/v15 is kept because it is the last versioned framework tree and often carries detail the unversioned 'user' tree dropped.",
       "other_verticals": "lending, education, books, learning, school - about 191 pages. Separate Frappe products (loan management, school ERP, desktop accounting, LMS) with no bearing on field service.",
-      "non_technical": "customer-guide, partner-guide, legal - about 68 pages. Frappe's own pricing, support and partner-programme material, not platform documentation."
+      "non_technical": "customer-guide, partner-guide, legal - about 68 pages. Frappe's own pricing, support and partner-programme material, not platform documentation.",
+      "wiki_v1": "wiki/ - 11 pages, superseded by wiki-v2/, which carries the same routes. Every wiki/ URL renders without a #wiki-content body, so selecting them only produced permanent skips. Dropped after the 2026-08-18 crawl recorded all 11 failing."
+    },
+    "known_upstream_gaps": {
+      "_comment": "Sections where upstream itself is partly broken, so a smaller page count here is not a crawl defect. mirror/_manifest.json lists every skip with its reason.",
+      "cloud": "27 of 183 pages fail upstream, mostly HTTP 500 on /cloud/handbook/* and /cloud/faq/*."
     }
   }
 }

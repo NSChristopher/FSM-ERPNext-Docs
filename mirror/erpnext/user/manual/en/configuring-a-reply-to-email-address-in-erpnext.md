@@ -13,11 +13,11 @@ The 'Reply-To' Email Address is set based on the 'Default Incoming' checkbox in 
 
 Prerequisites:
 
-You must have an email address record created in the ‘Email Account’ DocType for the desired email address, for example, ‘[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#91f0f3f2d1e5f4e2e5bff2fefc)'.
+You must have an email address record created in the ‘Email Account’ DocType for the desired email address, for example, ‘[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#f4959697b480918780da979b99)'.
 
 Steps:
 
-In the record for email address ‘[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#8beae9e8cbffeef8ffa5e8e4e6)' created in the 'Email Account' DocType, enable the 'Enable Incoming' checkbox and then the 'Default Incoming' checkbox. Enabling the 'Default Incoming' checkbox will then set this email as the email in 'Reply-To' (sample screenshot below).
+In the record for email address ‘[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#5130333211253422257f323e3c)' created in the 'Email Account' DocType, enable the 'Enable Incoming' checkbox and then the 'Default Incoming' checkbox. Enabling the 'Default Incoming' checkbox will then set this email as the email in 'Reply-To' (sample screenshot below).
 
 ![](https://docs.frappe.io/files/r5jqCdA.png)
 

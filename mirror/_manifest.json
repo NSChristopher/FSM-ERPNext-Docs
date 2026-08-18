@@ -3,13 +3,1694 @@
   "subtrees": [
     "framework/user/en/",
     "framework/v15/user/en/",
-    "erpnext/user/manual/en/"
+    "erpnext/user/manual/en/",
+    "hr/",
+    "cloud/",
+    "crm/",
+    "helpdesk/",
+    "insights/",
+    "drive/",
+    "builder/",
+    "wiki-v2/",
+    "wiki/"
   ],
-  "crawled_at": "2026-08-17",
+  "crawled_at": "2026-08-18",
   "note": "docs.frappe.io is a Frappe Wiki site; content is not git-backed. Framework docs stop at v15 - there is no v16 tree upstream. For v16 behaviour, prefer index/ and grep_source over anything here.",
-  "page_count": 1280,
-  "skipped_count": 34,
+  "page_count": 1712,
+  "skipped_count": 81,
   "pages": [
+    {
+      "path": "builder/data-script.md",
+      "url": "https://docs.frappe.io/builder/data-script",
+      "title": "Data Script",
+      "upstream_updated": "03-06-2026 11:59:56",
+      "bytes": 4057,
+      "sha256": "b659bc37b3106676f306a5358606577c5bad40ec5b8ecb1d568e62336ad76422"
+    },
+    {
+      "path": "builder/external-editor.md",
+      "url": "https://docs.frappe.io/builder/external-editor",
+      "title": "External Editor",
+      "upstream_updated": "13-05-2026 15:14:45",
+      "bytes": 1318,
+      "sha256": "cfca74c98961ac2d3e86f78057d60ac470a48600ae4c30d1926b5ea6eb941968"
+    },
+    {
+      "path": "builder/introduction.md",
+      "url": "https://docs.frappe.io/builder/introduction",
+      "title": "Introduction",
+      "upstream_updated": "06-01-2026 21:08:16",
+      "bytes": 2454,
+      "sha256": "f7ba5710e3eb481a934ada870c2cd480cf42dac8c391e541674e4156deacb19b"
+    },
+    {
+      "path": "cloud/app-plan.md",
+      "url": "https://docs.frappe.io/cloud/app-plan",
+      "title": "App Pricing Plans",
+      "upstream_updated": "16-02-2026 17:05:31",
+      "bytes": 996,
+      "sha256": "905541004d643d5bd254d01d1da91eac8ea97a8bed0c58e1bac3bf3f841e5dd2"
+    },
+    {
+      "path": "cloud/bench-analytics.md",
+      "url": "https://docs.frappe.io/cloud/bench-analytics",
+      "title": "Bench Analytics",
+      "upstream_updated": "16-02-2026 17:05:27",
+      "bytes": 1245,
+      "sha256": "f1cfe76be071f1cb5be7369c55cbc7ace516ba9c58a8afb54a5e4cd56ea3d180"
+    },
+    {
+      "path": "cloud/benches.md",
+      "url": "https://docs.frappe.io/cloud/benches",
+      "title": "Private Benches",
+      "upstream_updated": "27-02-2026 15:53:30",
+      "bytes": 1945,
+      "sha256": "33c0c349e13031bca50216bba5e8c1798873d68ba0dc20ef6ec9e0e556f25d63"
+    },
+    {
+      "path": "cloud/benches/app-patches.md",
+      "url": "https://docs.frappe.io/cloud/benches/app-patches",
+      "title": "App Patches",
+      "upstream_updated": "16-02-2026 17:05:22",
+      "bytes": 3708,
+      "sha256": "104552668dacb0d3d10e571debf5e2d5a412cf9e7fdffb212bf523c4e7afe48c"
+    },
+    {
+      "path": "cloud/benches/bench-config.md",
+      "url": "https://docs.frappe.io/cloud/benches/bench-config",
+      "title": "Bench Config",
+      "upstream_updated": "27-02-2026 15:53:30",
+      "bytes": 539,
+      "sha256": "8daf22ef3d7f606d871b6869d341d856fb92c2be6cd2c3962276d518e9b35990"
+    },
+    {
+      "path": "cloud/benches/create-new.md",
+      "url": "https://docs.frappe.io/cloud/benches/create-new",
+      "title": "Creating a new bench",
+      "upstream_updated": "22-05-2026 19:18:27",
+      "bytes": 904,
+      "sha256": "2121e0c96ed72bf9eb3367e2af11238153b7d0af40ac58f83d2e651426079d66"
+    },
+    {
+      "path": "cloud/benches/custom-app.md",
+      "url": "https://docs.frappe.io/cloud/benches/custom-app",
+      "title": "How to install a custom app",
+      "upstream_updated": "24-07-2026 14:21:28",
+      "bytes": 657,
+      "sha256": "e7e16f7d434adb1d133d0311b80f960a72ff1a0bcdbde1d8a22f29db791df742"
+    },
+    {
+      "path": "cloud/benches/debugging.md",
+      "url": "https://docs.frappe.io/cloud/benches/debugging",
+      "title": "Debugging",
+      "upstream_updated": "16-02-2026 17:05:22",
+      "bytes": 3700,
+      "sha256": "a21ee3c94918f1509220460f0eae7afda9977f5aaa927d8c56ad72f38a3d6711"
+    },
+    {
+      "path": "cloud/benches/editing-bench-dependency-version.md",
+      "url": "https://docs.frappe.io/cloud/benches/editing-bench-dependency-version",
+      "title": "Editing Bench Dependency Version",
+      "upstream_updated": "27-02-2026 15:53:30",
+      "bytes": 1962,
+      "sha256": "2203e4f7593c464f47f699a56eb189293c1b4c3f1cf8af4b9f9431c17e3606de"
+    },
+    {
+      "path": "cloud/benches/process-status.md",
+      "url": "https://docs.frappe.io/cloud/benches/process-status",
+      "title": "Process Status",
+      "upstream_updated": "16-02-2026 17:05:21",
+      "bytes": 380,
+      "sha256": "c1620f2210b99caaa887917fc97edb473ba956669f75a4a83548010867b3bffb"
+    },
+    {
+      "path": "cloud/benches/ssh.md",
+      "url": "https://docs.frappe.io/cloud/benches/ssh",
+      "title": "SSH Access",
+      "upstream_updated": "11-05-2026 11:55:20",
+      "bytes": 9159,
+      "sha256": "3f897cde0f70dfc5110be26b57f9ca63490d6e3d0625741a4f4399d26af08936"
+    },
+    {
+      "path": "cloud/benches/updating_a_bench.md",
+      "url": "https://docs.frappe.io/cloud/benches/updating_a_bench",
+      "title": "Updating a Bench",
+      "upstream_updated": "09-03-2026 16:38:51",
+      "bytes": 4525,
+      "sha256": "83e65a01c10a2767f7d0a5edbd50cc86462776dafa7c4accc1ec4d7447795593"
+    },
+    {
+      "path": "cloud/benefits.md",
+      "url": "https://docs.frappe.io/cloud/benefits",
+      "title": "Benefits",
+      "upstream_updated": "07-05-2026 13:16:10",
+      "bytes": 1248,
+      "sha256": "d7f0b1deb4962feba40f2327777c652004cb750d23564903e1bf4fd846b1b742"
+    },
+    {
+      "path": "cloud/billing/bill-payments.md",
+      "url": "https://docs.frappe.io/cloud/billing/bill-payments",
+      "title": "Bill Payments",
+      "upstream_updated": "29-04-2026 15:35:30",
+      "bytes": 2435,
+      "sha256": "bdd770737786e3e506a042611b2aec5bca900c9b33e8185e6ea51036305799de"
+    },
+    {
+      "path": "cloud/billing/billing-cycle.md",
+      "url": "https://docs.frappe.io/cloud/billing/billing-cycle",
+      "title": "Billing Cycle",
+      "upstream_updated": "06-03-2026 01:36:46",
+      "bytes": 2530,
+      "sha256": "4f737108fd22eba16fdfcc5eb2cf00c49c37cc2cd8ecd99b207e9f5dc48d9f6d"
+    },
+    {
+      "path": "cloud/billing/disable-account.md",
+      "url": "https://docs.frappe.io/cloud/billing/disable-account",
+      "title": "Disable Account / Cancel Subscription",
+      "upstream_updated": "16-02-2026 17:05:15",
+      "bytes": 786,
+      "sha256": "8ab8487834203992080a98a3b074ecedb79a114223c8ffb1a8138c919bdc1d35"
+    },
+    {
+      "path": "cloud/billing/payment_options.md",
+      "url": "https://docs.frappe.io/cloud/billing/payment_options",
+      "title": "Payment Options",
+      "upstream_updated": "16-02-2026 17:05:32",
+      "bytes": 1514,
+      "sha256": "aacf9001ad5cce19bb106624c62c65cd95b152618973f40c3b7047e9792e0812"
+    },
+    {
+      "path": "cloud/binlog-browser.md",
+      "url": "https://docs.frappe.io/cloud/binlog-browser",
+      "title": "Binlog Browser",
+      "upstream_updated": "16-02-2026 17:05:29",
+      "bytes": 3046,
+      "sha256": "696fb046f8b850a672b11277673ad7f2889615f3e3146ed85b901c8524ddcb9c"
+    },
+    {
+      "path": "cloud/cant-connect-to-mysql-server.md",
+      "url": "https://docs.frappe.io/cloud/cant-connect-to-mysql-server",
+      "title": "Can't connect to MySQL server",
+      "upstream_updated": "16-02-2026 17:05:19",
+      "bytes": 458,
+      "sha256": "85a497c8e5d09221bb2ea17d1affa574da70a0b8e21ba9e972f19fb702b5a6c3"
+    },
+    {
+      "path": "cloud/change-notification-email-of-team.md",
+      "url": "https://docs.frappe.io/cloud/change-notification-email-of-team",
+      "title": "Change notification email of Team",
+      "upstream_updated": "16-02-2026 17:05:33",
+      "bytes": 387,
+      "sha256": "0278316a3fa2896a7471600022a103ad052234af19c9eb481f2ef41c6ffab4d4"
+    },
+    {
+      "path": "cloud/change-team-of-bench-group.md",
+      "url": "https://docs.frappe.io/cloud/change-team-of-bench-group",
+      "title": "Change Team of Bench",
+      "upstream_updated": "10-03-2026 11:03:33",
+      "bytes": 659,
+      "sha256": "01db4acc7fefa930297eee59ccd155d83fc65bf2be06683c93c48ea4041c47e7"
+    },
+    {
+      "path": "cloud/common-issues/build-might-fail.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/build-might-fail",
+      "title": "Build might fail",
+      "upstream_updated": "16-02-2026 17:05:23",
+      "bytes": 878,
+      "sha256": "0d92b876f0b20983bd4e1a225dd4a0e01cedab7c1352cd209a86ac3dfaf5811d"
+    },
+    {
+      "path": "cloud/common-issues/debugging-app-installs-locally.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/debugging-app-installs-locally",
+      "title": "Debugging app installs locally",
+      "upstream_updated": "16-02-2026 17:05:23",
+      "bytes": 4239,
+      "sha256": "7197694b3912c742f6abb5c8e389dbae73e5cd6a84c09fba4cf45621259b5ae2"
+    },
+    {
+      "path": "cloud/common-issues/forgot-password-of-frappe-cloud.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/forgot-password-of-frappe-cloud",
+      "title": "Forgot Password",
+      "upstream_updated": "16-02-2026 17:05:15",
+      "bytes": 200,
+      "sha256": "b982b84535afe69a8156d5fbc3845ead253c960f06b72f75b2cc42b5ade2ef7f"
+    },
+    {
+      "path": "cloud/common-issues/incompatible-app-version.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/incompatible-app-version",
+      "title": "Incompatible app version",
+      "upstream_updated": "16-02-2026 17:05:23",
+      "bytes": 1385,
+      "sha256": "325508389bd2d5779a182d8d804a3903b162b4c7d8727dc4a268e6550dedb46f"
+    },
+    {
+      "path": "cloud/common-issues/incompatible-dependency-version.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/incompatible-dependency-version",
+      "title": "Incompatible dependency version",
+      "upstream_updated": "16-02-2026 17:05:23",
+      "bytes": 1141,
+      "sha256": "6805c35f9a52371550ea4be095fe845455c06fd5bae370c7986795ac53f6b9b6"
+    },
+    {
+      "path": "cloud/common-issues/incompatible-node-version.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/incompatible-node-version",
+      "title": "Incompatible Node version",
+      "upstream_updated": "16-02-2026 17:05:23",
+      "bytes": 1142,
+      "sha256": "86fa32b0803173c01fb29e40b55ff5db0e5d379a088b36ced46dc797e1309806"
+    },
+    {
+      "path": "cloud/common-issues/internal-server-error-on-frappe-site.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/internal-server-error-on-frappe-site",
+      "title": "Internal Server Error On Frappe Site",
+      "upstream_updated": "16-02-2026 17:05:19",
+      "bytes": 647,
+      "sha256": "4675bc31690000734a8f0474540e814e785b68b23e260cf575e15bdd46ee50f1"
+    },
+    {
+      "path": "cloud/common-issues/invalid-pyprojecttoml-file.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/invalid-pyprojecttoml-file",
+      "title": "Invalid pyproject.toml file",
+      "upstream_updated": "16-02-2026 17:05:23",
+      "bytes": 764,
+      "sha256": "500d39091b6d2249401985f07358901d254359f28c1870e5120668540409a9d3"
+    },
+    {
+      "path": "cloud/common-issues/oom-issues.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/oom-issues",
+      "title": "Out-of-Memory Issues",
+      "upstream_updated": "16-02-2026 17:05:28",
+      "bytes": 735,
+      "sha256": "4f936e5750aa39cf616e279fefbef4fdbb8269650cde0b7cdafcc6f1bb8b2538"
+    },
+    {
+      "path": "cloud/common-issues/required-app-not-found.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/required-app-not-found",
+      "title": "Required app not found",
+      "upstream_updated": "16-02-2026 17:05:22",
+      "bytes": 2610,
+      "sha256": "0978649a992af274f10b759daa7313ce726dff8fd2db9e4b83c0ca66ac5facd3"
+    },
+    {
+      "path": "cloud/common-issues/ssl-certificate-verification-error.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/ssl-certificate-verification-error",
+      "title": "SSL Certificate Verification Error",
+      "upstream_updated": "11-03-2026 17:03:25",
+      "bytes": 1208,
+      "sha256": "3c49f89bc578be19709f9eefc41599c4e1fedc20e08341661760c25dbaa06a9e"
+    },
+    {
+      "path": "cloud/common-issues/vite-not-found.md",
+      "url": "https://docs.frappe.io/cloud/common-issues/vite-not-found",
+      "title": "Vite not found",
+      "upstream_updated": "16-02-2026 17:05:23",
+      "bytes": 978,
+      "sha256": "1aef1893e57c453c975fc91581c1529785353fa834bbaac4f1fd26d7ef7727e0"
+    },
+    {
+      "path": "cloud/connect-apache-superset.md",
+      "url": "https://docs.frappe.io/cloud/connect-apache-superset",
+      "title": "Apache Superset",
+      "upstream_updated": "16-02-2026 17:05:34",
+      "bytes": 1597,
+      "sha256": "3f62f3c2a8b53c994c2ba1593f2f4ab745e9133d0d221ddefaefce4cb5917263"
+    },
+    {
+      "path": "cloud/connect-looker-studio.md",
+      "url": "https://docs.frappe.io/cloud/connect-looker-studio",
+      "title": "Looker Studio",
+      "upstream_updated": "16-02-2026 17:05:34",
+      "bytes": 2049,
+      "sha256": "bf09e121cf16a2b50217d819f70c840913636cf6068728873f12b8854501782d"
+    },
+    {
+      "path": "cloud/connect-metabase.md",
+      "url": "https://docs.frappe.io/cloud/connect-metabase",
+      "title": "Metabase",
+      "upstream_updated": "16-02-2026 17:05:33",
+      "bytes": 1894,
+      "sha256": "b1f48f54dd1b04366685b5057cee6a17d61adf03648260570c2f1cce33094455"
+    },
+    {
+      "path": "cloud/connect-power-bi-desktop.md",
+      "url": "https://docs.frappe.io/cloud/connect-power-bi-desktop",
+      "title": "Power BI Desktop",
+      "upstream_updated": "16-02-2026 17:05:33",
+      "bytes": 3770,
+      "sha256": "a706f8264e5684dd6d3d5e8c12229980353c1bbdc4cce1821e744b9eab0271bf"
+    },
+    {
+      "path": "cloud/connect-zoho-analytics.md",
+      "url": "https://docs.frappe.io/cloud/connect-zoho-analytics",
+      "title": "Zoho Analytics",
+      "upstream_updated": "16-02-2026 17:05:34",
+      "bytes": 1926,
+      "sha256": "c1c0860a7f536a6f9ff00d290d20a3b38b773403c0a1e8a16047f9b18a59458a"
+    },
+    {
+      "path": "cloud/control-resources-allocated-for-site.md",
+      "url": "https://docs.frappe.io/cloud/control-resources-allocated-for-site",
+      "title": "Control resources allocated for site",
+      "upstream_updated": "05-06-2026 12:27:40",
+      "bytes": 3775,
+      "sha256": "93d35b7d032bf36dfb2d71a5ae921a3093f5bd72feedfdd4271318197231983a"
+    },
+    {
+      "path": "cloud/create-child-teams.md",
+      "url": "https://docs.frappe.io/cloud/create-child-teams",
+      "title": "Create Child Teams",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 1245,
+      "sha256": "88d70eca45122534aa7d8999cf32e62ea94a91fc985706b7304fc0c8d5788147"
+    },
+    {
+      "path": "cloud/custom-apps/app-versioning/versioning.md",
+      "url": "https://docs.frappe.io/cloud/custom-apps/app-versioning/versioning",
+      "title": "Versioning",
+      "upstream_updated": "05-08-2026 12:52:56",
+      "bytes": 2533,
+      "sha256": "41728346a54d48ab891fba473630d1c4dbd11e8660c9b2b99787e0bbff0bafdc"
+    },
+    {
+      "path": "cloud/custom-apps/common-issues/github-ip-allow-list.md",
+      "url": "https://docs.frappe.io/cloud/custom-apps/common-issues/github-ip-allow-list",
+      "title": "GitHub IP Allow List",
+      "upstream_updated": "05-06-2026 11:41:55",
+      "bytes": 3658,
+      "sha256": "1eadbd4dae897e19351aa2ad8be5a168098aa2a9d124af70943c0c382a434259"
+    },
+    {
+      "path": "cloud/custom-frappe-framework-fork.md",
+      "url": "https://docs.frappe.io/cloud/custom-frappe-framework-fork",
+      "title": "Custom Frappe Framework Fork",
+      "upstream_updated": "16-02-2026 17:05:29",
+      "bytes": 443,
+      "sha256": "0ed102dc6c71ea7b737874889fcbe0944f398e0e9f4ff81c77af291d5e1bdd2a"
+    },
+    {
+      "path": "cloud/daily-usage-limit-reached.md",
+      "url": "https://docs.frappe.io/cloud/daily-usage-limit-reached",
+      "title": "Daily Usage limit reached",
+      "upstream_updated": "25-05-2026 10:38:59",
+      "bytes": 807,
+      "sha256": "31732c1afb6c34a5fef6188251c75f3323b0727acfce57f7eddac6e0fff90a39"
+    },
+    {
+      "path": "cloud/database-analyzer.md",
+      "url": "https://docs.frappe.io/cloud/database-analyzer",
+      "title": "Database Analyzer",
+      "upstream_updated": "26-04-2026 13:39:34",
+      "bytes": 2252,
+      "sha256": "428aafd3bbe4a24b1ff0d550ea14f731aa224b91debaa34c325580743afba6f7"
+    },
+    {
+      "path": "cloud/database-server-actions.md",
+      "url": "https://docs.frappe.io/cloud/database-server-actions",
+      "title": "Database Server Actions",
+      "upstream_updated": "13-08-2026 10:28:49",
+      "bytes": 7091,
+      "sha256": "d0f04da938135fc659663b0708e7588a2a156930e1014b5ef186dcff7409c4f2"
+    },
+    {
+      "path": "cloud/database-users-and-permission-manager.md",
+      "url": "https://docs.frappe.io/cloud/database-users-and-permission-manager",
+      "title": "Database Users And Permission Manager",
+      "upstream_updated": "19-03-2026 14:17:53",
+      "bytes": 6198,
+      "sha256": "23f6522e8f8c63e95215e72ee903cd996bcd1b5721d9b346d1b6acf8b0c8e2ea"
+    },
+    {
+      "path": "cloud/devtools/log-browser.md",
+      "url": "https://docs.frappe.io/cloud/devtools/log-browser",
+      "title": "Log Browser",
+      "upstream_updated": "16-02-2026 17:05:29",
+      "bytes": 786,
+      "sha256": "b3201966229aaef4e74e3e8269d52fab6fdcc150aca5d2810ee2cebf4c1f2c4e"
+    },
+    {
+      "path": "cloud/dropping-a-bench-group.md",
+      "url": "https://docs.frappe.io/cloud/dropping-a-bench-group",
+      "title": "Dropping a Bench",
+      "upstream_updated": "10-03-2026 11:03:33",
+      "bytes": 471,
+      "sha256": "655a7f07d4f47d96ada38257d36d5b768623ab645057852e869bcc09c7f90a43"
+    },
+    {
+      "path": "cloud/enable-server-script.md",
+      "url": "https://docs.frappe.io/cloud/enable-server-script",
+      "title": "Enable Server Script",
+      "upstream_updated": "16-02-2026 17:05:21",
+      "bytes": 600,
+      "sha256": "d8d5ee5a5c62e40b14122f2a3264636d22e64ed0abe6d4be7aca71c53c99d6ec"
+    },
+    {
+      "path": "cloud/faq/app-installation-issue.md",
+      "url": "https://docs.frappe.io/cloud/faq/app-installation-issue",
+      "title": "App Installation Issue",
+      "upstream_updated": "16-02-2026 17:05:31",
+      "bytes": 3309,
+      "sha256": "3122caf61e7d160dc89a3584cd06dbab82f9b327db8674c65acce8515c0ee175"
+    },
+    {
+      "path": "cloud/faq/architecture-and-security.md",
+      "url": "https://docs.frappe.io/cloud/faq/architecture-and-security",
+      "title": "FAQ - Security",
+      "upstream_updated": "27-07-2026 11:27:42",
+      "bytes": 6638,
+      "sha256": "c2e61b3d4cdd508fc6b6d22ba5c16ab1e6654dbffa394864e1224f1c235136f6"
+    },
+    {
+      "path": "cloud/faq/architecture.md",
+      "url": "https://docs.frappe.io/cloud/faq/architecture",
+      "title": "Architecture",
+      "upstream_updated": "07-05-2026 13:16:10",
+      "bytes": 1236,
+      "sha256": "202988b03dbc139d97490dd15dd4caa7d336ce0e2dfdb3442a4326c13a7102d7"
+    },
+    {
+      "path": "cloud/faq/billing.md",
+      "url": "https://docs.frappe.io/cloud/faq/billing",
+      "title": "FAQ - Billing",
+      "upstream_updated": "16-02-2026 17:05:32",
+      "bytes": 1715,
+      "sha256": "d05c4f4bfca593a143510251636382ac38c67e083799d98a102e21ecff1e2909"
+    },
+    {
+      "path": "cloud/faq/custom_apps.md",
+      "url": "https://docs.frappe.io/cloud/faq/custom_apps",
+      "title": "Attention required in Custom Apps",
+      "upstream_updated": "18-06-2026 13:09:22",
+      "bytes": 2574,
+      "sha256": "00fa7a975509d6754628d3c35cd09517a2653c53fc0a8563db7d7347084734cd"
+    },
+    {
+      "path": "cloud/faq/installing-app-apt-dependencies.md",
+      "url": "https://docs.frappe.io/cloud/faq/installing-app-apt-dependencies",
+      "title": "Installing App APT Dependencies",
+      "upstream_updated": "27-02-2026 15:53:30",
+      "bytes": 825,
+      "sha256": "8df974fb003dd8248d4db077cd88af74b1c47d13f07f816ef052b47783f4ee2b"
+    },
+    {
+      "path": "cloud/faq/mariadb-slow-queries-in-your-site.md",
+      "url": "https://docs.frappe.io/cloud/faq/mariadb-slow-queries-in-your-site",
+      "title": "MariaDB slow queries in your site",
+      "upstream_updated": "25-07-2026 13:45:39",
+      "bytes": 3234,
+      "sha256": "097f9ca4e7143dd8c4d8feeb5ecd467eeb1b34da74d2f250fe92ce4509f33da3"
+    },
+    {
+      "path": "cloud/faq/site.md",
+      "url": "https://docs.frappe.io/cloud/faq/site",
+      "title": "FAQ - Site",
+      "upstream_updated": "01-06-2026 12:10:56",
+      "bytes": 16163,
+      "sha256": "ce206858a79e53a8f2a77c7a6b935b6adf330cbfabf473c15e714147cbadeae8"
+    },
+    {
+      "path": "cloud/features.md",
+      "url": "https://docs.frappe.io/cloud/features",
+      "title": "Features",
+      "upstream_updated": "07-05-2026 13:16:10",
+      "bytes": 1265,
+      "sha256": "f14c6185667637203ee599c5a51c651b500d8a38b699c682cd6b81c81b197054"
+    },
+    {
+      "path": "cloud/frappe-compute/what-is-this-new-frappe-provider.md",
+      "url": "https://docs.frappe.io/cloud/frappe-compute/what-is-this-new-frappe-provider",
+      "title": "What is this new 'Frappe' provider?",
+      "upstream_updated": "07-05-2026 14:46:16",
+      "bytes": 709,
+      "sha256": "a1c1ebe0264b2b4c994bb9a277cd3c554e2a8f3426907a159ff5178d0b7dca8b"
+    },
+    {
+      "path": "cloud/frappe-insights.md",
+      "url": "https://docs.frappe.io/cloud/frappe-insights",
+      "title": "Frappe Insights",
+      "upstream_updated": "29-04-2026 15:20:01",
+      "bytes": 3220,
+      "sha256": "9331bed4b3bcf3888867f1d9412a334cf9e5994840ede812ce5b4acc226d6390"
+    },
+    {
+      "path": "cloud/getting-started/faqs.md",
+      "url": "https://docs.frappe.io/cloud/getting-started/faqs",
+      "title": "FAQs - General",
+      "upstream_updated": "30-05-2026 07:15:57",
+      "bytes": 211,
+      "sha256": "ef6771a690817433234df07f81cc8b7d98a2f29e0a278bc3844d0d3e6efb1b98"
+    },
+    {
+      "path": "cloud/getting-started/plans-pricing/change-product-warranty-for-dedicated-sites.md",
+      "url": "https://docs.frappe.io/cloud/getting-started/plans-pricing/change-product-warranty-for-dedicated-sites",
+      "title": "Change product warranty for dedicated sites",
+      "upstream_updated": "15-06-2026 17:17:41",
+      "bytes": 2211,
+      "sha256": "2b2b71e88499e37c31f00274441262670d5fb68f5807e7ae6806f7eb613235d4"
+    },
+    {
+      "path": "cloud/getting-started/uptime.md",
+      "url": "https://docs.frappe.io/cloud/getting-started/uptime",
+      "title": "Uptime",
+      "upstream_updated": "30-05-2026 07:15:57",
+      "bytes": 679,
+      "sha256": "91c772bfda1375646818583c2543fd617d619a9b36ab433814068c3477f90803"
+    },
+    {
+      "path": "cloud/guidelines-for-contributing-regional-compliance-app.md",
+      "url": "https://docs.frappe.io/cloud/guidelines-for-contributing-regional-compliance-app",
+      "title": "Guidelines for Contributing Regional Compliance App",
+      "upstream_updated": "05-06-2026 11:17:50",
+      "bytes": 6028,
+      "sha256": "63ec02e517e45b7edfafaf8003b7589d1f2bcdde01b8887e34d760d34457ba02"
+    },
+    {
+      "path": "cloud/guides-and-manuals/what-is-product-warranty.md",
+      "url": "https://docs.frappe.io/cloud/guides-and-manuals/what-is-product-warranty",
+      "title": "What is Product Warranty",
+      "upstream_updated": "03-06-2026 09:28:34",
+      "bytes": 1942,
+      "sha256": "a201db899f5ac736ae7fb8c0a9dafa5b89455cd7939877627ae1cb9e10440a4a"
+    },
+    {
+      "path": "cloud/guides/access-request.md",
+      "url": "https://docs.frappe.io/cloud/guides/access-request",
+      "title": "Access Request",
+      "upstream_updated": "16-02-2026 17:05:36",
+      "bytes": 3796,
+      "sha256": "d0594df7cca5a435e53bef584e7bab39cd95a10b31dfe80002be0475d26f4089"
+    },
+    {
+      "path": "cloud/handbook/fc-onboarding.md",
+      "url": "https://docs.frappe.io/cloud/handbook/fc-onboarding",
+      "title": "Most frequently used DocTypes",
+      "upstream_updated": "22-05-2026 19:18:28",
+      "bytes": 752,
+      "sha256": "d7c82807717560252abc024d37e75b1da32aa4f51ae38136dca83a4cd3b0f65c"
+    },
+    {
+      "path": "cloud/how-to-change-a-site-plan.md",
+      "url": "https://docs.frappe.io/cloud/how-to-change-a-site-plan",
+      "title": "Change a site plan",
+      "upstream_updated": "18-02-2026 16:22:11",
+      "bytes": 739,
+      "sha256": "08ec31143561ed7749d4688cebe3098c050259402d881508216cfa686db4c40e"
+    },
+    {
+      "path": "cloud/how-to-change-a-site-planbrbr-class%3Dprosemirror-trailingbreak.md",
+      "url": "https://docs.frappe.io/cloud/how-to-change-a-site-planbrbr-class%3Dprosemirror-trailingbreak",
+      "title": "How to change a site plan<br><br class=\"ProseMirror-trailingBreak\">",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 287,
+      "sha256": "23e1304356fcead7bec424cc9e5b2c01bf5943aec23705a38900521cf7c235da"
+    },
+    {
+      "path": "cloud/how-to-disable-auto-update-for-your-site.md",
+      "url": "https://docs.frappe.io/cloud/how-to-disable-auto-update-for-your-site",
+      "title": "Disable auto-update for your site",
+      "upstream_updated": "16-02-2026 17:05:18",
+      "bytes": 998,
+      "sha256": "83dd8d7f331c8842ddecdd7c8e74af887ad2629994c5a1ae49cf4866aefea62a"
+    },
+    {
+      "path": "cloud/how-to-get-static-ip.md",
+      "url": "https://docs.frappe.io/cloud/how-to-get-static-ip",
+      "title": "Obtain a Static IP",
+      "upstream_updated": "16-02-2026 17:05:19",
+      "bytes": 250,
+      "sha256": "b4a9467b1db3414e223dc0de0549658320ab9eaa9b56946f66d80930adfe4066"
+    },
+    {
+      "path": "cloud/how-to-uninstall-an-app-from-the-site.md",
+      "url": "https://docs.frappe.io/cloud/how-to-uninstall-an-app-from-the-site",
+      "title": "Uninstall an app from the site",
+      "upstream_updated": "16-02-2026 17:05:17",
+      "bytes": 307,
+      "sha256": "4605f25b3a00f332d016163ed85758956bb5b428278477cb4b9f750974ded7a9"
+    },
+    {
+      "path": "cloud/in-place-updates.md",
+      "url": "https://docs.frappe.io/cloud/in-place-updates",
+      "title": "In Place Updates",
+      "upstream_updated": "16-02-2026 17:05:22",
+      "bytes": 3362,
+      "sha256": "e8e085f535b08f10c8c325fbc1eee2d5de0c2f2febb6c7ed19a186a1130dd4f9"
+    },
+    {
+      "path": "cloud/installing-an-app.md",
+      "url": "https://docs.frappe.io/cloud/installing-an-app",
+      "title": "Installing an app",
+      "upstream_updated": "18-02-2026 16:21:28",
+      "bytes": 1568,
+      "sha256": "c51731b246438e4fcc7bbac25b0e01677f01b76032d6231de068414f51449d63"
+    },
+    {
+      "path": "cloud/instructions-to-upgrade-the-email-delivery-service-plan.md",
+      "url": "https://docs.frappe.io/cloud/instructions-to-upgrade-the-email-delivery-service-plan",
+      "title": "Upgrade the Email Delivery Service plan for more emails",
+      "upstream_updated": "18-02-2026 16:45:01",
+      "bytes": 731,
+      "sha256": "e2989925f48534c276bbadad8a3fa8172b66e4b4bccfdc4099d35398d18fc461"
+    },
+    {
+      "path": "cloud/introduction-1.md",
+      "url": "https://docs.frappe.io/cloud/introduction-1",
+      "title": "Introduction 1",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 3768,
+      "sha256": "bb816a4e330921a2527e362d4696e38f3775b42c49d17e8cfe9e27b57b28fd30"
+    },
+    {
+      "path": "cloud/is-it-scalable.md",
+      "url": "https://docs.frappe.io/cloud/is-it-scalable",
+      "title": "Scalability",
+      "upstream_updated": "30-05-2026 07:15:05",
+      "bytes": 813,
+      "sha256": "65cb91ada1f19d80b95316a5aae6d3539e3328a43232f3346e6a9e5cd87f26a1"
+    },
+    {
+      "path": "cloud/local-fc-setup.md",
+      "url": "https://docs.frappe.io/cloud/local-fc-setup",
+      "title": "Local Development Environment Setup",
+      "upstream_updated": "16-02-2026 17:05:36",
+      "bytes": 20086,
+      "sha256": "744c98238d87ec0d81ce241559d62525d663747c3f3c48f23a58397807303022"
+    },
+    {
+      "path": "cloud/lock-wait-timeout-exceeded-error.md",
+      "url": "https://docs.frappe.io/cloud/lock-wait-timeout-exceeded-error",
+      "title": "Lock wait timeout exceeded error",
+      "upstream_updated": "10-06-2026 16:19:42",
+      "bytes": 899,
+      "sha256": "aa36448bc44f49a660a4bdd8d5ec387b3016b0c9143c0f0770dd40a7b49dd6ef"
+    },
+    {
+      "path": "cloud/logs.md",
+      "url": "https://docs.frappe.io/cloud/logs",
+      "title": "Logs",
+      "upstream_updated": "29-04-2026 15:20:01",
+      "bytes": 1078,
+      "sha256": "19506754d53d22136dab2a429f5055dce50e72a1c98852604fd8c5cd9ffa60eb"
+    },
+    {
+      "path": "cloud/managing_team_members.md",
+      "url": "https://docs.frappe.io/cloud/managing_team_members",
+      "title": "Managing Team Members",
+      "upstream_updated": "16-02-2026 17:05:33",
+      "bytes": 641,
+      "sha256": "71a7cdc30c53fcf4b615ed39d78dae8fef7dd527332de8394148a6c577c35613"
+    },
+    {
+      "path": "cloud/marketplace.md",
+      "url": "https://docs.frappe.io/cloud/marketplace",
+      "title": "Frappe Cloud Marketplace Overview",
+      "upstream_updated": "16-02-2026 17:05:30",
+      "bytes": 1686,
+      "sha256": "4b903d383c8180c43285fb5e10fb1cd8bea16670154a8bf156d3df8c78ea9d14"
+    },
+    {
+      "path": "cloud/marketplace/app-authoring-guidelines.md",
+      "url": "https://docs.frappe.io/cloud/marketplace/app-authoring-guidelines",
+      "title": "App authoring guidelines",
+      "upstream_updated": "16-02-2026 17:05:30",
+      "bytes": 2013,
+      "sha256": "76c2765ef8825cd9fba97c85fc9f7593da6c246031296992bd9ae70d36d2cd5f"
+    },
+    {
+      "path": "cloud/marketplace/manage-marketplace-app.md",
+      "url": "https://docs.frappe.io/cloud/marketplace/manage-marketplace-app",
+      "title": "Managing your Marketplace App",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 1391,
+      "sha256": "e862fe9ac5743e8e848d15cf1490472dd5d6aca98b65a09b7638b4c2469c6137"
+    },
+    {
+      "path": "cloud/marketplace/marketplace-guidelines.md",
+      "url": "https://docs.frappe.io/cloud/marketplace/marketplace-guidelines",
+      "title": "Guidelines for publishing an app",
+      "upstream_updated": "16-02-2026 17:05:31",
+      "bytes": 2750,
+      "sha256": "70e82413e60f6f23a7752e606cb2666033ff7c5822095a27f42f795addd3db7f"
+    },
+    {
+      "path": "cloud/marketplace/payouts.md",
+      "url": "https://docs.frappe.io/cloud/marketplace/payouts",
+      "title": "Payouts",
+      "upstream_updated": "16-02-2026 17:05:31",
+      "bytes": 1289,
+      "sha256": "8ddf45c6fb67b568f8f51fd2631a67c833d570e0dbda197934a1f50dd43c2095"
+    },
+    {
+      "path": "cloud/marketplace/publishing-an-app-to-marketplace.md",
+      "url": "https://docs.frappe.io/cloud/marketplace/publishing-an-app-to-marketplace",
+      "title": "Publishing an App to Marketplace",
+      "upstream_updated": "16-02-2026 17:05:30",
+      "bytes": 3034,
+      "sha256": "9cb09a1b62598bef0a30c36aef6b1812c393ce1670da906d807da587828b35e8"
+    },
+    {
+      "path": "cloud/notice.md",
+      "url": "https://docs.frappe.io/cloud/notice",
+      "title": "Notices",
+      "upstream_updated": "14-05-2026 12:22:33",
+      "bytes": 939,
+      "sha256": "0ebe596bba385831c0f594ec0f13f27823eaf203e662db6a8bfefa41661faa6e"
+    },
+    {
+      "path": "cloud/notification-configuration.md",
+      "url": "https://docs.frappe.io/cloud/notification-configuration",
+      "title": "Notification Configuration",
+      "upstream_updated": "16-02-2026 17:05:33",
+      "bytes": 995,
+      "sha256": "940866673421d7ed6d393f803094e413ae6bcde12b79110ea25b8fe021f08737"
+    },
+    {
+      "path": "cloud/performance-error-debugging.md",
+      "url": "https://docs.frappe.io/cloud/performance-error-debugging",
+      "title": "Site Slow: 504 Gateway timeout",
+      "upstream_updated": "16-02-2026 17:05:19",
+      "bytes": 2684,
+      "sha256": "b3644ddf51ef838f53c1abf5695f2ce7c29216406145bc71f24a8fa00d559608"
+    },
+    {
+      "path": "cloud/performance-tuning.md",
+      "url": "https://docs.frappe.io/cloud/performance-tuning",
+      "title": "DB Performance Tuning",
+      "upstream_updated": "29-04-2026 15:20:01",
+      "bytes": 1778,
+      "sha256": "76711a4693e45c2fdc046df3da60c031dfd8bc280e26e0af42e108c4f045a52c"
+    },
+    {
+      "path": "cloud/pricing.md",
+      "url": "https://docs.frappe.io/cloud/pricing",
+      "title": "Pricing",
+      "upstream_updated": "30-05-2026 07:15:05",
+      "bytes": 557,
+      "sha256": "255da4cdae7db10fbdbde0f6770c52734920bfb72d078a374eb799b57e45797c"
+    },
+    {
+      "path": "cloud/private-benches/common-issues/frappe-listed-as-a-python-dependency.md",
+      "url": "https://docs.frappe.io/cloud/private-benches/common-issues/frappe-listed-as-a-python-dependency",
+      "title": "Frappe listed as a Python dependency",
+      "upstream_updated": "03-08-2026 12:56:17",
+      "bytes": 1563,
+      "sha256": "a84fa6b5e367cc3605fb899c821c2da57097e57a219768c9d04340b30fa5f2e8"
+    },
+    {
+      "path": "cloud/private-benches/common-issues/pkg-resources-error-when-updating-site.md",
+      "url": "https://docs.frappe.io/cloud/private-benches/common-issues/pkg-resources-error-when-updating-site",
+      "title": "pkg_resources error when updating site",
+      "upstream_updated": "04-08-2026 15:54:09",
+      "bytes": 3342,
+      "sha256": "e4b2b56e90bb90870316c46820aadc4910c4e1f61b7641d63e3d83371470edde"
+    },
+    {
+      "path": "cloud/private-benches/common-issues/request-timed-out.md",
+      "url": "https://docs.frappe.io/cloud/private-benches/common-issues/request-timed-out",
+      "title": "Request Timed Out",
+      "upstream_updated": "24-04-2026 11:26:55",
+      "bytes": 1216,
+      "sha256": "1cdf76dfafa3a83165fb9ea9d4ddd6fadfdb8e8b4fc22315bf41978a71ff76b2"
+    },
+    {
+      "path": "cloud/recent-issues.md",
+      "url": "https://docs.frappe.io/cloud/recent-issues",
+      "title": "Recent Issues",
+      "upstream_updated": "27-07-2026 15:17:09",
+      "bytes": 20727,
+      "sha256": "d4fa2fd00a860320c320b9370a6d5086fbd87a1cd6d3a3b94d836e3ddf77b137"
+    },
+    {
+      "path": "cloud/reliability.md",
+      "url": "https://docs.frappe.io/cloud/reliability",
+      "title": "Reliability",
+      "upstream_updated": "30-05-2026 07:15:57",
+      "bytes": 2518,
+      "sha256": "c40a9fccfaa659aab9cdbb2ecaad572b1c677081d6816c270bdb85123b5d53b1"
+    },
+    {
+      "path": "cloud/role-permissions.md",
+      "url": "https://docs.frappe.io/cloud/role-permissions",
+      "title": "Role and Permissions",
+      "upstream_updated": "10-08-2026 15:58:33",
+      "bytes": 3094,
+      "sha256": "c7d0299c67e131a380443ef581d6246a1ea1cdedfe86ded3c617d7716f35bdf9"
+    },
+    {
+      "path": "cloud/server-notification-configuration.md",
+      "url": "https://docs.frappe.io/cloud/server-notification-configuration",
+      "title": "Notification Configuration",
+      "upstream_updated": "16-02-2026 17:05:27",
+      "bytes": 1023,
+      "sha256": "d9d0cf70c9be368aa2b8a85a6e2bed14e69f826038bb1587cc01986129dd215a"
+    },
+    {
+      "path": "cloud/server-snapshot.md",
+      "url": "https://docs.frappe.io/cloud/server-snapshot",
+      "title": "Server Snapshot",
+      "upstream_updated": "25-02-2026 12:19:28",
+      "bytes": 4148,
+      "sha256": "270fa3fff282222f80cd4d98a3d4b0d57868bb95f3c175cda337016eb424c97a"
+    },
+    {
+      "path": "cloud/server-storage-breakdown.md",
+      "url": "https://docs.frappe.io/cloud/server-storage-breakdown",
+      "title": "Server Storage Breakdown",
+      "upstream_updated": "02-03-2026 14:31:59",
+      "bytes": 3169,
+      "sha256": "559555cdbc449346d8daa4041958f0023a3c7aae59d7e83663a9209b03bf8fbd"
+    },
+    {
+      "path": "cloud/servers/create-a-new-site-on-a-dedicated-server.md",
+      "url": "https://docs.frappe.io/cloud/servers/create-a-new-site-on-a-dedicated-server",
+      "title": "Creating a new site on a dedicated server",
+      "upstream_updated": "16-02-2026 17:05:24",
+      "bytes": 768,
+      "sha256": "b816007f90f62a019db71a04796372935af4a853be1df1af45b7a849428e9d9f"
+    },
+    {
+      "path": "cloud/servers/delete.md",
+      "url": "https://docs.frappe.io/cloud/servers/delete",
+      "title": "Delete Servers",
+      "upstream_updated": "16-02-2026 17:05:25",
+      "bytes": 618,
+      "sha256": "a346a66301dee539ade8bdae9def8b64b60facc608e09f504c92a51a9fb9cab9"
+    },
+    {
+      "path": "cloud/servers/guidelines-for-choosing-a-server-plan.md",
+      "url": "https://docs.frappe.io/cloud/servers/guidelines-for-choosing-a-server-plan",
+      "title": "Guidelines for choosing a server plan",
+      "upstream_updated": "10-03-2026 11:37:05",
+      "bytes": 6249,
+      "sha256": "218cf929c2531bbb060911530f46a078c209c671e3c1c789863200c637a7cda2"
+    },
+    {
+      "path": "cloud/servers/instance-types.md",
+      "url": "https://docs.frappe.io/cloud/servers/instance-types",
+      "title": "Server Instance Types",
+      "upstream_updated": "16-02-2026 17:05:25",
+      "bytes": 2721,
+      "sha256": "f9152651ede88c50d075af5447055259be95eaa396bb27878948b706576c99a1"
+    },
+    {
+      "path": "cloud/servers/new_bench.md",
+      "url": "https://docs.frappe.io/cloud/servers/new_bench",
+      "title": "Creating new Bench",
+      "upstream_updated": "16-02-2026 17:05:24",
+      "bytes": 819,
+      "sha256": "893b549f9254cd8891659614f4ca72120e95f057f5e6e3d3d1b16a8741f97547"
+    },
+    {
+      "path": "cloud/servers/new.md",
+      "url": "https://docs.frappe.io/cloud/servers/new",
+      "title": "Creating new server",
+      "upstream_updated": "22-05-2026 19:18:28",
+      "bytes": 2487,
+      "sha256": "cef5586d09fb19f3a717c7d751b2f12d7977c3232364d3d9b4b9a2cf508a0555"
+    },
+    {
+      "path": "cloud/servers/other-information/faqs-server.md",
+      "url": "https://docs.frappe.io/cloud/servers/other-information/faqs-server",
+      "title": "FAQs - Server",
+      "upstream_updated": "16-02-2026 17:05:28",
+      "bytes": 754,
+      "sha256": "3af58e0c294d5fcab92e8299e7090ce0b978e8f1791413fc70b5e73c2cb230b5"
+    },
+    {
+      "path": "cloud/servers/other-information/on-prem-failover-setup.md",
+      "url": "https://docs.frappe.io/cloud/servers/other-information/on-prem-failover-setup",
+      "title": "On-Prem Failover Setup",
+      "upstream_updated": "08-04-2026 12:27:05",
+      "bytes": 3551,
+      "sha256": "21c73daab66c6246e1bdeb11f96a167c264294fa512f984eecab75c9c4e1eed0"
+    },
+    {
+      "path": "cloud/servers/plan.md",
+      "url": "https://docs.frappe.io/cloud/servers/plan",
+      "title": "Change plan",
+      "upstream_updated": "16-02-2026 17:05:25",
+      "bytes": 1364,
+      "sha256": "cce3a94dc3cd54bb8ebf47f33dd712ba4f5d00878fedefe97424c3cadde0ef93"
+    },
+    {
+      "path": "cloud/servers/provider-comparision.md",
+      "url": "https://docs.frappe.io/cloud/servers/provider-comparision",
+      "title": "Cloud Provider Comparison",
+      "upstream_updated": "14-04-2026 12:42:50",
+      "bytes": 4431,
+      "sha256": "f0e82ba7a7cdd4a9d0009edd7ca06f24b62f9837886a1051332ee2254744c786"
+    },
+    {
+      "path": "cloud/servers/servers-introduction.md",
+      "url": "https://docs.frappe.io/cloud/servers/servers-introduction",
+      "title": "Introduction",
+      "upstream_updated": "16-02-2026 17:05:24",
+      "bytes": 861,
+      "sha256": "913d061b1718bbd4a6f4bc0ac6534cd571a82660a2ba7c8c691b9fb648d1b93e"
+    },
+    {
+      "path": "cloud/setup-webhook.md",
+      "url": "https://docs.frappe.io/cloud/setup-webhook",
+      "title": "Webhook Implementation",
+      "upstream_updated": "29-04-2026 15:20:01",
+      "bytes": 3358,
+      "sha256": "3ff570fc3139e87c847e38772757fa886ad96ff7853833bd02db1700b18cc3fb"
+    },
+    {
+      "path": "cloud/signup-login/notifications.md",
+      "url": "https://docs.frappe.io/cloud/signup-login/notifications",
+      "title": "Notifications",
+      "upstream_updated": "16-02-2026 17:05:32",
+      "bytes": 538,
+      "sha256": "980b2dd90a6cfc1fc8a9c28cd864f5903d3f3ccff08635f5ed4e91979418d201"
+    },
+    {
+      "path": "cloud/simplified-login-to-frappe-cloud-dashboard.md",
+      "url": "https://docs.frappe.io/cloud/simplified-login-to-frappe-cloud-dashboard",
+      "title": "Login from Frappe apps",
+      "upstream_updated": "22-05-2026 19:18:27",
+      "bytes": 2319,
+      "sha256": "85b4ee0bbb77df28131c1bb4b500bc77a7405a2755ea685df90288fcce2ea5aa"
+    },
+    {
+      "path": "cloud/site-notification-configuration.md",
+      "url": "https://docs.frappe.io/cloud/site-notification-configuration",
+      "title": "Notification Configuration",
+      "upstream_updated": "16-02-2026 17:05:18",
+      "bytes": 1011,
+      "sha256": "e6283bc86bfffa21b1586dbbc8e57cb8ceb3bd2a27990f12d856aa1985795bb3"
+    },
+    {
+      "path": "cloud/site-process-list.md",
+      "url": "https://docs.frappe.io/cloud/site-process-list",
+      "title": "Site Process List",
+      "upstream_updated": "16-02-2026 17:05:16",
+      "bytes": 287,
+      "sha256": "2e63fee11bd64b01af8e2c7dea42984e18186f46593451fde2bada6a210d82d0"
+    },
+    {
+      "path": "cloud/site/common-issues/500-internal-server-error.md",
+      "url": "https://docs.frappe.io/cloud/site/common-issues/500-internal-server-error",
+      "title": "500 Internal Server Error",
+      "upstream_updated": "16-02-2026 17:05:19",
+      "bytes": 1081,
+      "sha256": "f3dac81011152e5843daf49041e3dbbf8dee3a35dd949540539b1f1531f3f9bd"
+    },
+    {
+      "path": "cloud/site/common-issues/502-bad-gateway.md",
+      "url": "https://docs.frappe.io/cloud/site/common-issues/502-bad-gateway",
+      "title": "502 Bad Gateway",
+      "upstream_updated": "12-08-2026 12:44:31",
+      "bytes": 615460,
+      "sha256": "bd272b07d95c5c7696392a1addbaf9cd40c6076d322bde0c6ce321eb7f5e96bb"
+    },
+    {
+      "path": "cloud/site/common-issues/lost-connection-to-mysql-server.md",
+      "url": "https://docs.frappe.io/cloud/site/common-issues/lost-connection-to-mysql-server",
+      "title": "Lost connection to mysql server",
+      "upstream_updated": "16-02-2026 17:05:19",
+      "bytes": 463,
+      "sha256": "7dc33f9a68b832ebd021084d1ded0d9cfed5153e79377d13ed7946a97b17d116"
+    },
+    {
+      "path": "cloud/site/common-issues/request-timeout-server-was-too-busy-to-process-this-request.md",
+      "url": "https://docs.frappe.io/cloud/site/common-issues/request-timeout-server-was-too-busy-to-process-this-request",
+      "title": "Request Timeout: Server was too busy to process this request",
+      "upstream_updated": "24-04-2026 12:55:11",
+      "bytes": 743,
+      "sha256": "a1c957cb11f2ed6a8803f5291d2f7d4e9f77e7736982427e52fa47ceabcdcece"
+    },
+    {
+      "path": "cloud/site/common-issues/site-slow-504-gateway-timeout.md",
+      "url": "https://docs.frappe.io/cloud/site/common-issues/site-slow-504-gateway-timeout",
+      "title": "Site Slow: 504 Gateway timeout",
+      "upstream_updated": "16-02-2026 17:05:19",
+      "bytes": 2684,
+      "sha256": "b3644ddf51ef838f53c1abf5695f2ce7c29216406145bc71f24a8fa00d559608"
+    },
+    {
+      "path": "cloud/site/common-issues/work-horse-terminated-unexpectedly.md",
+      "url": "https://docs.frappe.io/cloud/site/common-issues/work-horse-terminated-unexpectedly",
+      "title": "Work-horse terminated unexpectedly; Waitpid returned 9/15 (signal 9/15)",
+      "upstream_updated": "16-02-2026 17:05:28",
+      "bytes": 368,
+      "sha256": "cbc5c9cd060ca64bfd3f290833c48e73b45838247fdaa873b080c52fba54a61b"
+    },
+    {
+      "path": "cloud/site/site-migrations/in-place-site-migration.md",
+      "url": "https://docs.frappe.io/cloud/site/site-migrations/in-place-site-migration",
+      "title": "In-Place Site Migration",
+      "upstream_updated": "06-03-2026 01:18:23",
+      "bytes": 569,
+      "sha256": "f650ffbc5dc17334c3e0200da306a0d8a6d060e5445f62fd4ae28f0373402825"
+    },
+    {
+      "path": "cloud/site/site-migrations/introduction-to-site-migration.md",
+      "url": "https://docs.frappe.io/cloud/site/site-migrations/introduction-to-site-migration",
+      "title": "Introduction to Site Migration",
+      "upstream_updated": "06-03-2026 01:18:23",
+      "bytes": 1133,
+      "sha256": "b8e83a468abd5856528f1bff017720653ac5ec72016dd32011940e7a9d3a8ea9"
+    },
+    {
+      "path": "cloud/site/site-migrations/move-site-from-shared-to-private-bench.md",
+      "url": "https://docs.frappe.io/cloud/site/site-migrations/move-site-from-shared-to-private-bench",
+      "title": "Move Site From Shared To Private Bench",
+      "upstream_updated": "06-03-2026 10:07:30",
+      "bytes": 1970,
+      "sha256": "3b3f59e9417d908ba6cc13180907a0171e5da662c5d36284a899f3f72facb7e6"
+    },
+    {
+      "path": "cloud/site/site-migrations/move-site-to-different-region.md",
+      "url": "https://docs.frappe.io/cloud/site/site-migrations/move-site-to-different-region",
+      "title": "Move Site To Different Region",
+      "upstream_updated": "06-03-2026 01:18:24",
+      "bytes": 1143,
+      "sha256": "e88f68d8b2e30ee54ac81e86283dbe4c9a9a81c8a875c92ab377e58218cd5070"
+    },
+    {
+      "path": "cloud/site/site-migrations/move-site-to-different-server-or-bench.md",
+      "url": "https://docs.frappe.io/cloud/site/site-migrations/move-site-to-different-server-or-bench",
+      "title": "Move Site To Different Server or Bench",
+      "upstream_updated": "08-03-2026 12:11:59",
+      "bytes": 1419,
+      "sha256": "c4b17985fdaa859b0846ba9b2dc89aa60575442716eb94db3e061e50373d88a9"
+    },
+    {
+      "path": "cloud/sites/activity.md",
+      "url": "https://docs.frappe.io/cloud/sites/activity",
+      "title": "Activity",
+      "upstream_updated": "16-02-2026 17:05:17",
+      "bytes": 327,
+      "sha256": "3245d7c1822a188851de3c4f9677687d3763e8186e57b8d282c0a68373551ead"
+    },
+    {
+      "path": "cloud/sites/backups.md",
+      "url": "https://docs.frappe.io/cloud/sites/backups",
+      "title": "Site Backups",
+      "upstream_updated": "27-02-2026 15:15:46",
+      "bytes": 5951,
+      "sha256": "b666daa0f788b266d36a6c1ce49653080e0762034d0ec3404718886fa46cba4e"
+    },
+    {
+      "path": "cloud/sites/change-team-of-site.md",
+      "url": "https://docs.frappe.io/cloud/sites/change-team-of-site",
+      "title": "Change Team of Site",
+      "upstream_updated": "16-02-2026 17:05:18",
+      "bytes": 616,
+      "sha256": "043d1bd0ed63b20232b7967c950224066636cd462909142c9b48d62619636d0e"
+    },
+    {
+      "path": "cloud/sites/creating-a-new-site.md",
+      "url": "https://docs.frappe.io/cloud/sites/creating-a-new-site",
+      "title": "Creating a new site",
+      "upstream_updated": "22-05-2026 19:18:27",
+      "bytes": 1196,
+      "sha256": "3c32282ba6f0b626abeff075ad562d3e7689e09ab7d56e3cd1bba94d101c8947"
+    },
+    {
+      "path": "cloud/sites/custom-domains.md",
+      "url": "https://docs.frappe.io/cloud/sites/custom-domains",
+      "title": "Custom Domains",
+      "upstream_updated": "14-08-2026 12:21:38",
+      "bytes": 12168,
+      "sha256": "c1db5b03c386c9af9f9c7737de75214a19f3199a8c5fd97d9fe740210d33b9bf"
+    },
+    {
+      "path": "cloud/sites/database-access.md",
+      "url": "https://docs.frappe.io/cloud/sites/database-access",
+      "title": "Database Access",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 2383,
+      "sha256": "ab77f6bfb4a1437ebfe33c08ba38705db6be00c4113bf9c2505a130d4749950c"
+    },
+    {
+      "path": "cloud/sites/drop-delete-your-site.md",
+      "url": "https://docs.frappe.io/cloud/sites/drop-delete-your-site",
+      "title": "Drop/Delete your site",
+      "upstream_updated": "16-02-2026 17:05:18",
+      "bytes": 643,
+      "sha256": "43fb16dccdade3351d55faa08c19837688cc7e30fb6078cf3acba8bc87363789"
+    },
+    {
+      "path": "cloud/sites/how-to-update-an-app-site-on-a-private-bench.md",
+      "url": "https://docs.frappe.io/cloud/sites/how-to-update-an-app-site-on-a-private-bench",
+      "title": "Update an app/site on a private bench",
+      "upstream_updated": "16-02-2026 17:05:18",
+      "bytes": 1693,
+      "sha256": "9de356db6294bb670004703bd7513d544e73bc70c0b293ca94c4be0c9244e951"
+    },
+    {
+      "path": "cloud/sites/jobs.md",
+      "url": "https://docs.frappe.io/cloud/sites/jobs",
+      "title": "Jobs",
+      "upstream_updated": "16-02-2026 17:05:17",
+      "bytes": 736,
+      "sha256": "1eea74849d240b1d783edef4d4dfd15e0322a39cedfc2d200c65028083ecc155"
+    },
+    {
+      "path": "cloud/sites/migrate-an-existing-site.md",
+      "url": "https://docs.frappe.io/cloud/sites/migrate-an-existing-site",
+      "title": "Restore & Migrate Site",
+      "upstream_updated": "17-07-2026 11:02:36",
+      "bytes": 11123,
+      "sha256": "58e25773a33887147b5aad8c30442f92222654ce80e861e962e5f3d60dc671e7"
+    },
+    {
+      "path": "cloud/sites/monitoring.md",
+      "url": "https://docs.frappe.io/cloud/sites/monitoring",
+      "title": "Monitoring",
+      "upstream_updated": "19-03-2026 10:04:28",
+      "bytes": 4918,
+      "sha256": "338a41409238edbd096c7eeb8587d115765562d914c48087d2f91fb69ace1658"
+    },
+    {
+      "path": "cloud/sites/move-site-across-region.md",
+      "url": "https://docs.frappe.io/cloud/sites/move-site-across-region",
+      "title": "Move site across region",
+      "upstream_updated": "07-03-2026 12:44:05",
+      "bytes": 1254,
+      "sha256": "4641991d4566b2e53c442a762e03e4aef72db0ccd4c1ab1ba0f55a4d6cd8ed3d"
+    },
+    {
+      "path": "cloud/sites/move-site-across-server.md",
+      "url": "https://docs.frappe.io/cloud/sites/move-site-across-server",
+      "title": "Move site across server",
+      "upstream_updated": "09-03-2026 11:21:28",
+      "bytes": 2136,
+      "sha256": "3a72ae0ca4418865f0193af7060feade808ae33b1ff1e46e6b62865cbf5f8ed6"
+    },
+    {
+      "path": "cloud/sites/move-site-to-private-bench.md",
+      "url": "https://docs.frappe.io/cloud/sites/move-site-to-private-bench",
+      "title": "Move site to private bench",
+      "upstream_updated": "17-06-2026 17:16:05",
+      "bytes": 1307,
+      "sha256": "157895d8d6149312ec22b354068f4b08c0716c7e53cdd1f3bb0f7acdb2c84758"
+    },
+    {
+      "path": "cloud/sites/site-config.md",
+      "url": "https://docs.frappe.io/cloud/sites/site-config",
+      "title": "Site Config",
+      "upstream_updated": "19-02-2026 12:59:07",
+      "bytes": 1500,
+      "sha256": "4e0081035b07444d41ef0fb4589de3a7b69c8f2eb99ef91bfdf7563c1ab2329e"
+    },
+    {
+      "path": "cloud/sites/version-upgrade.md",
+      "url": "https://docs.frappe.io/cloud/sites/version-upgrade",
+      "title": "Version Upgrade",
+      "upstream_updated": "12-03-2026 20:41:33",
+      "bytes": 812,
+      "sha256": "66b2b46621b18a2f1b08ff1de18d9f925ff80ac546126c7abd46e71284915d9e"
+    },
+    {
+      "path": "cloud/soc-2-report.md",
+      "url": "https://docs.frappe.io/cloud/soc-2-report",
+      "title": "SOC 2 (Systems and Organization Controls) Report",
+      "upstream_updated": "16-02-2026 17:05:35",
+      "bytes": 874,
+      "sha256": "d909f17a9e8664090bfd0f9afc34c4a775e91b18ed6f58c2a0930aa6d3ecb244"
+    },
+    {
+      "path": "cloud/storage-addons.md",
+      "url": "https://docs.frappe.io/cloud/storage-addons",
+      "title": "Storage Addons",
+      "upstream_updated": "10-05-2026 13:52:35",
+      "bytes": 3890,
+      "sha256": "dd2185416ccbf269b1f4e48c9b762eea5fabd0e39300146caedcb5561b5f7525"
+    },
+    {
+      "path": "cloud/switching_between_teams.md",
+      "url": "https://docs.frappe.io/cloud/switching_between_teams",
+      "title": "Switching between Teams",
+      "upstream_updated": "16-02-2026 17:05:32",
+      "bytes": 391,
+      "sha256": "96374eddd108b0044ed67d80b3b3bb13eaeb3d7fb44a6ab6b1a24da392be77ca"
+    },
+    {
+      "path": "cloud/tiny-plan.md",
+      "url": "https://docs.frappe.io/cloud/tiny-plan",
+      "title": "Tiny Plan ($5 / month)",
+      "upstream_updated": "16-02-2026 17:05:18",
+      "bytes": 2275,
+      "sha256": "3dbc2c424306b2ecc089617b0b92de315d3cf5efc032c34b62b9102c0d945349"
+    },
+    {
+      "path": "cloud/two-factor-authentication-2fa.md",
+      "url": "https://docs.frappe.io/cloud/two-factor-authentication-2fa",
+      "title": "Two-factor authentication (2FA)",
+      "upstream_updated": "16-02-2026 17:05:32",
+      "bytes": 1547,
+      "sha256": "97f7a6caa875c5a5ca321246f363537f25487f9c56b24f1c98b53f17520e3e11"
+    },
+    {
+      "path": "cloud/unknown-command-.md",
+      "url": "https://docs.frappe.io/cloud/unknown-command-",
+      "title": "Unknown command -",
+      "upstream_updated": "16-02-2026 17:05:28",
+      "bytes": 459,
+      "sha256": "d4b1c73d6068c9668beabb11050853e76709d419ce70b8eee0623b018b6226f6"
+    },
+    {
+      "path": "cloud/webhook-attempt-logs.md",
+      "url": "https://docs.frappe.io/cloud/webhook-attempt-logs",
+      "title": "Webhook Attempt Logs",
+      "upstream_updated": "16-02-2026 17:05:35",
+      "bytes": 921,
+      "sha256": "842eda389decd632a567bfc6a50ad8b73194153107b67874964ed6b72b2ff876"
+    },
+    {
+      "path": "cloud/webhook-events.md",
+      "url": "https://docs.frappe.io/cloud/webhook-events",
+      "title": "Webhook Events",
+      "upstream_updated": "16-02-2026 17:05:34",
+      "bytes": 3294,
+      "sha256": "2831b4952d1dcd24b5f6c33513806f948861a7e8ac5d20db2a15bf37bea16477"
+    },
+    {
+      "path": "cloud/webhook-introduction.md",
+      "url": "https://docs.frappe.io/cloud/webhook-introduction",
+      "title": "Introduction",
+      "upstream_updated": "16-02-2026 17:05:34",
+      "bytes": 677,
+      "sha256": "e971bf70e3ed379570a8cc05dbde49377676a2584ca14743492f32dae12aafe1"
+    },
+    {
+      "path": "cloud/what-are-benches-and-bench-groups.md",
+      "url": "https://docs.frappe.io/cloud/what-are-benches-and-bench-groups",
+      "title": "What are Benches?",
+      "upstream_updated": "27-02-2026 15:53:30",
+      "bytes": 2888,
+      "sha256": "b5e69941d9c04d0f0e849e8f4441538d13094a03179b93dce4793eb9d27266e1"
+    },
+    {
+      "path": "cloud/whats-new.md",
+      "url": "https://docs.frappe.io/cloud/whats-new",
+      "title": "What's New",
+      "upstream_updated": "30-05-2026 07:15:57",
+      "bytes": 505,
+      "sha256": "02b1658dc5f41ae14f342677de73a02c895ae741b6a68585fdc1db98b28256a9"
+    },
+    {
+      "path": "crm/assignment-rule.md",
+      "url": "https://docs.frappe.io/crm/assignment-rule",
+      "title": "Assignment Rule",
+      "upstream_updated": "26-05-2026 11:50:26",
+      "bytes": 1891,
+      "sha256": "f04bb19a5dce4ddc1bf010681275f73eac4ff29ad4b7a41812ba2afa2d9f3310"
+    },
+    {
+      "path": "crm/call-log.md",
+      "url": "https://docs.frappe.io/crm/call-log",
+      "title": "Call Log",
+      "upstream_updated": "05-02-2026 16:49:16",
+      "bytes": 2313,
+      "sha256": "46259a16a42ad9fb02d9c27a9325bf3f5e37483ad22bb9ac346f3589598197bb"
+    },
+    {
+      "path": "crm/capturing-leads/web-form.md",
+      "url": "https://docs.frappe.io/crm/capturing-leads/web-form",
+      "title": "Forms",
+      "upstream_updated": "17-07-2026 17:59:25",
+      "bytes": 3964,
+      "sha256": "6398675ce74e5596f69c0ff9397dc08a3428cfc058cd3007d3a1c0bf2eea120c"
+    },
+    {
+      "path": "crm/comment.md",
+      "url": "https://docs.frappe.io/crm/comment",
+      "title": "Comment",
+      "upstream_updated": "05-02-2026 16:49:16",
+      "bytes": 1116,
+      "sha256": "82f81e9edb82395f03b318cdd13a66af0ae66f6d4c643348f7afa6bf37e4e500"
+    },
+    {
+      "path": "crm/contact.md",
+      "url": "https://docs.frappe.io/crm/contact",
+      "title": "Contact",
+      "upstream_updated": "20-04-2026 22:18:42",
+      "bytes": 1456,
+      "sha256": "633fcd589cb6fef7726f168d8ebf28988afceb98013a79414bbffdab62e47cc0"
+    },
+    {
+      "path": "crm/custom-actions.md",
+      "url": "https://docs.frappe.io/crm/custom-actions",
+      "title": "Custom Actions",
+      "upstream_updated": "26-05-2026 19:09:26",
+      "bytes": 9038,
+      "sha256": "e0406d4032ca56ee45f23ede5769ad9fafcbd23d5682940a8644e8e504d5e6f9"
+    },
+    {
+      "path": "crm/custom-branding.md",
+      "url": "https://docs.frappe.io/crm/custom-branding",
+      "title": "Custom Branding",
+      "upstream_updated": "20-04-2026 17:46:16",
+      "bytes": 752,
+      "sha256": "e1b0fcdb065719785aaa39ff84ed441ccba914f1f8f1de2626be4680893582bd"
+    },
+    {
+      "path": "crm/custom-fields.md",
+      "url": "https://docs.frappe.io/crm/custom-fields",
+      "title": "Custom Fields",
+      "upstream_updated": "05-02-2026 16:49:17",
+      "bytes": 2214,
+      "sha256": "8c69f0e7235dd8b36aec76d6a54d6212bbe3e518aabe9ec1be369cd5e5f74bec"
+    },
+    {
+      "path": "crm/custom-list-actions.md",
+      "url": "https://docs.frappe.io/crm/custom-list-actions",
+      "title": "Custom List Actions",
+      "upstream_updated": "05-02-2026 16:49:17",
+      "bytes": 4339,
+      "sha256": "e243dd1b54149cea16e9b8f3349e09ae5fe62c1011f7ec80b31a76a76a42f938"
+    },
+    {
+      "path": "crm/custom-script.md",
+      "url": "https://docs.frappe.io/crm/custom-script",
+      "title": "Custom Script",
+      "upstream_updated": "08-05-2026 15:48:20",
+      "bytes": 4784,
+      "sha256": "aad152669b8a7bc792567494b86c49f33eaf38596032283ce1934c4cf25e08bb"
+    },
+    {
+      "path": "crm/custom-statuses.md",
+      "url": "https://docs.frappe.io/crm/custom-statuses",
+      "title": "Custom Statuses",
+      "upstream_updated": "26-05-2026 19:09:14",
+      "bytes": 4750,
+      "sha256": "41b614376025f9ad1cbad813b0d74bb011529fae0e467ca4ae9dcbf9eb2a6af5"
+    },
+    {
+      "path": "crm/data.md",
+      "url": "https://docs.frappe.io/crm/data",
+      "title": "Data",
+      "upstream_updated": "05-02-2026 16:49:16",
+      "bytes": 521,
+      "sha256": "3c88ab1a9bf7f69ccfe006088284b7b3831fdefab3c26f737879775792df3bc9"
+    },
+    {
+      "path": "crm/deal.md",
+      "url": "https://docs.frappe.io/crm/deal",
+      "title": "Deal",
+      "upstream_updated": "20-04-2026 22:42:03",
+      "bytes": 4195,
+      "sha256": "eb61b2f8aebe03a4dd273cbe2f9a797830d5aa074d06f8ae8bf9623fd4adaa90"
+    },
+    {
+      "path": "crm/email-communication.md",
+      "url": "https://docs.frappe.io/crm/email-communication",
+      "title": "Email Communication",
+      "upstream_updated": "05-02-2026 16:49:16",
+      "bytes": 4600,
+      "sha256": "23d6223c51329a71ca00f5052e5e8ec53c9ddc471d26d7abcaf840f108e86646"
+    },
+    {
+      "path": "crm/email-template.md",
+      "url": "https://docs.frappe.io/crm/email-template",
+      "title": "Email Template",
+      "upstream_updated": "23-04-2026 14:12:53",
+      "bytes": 1434,
+      "sha256": "127c54bc43b702ffee93999892d163803f1c6f6367cda2b9edd9537c262be466"
+    },
+    {
+      "path": "crm/erpnext.md",
+      "url": "https://docs.frappe.io/crm/erpnext",
+      "title": "ERPNext",
+      "upstream_updated": "25-06-2026 14:09:45",
+      "bytes": 8022,
+      "sha256": "cd14403c389e4be967b6865cfe4e798304d436acde2762aa7b9853ce6d815e8c"
+    },
+    {
+      "path": "crm/exotel.md",
+      "url": "https://docs.frappe.io/crm/exotel",
+      "title": "Exotel",
+      "upstream_updated": "05-02-2026 16:49:17",
+      "bytes": 6435,
+      "sha256": "ef7e52fc8bb2b854efc9125d0a4bbfdea7412bcfc90afe364a79f5ba5701f35b"
+    },
+    {
+      "path": "crm/general-and-defaults.md",
+      "url": "https://docs.frappe.io/crm/general-and-defaults",
+      "title": "General and Defaults",
+      "upstream_updated": "20-04-2026 17:46:37",
+      "bytes": 1774,
+      "sha256": "f01d392aea619b818395771fff00d92b908260f9a7377d191149eafe075651fb"
+    },
+    {
+      "path": "crm/home-actions.md",
+      "url": "https://docs.frappe.io/crm/home-actions",
+      "title": "Home Actions",
+      "upstream_updated": "20-04-2026 17:46:16",
+      "bytes": 1131,
+      "sha256": "826ffeebebc4c0228af5adea0f6b4d2e6918cac222b70672ab9751d0c4cdb2fe"
+    },
+    {
+      "path": "crm/introduction.md",
+      "url": "https://docs.frappe.io/crm/introduction",
+      "title": "Introduction",
+      "upstream_updated": "20-04-2026 22:23:27",
+      "bytes": 2693,
+      "sha256": "6845c97074070fed494e9471396e9fdcaa0a7b76f760353cbaf20aeea7d7bf87"
+    },
+    {
+      "path": "crm/introduction/installation.md",
+      "url": "https://docs.frappe.io/crm/introduction/installation",
+      "title": "Installation",
+      "upstream_updated": "21-04-2026 12:40:49",
+      "bytes": 3624,
+      "sha256": "6c08ef6d9bfae01c2081b970b97d0c50164e26159f3fd85a4975f6d79059060b"
+    },
+    {
+      "path": "crm/inviting-your-team.md",
+      "url": "https://docs.frappe.io/crm/inviting-your-team",
+      "title": "Inviting Your Team",
+      "upstream_updated": "20-04-2026 17:15:58",
+      "bytes": 1441,
+      "sha256": "5452ba966bfbd28bdff7a5372f8cc10a4f50dd0941ef1f7d54da58a3ffc47f64"
+    },
+    {
+      "path": "crm/lead-syncing/meta.md",
+      "url": "https://docs.frappe.io/crm/lead-syncing/meta",
+      "title": "Facebook / Instagram",
+      "upstream_updated": "09-03-2026 23:57:15",
+      "bytes": 2714,
+      "sha256": "13edafd8a59373348b0ecd84df7b6147ba339118b130d1d21b0694b9d133b465"
+    },
+    {
+      "path": "crm/lead.md",
+      "url": "https://docs.frappe.io/crm/lead",
+      "title": "Lead",
+      "upstream_updated": "20-04-2026 21:58:19",
+      "bytes": 3438,
+      "sha256": "47a4a5057d1608cd5dc05453a1e5153a4e1270dfd84cd5473236f2b8be8770a2"
+    },
+    {
+      "path": "crm/mobile-app-installation.md",
+      "url": "https://docs.frappe.io/crm/mobile-app-installation",
+      "title": "Mobile App Installation",
+      "upstream_updated": "05-02-2026 16:49:17",
+      "bytes": 1903,
+      "sha256": "670ba624eea704f06ecd14affa5fd875408fa40685f26f4c5e8ba628b59d0343"
+    },
+    {
+      "path": "crm/note.md",
+      "url": "https://docs.frappe.io/crm/note",
+      "title": "Note",
+      "upstream_updated": "21-04-2026 08:00:27",
+      "bytes": 1386,
+      "sha256": "46e7474b08a14501350a4c880c0d548006daec6d3681b61f48ea2e60eecf3833"
+    },
+    {
+      "path": "crm/notification.md",
+      "url": "https://docs.frappe.io/crm/notification",
+      "title": "Notification",
+      "upstream_updated": "05-02-2026 16:49:17",
+      "bytes": 1023,
+      "sha256": "58319f0ba17c588990eccd13be51a696e4ec92f870826895e8a107fef4ba8b9a"
+    },
+    {
+      "path": "crm/organization.md",
+      "url": "https://docs.frappe.io/crm/organization",
+      "title": "Organization",
+      "upstream_updated": "21-04-2026 08:00:27",
+      "bytes": 1519,
+      "sha256": "88cf9fe9329c31f2a94a457c4f1587d511ec020d8d0e8f98e9662d4b42eef3d7"
+    },
+    {
+      "path": "crm/pinned-view.md",
+      "url": "https://docs.frappe.io/crm/pinned-view",
+      "title": "Pinned View",
+      "upstream_updated": "21-05-2026 18:49:00",
+      "bytes": 1134,
+      "sha256": "dff4a16e599827308ade8042ee7ab0953161ddfca635e330d63e3a3b873731e7"
+    },
+    {
+      "path": "crm/profile-and-preferences.md",
+      "url": "https://docs.frappe.io/crm/profile-and-preferences",
+      "title": "Profile and Preferences",
+      "upstream_updated": "20-04-2026 17:01:28",
+      "bytes": 1854,
+      "sha256": "cfee648d2555b2e9e95b2170957b63592cf77ba90c4ffbaf982022b8b043025e"
+    },
+    {
+      "path": "crm/public-view.md",
+      "url": "https://docs.frappe.io/crm/public-view",
+      "title": "Public View",
+      "upstream_updated": "21-05-2026 18:49:45",
+      "bytes": 1823,
+      "sha256": "c728dd17f8e2a02fb1439bca40cf662cf0b078deab31ec131d7a2bed2281d7a9"
+    },
+    {
+      "path": "crm/quick-entry-layout.md",
+      "url": "https://docs.frappe.io/crm/quick-entry-layout",
+      "title": "Quick Entry Layout",
+      "upstream_updated": "05-02-2026 16:49:17",
+      "bytes": 1877,
+      "sha256": "d46d6a7fa855a0f2bab3b2b92936d7a9d1f0452a4e3673bc9e3bddc17e783bd3"
+    },
+    {
+      "path": "crm/service-level-agreement.md",
+      "url": "https://docs.frappe.io/crm/service-level-agreement",
+      "title": "Service Level Agreement",
+      "upstream_updated": "07-05-2026 17:28:05",
+      "bytes": 2655,
+      "sha256": "7f4704f517122e186e828540c936af8408b991f2dad6153bb6cee86458a44f86"
+    },
+    {
+      "path": "crm/setting-up.md",
+      "url": "https://docs.frappe.io/crm/setting-up",
+      "title": "Setting Up Your Workspace",
+      "upstream_updated": "20-04-2026 16:49:23",
+      "bytes": 2176,
+      "sha256": "3e0e12eaca65f38cb62119b40d6a3572190f8ee6fb72536a9f45ef8d17243691"
+    },
+    {
+      "path": "crm/settings/sales-hierarchy.md",
+      "url": "https://docs.frappe.io/crm/settings/sales-hierarchy",
+      "title": "Sales Hierarchy",
+      "upstream_updated": "02-06-2026 16:43:01",
+      "bytes": 1962,
+      "sha256": "8c54e5580013abc3cfb211c2386cababda71b26d269a7f2a0ec8ae570f9ea330"
+    },
+    {
+      "path": "crm/task.md",
+      "url": "https://docs.frappe.io/crm/task",
+      "title": "Task",
+      "upstream_updated": "21-04-2026 08:13:44",
+      "bytes": 1557,
+      "sha256": "44c006066e302de9bffc5719359c54596d5f60d8f19e9f499fdd5db17be2a87c"
+    },
+    {
+      "path": "crm/twilio.md",
+      "url": "https://docs.frappe.io/crm/twilio",
+      "title": "Twilio",
+      "upstream_updated": "05-02-2026 16:49:17",
+      "bytes": 3739,
+      "sha256": "1d541525d156158ef657cdcacae3180b760a707f607c52959aba92db870d5740"
+    },
+    {
+      "path": "crm/view.md",
+      "url": "https://docs.frappe.io/crm/view",
+      "title": "Saved View",
+      "upstream_updated": "21-05-2026 18:22:35",
+      "bytes": 1950,
+      "sha256": "996358d6362ec0b5392f3128755336281bf49a0b120363f3a9249bc3f8589ad3"
+    },
+    {
+      "path": "crm/whatsapp.md",
+      "url": "https://docs.frappe.io/crm/whatsapp",
+      "title": "WhatsApp",
+      "upstream_updated": "09-03-2026 16:17:59",
+      "bytes": 3425,
+      "sha256": "5f4f5c32f7922b6005f14081e8d88aab1e684a4d8526ae41b15f013dffa98d86"
+    },
+    {
+      "path": "drive/file-access.md",
+      "url": "https://docs.frappe.io/drive/file-access",
+      "title": "Sharing",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 1869,
+      "sha256": "2aae2f0ae2ed187482a39e82c740b1e3527f3c34d09bc1bceb493cbf49322665"
+    },
+    {
+      "path": "drive/files.md",
+      "url": "https://docs.frappe.io/drive/files",
+      "title": "Files",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 903,
+      "sha256": "c788656debc59a146a52bf79520e02cb1fc11f55ea508e3eb60119356a3ec994"
+    },
+    {
+      "path": "drive/introduction.md",
+      "url": "https://docs.frappe.io/drive/introduction",
+      "title": "Introduction",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 3815,
+      "sha256": "6dedd771497c4e6c71d54b543a3917cf04a510db3ee64d906fcca90ff9a230ce"
+    },
+    {
+      "path": "drive/microsoft-documents.md",
+      "url": "https://docs.frappe.io/drive/microsoft-documents",
+      "title": "Microsoft Documents",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 425,
+      "sha256": "95bcdf5b59a0f0067daeadd039981edc5a1c0d9ff60a6b71abcfe770aeda1bc5"
+    },
+    {
+      "path": "drive/open-source.md",
+      "url": "https://docs.frappe.io/drive/open-source",
+      "title": "Open Source",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 1531,
+      "sha256": "4eb72b24abf61fe22f5699bbffdcf36bcc75d2607dcbc651c8e1dbf3b484717a"
+    },
+    {
+      "path": "drive/previews.md",
+      "url": "https://docs.frappe.io/drive/previews",
+      "title": "Previews",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 1127,
+      "sha256": "1122c4b3db10735596aa7841987b55451f30ae95f7f5c81f09857ea363c7aa39"
+    },
+    {
+      "path": "drive/quick-start.md",
+      "url": "https://docs.frappe.io/drive/quick-start",
+      "title": "Host Locally",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 1572,
+      "sha256": "4fa62a269254948fa3a352f37ed30e88f6ea491e71ee5f49b5a8c194e515af69"
+    },
+    {
+      "path": "drive/s3-integration.md",
+      "url": "https://docs.frappe.io/drive/s3-integration",
+      "title": "Setting up S3",
+      "upstream_updated": "13-01-2026 15:35:33",
+      "bytes": 520,
+      "sha256": "c3721866fdbbda0f1af8f7fe593c4ee4df87a4b5e76c4aec2b567e58444d004c"
+    },
+    {
+      "path": "drive/storage-quota.md",
+      "url": "https://docs.frappe.io/drive/storage-quota",
+      "title": "Storage",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 811,
+      "sha256": "50f5ba51d9c41791cefd11bf14221c3a2f872c8b1ace6a1583a3220e063b5379"
+    },
+    {
+      "path": "drive/teams.md",
+      "url": "https://docs.frappe.io/drive/teams",
+      "title": "Teams",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 412,
+      "sha256": "de00f24167ec044526d0f41383b3f8b399b5982e3ce8d988991ac897479034a6"
+    },
+    {
+      "path": "drive/why-frappe-drive.md",
+      "url": "https://docs.frappe.io/drive/why-frappe-drive",
+      "title": "Frappe Drive for You",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 531,
+      "sha256": "778d6074b9254e76c8020da8b49e2d7d110f7556ad0e797ff8e3700186c17e5c"
+    },
     {
       "path": "erpnext/user/manual/en/2-step-301-redirect-in-your-erpnext-website.md",
       "url": "https://docs.frappe.io/erpnext/user/manual/en/2-step-301-redirect-in-your-erpnext-website",
@@ -584,7 +2265,7 @@
       "title": "Automate Lead Creation | ERPNext Documentation",
       "upstream_updated": "23-07-2026 22:17:18",
       "bytes": 1252,
-      "sha256": "3411318540ffca38f3c4f65bcfdbb6463fd4813a06998c36da70c2c7f6b3169c"
+      "sha256": "1c383e16781e1c77d2a62e7f74caa493c3386e6eff13e6bb0365bccf9e0d673f"
     },
     {
       "path": "erpnext/user/manual/en/automating-issue-assignments-to-support-team-in-erpnext.md",
@@ -1112,7 +2793,7 @@
       "title": "Configuring A Reply-To Email Address",
       "upstream_updated": "04-03-2026 16:28:43",
       "bytes": 933,
-      "sha256": "2c4fe94fb0f312d5959cb5c91364ef8431e11bfb7a344341efb76d806f6bdedb"
+      "sha256": "46b6019c9babbe570969c80a796ba5e240c03a0254093c3ac9ea8932bafd8bc1"
     },
     {
       "path": "erpnext/user/manual/en/configuring-earned-leave.md",
@@ -1976,7 +3657,7 @@
       "title": "Email Account",
       "upstream_updated": "02-03-2026 23:35:30",
       "bytes": 7793,
-      "sha256": "b7e50fe53ba99113d367a8474e2398df38263940d5a8e1eb947a321beeb52838"
+      "sha256": "acb00a3d77ad044cd119feda72342a98a0e0182a493b04720f145b51155cf446"
     },
     {
       "path": "erpnext/user/manual/en/email-campaign.md",
@@ -2001,6 +3682,14 @@
       "upstream_updated": "02-03-2026 23:35:30",
       "bytes": 4421,
       "sha256": "527a54f475e8dd0fc67250b78e350a8af0abac7b19f2dead7f98c1f839d8e117"
+    },
+    {
+      "path": "erpnext/user/manual/en/email-dropbox.md",
+      "url": "https://docs.frappe.io/erpnext/user/manual/en/email-dropbox",
+      "title": "Email Dropbox",
+      "upstream_updated": "02-03-2026 23:35:31",
+      "bytes": 1659,
+      "sha256": "d5f26f9a76dc5f1f682a8ac1b46172adb21f749e7111b014308f4a5f4a7322e9"
     },
     {
       "path": "erpnext/user/manual/en/email-error.md",
@@ -3136,7 +4825,7 @@
       "title": "Job Applicant",
       "upstream_updated": "04-02-2026 14:54:31",
       "bytes": 2281,
-      "sha256": "d8f291a0cc49b176669255d0a049fe9d03dc3ef1ab524ec4976a79c732ae87bc"
+      "sha256": "bf52aceedcff31d3923f8be2d3d02ba7f83aad9e6bc8e24f75738bc172d7369c"
     },
     {
       "path": "erpnext/user/manual/en/job-card-summary.md",
@@ -7224,7 +8913,7 @@
       "title": "Configuration",
       "upstream_updated": "12-06-2026 22:19:24",
       "bytes": 17178,
-      "sha256": "008e0a74bf7940e294bc1ab9283d1db2682105e17809778121ab7414a0024968"
+      "sha256": "2412bf349b39b1134b22dde3f6dcca177aad1bfb9e9a3222e72b7c2087b00f35"
     },
     {
       "path": "framework/user/en/basics/sites.md",
@@ -8936,7 +10625,7 @@
       "title": "Configuration",
       "upstream_updated": "12-06-2026 22:19:24",
       "bytes": 17178,
-      "sha256": "47fd6f9e73abec577692616d0a55e6cc56354422c7e1c0d62b5e59cb73eecb1e"
+      "sha256": "bd08bbab3733d9c41b5803e76b3466e00291f0e7829d3840c4cc2cc8b38132cb"
     },
     {
       "path": "framework/v15/user/en/basics/sites.md",
@@ -10249,9 +11938,1909 @@
       "upstream_updated": "17-02-2026 10:41:22",
       "bytes": 2558,
       "sha256": "57dcb1b67123b9d6fb691392401bfbc18d5827a87b3f47e540ad960de1ff2215"
+    },
+    {
+      "path": "helpdesk/agent.md",
+      "url": "https://docs.frappe.io/helpdesk/agent",
+      "title": "Agent",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 3616,
+      "sha256": "9357a31b7568638426daf84ea6b92203d4b6c9c194fb6aa2e4688cab3a8f3b5a"
+    },
+    {
+      "path": "helpdesk/assignment-rule.md",
+      "url": "https://docs.frappe.io/helpdesk/assignment-rule",
+      "title": "Assignment Rule",
+      "upstream_updated": "28-05-2026 01:50:29",
+      "bytes": 2099,
+      "sha256": "cbeaecd6dd73fa58d1a85fb8fa5b0f5b6e8a8cc6a9eda804aff82832c3579e8a"
+    },
+    {
+      "path": "helpdesk/comment.md",
+      "url": "https://docs.frappe.io/helpdesk/comment",
+      "title": "Comment",
+      "upstream_updated": "28-05-2026 01:50:29",
+      "bytes": 1165,
+      "sha256": "e79ca550b7d9bf8200bcd7fffbb8a7a90b8f70ca62d4b137f623ce0e219791eb"
+    },
+    {
+      "path": "helpdesk/contact.md",
+      "url": "https://docs.frappe.io/helpdesk/contact",
+      "title": "Contact",
+      "upstream_updated": "27-06-2026 23:20:43",
+      "bytes": 5026,
+      "sha256": "a2cd3a4980551db3c8ea959922c6501364b979e0b0204653b11938fbe09e9fe1"
+    },
+    {
+      "path": "helpdesk/custom-actions.md",
+      "url": "https://docs.frappe.io/helpdesk/custom-actions",
+      "title": "Custom Actions",
+      "upstream_updated": "02-03-2026 11:44:32",
+      "bytes": 8063,
+      "sha256": "c8b0a4389f3f19a90af8b7cae3786d21592c02c80313ebd289aa1e640485ab9d"
+    },
+    {
+      "path": "helpdesk/custom-views.md",
+      "url": "https://docs.frappe.io/helpdesk/custom-views",
+      "title": "Managing Tickets with ease (Views)",
+      "upstream_updated": "19-03-2026 11:59:12",
+      "bytes": 3356,
+      "sha256": "cb9b9b4435b34cf70248fd550db6b303e545f257fa91fb8d3bb94d5908a04cee"
+    },
+    {
+      "path": "helpdesk/customer-portal.md",
+      "url": "https://docs.frappe.io/helpdesk/customer-portal",
+      "title": "Customer Portal",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 3171,
+      "sha256": "b8a2fd59a8361f8435adc7f915f2c3a88ea48632477339fcbf18ec2b69a8cbf1"
+    },
+    {
+      "path": "helpdesk/customer.md",
+      "url": "https://docs.frappe.io/helpdesk/customer",
+      "title": "Customer",
+      "upstream_updated": "25-06-2026 21:42:10",
+      "bytes": 4580,
+      "sha256": "d0036ceafe161393e192345419dcc539615730920748ea5c51ac75d6deed80ff"
+    },
+    {
+      "path": "helpdesk/customers-contacts.md",
+      "url": "https://docs.frappe.io/helpdesk/customers-contacts",
+      "title": "Customers & Contacts",
+      "upstream_updated": "23-07-2026 16:57:23",
+      "bytes": 8243,
+      "sha256": "bb984096d2df276ca8cde1430b2c36d27dd5c5bb4b0ef035bd8c8a434370cb8a"
+    },
+    {
+      "path": "helpdesk/customization/email-preferences.md",
+      "url": "https://docs.frappe.io/helpdesk/customization/email-preferences",
+      "title": "Email Preferences",
+      "upstream_updated": "08-05-2026 01:20:27",
+      "bytes": 2548,
+      "sha256": "43620da7d33604e46ded532f71c38695ffe80adb866b5e00057a1f1f4a0625e1"
+    },
+    {
+      "path": "helpdesk/email-communication.md",
+      "url": "https://docs.frappe.io/helpdesk/email-communication",
+      "title": "Email Communication",
+      "upstream_updated": "28-05-2026 01:50:29",
+      "bytes": 4384,
+      "sha256": "06ebce834df666e804376182040399e03fe421b48d9e10f4c7b2f3613dcb67cc"
+    },
+    {
+      "path": "helpdesk/email-notifications.md",
+      "url": "https://docs.frappe.io/helpdesk/email-notifications",
+      "title": "Email Notifications",
+      "upstream_updated": "08-05-2026 01:20:27",
+      "bytes": 3903,
+      "sha256": "590ebdca30a8ca7e34d299f62a7d2e4eb2b2d4532d7b91d72dee5aa92d76e971"
+    },
+    {
+      "path": "helpdesk/exotel.md",
+      "url": "https://docs.frappe.io/helpdesk/exotel",
+      "title": "Exotel",
+      "upstream_updated": "21-05-2026 12:59:27",
+      "bytes": 5051,
+      "sha256": "a4c273530b6cdbd4617bbbd0c9cd60c38caadfbe63c75017d7a2f26e1464261d"
+    },
+    {
+      "path": "helpdesk/faq.md",
+      "url": "https://docs.frappe.io/helpdesk/faq",
+      "title": "Custom time for pulling emails",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 1328,
+      "sha256": "bd48440a44c31918cb67dac35917e01a7516767d74efc807d54a4ce8d38e6cea"
+    },
+    {
+      "path": "helpdesk/faq/setting-up-outlook-for-frappe.md",
+      "url": "https://docs.frappe.io/helpdesk/faq/setting-up-outlook-for-frappe",
+      "title": "Setting up Outlook for Frappe Helpdesk",
+      "upstream_updated": "16-06-2026 16:24:34",
+      "bytes": 7368,
+      "sha256": "aa33c716236e22c52084d084743c34c6457b2ccabb23613eed103aaf0b4eb1c7"
+    },
+    {
+      "path": "helpdesk/field-dependency.md",
+      "url": "https://docs.frappe.io/helpdesk/field-dependency",
+      "title": "Field Dependency",
+      "upstream_updated": "02-03-2026 11:44:32",
+      "bytes": 6401,
+      "sha256": "81907983abf3362836952f782ac22dbf0151b3dc58edd241aeb640c5b7f37ddb"
+    },
+    {
+      "path": "helpdesk/helpdesk/customization/outside-working-hours-banner.md",
+      "url": "https://docs.frappe.io/helpdesk/helpdesk/customization/outside-working-hours-banner",
+      "title": "Outside Working Hours Banner",
+      "upstream_updated": "08-05-2026 01:20:27",
+      "bytes": 2448,
+      "sha256": "84debceaf213bca09f9354a6874395a2edd23f2c1e493c0abdd7192901716c4e"
+    },
+    {
+      "path": "helpdesk/helpdesk/other-features/comment-reactions.md",
+      "url": "https://docs.frappe.io/helpdesk/helpdesk/other-features/comment-reactions",
+      "title": "Comment Reactions",
+      "upstream_updated": "28-05-2026 01:50:29",
+      "bytes": 1107,
+      "sha256": "bd61b6684684aedc79b205779e9d0e07254261b98e10d2711d68e5aecf25d0fd"
+    },
+    {
+      "path": "helpdesk/installation.md",
+      "url": "https://docs.frappe.io/helpdesk/installation",
+      "title": "Installation",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 2346,
+      "sha256": "1e2e7f4c5e6b012cae0c6e8534f92ba588e26be3414867fe4238dc185765631a"
+    },
+    {
+      "path": "helpdesk/integration/erpnext.md",
+      "url": "https://docs.frappe.io/helpdesk/integration/erpnext",
+      "title": "ERPNext",
+      "upstream_updated": "11-06-2026 15:05:03",
+      "bytes": 2137,
+      "sha256": "27806fee2e2f34534ee7f95472333af910ab037996eef6b807bb94c400f2791b"
+    },
+    {
+      "path": "helpdesk/inviting-agents.md",
+      "url": "https://docs.frappe.io/helpdesk/inviting-agents",
+      "title": "Inviting agents",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 2208,
+      "sha256": "61aa710ef19b6d12fd1747b49d83efe0f2d0f13b5ebb3d81d356bb351c74a944"
+    },
+    {
+      "path": "helpdesk/knowledge-base.md",
+      "url": "https://docs.frappe.io/helpdesk/knowledge-base",
+      "title": "Knowledge Base",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 2712,
+      "sha256": "9fcaf072a32e724e74d9e6d25a28bcb6812f6e1d5b63206e0da8a547b5a0d96f"
+    },
+    {
+      "path": "helpdesk/lesson-1-your-first-ticket.md",
+      "url": "https://docs.frappe.io/helpdesk/lesson-1-your-first-ticket",
+      "title": "Creating a ticket",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 2242,
+      "sha256": "c13f15aca6a613df9c260709cd731f4e631ca4bb5f02c29fba118729af7448fd"
+    },
+    {
+      "path": "helpdesk/lesson-2understanding-ticket-view.md",
+      "url": "https://docs.frappe.io/helpdesk/lesson-2understanding-ticket-view",
+      "title": "Understanding ticket view",
+      "upstream_updated": "16-01-2026 12:58:07",
+      "bytes": 5886,
+      "sha256": "1b84502ca786adcc49701750d022f4f69bd1656d135c4d1e630af1fbcc094c5e"
+    },
+    {
+      "path": "helpdesk/lesson-3-agents-teams.md",
+      "url": "https://docs.frappe.io/helpdesk/lesson-3-agents-teams",
+      "title": "Agents & Teams",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 2981,
+      "sha256": "8d1071b7fab2cfe880ac15b6d08a3710b4df5576c9e170fc6de605ef66220081"
+    },
+    {
+      "path": "helpdesk/lesson-4-knowledge-base.md",
+      "url": "https://docs.frappe.io/helpdesk/lesson-4-knowledge-base",
+      "title": "Knowledge Base",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 3874,
+      "sha256": "fb51082face6a3b47cb45a499b626fe56e84e9c21e4a6473fe496ceee8775f10"
+    },
+    {
+      "path": "helpdesk/notification.md",
+      "url": "https://docs.frappe.io/helpdesk/notification",
+      "title": "Notification",
+      "upstream_updated": "28-05-2026 01:50:29",
+      "bytes": 1166,
+      "sha256": "4d16d7543a678a8848070c5f013b3a9c8569664307e443b9f52fe1776126787a"
+    },
+    {
+      "path": "helpdesk/other-features/agent-availability.md",
+      "url": "https://docs.frappe.io/helpdesk/other-features/agent-availability",
+      "title": "Agent Availability Status",
+      "upstream_updated": "08-06-2026 11:56:24",
+      "bytes": 6522,
+      "sha256": "52100a50be13869f83fffc9105aa77fd38d1b2829203f60a08807e6de604e7cb"
+    },
+    {
+      "path": "helpdesk/other-features/agent-home-page.md",
+      "url": "https://docs.frappe.io/helpdesk/other-features/agent-home-page",
+      "title": "Agent Home Page",
+      "upstream_updated": "28-05-2026 01:50:29",
+      "bytes": 4947,
+      "sha256": "ac5a0d14841e4791a70987b3b3f09ee6a2e45e86f2ffbe14bdbeaaa003a42d2c"
+    },
+    {
+      "path": "helpdesk/other-features/bulk-reply.md",
+      "url": "https://docs.frappe.io/helpdesk/other-features/bulk-reply",
+      "title": "Bulk Reply",
+      "upstream_updated": "29-05-2026 12:40:23",
+      "bytes": 3286,
+      "sha256": "99ec45793c2ac630b513e110d4ebf9a1b13126be4bca6b5f453041831ad03ea7"
+    },
+    {
+      "path": "helpdesk/pwa-installation.md",
+      "url": "https://docs.frappe.io/helpdesk/pwa-installation",
+      "title": "PWA Installation",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 1004,
+      "sha256": "739691829a54451178af3a5f9eff844804b0c527b175ac57f3c4ca92b011b683"
+    },
+    {
+      "path": "helpdesk/saved-replies.md",
+      "url": "https://docs.frappe.io/helpdesk/saved-replies",
+      "title": "Saved Replies",
+      "upstream_updated": "12-08-2026 23:56:55",
+      "bytes": 10069,
+      "sha256": "168dc1bfa6cf14a890e5b2c45342752d3a11c1ff11459cad4442f82c85c6a728"
+    },
+    {
+      "path": "helpdesk/service-level-agreement.md",
+      "url": "https://docs.frappe.io/helpdesk/service-level-agreement",
+      "title": "Service Level Agreement",
+      "upstream_updated": "03-08-2026 17:57:49",
+      "bytes": 11044,
+      "sha256": "e9452f36a497c2255257cb49cbc00ba0b7c4d044da1c9e01c28bf7d8a1d7a0a6"
+    },
+    {
+      "path": "helpdesk/setting-up.md",
+      "url": "https://docs.frappe.io/helpdesk/setting-up",
+      "title": "Setting Up",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 816,
+      "sha256": "2cac7dc9645b0953cec6c05061dde8741263036314946a69a46d0221806b6cc6"
+    },
+    {
+      "path": "helpdesk/settings.md",
+      "url": "https://docs.frappe.io/helpdesk/settings",
+      "title": "Settings",
+      "upstream_updated": "15-05-2026 13:19:31",
+      "bytes": 8930,
+      "sha256": "5606d9cb3ce503222773191e97be30c4559d8abc54d47b11d6a7feaa479086d9"
+    },
+    {
+      "path": "helpdesk/team.md",
+      "url": "https://docs.frappe.io/helpdesk/team",
+      "title": "Team",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 2414,
+      "sha256": "9e6dbdac221e07c25636895e203ed6d2bc5df8f85660da32080aae66969b20d8"
+    },
+    {
+      "path": "helpdesk/ticket-priority.md",
+      "url": "https://docs.frappe.io/helpdesk/ticket-priority",
+      "title": "Ticket Priority",
+      "upstream_updated": "03-08-2026 17:48:08",
+      "bytes": 2708,
+      "sha256": "2872a3229ff955ba4cd25af87377be0231751d8e2697d79877c12ac79d688e62"
+    },
+    {
+      "path": "helpdesk/ticket-routing.md",
+      "url": "https://docs.frappe.io/helpdesk/ticket-routing",
+      "title": "Ticket Routing",
+      "upstream_updated": "02-03-2026 11:44:32",
+      "bytes": 1657,
+      "sha256": "38dd2028bbac22e42a03629c3bb34dc1a12b033da3db6cf2b64d0aa30fe0afc6"
+    },
+    {
+      "path": "helpdesk/ticket-status.md",
+      "url": "https://docs.frappe.io/helpdesk/ticket-status",
+      "title": "Ticket Status",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 2984,
+      "sha256": "db4678b38a0f7e3a9d47e00e66c71e5d26725c96d3a604831ae0de5715f4cda3"
+    },
+    {
+      "path": "helpdesk/ticket-type.md",
+      "url": "https://docs.frappe.io/helpdesk/ticket-type",
+      "title": "Ticket Type",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 1114,
+      "sha256": "689514225c602127baccd4a15d95c982b6416f716ad487d6c88432363875ab23"
+    },
+    {
+      "path": "helpdesk/ticket.md",
+      "url": "https://docs.frappe.io/helpdesk/ticket",
+      "title": "Ticket",
+      "upstream_updated": "03-08-2026 18:00:48",
+      "bytes": 2207,
+      "sha256": "7293e0079d0d203f7c4975002106aa1b5f80edcc1c94c964fe4af41fe6114bb1"
+    },
+    {
+      "path": "helpdesk/tickets-not-being-created.md",
+      "url": "https://docs.frappe.io/helpdesk/tickets-not-being-created",
+      "title": "Tickets not being created?",
+      "upstream_updated": "06-01-2026 17:21:18",
+      "bytes": 641,
+      "sha256": "da822726555642f089277ef8e65737770406ea6421d92aa15b1b09cfc21b8ef4"
+    },
+    {
+      "path": "helpdesk/twilio.md",
+      "url": "https://docs.frappe.io/helpdesk/twilio",
+      "title": "Twilio",
+      "upstream_updated": "21-05-2026 12:59:27",
+      "bytes": 2820,
+      "sha256": "070d060fa09af0ca99a60a3e27eac27abb6bf9b15c3ab54752e508370f42fd32"
+    },
+    {
+      "path": "helpdesk/your-first-steps-with-frappe-helpdesk.md",
+      "url": "https://docs.frappe.io/helpdesk/your-first-steps-with-frappe-helpdesk",
+      "title": "Your First Steps with Frappe Helpdesk",
+      "upstream_updated": "27-05-2026 21:39:01",
+      "bytes": 7284,
+      "sha256": "dc9cfc6f77ae814cdfcd95748f6b14a867ccda1f93de406c1dd2e40be3a4d5fe"
+    },
+    {
+      "path": "hr/additional-salary.md",
+      "url": "https://docs.frappe.io/hr/additional-salary",
+      "title": "Additional Salary",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 2374,
+      "sha256": "045a185c929167771c8302aa06ab263a52f497d80d8b35b53d99900e439477e5"
+    },
+    {
+      "path": "hr/appointment-letter.md",
+      "url": "https://docs.frappe.io/hr/appointment-letter",
+      "title": "Appointment Letter",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1688,
+      "sha256": "66b06fa51522e80a2ab85761e41e3271324137c89b3255343233463cf82dce44"
+    },
+    {
+      "path": "hr/appraisal-cycle.md",
+      "url": "https://docs.frappe.io/hr/appraisal-cycle",
+      "title": "Appraisal Cycle",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 3504,
+      "sha256": "2ccc921f249d7090fe77c1472f5b46dd9ed2facbef51a0eef0150c660945fe04"
+    },
+    {
+      "path": "hr/appraisal-overview-report.md",
+      "url": "https://docs.frappe.io/hr/appraisal-overview-report",
+      "title": "Appraisal Overview Report",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 476,
+      "sha256": "6eb5c5e277503d97ec6db1203590a4c59925d382d06bc1d515ff78756cc5ab44"
+    },
+    {
+      "path": "hr/appraisal-template.md",
+      "url": "https://docs.frappe.io/hr/appraisal-template",
+      "title": "Appraisal Template",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 1436,
+      "sha256": "7143df131ed67a289fdecdfd9f621598218f54a5ea7140a7fb3161bcf827bd41"
+    },
+    {
+      "path": "hr/appraisal.md",
+      "url": "https://docs.frappe.io/hr/appraisal",
+      "title": "Appraisal",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 4937,
+      "sha256": "4b05d0391d1e7d5e1bc8ac6c284fa13321656673e1a26c671f334245500993c0"
+    },
+    {
+      "path": "hr/arrears.md",
+      "url": "https://docs.frappe.io/hr/arrears",
+      "title": "Arrears",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 1071,
+      "sha256": "f82dfdeed5347e20b0fdad9c413f608bcf452812fd92f3c692586d39853ca41d"
+    },
+    {
+      "path": "hr/attendance-request.md",
+      "url": "https://docs.frappe.io/hr/attendance-request",
+      "title": "Attendance Request",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 3117,
+      "sha256": "131e6c26a6c34f3368a6c85a9cfb8ec2b22a8cd47461901d781527a0280de7b6"
+    },
+    {
+      "path": "hr/attendance.md",
+      "url": "https://docs.frappe.io/hr/attendance",
+      "title": "Attendance",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 2628,
+      "sha256": "e6241afd523589db0bad7f19ae74b6e85537b423c34c56398d1b190b5b1288a1"
+    },
+    {
+      "path": "hr/auto-attendance.md",
+      "url": "https://docs.frappe.io/hr/auto-attendance",
+      "title": "Auto Attendance",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 5700,
+      "sha256": "32b73dcafaccb3495203ef9869f6eb52766d4e0599d8a317f5e906d653bb4b86"
+    },
+    {
+      "path": "hr/branch.md",
+      "url": "https://docs.frappe.io/hr/branch",
+      "title": "Branch",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1100,
+      "sha256": "dca1d4a4b32f989d779af1404e38a315d765e2f0a57ec5b290936420215c959f"
+    },
+    {
+      "path": "hr/compensatory-leave-request.md",
+      "url": "https://docs.frappe.io/hr/compensatory-leave-request",
+      "title": "Compensatory Leave Request",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 2123,
+      "sha256": "16a9d88bd20304cfbb6eaa2d28e5ef9335199d5d35bd013d403035375965547f"
+    },
+    {
+      "path": "hr/configuring-earned-leave.md",
+      "url": "https://docs.frappe.io/hr/configuring-earned-leave",
+      "title": "Configuring Earned Leave",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 685,
+      "sha256": "18965b4aac9cf942d8c4d73dc66c532ece48f7fff4afb888a2d36f279f118808"
+    },
+    {
+      "path": "hr/create-payroll-entry-with-timesheets.md",
+      "url": "https://docs.frappe.io/hr/create-payroll-entry-with-timesheets",
+      "title": "Create Payroll Entry with Timesheets",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1550,
+      "sha256": "61fcbab415d1d41b6d50f58a6e84002121c145f51c3312c2adc74ca86e196b84"
+    },
+    {
+      "path": "hr/daily-work-summary-group.md",
+      "url": "https://docs.frappe.io/hr/daily-work-summary-group",
+      "title": "Daily Work Summary Group",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1640,
+      "sha256": "4744694a238c5692517a52156456bea4a2590bd79d763993fed80df83b7812f7"
+    },
+    {
+      "path": "hr/department-wise-leave-approval-in-erpnext.md",
+      "url": "https://docs.frappe.io/hr/department-wise-leave-approval-in-erpnext",
+      "title": "Department-wise Leave Approval in ERPNext",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 3199,
+      "sha256": "2a12e8351742ee86433573111d8b1f79e09ffddb12bc032da96ba86086012303"
+    },
+    {
+      "path": "hr/department.md",
+      "url": "https://docs.frappe.io/hr/department",
+      "title": "Department",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1771,
+      "sha256": "85ab936b5901130a6e6f905650533d883b4210d77829c45b8926f6ddaf6d3a0f"
+    },
+    {
+      "path": "hr/designation.md",
+      "url": "https://docs.frappe.io/hr/designation",
+      "title": "Designation",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1388,
+      "sha256": "141b1be066e55fdbacce79fbdd83c0389d174b202cbc4342d9dd75d0b38f16e7"
+    },
+    {
+      "path": "hr/earned-leaves.md",
+      "url": "https://docs.frappe.io/hr/earned-leaves",
+      "title": "Earned Leaves",
+      "upstream_updated": "26-02-2026 22:14:04",
+      "bytes": 1159,
+      "sha256": "57b503439620f3b7c48c470e1a181d06c395ccd9c6757e07cf2700332af76976"
+    },
+    {
+      "path": "hr/employee-advance.md",
+      "url": "https://docs.frappe.io/hr/employee-advance",
+      "title": "Employee Advance",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 5743,
+      "sha256": "80095b9b9b05642ed93d623b416c346bd42071c15314b5932e46bcaf8ab6741e"
+    },
+    {
+      "path": "hr/employee-attendance-tool.md",
+      "url": "https://docs.frappe.io/hr/employee-attendance-tool",
+      "title": "Employee Attendance Tool",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1890,
+      "sha256": "3e5257020390ff7908e8bbaea22409147bd5043943ce853547aab6c46bf53222"
+    },
+    {
+      "path": "hr/employee-benefit-application.md",
+      "url": "https://docs.frappe.io/hr/employee-benefit-application",
+      "title": "Employee Benefit Application",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 2293,
+      "sha256": "810693e6306ab729eee1c5f87b1d62acf5ef970ea07eb0b577b0e75ff6962e4f"
+    },
+    {
+      "path": "hr/employee-benefit-claim.md",
+      "url": "https://docs.frappe.io/hr/employee-benefit-claim",
+      "title": "Employee Benefit Claim",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 1135,
+      "sha256": "1145b75da08a868ee34573fbf641a2ec15e34bbfdf6db661be3cf6d71756f429"
+    },
+    {
+      "path": "hr/employee-checkin.md",
+      "url": "https://docs.frappe.io/hr/employee-checkin",
+      "title": "Employee Checkin",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 3160,
+      "sha256": "fce7aa2953d669929914ae0c5a90c9776b4cac568f0fa49d41b69e9ceeaa9e41"
+    },
+    {
+      "path": "hr/employee-flexible-benefits.md",
+      "url": "https://docs.frappe.io/hr/employee-flexible-benefits",
+      "title": "Flexible Benefits",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 4113,
+      "sha256": "588db5ed4d693c5793ac566bc9bfd8a3625e817b978dfce248f759c44129adf1"
+    },
+    {
+      "path": "hr/employee-grade.md",
+      "url": "https://docs.frappe.io/hr/employee-grade",
+      "title": "Employee Grade",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1622,
+      "sha256": "a160af609a91bd1fd39581beb3f1921e4f817cbf3d3543b3d0fb792628685e38"
+    },
+    {
+      "path": "hr/employee-group.md",
+      "url": "https://docs.frappe.io/hr/employee-group",
+      "title": "Employee Group",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1257,
+      "sha256": "a80e5d4829a5998bafba5de4e7636f1036be645ffca81b528e5492d3258010a4"
+    },
+    {
+      "path": "hr/employee-health-insurance.md",
+      "url": "https://docs.frappe.io/hr/employee-health-insurance",
+      "title": "Employee Health Insurance",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 946,
+      "sha256": "8491df91f769c31792da53bc200d540bf21a9cf9e6b61b3ceaa825a75c3ff1e2"
+    },
+    {
+      "path": "hr/employee-incentive.md",
+      "url": "https://docs.frappe.io/hr/employee-incentive",
+      "title": "Employee Incentive",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 1595,
+      "sha256": "0b4dd44bc2834874c4377df0132ef965ce059f088e9841ca8479bd0979e3768b"
+    },
+    {
+      "path": "hr/employee-lifecycle-management.md",
+      "url": "https://docs.frappe.io/hr/employee-lifecycle-management",
+      "title": "Employee Lifecycle Management",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 730,
+      "sha256": "5830016f91a8acdecdeb9ee08ea14e29b3487a40cded8809f60dd4ea1722fcec"
+    },
+    {
+      "path": "hr/employee-onboarding.md",
+      "url": "https://docs.frappe.io/hr/employee-onboarding",
+      "title": "Employee Onboarding",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 4388,
+      "sha256": "c9170cf115590e22a6f66525b6c059c20f5d896735da96344de8d4228418bd23"
+    },
+    {
+      "path": "hr/employee-other-income.md",
+      "url": "https://docs.frappe.io/hr/employee-other-income",
+      "title": "Employee Other Income",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 915,
+      "sha256": "47c3e37730dae3484b17d7e7025a9d2ab152f3b42dbb25b56894ee241e631cb1"
+    },
+    {
+      "path": "hr/employee-performance-feedback.md",
+      "url": "https://docs.frappe.io/hr/employee-performance-feedback",
+      "title": "Employee Performance Feedback",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 2364,
+      "sha256": "8c153cc175c52eab745544d5aab275f17fb29599608ad93592fe7c57fd362212"
+    },
+    {
+      "path": "hr/employee-promotion.md",
+      "url": "https://docs.frappe.io/hr/employee-promotion",
+      "title": "Employee Promotion",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 1432,
+      "sha256": "f010b77e25fa27f553c97bbe80ca254cb486fde229ea44426fcd1fb409fca6af"
+    },
+    {
+      "path": "hr/employee-referral.md",
+      "url": "https://docs.frappe.io/hr/employee-referral",
+      "title": "Employee Referral",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 2592,
+      "sha256": "6e6b1db4369a46bcd9335cb1d86580d42060565dc0efed2d19132482706e441b"
+    },
+    {
+      "path": "hr/employee-separation.md",
+      "url": "https://docs.frappe.io/hr/employee-separation",
+      "title": "Employee Separation",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 4193,
+      "sha256": "e97d4d5c7a0f8f73a9a45cefdc65136f2bcaa95709ef87d7cf009a50b4e6e6b4"
+    },
+    {
+      "path": "hr/employee-skill-map.md",
+      "url": "https://docs.frappe.io/hr/employee-skill-map",
+      "title": "Employee Skill Map",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 1083,
+      "sha256": "5c22e234596907d66f89dd6883f4b613fdbc7cc1682d53b75d624f40ab587327"
+    },
+    {
+      "path": "hr/employee-tax-exemption-declaration.md",
+      "url": "https://docs.frappe.io/hr/employee-tax-exemption-declaration",
+      "title": "Employee Tax Exemption Declaration",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 4134,
+      "sha256": "46f7d6b4a11822d2a41e24d5bfd21229d9c6524d94f565355bf0ce1ed1dc8af5"
+    },
+    {
+      "path": "hr/employee-tax-exemption-proof-submission.md",
+      "url": "https://docs.frappe.io/hr/employee-tax-exemption-proof-submission",
+      "title": "Employee Tax Exemption Proof Submission",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 2706,
+      "sha256": "679915672f31affabe653d66fbcd140e6ee125ea132fa9fbc205b1ec5cf21823"
+    },
+    {
+      "path": "hr/employee-transfer.md",
+      "url": "https://docs.frappe.io/hr/employee-transfer",
+      "title": "Employee Transfer",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 1671,
+      "sha256": "abbb5923d10620f3cb645c9b6c58a43722cb6e9f5cbf0ac4dd06f2bc074cb5c0"
+    },
+    {
+      "path": "hr/employee.md",
+      "url": "https://docs.frappe.io/hr/employee",
+      "title": "Employee",
+      "upstream_updated": "31-03-2026 12:12:35",
+      "bytes": 7165,
+      "sha256": "daa68b91ec0d280bcbc7eee018836e5065ba2a4bc24fd6d4a360eb264fc7374f"
+    },
+    {
+      "path": "hr/employment-type.md",
+      "url": "https://docs.frappe.io/hr/employment-type",
+      "title": "Employment Type",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1058,
+      "sha256": "d4228f1dce8d969c9b20b181920305260e2e69aedfadf371c11a243093ccb64e"
+    },
+    {
+      "path": "hr/exit-interview.md",
+      "url": "https://docs.frappe.io/hr/exit-interview",
+      "title": "Exit Interview",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 3419,
+      "sha256": "79763b22f5cb1625b599b22189e2e8d45973a49f44d5a6e02cab7096a4473b66"
+    },
+    {
+      "path": "hr/expense-claim.md",
+      "url": "https://docs.frappe.io/hr/expense-claim",
+      "title": "Expense Claim",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 3837,
+      "sha256": "bb242eb4a48bd824afc6fb8559e8db67d2902a016189619e8421f1086aa13b15"
+    },
+    {
+      "path": "hr/fleet-management.md",
+      "url": "https://docs.frappe.io/hr/fleet-management",
+      "title": "Fleet Management",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 461,
+      "sha256": "2de6add11d77599ded4c43230a852057797243ce6c38ed8d1f662d4719909e0c"
+    },
+    {
+      "path": "hr/full-and-final-statement.md",
+      "url": "https://docs.frappe.io/hr/full-and-final-statement",
+      "title": "Full and Final Statement",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 3736,
+      "sha256": "c1fb4624742b1c3b7dd923a43755818deeb32649f9d7085929ccd05d063d78c7"
+    },
+    {
+      "path": "hr/goal.md",
+      "url": "https://docs.frappe.io/hr/goal",
+      "title": "Goal",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 3634,
+      "sha256": "424d24f5d30cb760bbd476a5e248a09be453cabdadb160d00d899b9c08129639"
+    },
+    {
+      "path": "hr/gratuity-rule.md",
+      "url": "https://docs.frappe.io/hr/gratuity-rule",
+      "title": "Gratuity Rule",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 2440,
+      "sha256": "8690bf3b8469efb7dd9d8663d20ce99891dcfcd64a917ebf438c829ecb65b8a2"
+    },
+    {
+      "path": "hr/gratuity.md",
+      "url": "https://docs.frappe.io/hr/gratuity",
+      "title": "Gratuity",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 2476,
+      "sha256": "7deb8d285483e00439f994b2808f09dffd58a3e65421338a700ae680c97979c9"
+    },
+    {
+      "path": "hr/holiday-list.md",
+      "url": "https://docs.frappe.io/hr/holiday-list",
+      "title": "Holiday List",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 2875,
+      "sha256": "910232de0d4e8e50c08f83634dfc5c4394e97339cee1e91ea1616ad88218158a"
+    },
+    {
+      "path": "hr/how-to-encash-unused-leaves-using-salary-slips.md",
+      "url": "https://docs.frappe.io/hr/how-to-encash-unused-leaves-using-salary-slips",
+      "title": "How to encash unused leaves using Salary Slips",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1755,
+      "sha256": "f5e2c8e68d16deb30953a6cde898dff93c5dc55b0ced5645773742717b51c890"
+    },
+    {
+      "path": "hr/how-to-process-payroll-in-frappehr.md",
+      "url": "https://docs.frappe.io/hr/how-to-process-payroll-in-frappehr",
+      "title": "How to process Payroll in Frappe HR",
+      "upstream_updated": "09-02-2026 17:07:51",
+      "bytes": 3746,
+      "sha256": "d8a3defadcb812e726c35026d50e60adaaec8197736445a8e963f8d9d269ca6c"
+    },
+    {
+      "path": "hr/hr-settings.md",
+      "url": "https://docs.frappe.io/hr/hr-settings",
+      "title": "HR Settings",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 6883,
+      "sha256": "c2f2c1f9f1bf206cda2046a5ca7bc3bf8097c09007f01a16c1645947fcd447c0"
+    },
+    {
+      "path": "hr/hr/leave-management/holiday-list-assignment.md",
+      "url": "https://docs.frappe.io/hr/hr/leave-management/holiday-list-assignment",
+      "title": "Holiday List Assignment",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1943,
+      "sha256": "5474a95625cae155d5e0a1804b90fd826b741af1c2a3fd5538851e2a4c4f7695"
+    },
+    {
+      "path": "hr/hr/leave-management/leave-adjustment.md",
+      "url": "https://docs.frappe.io/hr/hr/leave-management/leave-adjustment",
+      "title": "Leave Adjustment",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 794,
+      "sha256": "857b3b2bded0fb069b250b5c656ce0a669977c607fc280f4a7cbd5fac7b6f6ef"
+    },
+    {
+      "path": "hr/human-resource-setup.md",
+      "url": "https://docs.frappe.io/hr/human-resource-setup",
+      "title": "Human Resource Setup",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 2414,
+      "sha256": "3b88b32085c28e5ba454ceb4a1f3b25e8c2ef84b5c46fb656990accf399d1a4c"
+    },
+    {
+      "path": "hr/human-resources-reports.md",
+      "url": "https://docs.frappe.io/hr/human-resources-reports",
+      "title": "Human Resources Reports",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 3483,
+      "sha256": "2841365b04546444577e1e5b83405ffe5c035f96b0078c2343a140e41569ea99"
+    },
+    {
+      "path": "hr/income-tax-calculation-in-frappehr.md",
+      "url": "https://docs.frappe.io/hr/income-tax-calculation-in-frappehr",
+      "title": "Income Tax Calculation in Frappe HR",
+      "upstream_updated": "09-02-2026 17:24:56",
+      "bytes": 1132,
+      "sha256": "5fcda66de32dd4f27c4dbe9b6e36245680bcd3a261e5b8e4fa3ce9e8672ce2f3"
+    },
+    {
+      "path": "hr/income-tax-slab.md",
+      "url": "https://docs.frappe.io/hr/income-tax-slab",
+      "title": "Income Tax Slab",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 3300,
+      "sha256": "b7bb39e6df729e3bd909005fca482e8e5ff6ed324e4ac8990cac529e6e65c84f"
+    },
+    {
+      "path": "hr/india-payroll/employee-provident-fund.md",
+      "url": "https://docs.frappe.io/hr/india-payroll/employee-provident-fund",
+      "title": "Employee Provident Fund (EPF)",
+      "upstream_updated": "09-07-2026 15:47:58",
+      "bytes": 8348,
+      "sha256": "12351e163563753bc4c02d7699d3fe3606cf1ae900cbbe5a4cd52cfe7570aba7"
+    },
+    {
+      "path": "hr/india-payroll/employee-state-insurance.md",
+      "url": "https://docs.frappe.io/hr/india-payroll/employee-state-insurance",
+      "title": "Employee State Insurance",
+      "upstream_updated": "03-07-2026 17:47:19",
+      "bytes": 2018,
+      "sha256": "9ba704f949b7492997f06b52ae6c946b92d9d56fd5f9d5c52dd6c8a31ec93b69"
+    },
+    {
+      "path": "hr/india-payroll/introduction.md",
+      "url": "https://docs.frappe.io/hr/india-payroll/introduction",
+      "title": "Introduction",
+      "upstream_updated": "24-06-2026 02:32:00",
+      "bytes": 907,
+      "sha256": "4adf8888824611d72e5329ccf3ae8217f3632a5893aba247a89a15fcc3bbec1c"
+    },
+    {
+      "path": "hr/india-payroll/labour-welfare-fund.md",
+      "url": "https://docs.frappe.io/hr/india-payroll/labour-welfare-fund",
+      "title": "Labour Welfare Fund (LWF)",
+      "upstream_updated": "09-07-2026 15:48:29",
+      "bytes": 2805,
+      "sha256": "998fb4e5e147af69c10076268c2bd39a82558b14d3b377bbbc4b781a690390b0"
+    },
+    {
+      "path": "hr/india-payroll/professional-tax.md",
+      "url": "https://docs.frappe.io/hr/india-payroll/professional-tax",
+      "title": "Professional Tax",
+      "upstream_updated": "03-07-2026 14:46:24",
+      "bytes": 5411,
+      "sha256": "f26f994735097ceed9d2acaf258ddc6d5306a17563d1c2d1611624e29a187190"
+    },
+    {
+      "path": "hr/india-payroll/reports.md",
+      "url": "https://docs.frappe.io/hr/india-payroll/reports",
+      "title": "Reports",
+      "upstream_updated": "09-07-2026 15:46:57",
+      "bytes": 1143,
+      "sha256": "3ea29ffc39ffbcd4ce3571442bc24dbe7029ffa199aa5643e812a174305c5d82"
+    },
+    {
+      "path": "hr/india-payroll/tax-regime-selector.md",
+      "url": "https://docs.frappe.io/hr/india-payroll/tax-regime-selector",
+      "title": "Tax Regime Selector",
+      "upstream_updated": "03-07-2026 15:42:08",
+      "bytes": 5020,
+      "sha256": "1c917ece5986224c1e6dfb08069cef488bf9a9e8118a01c6277311055fbd59ce"
+    },
+    {
+      "path": "hr/integrating-frappe-hr-with-biometric-attendance-devices.md",
+      "url": "https://docs.frappe.io/hr/integrating-frappe-hr-with-biometric-attendance-devices",
+      "title": "Integrating Frappe HR With Biometric Attendance Devices",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 7205,
+      "sha256": "3f241d67b5bedebeef25d4315a9789c5bf57913162b94b4f0ef666914e865028"
+    },
+    {
+      "path": "hr/interview-feedback.md",
+      "url": "https://docs.frappe.io/hr/interview-feedback",
+      "title": "Interview Feedback",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1771,
+      "sha256": "d050e7f3f8a5a4f8ec926588c06a118b904006a497be1c281257f8bb7558c72a"
+    },
+    {
+      "path": "hr/interview-management.md",
+      "url": "https://docs.frappe.io/hr/interview-management",
+      "title": "Interview Management",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 455,
+      "sha256": "a51084cf8154870bac5fef5fc431875093aa6ca0c71dcd71f1e3d6243efae167"
+    },
+    {
+      "path": "hr/interview-round.md",
+      "url": "https://docs.frappe.io/hr/interview-round",
+      "title": "Interview Round",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1655,
+      "sha256": "0bd4b997e492fa94efcfc46e16063621fb9cb124e8abba2461451fc2b7edb3af"
+    },
+    {
+      "path": "hr/interview-type.md",
+      "url": "https://docs.frappe.io/hr/interview-type",
+      "title": "Interview Type",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 829,
+      "sha256": "dba3c3719fa679620a02a2bab78a68a45ab675ef9750f8ae4c24644fac7ea69a"
+    },
+    {
+      "path": "hr/interview.md",
+      "url": "https://docs.frappe.io/hr/interview",
+      "title": "Interview",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 2614,
+      "sha256": "e744638c188ba7c15de2bcc3c8bad3d298face0817e0ff53fcbe032d043f5855"
+    },
+    {
+      "path": "hr/introduction.md",
+      "url": "https://docs.frappe.io/hr/introduction",
+      "title": "Frappe HR",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 3273,
+      "sha256": "6fa730c7520a600d165ae2c0db336b42c5f8f76ee3eb3617a10cd8f293f1fae7"
+    },
+    {
+      "path": "hr/job-applicant.md",
+      "url": "https://docs.frappe.io/hr/job-applicant",
+      "title": "Job Applicant",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 2281,
+      "sha256": "e6f0fe5592bad1d3b559948c3632fde623e5f388ae36dd0cc36db3935058ccbd"
+    },
+    {
+      "path": "hr/job-offer.md",
+      "url": "https://docs.frappe.io/hr/job-offer",
+      "title": "Job Offer",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1720,
+      "sha256": "718eaadb2ff37d4db0d51af3b3bfd067b77e46a5cfc67fb406992a4b84074b16"
+    },
+    {
+      "path": "hr/job-opening.md",
+      "url": "https://docs.frappe.io/hr/job-opening",
+      "title": "Job Opening",
+      "upstream_updated": "10-08-2026 14:24:40",
+      "bytes": 2404,
+      "sha256": "f0bd6d53072aa0b5350e7a6b6a8f4c71c4ebfc94ea957d1ed8a0c0c1615a8faa"
+    },
+    {
+      "path": "hr/job-portal.md",
+      "url": "https://docs.frappe.io/hr/job-portal",
+      "title": "Job Portal",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1721,
+      "sha256": "59b7742b2d8314195598615e0117ab78d3356c412a67e83acd1e89ecadf261f1"
+    },
+    {
+      "path": "hr/job-requisition.md",
+      "url": "https://docs.frappe.io/hr/job-requisition",
+      "title": "Job Requisition",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 3110,
+      "sha256": "b213351cf4db99e0becce02504301b3362fe5d0d1452aeaa464d8bebfbabb4e4"
+    },
+    {
+      "path": "hr/leave-allocation-after-compensatory-leave-request.md",
+      "url": "https://docs.frappe.io/hr/leave-allocation-after-compensatory-leave-request",
+      "title": "Leave allocation after Compensatory Leave Request",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 949,
+      "sha256": "8f780274e1c5a61d4a634faf34c5f719c6d957e087d608aaf955df02dfd5007a"
+    },
+    {
+      "path": "hr/leave-allocation.md",
+      "url": "https://docs.frappe.io/hr/leave-allocation",
+      "title": "Leave Allocation",
+      "upstream_updated": "26-02-2026 22:14:04",
+      "bytes": 2069,
+      "sha256": "5eefca8769d4daf102f800cf137862d497f9fa1cb8e4c5699df3ae4d0c21c485"
+    },
+    {
+      "path": "hr/leave-application.md",
+      "url": "https://docs.frappe.io/hr/leave-application",
+      "title": "Leave Application",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 5543,
+      "sha256": "7045498d4d31a1c2400413b25a838043bb56adef993a4277512c396db305a306"
+    },
+    {
+      "path": "hr/leave-block-list.md",
+      "url": "https://docs.frappe.io/hr/leave-block-list",
+      "title": "Leave Block List",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 1760,
+      "sha256": "6aafe3edf1836b9f5335a75b8847e3eb097888fd9252f52af5431f3c3c2b5e72"
+    },
+    {
+      "path": "hr/leave-calculation-in-salary-slip.md",
+      "url": "https://docs.frappe.io/hr/leave-calculation-in-salary-slip",
+      "title": "Leave Calculation In Salary Slip",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1949,
+      "sha256": "e7c5d773ab25af65217cebbe4673211dc173afb9be2e2f9c9994a9b5c2572aec"
+    },
+    {
+      "path": "hr/leave-control-panel.md",
+      "url": "https://docs.frappe.io/hr/leave-control-panel",
+      "title": "Leave Control Panel",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 1845,
+      "sha256": "a8a56e4ca7f8eb304c3033ff3183afd9ae40c7ba553621b0b5a9ad9fb6ea4389"
+    },
+    {
+      "path": "hr/leave-encashment.md",
+      "url": "https://docs.frappe.io/hr/leave-encashment",
+      "title": "Leave Encashment",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 3003,
+      "sha256": "7cc7ea4889640be284c71a99077a7d38ebd983ab4791af9f6609bad1d05bb974"
+    },
+    {
+      "path": "hr/leave-ledger-entry.md",
+      "url": "https://docs.frappe.io/hr/leave-ledger-entry",
+      "title": "Leave Ledger Entry",
+      "upstream_updated": "26-02-2026 22:14:04",
+      "bytes": 291,
+      "sha256": "62f3bb4b293bb9a566ed6b5a45925685708e69464544051c034dbc9a157887d0"
+    },
+    {
+      "path": "hr/leave-ledger-report.md",
+      "url": "https://docs.frappe.io/hr/leave-ledger-report",
+      "title": "Leave Ledger Report",
+      "upstream_updated": "26-02-2026 22:14:04",
+      "bytes": 761,
+      "sha256": "bff34d750585d9907fb596e7e22342bbb21b7960957eb4b95ddc2b4587773dc0"
+    },
+    {
+      "path": "hr/leave-management/help-articles/how-to-sanction-leave-encashment-amount-in-salary-slip.md",
+      "url": "https://docs.frappe.io/hr/leave-management/help-articles/how-to-sanction-leave-encashment-amount-in-salary-slip",
+      "title": "How to Sanction Leave Encashment Amount in Salary Slip",
+      "upstream_updated": "05-07-2026 14:39:15",
+      "bytes": 4635,
+      "sha256": "0864a100c3460d1392e033db286d92c40291d0e4f1699b53e85a324cd578fb98"
+    },
+    {
+      "path": "hr/leave-management/help-articles/leave-calculation-in-salary-slip.md",
+      "url": "https://docs.frappe.io/hr/leave-management/help-articles/leave-calculation-in-salary-slip",
+      "title": "Leave Calculation in Salary Slip",
+      "upstream_updated": "05-07-2026 15:39:15",
+      "bytes": 5825,
+      "sha256": "8ebfccae36977df46b93e02d43b1373d415ecc7336a4d6026a4ffa51409b148b"
+    },
+    {
+      "path": "hr/leave-management/help-articles/setting-employee-wise-leave-approver.md",
+      "url": "https://docs.frappe.io/hr/leave-management/help-articles/setting-employee-wise-leave-approver",
+      "title": "Setting Employee Wise Leave Approver",
+      "upstream_updated": "05-07-2026 14:25:16",
+      "bytes": 3757,
+      "sha256": "e5b9d32c2eb442356560933a84e79328adc6e133fc4a14d08f68066bb7c115bb"
+    },
+    {
+      "path": "hr/leave-period.md",
+      "url": "https://docs.frappe.io/hr/leave-period",
+      "title": "Leave Period",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1883,
+      "sha256": "52e9e2cfe25b702f4fc334c59126ac2182ad2361012411e2610140ac33f1d172"
+    },
+    {
+      "path": "hr/leave-policy-assignment.md",
+      "url": "https://docs.frappe.io/hr/leave-policy-assignment",
+      "title": "Leave Policy Assignment",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 2064,
+      "sha256": "179d410bee9953a623e9cdce45e3fba8a15b2b70d4d10a11eb2d87aaff1c5ebf"
+    },
+    {
+      "path": "hr/leave-policy.md",
+      "url": "https://docs.frappe.io/hr/leave-policy",
+      "title": "Leave Policy",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1043,
+      "sha256": "fb415335735c9a2013082c74ddd192ea6b2942cd9d7099456a9c0840c630f930"
+    },
+    {
+      "path": "hr/leave-type.md",
+      "url": "https://docs.frappe.io/hr/leave-type",
+      "title": "Leave Type",
+      "upstream_updated": "15-07-2026 12:57:33",
+      "bytes": 7421,
+      "sha256": "2241a28f8c1cef9234948544a840369facfbeaf0f9ab775e9287a18573f49073"
+    },
+    {
+      "path": "hr/leaves.md",
+      "url": "https://docs.frappe.io/hr/leaves",
+      "title": "Leaves",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1547,
+      "sha256": "879b312ae8fa9e2ef7cebbaa74387687ace0c3141674e9117280f32073ff1b86"
+    },
+    {
+      "path": "hr/loan-application.md",
+      "url": "https://docs.frappe.io/hr/loan-application",
+      "title": "Loan Application",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 1889,
+      "sha256": "e611073260abf2b3f7b3a923b9e4aede212f06e64eafc3fb855db82065a6101d"
+    },
+    {
+      "path": "hr/loan-type.md",
+      "url": "https://docs.frappe.io/hr/loan-type",
+      "title": "Loan Type",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 714,
+      "sha256": "a24058b13c54d0d44e7f03fe5a7eca73de21978147a8f3ab3325695d5c69c61f"
+    },
+    {
+      "path": "hr/loan.md",
+      "url": "https://docs.frappe.io/hr/loan",
+      "title": "Loan",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 2550,
+      "sha256": "0c2159db58e162601ec68eb3a68aec6e2e70832eceba23d2eccb4ba154ac91e7"
+    },
+    {
+      "path": "hr/mobile-app-installation.md",
+      "url": "https://docs.frappe.io/hr/mobile-app-installation",
+      "title": "Mobile App Installation",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1547,
+      "sha256": "43d2ae3bce25353de991fcaf346f27466401a14318addc08f4369ab5d51855fd"
+    },
+    {
+      "path": "hr/multicurrency-employee-advance-expense-claim.md",
+      "url": "https://docs.frappe.io/hr/multicurrency-employee-advance-expense-claim",
+      "title": "Multi Currency Advance & Claim",
+      "upstream_updated": "03-04-2026 01:12:11",
+      "bytes": 4780,
+      "sha256": "52e39f931520c5fbc343b35544905eef06510bef50cde598de7b7c2c6a547a2c"
+    },
+    {
+      "path": "hr/organizational-chart.md",
+      "url": "https://docs.frappe.io/hr/organizational-chart",
+      "title": "Organizational Chart",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 1216,
+      "sha256": "5982249164fae80966f5a897487f164b38be7c19094eb473290e6b88849e2c83"
+    },
+    {
+      "path": "hr/overtime.md",
+      "url": "https://docs.frappe.io/hr/overtime",
+      "title": "Overtime",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 2304,
+      "sha256": "af2e8c633326243fe48efb6d4d14e80d0566f0c5a3149590e48f1fd09b39f37d"
+    },
+    {
+      "path": "hr/payroll-articles/make-bank-entry-from-payroll-entry.md",
+      "url": "https://docs.frappe.io/hr/payroll-articles/make-bank-entry-from-payroll-entry",
+      "title": "Make Bank Entry from Payroll Entry",
+      "upstream_updated": "02-07-2026 14:36:33",
+      "bytes": 3407,
+      "sha256": "a355d99329cb36f37e15eea49946d43bacc3aedf4070833849de58ce326df284"
+    },
+    {
+      "path": "hr/payroll-correction.md",
+      "url": "https://docs.frappe.io/hr/payroll-correction",
+      "title": "Payroll Correction",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 1272,
+      "sha256": "4cbcc27dfeeb6381398ccc13e5a1125367abec9391eaa15e0d158a460e4270f3"
+    },
+    {
+      "path": "hr/payroll-entry.md",
+      "url": "https://docs.frappe.io/hr/payroll-entry",
+      "title": "Payroll Entry",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 4508,
+      "sha256": "8a45109a6f11fefd5d65e2bda8c51ad4268cd5036a657469d78ca88c30a9975e"
+    },
+    {
+      "path": "hr/payroll-management.md",
+      "url": "https://docs.frappe.io/hr/payroll-management",
+      "title": "Payroll Management",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 951,
+      "sha256": "95f55ef1f7a1dcbf6467e045d610d11487639bf97d3103e86eee24eeb631625c"
+    },
+    {
+      "path": "hr/payroll-period.md",
+      "url": "https://docs.frappe.io/hr/payroll-period",
+      "title": "Payroll Period",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 995,
+      "sha256": "fc96376208c6755f1a75e8c3c4a2cb44a81c4781e5e0c83a946041b85d5db9fc"
+    },
+    {
+      "path": "hr/payroll-settings.md",
+      "url": "https://docs.frappe.io/hr/payroll-settings",
+      "title": "Payroll Settings",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 3595,
+      "sha256": "588a793563e532230d1454270ee163a1bd82b33ebf00e4e0014fc8727064acdf"
+    },
+    {
+      "path": "hr/payroll-setup.md",
+      "url": "https://docs.frappe.io/hr/payroll-setup",
+      "title": "Payroll Setup",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 15025,
+      "sha256": "c69e7b1db2c9b838648a519a716cf9549607e10380a1dbe9695c853f2877cfee"
+    },
+    {
+      "path": "hr/project-profitability-report.md",
+      "url": "https://docs.frappe.io/hr/project-profitability-report",
+      "title": "Project Profitability Report",
+      "upstream_updated": "16-02-2026 20:28:15",
+      "bytes": 1256,
+      "sha256": "17cf3e752bd432299d84911bb90f2e0aeeaed632a3a8dcacd5af6e1ce40dc867"
+    },
+    {
+      "path": "hr/push-notification.md",
+      "url": "https://docs.frappe.io/hr/push-notification",
+      "title": "Push Notification",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 643,
+      "sha256": "2fc24943e8590db03f079477fa9136f5ea8d39182df1a0f4ee13d1d84d7a31a4"
+    },
+    {
+      "path": "hr/recruitment.md",
+      "url": "https://docs.frappe.io/hr/recruitment",
+      "title": "Recruitment",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 379,
+      "sha256": "e642537bc30fb88cfdd5320961dffd78823e8c007a500a4ad71cbf7da5681696"
+    },
+    {
+      "path": "hr/reports/employee-ctc-break-up.md",
+      "url": "https://docs.frappe.io/hr/reports/employee-ctc-break-up",
+      "title": "Employee CTC Break-Up",
+      "upstream_updated": "24-06-2026 11:59:50",
+      "bytes": 2852,
+      "sha256": "1b7ecc8216d0301a004d289bbd7e22a551d6365b238c9e48cb8f0dd0d2320cf6"
+    },
+    {
+      "path": "hr/retention-bonus.md",
+      "url": "https://docs.frappe.io/hr/retention-bonus",
+      "title": "Retention Bonus",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 1426,
+      "sha256": "7f18e88e5ec73c525b957e5b4734ba83a2eed47195206aea484b8fc924e37365"
+    },
+    {
+      "path": "hr/roster.md",
+      "url": "https://docs.frappe.io/hr/roster",
+      "title": "Roster",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 3734,
+      "sha256": "b2eabee91fe1e84ccc1743610de1f7402785a31bc029d76e32533efed0f9b174"
+    },
+    {
+      "path": "hr/salary-component.md",
+      "url": "https://docs.frappe.io/hr/salary-component",
+      "title": "Salary Component",
+      "upstream_updated": "24-06-2026 17:49:11",
+      "bytes": 8452,
+      "sha256": "49034c812613842a241ddca79611c8b3d3248c7058d42b2bd26881d29e008c90"
+    },
+    {
+      "path": "hr/salary-slip.md",
+      "url": "https://docs.frappe.io/hr/salary-slip",
+      "title": "Salary Slip",
+      "upstream_updated": "05-07-2026 15:39:15",
+      "bytes": 3501,
+      "sha256": "acfc868dad8b473043c411d3a9ca11b9c46b885e98fd8ca008919fb4c5e9dbc1"
+    },
+    {
+      "path": "hr/salary-structure-and-payroll.md",
+      "url": "https://docs.frappe.io/hr/salary-structure-and-payroll",
+      "title": "Salary Structure and Payroll",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1225,
+      "sha256": "9c37d5d39dbcfde344be8ef81d28598c9cc4ef1096f7e9e36eee22270f710c60"
+    },
+    {
+      "path": "hr/salary-structure-assignment-tool.md",
+      "url": "https://docs.frappe.io/hr/salary-structure-assignment-tool",
+      "title": "Salary Structure Assignment Tool",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 2188,
+      "sha256": "7596c66b278fe64c23f77b3b2395c17a0bc370c837b94d35b314aa4d9a8ac8fd"
+    },
+    {
+      "path": "hr/salary-structure-assignment.md",
+      "url": "https://docs.frappe.io/hr/salary-structure-assignment",
+      "title": "Salary Structure Assignment",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 3131,
+      "sha256": "d922ea24393d5decb51075ac0d133a0353ba41b35dcffabc5aa72996996aeb44"
+    },
+    {
+      "path": "hr/salary-structure.md",
+      "url": "https://docs.frappe.io/hr/salary-structure",
+      "title": "Salary Structure",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 4488,
+      "sha256": "1329e545c786970cf7f1f43797facb641cde18a73940ffdaac04045fba2dc4ca"
+    },
+    {
+      "path": "hr/setting-employee-wise-leave-approver.md",
+      "url": "https://docs.frappe.io/hr/setting-employee-wise-leave-approver",
+      "title": "Setting Employee-wise Leave Approver",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1195,
+      "sha256": "74e7e1eeb1ea89316f1aa490f59771eef4b3e03bda54f12b7eab5f44b96d8d81"
+    },
+    {
+      "path": "hr/setting-flexible-benefits-against-a-benefit-claim.md",
+      "url": "https://docs.frappe.io/hr/setting-flexible-benefits-against-a-benefit-claim",
+      "title": "Setting Flexible Benefits against a Benefit Claim",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1227,
+      "sha256": "17d8322109fa553e32cec9e0c04e66e8bc570905e1281caf9f3543bfad03c759"
+    },
+    {
+      "path": "hr/setting-up-income-tax-deduction.md",
+      "url": "https://docs.frappe.io/hr/setting-up-income-tax-deduction",
+      "title": "Setting Up Income Tax Deduction",
+      "upstream_updated": "04-02-2026 14:54:33",
+      "bytes": 7683,
+      "sha256": "53534f4e46547013d3a108903d1b07e63047d2c12937799452e33ca25db0c82f"
+    },
+    {
+      "path": "hr/shift-assignment-tool.md",
+      "url": "https://docs.frappe.io/hr/shift-assignment-tool",
+      "title": "Shift Assignment Tool",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 3604,
+      "sha256": "b11f993f3401871bc708498b1b2de10dd25bb61a372fc6bf430c5efb38fc7d02"
+    },
+    {
+      "path": "hr/shift-assignment.md",
+      "url": "https://docs.frappe.io/hr/shift-assignment",
+      "title": "Shift Assignment",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1699,
+      "sha256": "ca0d952976a1af53f46ff5afa88e55f14c80415ac51ec4a38efbda8fd5e908e5"
+    },
+    {
+      "path": "hr/shift-location.md",
+      "url": "https://docs.frappe.io/hr/shift-location",
+      "title": "Shift Location",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1171,
+      "sha256": "39aa9c5ffe581d9a7df84e5dc65567e0b9fc758e13831999cd59363f1d7888ac"
+    },
+    {
+      "path": "hr/shift-management.md",
+      "url": "https://docs.frappe.io/hr/shift-management",
+      "title": "Shift Management",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 679,
+      "sha256": "b69a833cbc93eb736e35cb1a986e1e7a49445514d8dbbe090e5614ef5714a85e"
+    },
+    {
+      "path": "hr/shift-request.md",
+      "url": "https://docs.frappe.io/hr/shift-request",
+      "title": "Shift Request",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1951,
+      "sha256": "b609cdba790565c02d1c4e82287430b83ce6e2131067ab733adf55049853fef9"
+    },
+    {
+      "path": "hr/shift-schedule-assignment.md",
+      "url": "https://docs.frappe.io/hr/shift-schedule-assignment",
+      "title": "Shift Schedule Assignment",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1502,
+      "sha256": "6d018378c1762ff9ffca122afb0fc46f40f2a36976fec55abb38407c7d4630ab"
+    },
+    {
+      "path": "hr/shift-schedule.md",
+      "url": "https://docs.frappe.io/hr/shift-schedule",
+      "title": "Shift Schedule",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 1210,
+      "sha256": "0fcbd9ba3da2d467b7a4479bd91113fc0cd6fd3ba3d4d50efed3a923d6bbc133"
+    },
+    {
+      "path": "hr/shift-type.md",
+      "url": "https://docs.frappe.io/hr/shift-type",
+      "title": "Shift Type",
+      "upstream_updated": "04-02-2026 14:54:29",
+      "bytes": 6937,
+      "sha256": "1304ba5f01762247bf791927f521075394d02532c44b66ae95f8aa33e689cad9"
+    },
+    {
+      "path": "hr/staffing-plan.md",
+      "url": "https://docs.frappe.io/hr/staffing-plan",
+      "title": "Staffing Plan",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 2150,
+      "sha256": "46f0d449fe7a3d6fda20be574650cd7cf4d0dddaacb9c3ea150935d16c21c4f3"
+    },
+    {
+      "path": "hr/training-event.md",
+      "url": "https://docs.frappe.io/hr/training-event",
+      "title": "Training Event",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 2007,
+      "sha256": "a83ade5b0d2288af43659b37b9cc1e67266c62d5742f0dfb859a76bd03b0d94c"
+    },
+    {
+      "path": "hr/training-feedback.md",
+      "url": "https://docs.frappe.io/hr/training-feedback",
+      "title": "Training Feedback",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1036,
+      "sha256": "d63e3c75f13726ce693690df0c9074fc33777a2547694d8741df44270009f94c"
+    },
+    {
+      "path": "hr/training-program.md",
+      "url": "https://docs.frappe.io/hr/training-program",
+      "title": "Training Program",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1291,
+      "sha256": "078706d3ddd9d167e597f89cc1a01203a073b3ae4e9878cf35dfb744c0e3d9e6"
+    },
+    {
+      "path": "hr/training-result.md",
+      "url": "https://docs.frappe.io/hr/training-result",
+      "title": "Training Result",
+      "upstream_updated": "04-02-2026 14:54:31",
+      "bytes": 1373,
+      "sha256": "aa4f12bba3b399c22e20220da4e224a5478b292b95212e464202fc5c6f72f539"
+    },
+    {
+      "path": "hr/travel-request.md",
+      "url": "https://docs.frappe.io/hr/travel-request",
+      "title": "Travel Request",
+      "upstream_updated": "04-02-2026 14:54:30",
+      "bytes": 525,
+      "sha256": "ec51272d19bd2f70d148c0d74fd071d3ff7dd487dcdfd2dcb196e16b60bd5509"
+    },
+    {
+      "path": "hr/upload-attendance.md",
+      "url": "https://docs.frappe.io/hr/upload-attendance",
+      "title": "Upload Attendance",
+      "upstream_updated": "28-02-2026 12:40:07",
+      "bytes": 1251,
+      "sha256": "b5f9127b2b315369bf16ac916100b5883e63119d1e0348cedc732474686efbed"
+    },
+    {
+      "path": "hr/user-permission-based-on-hierarchy.md",
+      "url": "https://docs.frappe.io/hr/user-permission-based-on-hierarchy",
+      "title": "User Permission based on Hierarchy",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1165,
+      "sha256": "daca84cdbd3df77d3b2f63edd5fc1fae2719091581c327608301fe31319d4556"
+    },
+    {
+      "path": "hr/using-auto-attendance.md",
+      "url": "https://docs.frappe.io/hr/using-auto-attendance",
+      "title": "Using Auto Attendance",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 1235,
+      "sha256": "4cfa1a328facc092fb346d5de448cc14b040a4f50efeb484eb2e45331d7fe033"
+    },
+    {
+      "path": "hr/vehicle-log.md",
+      "url": "https://docs.frappe.io/hr/vehicle-log",
+      "title": "Vehicle Log",
+      "upstream_updated": "29-05-2026 10:36:25",
+      "bytes": 1802,
+      "sha256": "756f95a3872692183cb64dda71cd1ef50aede73ad66855bc1091dbf4e103a916"
+    },
+    {
+      "path": "hr/vehicle.md",
+      "url": "https://docs.frappe.io/hr/vehicle",
+      "title": "Vehicle",
+      "upstream_updated": "04-02-2026 14:54:32",
+      "bytes": 1305,
+      "sha256": "7069cbf0725e18ca46a50ae5bcb16cc32cb115f5a2d465fb12c38d5ddd3c4a60"
+    },
+    {
+      "path": "hr/videos.md",
+      "url": "https://docs.frappe.io/hr/videos",
+      "title": "Videos",
+      "upstream_updated": "04-02-2026 14:54:28",
+      "bytes": 970,
+      "sha256": "a71cd07fedc651fb30e2d806982931d1fe731978b9875bb708d98d95ca662487"
+    },
+    {
+      "path": "hr/working-days-calculation-in-the-salary-slip.md",
+      "url": "https://docs.frappe.io/hr/working-days-calculation-in-the-salary-slip",
+      "title": "Working Days Calculation in the Salary Slip",
+      "upstream_updated": "04-02-2026 14:54:34",
+      "bytes": 629,
+      "sha256": "f4b18e2ef284a93e2b5077032f6ee86568699527f06366d82eb14cdc59423094"
+    },
+    {
+      "path": "insights/articles/creating-date-table.md",
+      "url": "https://docs.frappe.io/insights/articles/creating-date-table",
+      "title": "Creating Date Table",
+      "upstream_updated": "03-03-2026 16:09:18",
+      "bytes": 1448,
+      "sha256": "ee2c1f2a299379fce05b28313593e296f3ada32a1fa7d67757f47127494ab42a"
+    },
+    {
+      "path": "insights/charts/chart-types-explained.md",
+      "url": "https://docs.frappe.io/insights/charts/chart-types-explained",
+      "title": "Choosing the right Chart",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 9029,
+      "sha256": "7e72477a3b87c13c3ebf44c14140a1575ee02185e2a55dd066da8307c7bb39c4"
+    },
+    {
+      "path": "insights/charts/overview.md",
+      "url": "https://docs.frappe.io/insights/charts/overview",
+      "title": "Overview",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 658,
+      "sha256": "e1afaa1c8f7b811db94fb0f3da41409b950827aba1ea708191e499ade583e3d0"
+    },
+    {
+      "path": "insights/connect-data/add-data-source.md",
+      "url": "https://docs.frappe.io/insights/connect-data/add-data-source",
+      "title": "Add Data Source",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 2268,
+      "sha256": "08be0de94a2236ed4687c96c647992d9e4af630f24f16bbc2918ca5e472e5050"
+    },
+    {
+      "path": "insights/connect-data/manage-data-sources.md",
+      "url": "https://docs.frappe.io/insights/connect-data/manage-data-sources",
+      "title": "Manage Data Sources",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 477,
+      "sha256": "9f2fe244bce0a454372b87cf60ecf19842b1b86783bf28cc9cc91d08cdb8bc56"
+    },
+    {
+      "path": "insights/connect-data/Overview.md",
+      "url": "https://docs.frappe.io/insights/connect-data/Overview",
+      "title": "Overview",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 559,
+      "sha256": "784992486869f543f5729cd4f971c4c6401f2a845295ee24bd2fefd5d87a64a8"
+    },
+    {
+      "path": "insights/creating-your-first-dashboard.md",
+      "url": "https://docs.frappe.io/insights/creating-your-first-dashboard",
+      "title": "Create Your First Dashboard",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 4962,
+      "sha256": "987c0eb0abea1066ae2875f322a8751bcf7b25063536817447a09aca9cd45a2b"
+    },
+    {
+      "path": "insights/dashboards/creating-your-first-dashboard.md",
+      "url": "https://docs.frappe.io/insights/dashboards/creating-your-first-dashboard",
+      "title": "Creating your first Dashboard",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 4217,
+      "sha256": "e4d1b79901e5655eab1e007c86016738cd60d9534649473c8a9875573096ff30"
+    },
+    {
+      "path": "insights/dashboards/overview.md",
+      "url": "https://docs.frappe.io/insights/dashboards/overview",
+      "title": "Overview",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 702,
+      "sha256": "da9b54b77152567b720e5840c9544a325c6cbddd184f083f0035e40257d7201b"
+    },
+    {
+      "path": "insights/dashboards/sharing-and-access-control.md",
+      "url": "https://docs.frappe.io/insights/dashboards/sharing-and-access-control",
+      "title": "Sharing and Access Control",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 1873,
+      "sha256": "81864a903c61478246218ad75586fa730b9d1cbae6fa2b18c237bd599cd8c1ee"
+    },
+    {
+      "path": "insights/data-sources/data-store.md",
+      "url": "https://docs.frappe.io/insights/data-sources/data-store",
+      "title": "Data Store",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 2462,
+      "sha256": "0d96a6a2da2110d3b711ac8f12e02515b281df0f838004801b6650577de01f89"
+    },
+    {
+      "path": "insights/data-sources/overview.md",
+      "url": "https://docs.frappe.io/insights/data-sources/overview",
+      "title": "Overview",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 2947,
+      "sha256": "987005470f5049eafe41a7b13fca05b7b489d51713fe458fc8eec082262a1afe"
+    },
+    {
+      "path": "insights/get-started/complete-setup.md",
+      "url": "https://docs.frappe.io/insights/get-started/complete-setup",
+      "title": "Complete Setup",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 777,
+      "sha256": "089262cb2b5f9f18036d8d03dcc99952338a6815660d60944ddf64cf6dc8e4ca"
+    },
+    {
+      "path": "insights/get-started/installation.md",
+      "url": "https://docs.frappe.io/insights/get-started/installation",
+      "title": "Installation",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 2351,
+      "sha256": "cc011fde0d965de1a0c608349dd2acc786c8bdd17fdfc1301f016fbc1bb80fa2"
+    },
+    {
+      "path": "insights/introduction.md",
+      "url": "https://docs.frappe.io/insights/introduction",
+      "title": "Introduction",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 2780,
+      "sha256": "5e4e10e588c313103e93d49ecdd50339144a272b2d11aa458ebceb9e9c651de1"
+    },
+    {
+      "path": "insights/permissions-access-control/enable-permissions.md",
+      "url": "https://docs.frappe.io/insights/permissions-access-control/enable-permissions",
+      "title": "Enable Permissions",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 517,
+      "sha256": "b65ac3b66a0cd1a12ffb5b96b6e4354d62a66bdbbd8ea9dcabf7e5e4c2490e05"
+    },
+    {
+      "path": "insights/permissions-access-control/overview.md",
+      "url": "https://docs.frappe.io/insights/permissions-access-control/overview",
+      "title": "Overview",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 754,
+      "sha256": "856625c62809684192bd2612f3fe2099849bf317583633f90ad44c7ed4d0f65c"
+    },
+    {
+      "path": "insights/querying/expressions.md",
+      "url": "https://docs.frappe.io/insights/querying/expressions",
+      "title": "Expressions",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 12994,
+      "sha256": "46f69867210a26879631d7a8ba211a313570758d8b0696bf522c1c980a21eaa0"
+    },
+    {
+      "path": "insights/querying/operations.md",
+      "url": "https://docs.frappe.io/insights/querying/operations",
+      "title": "Operations",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 9605,
+      "sha256": "7ec8e05e63f22d7ecc00022564cb067a70ba2b551207ee66b58de3505d4af32f"
+    },
+    {
+      "path": "insights/querying/overview.md",
+      "url": "https://docs.frappe.io/insights/querying/overview",
+      "title": "Overview",
+      "upstream_updated": "06-01-2026 17:21:16",
+      "bytes": 1240,
+      "sha256": "d921c0ece7b4dc02df74af9497201323e264575c6ca0deb5ad5b077a6b9ded00"
+    },
+    {
+      "path": "insights/workbooks/charts.md",
+      "url": "https://docs.frappe.io/insights/workbooks/charts",
+      "title": "Charts",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 3161,
+      "sha256": "44c91a7d0b981c7d7f6884f532ee2767ff7823a35fcea283e66a2e2517942465"
+    },
+    {
+      "path": "insights/workbooks/dashboards.md",
+      "url": "https://docs.frappe.io/insights/workbooks/dashboards",
+      "title": "Dashboards",
+      "upstream_updated": "13-01-2026 15:35:56",
+      "bytes": 1762,
+      "sha256": "226454ed3e14c0a52e77ba962262ed8b490204f0550bd0d4b7d09c84b1c16c31"
+    },
+    {
+      "path": "insights/workbooks/overview.md",
+      "url": "https://docs.frappe.io/insights/workbooks/overview",
+      "title": "Overview",
+      "upstream_updated": "13-01-2026 15:35:34",
+      "bytes": 1579,
+      "sha256": "53f6ab0751f0a6148c143ad4cc5186efc3757b0c813a12781b7e1e303d45114e"
+    },
+    {
+      "path": "insights/workbooks/queries.md",
+      "url": "https://docs.frappe.io/insights/workbooks/queries",
+      "title": "Queries",
+      "upstream_updated": "13-01-2026 15:35:56",
+      "bytes": 18181,
+      "sha256": "e93dd45a4752b23e6a9d2a4da0e64e2f5824a90d97beb8f2a2ea66382148bbc5"
+    },
+    {
+      "path": "wiki-v2/how-to-contribute.md",
+      "url": "https://docs.frappe.io/wiki-v2/how-to-contribute",
+      "title": "How to contribute",
+      "upstream_updated": "19-01-2026 01:21:17",
+      "bytes": 361,
+      "sha256": "531386d1358eafa1b0748237d664242d0189b63330a52190167ae7c536602b18"
+    },
+    {
+      "path": "wiki-v2/install-locally.md",
+      "url": "https://docs.frappe.io/wiki-v2/install-locally",
+      "title": "Install locally",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 254,
+      "sha256": "3607ea3ad9540adaac869e19acebfc7840108109b35219aa9e82cee53c99c1b9"
+    },
+    {
+      "path": "wiki-v2/introduction.md",
+      "url": "https://docs.frappe.io/wiki-v2/introduction",
+      "title": "Introduction",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 2020,
+      "sha256": "22b8fc12d7556c6e0382e640cc971a204c32dc5a5f9cc5415328aa085c89b3d6"
+    },
+    {
+      "path": "wiki-v2/new-wiki-group.md",
+      "url": "https://docs.frappe.io/wiki-v2/new-wiki-group",
+      "title": "New Wiki Group",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 379,
+      "sha256": "cd9dcdbc4a53ff7524f7395dc7d829c143d927260a12aa3f665c427fa28db819"
+    },
+    {
+      "path": "wiki-v2/new-wiki-page.md",
+      "url": "https://docs.frappe.io/wiki-v2/new-wiki-page",
+      "title": "New Wiki Page",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 310,
+      "sha256": "665e87ca560b7e3eacc7f8a7a323a8674d6aec8006f15838824e5793743054c0"
+    },
+    {
+      "path": "wiki-v2/use-on-frappe-cloud.md",
+      "url": "https://docs.frappe.io/wiki-v2/use-on-frappe-cloud",
+      "title": "Use on Frappe Cloud",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 401,
+      "sha256": "34939d9c7c9f12d2dfeaec4fafa50106b5ada992175b0cf35e28b47718fef77d"
+    },
+    {
+      "path": "wiki-v2/wiki-migration-guide.md",
+      "url": "https://docs.frappe.io/wiki-v2/wiki-migration-guide",
+      "title": "Wiki Migration Guide",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 559,
+      "sha256": "73addb23e467dbbabe76a8e4b3f25028378289d7b66a6477b42556b89bab2383"
+    },
+    {
+      "path": "wiki-v2/wiki-settings.md",
+      "url": "https://docs.frappe.io/wiki-v2/wiki-settings",
+      "title": "Wiki Settings",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 1312,
+      "sha256": "691936eda86e6574cff58a4f530267df46b0802f2e314102b1534a116a92c8c6"
+    },
+    {
+      "path": "wiki-v2/wiki-space.md",
+      "url": "https://docs.frappe.io/wiki-v2/wiki-space",
+      "title": "Wiki Space",
+      "upstream_updated": "13-01-2026 11:36:00",
+      "bytes": 345,
+      "sha256": "968f30c081ad0048a28992b9fb0a36980590d6e0c1ef299f84c38bea2de3de45"
     }
   ],
   "skipped": [
+    {
+      "route": "builder/setting-up",
+      "reason": "thin (125b)"
+    },
+    {
+      "route": "cloud/api",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/api/api-billing",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/api/authentication",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/api/create_an_access_token",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/api/sites",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/application-server-horizontal-scaling",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/billing/plans",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/change-ownership-of-server",
+      "reason": "thin (193b)"
+    },
+    {
+      "route": "cloud/faq/general",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/faq/support",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/folder-structure",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/getting-started/connect-learn",
+      "reason": "thin (194b)"
+    },
+    {
+      "route": "cloud/handbook/bench",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/handbook/bench-update",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/handbook/fc-handbook-introduction",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/handbook/how-bench-deploy-works",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/handbook/ops",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/handbook/support",
+      "reason": "thin (179b)"
+    },
+    {
+      "route": "cloud/handbook/support-handbook-site",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/handbook/team",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/hybrid-cloud-architecture",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/hybrid-cloud-introduction",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/hybrid-cloud-new",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/introduction",
+      "reason": "thin (148b)"
+    },
+    {
+      "route": "cloud/public-bench-update-schedule",
+      "reason": "thin (154b)"
+    },
+    {
+      "route": "cloud/servers/frappe-cloud-hybrid",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "cloud/sites/delete-site",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "crm/invite-users",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "crm/profile",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "crm/web-form",
+      "reason": "upstream http 500"
+    },
     {
       "route": "erpnext/user/manual/en/accounting-masters",
       "reason": "http 404"
@@ -10279,10 +13868,6 @@
     {
       "route": "erpnext/user/manual/en/education",
       "reason": "http 404"
-    },
-    {
-      "route": "erpnext/user/manual/en/email-dropbox",
-      "reason": "no #wiki-content"
     },
     {
       "route": "erpnext/user/manual/en/examination",
@@ -10387,6 +13972,74 @@
     {
       "route": "framework/v15/user/en/new-wiki-page",
       "reason": "upstream redirect loop"
+    },
+    {
+      "route": "helpdesk/quick-first-steps",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "hr/how-to-process-payroll-in-erpnext",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "hr/income-tax-calculation-in-erpnext",
+      "reason": "upstream http 500"
+    },
+    {
+      "route": "insights/new-wiki-page",
+      "reason": "thin (30b)"
+    },
+    {
+      "route": "wiki-v2/approving-changes",
+      "reason": "thin (171b)"
+    },
+    {
+      "route": "wiki-v2/check-page-revisions",
+      "reason": "thin (168b)"
+    },
+    {
+      "route": "wiki/approving-changes",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/check-page-revisions",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/how-to-contribute",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/install-locally",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/introduction",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/new-wiki-group",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/new-wiki-page",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/use-on-frappe-cloud",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/wiki-migration-guide",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/wiki-settings",
+      "reason": "no #wiki-content"
+    },
+    {
+      "route": "wiki/wiki-space",
+      "reason": "no #wiki-content"
     }
   ]
 }

@@ -201,7 +201,7 @@ Some of the available lower level configurations for Frappe's Email module.
 | --- | --- |
 |  |  |
 | `auto_email_id` | If set, this will be the default email for outgoing mails. |
-| `mail_login` | is used as the second preference and "[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#8ae4e5fee3ece3e9ebfee3e5e4f9caeff2ebe7fae6efa4e9e5e7)" is used as fallback. |
+| `mail_login` | is used as the second preference and "[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#4c222338252a252f2d382523223f0c29342d213c2029622f2321)" is used as fallback. |
 | `always_use_account_email_id_as_sender` | Use Account Email ID As Sender. |
 | `always_use_account_name_as_sender_name` | Use Account Name as Sender Name |
 | `email_sender_name` | Email Sender Name. |

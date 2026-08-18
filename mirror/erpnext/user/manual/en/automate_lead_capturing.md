@@ -11,7 +11,7 @@ Leads come from many different sources. It is important that all leads are recor
 
 ## Create Leads From Emails
 
-You may have an email address like '[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#6013010c051320190f1512030f0d10010e194e030f0d)' which is probably displayed on your website. People may send emails asking information about your products and services. You can enable [Email Account](https://docs.frappe.io/erpnext/email-account) to pull these emails and create a lead for each email.
+You may have an email address like '[\[email protected\]](https://docs.frappe.io/cdn-cgi/l/email-protection#5f2c3e333a2c1f26302a2d3c30322f3e3126713c3032)' which is probably displayed on your website. People may send emails asking information about your products and services. You can enable [Email Account](https://docs.frappe.io/erpnext/email-account) to pull these emails and create a lead for each email.
 
 ## Create Leads From Webforms
 
